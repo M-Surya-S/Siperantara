@@ -1,0 +1,141 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.29 why chose css
+/*----------------------------------------*/
+.why-choose-item {
+	&.style-one {
+		background-color: var(--bd-white);
+		padding: 40px 40px;
+		@media #{$lg,$md,$sm,$xs} {
+			padding: 30px 30px;
+		}
+		&:hover{
+			.icon{
+				transform: rotateY(180deg);
+				color: var(--bd-primary);
+			}
+		}
+		.icon {
+			margin-bottom: 20px;
+			transition: all 0.8s ease;
+			display: inline-block;
+			span{
+				i{
+					font-size: 60px;
+				}
+			}
+
+		}
+		.title {
+			font-size: 24px;
+			margin-bottom: 15px;
+			@media #{$lg} {
+				font-size: 22px;
+			}
+			@media #{$md,$sm,$xs} {
+				font-size: 20px;
+			}
+		}
+	}
+	&.style-two {
+		padding: 40px 40px;
+		border: 1px solid var(--bd-border-primary);
+		margin-top: 45px;
+		@media #{$lg,$md,$sm,$xs} {
+			padding: 30px 30px;
+		}
+		@media #{$lg,$md,$sm,$xs}{
+			margin-top: 55px;
+		}
+		&:hover{
+			.icon{
+				transform: rotateY(180deg);
+			}
+		}
+		.icon {
+			transition: all 0.8s ease;
+			background-color: var(--bd-primary);
+			border-radius: 100%;
+			justify-content: center;
+			align-items: center;
+			width: 80px;
+			height: 80px;
+			margin-top: -86px;
+			margin-bottom: 25px;
+			display: flex;
+			span{
+				i{
+					font-size: 40px;
+					color: var(--bd-white);
+				}
+			}
+
+		}
+		.title {
+			font-size: 24px;
+			margin-bottom: 15px;
+			@media #{$lg} {
+				font-size: 22px;
+			}
+			@media #{$md,$sm,$xs} {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+/* style three */
+.why-choose{
+	&-details{
+		margin-bottom: 40px;
+	}
+	&-list{
+		&-content{
+			.title{
+				font-size: 24px;
+				margin-bottom: 10px;
+				@media #{$xl,$lg,$md,$sm} {
+					font-size: 22px;
+				}
+				@media #{$xs} {
+					font-size: 20px;
+				}
+			}
+		}
+		&-item{
+			display: flex;
+		  	gap: 10px 20px;
+			@media #{$xxs}{
+				flex-wrap: wrap;
+			}
+			&:not(:last-child){
+				margin-bottom: 25px;
+			}
+		}
+		&-icon{
+			i{
+				font-size: 40px;
+				line-height: 40px;
+				color: var(--bd-primary);
+			}
+		}
+	}
+	&-thumb{
+		margin-left: 50px;
+		max-width: 600px;
+		@media #{$md,$sm,$xs}{
+			max-width: 100%;
+		}
+		@media #{$lg}{
+			position: sticky;
+			top: 50px;
+		}
+		@media #{$md,$sm,$xs}{
+			margin-left: 0px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+}

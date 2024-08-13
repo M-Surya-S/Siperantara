@@ -1,0 +1,50 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.6 Copyright Style 1
+/*----------------------------------------*/
+
+/* Footer copyright style */
+.footer-copyright-area {
+    position: relative;
+    z-index: 5;
+    padding: 27px 0;
+}
+.footer-copyright-area {
+    &.style-one,
+    &.style-two{
+        &:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        .footer-copyright{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.footer-copyright-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px 40px;
+    @media #{$xs,$sm} {
+        justify-content: center;
+    }
+}
+.footer-copyright {
+	.description {
+		color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        a {
+            color: var(--bd-primary);
+        }
+	}
+}

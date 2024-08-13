@@ -1,0 +1,263 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 Breadcrumb
+/*----------------------------------------*/
+
+.bd-breadcrumb {
+  position: relative;
+  z-index: 2;
+  padding: 170px 0;
+
+  @media #{$xl} {
+    padding: 150px 0;
+  }
+
+  @media #{$lg} {
+    padding: 120px 0;
+  }
+
+  @media #{$md} {
+    padding: 100px 0;
+  }
+
+  @media #{$sm,$xs} {
+    padding: 100px 0;
+  }
+
+  &-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0.4;
+      background: #000;
+    }
+  }
+
+  &-title {
+    color: var(--bd-white);
+    margin-bottom: 20px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px 30px;
+    color: var(--bd-white);
+    flex-wrap: wrap;
+
+    span {
+      position: relative;
+
+      a {
+        &:hover {
+          color: var(--bd-primary);
+        }
+      }
+
+      i {
+        margin-inline-end: 10px;
+      }
+
+      &:not(:last-child) {
+        &::before {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 6px;
+          border-radius: 40%;
+          background-color: var(--bd-white);
+          inset-inline-end: -15px;
+          top: 50%;
+        }
+      }
+    }
+  }
+
+  &-area {
+    &.style-two {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .bd-breadcrumb-title {
+        margin-bottom: 10px;
+      }
+
+      .bd-breadcrumb-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &.style-two {
+    .bd-breadcrumb-title {
+      color: var(--bd-black);
+    }
+
+    .bd-breadcrumb-list {
+      color: var(--bd-black);
+    }
+
+    .bd-breadcrumb-list span:not(:last-child)::before {
+      background-color: var(--bd-black);
+    }
+
+    @media #{$xxs} {
+      padding-top: 100px;
+      padding-bottom: 130px;
+    }
+  }
+}
+
+.bd-breadcrumb-banner-area {
+  min-height: 720px;
+}
+
+.breadcrumb-banner-bg {
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    background: var(--bd-secondary);
+  }
+}
+
+.has-black {
+  .bd-breadcrumb-title {
+    color: var(--bd-black);
+  }
+
+  .bd-breadcrumb-list {
+    span {
+      color: var(--bd-black);
+    }
+  }
+}
+
+.breadcrumb-bg {
+  background-color: #E8D7BD;
+}
+
+.bd-breadcrumb-shape {
+  .shape-1 {
+    position: absolute;
+    z-index: 5;
+    left: 100px;
+    bottom: 0;
+
+    @media #{$md} {
+      left: 50px;
+    }
+
+    @media #{$sm,$xs} {
+      left: 30px;
+    }
+
+    @media #{$xxs} {
+      left: 20px;
+    }
+
+    img {
+      @media #{$xl} {
+        width: 180px;
+      }
+
+      @media #{$lg} {
+        width: 150px;
+      }
+
+      @media #{$md} {
+        width: 100px;
+      }
+
+      @media #{$sm,$xs} {
+        width: 80px;
+      }
+    }
+  }
+
+  .shape-2 {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+
+    img {
+      @media #{$xl} {
+        width: 600px;
+      }
+
+      @media #{$lg} {
+        width: 450px;
+      }
+
+      @media #{$md} {
+        width: 350px;
+      }
+
+      @media #{$sm} {
+        width: 300px;
+      }
+
+      @media #{$xs} {
+        width: 250px;
+      }
+    }
+  }
+
+  .shape-3 {
+    position: absolute;
+    z-index: 5;
+    right: 320px;
+    top: 50px;
+
+    @media #{$xl} {
+      right: 250px;
+    }
+
+    @media #{$lg} {
+      right: 180px;
+    }
+
+    @media #{$md} {
+      right: 120px;
+    }
+
+    @media #{$sm} {
+      right: 120px;
+    }
+
+    @media #{$xs} {
+      right: 90px;
+    }
+
+    @media #{$xxs} {
+      top: 20px;
+      right: 30px;
+    }
+
+    img {
+      @media #{$sm,$xs} {
+        width: 50px;
+      }
+    }
+  }
+}

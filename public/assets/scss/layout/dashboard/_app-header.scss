@@ -1,0 +1,166 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.3.1 Dashboard Header css
+/*----------------------------------------*/
+
+.app-header {
+    background-color: var(--bd-white);
+    position: fixed;
+    width: calc(100% - 260px);
+    transition: 0.5s;
+    top: 0;
+    z-index: 999;
+    right: 0;
+
+    &.collapsed {
+        width: 100%;
+    }
+
+    @media #{$xs,$sm,$md} {
+        width: 100%;
+    }
+
+    &-inner {
+        @include flexbox();
+        justify-content: space-between;
+        padding: 13px 30px;
+        transition: 0.3s;
+        height: 70px;
+        align-items: center;
+        column-gap: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    &-left {
+        @include flexbox();
+        align-items: center;
+        gap: 40px;
+    }
+
+    &-input {
+        input[type="text"] {
+            border: 1px solid var(--bd-border-primary);
+            height: 36px;
+            padding-right: 55px;
+            &:focus {
+                border-color: var(--bd-black);
+            }
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        button {
+            position: absolute;
+            inset-inline-end: 20px;
+            font-size: 14px;
+            color: #060606;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-right {
+        @include flexbox();
+        align-items: center;
+        column-gap: 30px;
+    }
+    &-title{
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            font-size: 24px;
+        }
+    }
+}
+.admin-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.admin-meta {
+    display: inline-block;
+    text-align: start;
+}
+.admin-meta-name {
+    font-size: 20px;
+    color: var(--bd-black);
+    font-family: var(--bd-ff-heading);
+    font-weight: var(--bd-fw-sbold);
+    display: block;
+}
+.status {
+    padding-left: 15px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        background-color: var(--bd-success);
+        left: 0;
+        top: 58%;
+        transform: translateY(-50%);
+    }
+}
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "\f107";
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    font-family: var(--bd-ff-fontawesome);
+    font-size: 20px;
+}
+.dropdown-menu.show {
+    width: 100%;
+    font-size: 16px;
+    transform: translate(0px, 60px) !important;
+}
+.avatar-sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    min-width: 50px;
+}
+.bar {
+    &-icon {
+        width: 20px;
+        height: 18px;
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 2px;
+            background: var(--bd-text-primary);
+            display: inline-block;
+
+            &:nth-child(2) {
+                margin-inline-start: -10px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            span {
+                &:nth-child(2) {
+                    margin-inline-start: 0;
+                }
+            }
+        }
+    }
+}

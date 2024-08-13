@@ -1,0 +1,93 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Agent details css
+/*----------------------------------------*/
+
+.agent-details-widget{
+    border: 1px solid var(--bd-border-primary);
+    padding: 30px 30px;
+    @media #{$xxs}{
+        padding: 20px 20px;
+    }
+    .input-box{
+        textarea{
+            height: 150px;
+        }
+    }
+}
+
+.bd-product-details{
+    &-additional-info{
+        padding-top: 30px;
+        @media #{$xs}{
+            overflow-x: scroll;
+        }
+        $add : &;
+        &-title{
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            display: none;
+        }
+    
+        &.bd-table-style-2{
+            padding-top: 50px;
+            #{$add}-title{
+                display: block;
+            }
+            & table{
+                border: 0;
+                border-collapse: separate;
+                border-spacing: 0 7px;
+                & tr{
+                    border: 0;
+                    &:not(:last-child){
+                        border: 0;
+                        margin-bottom: 6px;
+                    }
+    
+                    & td{
+                        padding: 7px 24px;
+                        border: 1px solid #E6E7E8;
+                        &:first-child{
+                            padding-left: 24px;
+                            border-right: 0;
+                        }
+                        &:last-child{
+                            padding-left: 34px;
+                        }
+                    }
+                }
+            }
+        }
+        & table{
+            border: 1px solid var(--bd-border-primary);
+            width: 100%;
+            @media #{$xs} {
+                width: 500px;
+            }
+            & tr{
+                &:not(:last-child){
+                    border-bottom: 1px solid #ECEDED;
+                }
+                & td{
+                    padding: 12px 34px;
+                    &:first-child{
+                        font-size: 16px;
+                        color: var(--bd-black);
+                        background-color: #F9F9F9;
+                        width: 306px;
+                        @media #{$xs,$sm} {
+                            width: 180px;
+                        }
+                    }
+                    &:last-child{
+                        font-size: 16px;
+                        color: var(--bd-text-primary);
+                    }
+                }
+            }
+        }
+    }
+}

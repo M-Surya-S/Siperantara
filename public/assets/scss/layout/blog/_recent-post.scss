@@ -1,0 +1,73 @@
+
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.2 Recent Post css
+/*----------------------------------------*/
+
+.sidebar-blog{
+    &-item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media #{$xxs}{
+            flex-wrap: wrap;
+        }
+        &:not(:last-child){
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--bd-border-primary);
+        }
+        &:hover{
+            .sidebar-blog-thumb{
+                img{
+                    transform: scale3d(1.07, 1.07, 1.07);
+                }
+            }
+        }
+    }
+    &-thumb{
+        overflow: hidden;
+        width: 110px;
+        height: 90px;
+        object-fit: cover;
+        min-width: 110px;
+        @media #{$lg}{
+            width: 80px;
+            min-width: 80px;
+        }
+        @media #{$xxs}{
+            width: 100%;
+            height: 100%;
+        }
+        & img{
+            transition: all 1.1s cubic-bezier(0, 0, 0.2, 1);
+            width: 100%;
+            height: 90px;
+            @media #{$xxs}{
+                height: 100%;
+            }
+        }
+    }
+    &-title{
+        font-size: 16px;
+        line-height: 1.3;
+        & a{
+            &:hover{
+                color: var(--bd-primary);
+            }
+        }
+
+    }
+    &-meta{
+        & span{
+            font-size: 14px;
+            color: var(--bd-taxonomy);
+            & a{
+                &:hover{
+                    color: var(--bd-primary);
+                }
+            }
+        }
+    }
+}

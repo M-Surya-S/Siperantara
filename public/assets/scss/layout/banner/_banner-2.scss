@@ -1,0 +1,314 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.1 banner Style 1
+/*----------------------------------------*/
+
+/* Banner style */
+.banner-style-two  {
+	.banner-shape-one {
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		top: 80px;
+		@media #{$xl}{
+			max-width: 370px;
+		}
+		@media #{$lg}{
+			top: 90px;
+   			right: -100px;
+			max-width: 400px;
+		}
+		@media #{$md}{
+			top: 105px;
+			right: -100px;
+			max-width: 380px;
+		}
+		@media #{$sm}{
+			max-width: 300px;
+		}
+		@media #{$xs}{
+			display: none;
+		}
+	}
+	.banner-shape-two {
+		position: absolute;
+		right: 170px;
+		z-index: 2;
+		top: 30px;
+		@media #{$xxl}{
+			right: 170px;
+			top: 0px;
+		}
+		@media #{$xl}{
+			right: 200px;
+			top: -90px;
+		}
+		@media #{$lg,$md,$sm,$xs}{
+			display: none;
+		}
+	}
+	.banner-shape-three {
+		position: absolute;
+		right: 410px;
+		z-index: 2;
+		top: 80px;
+		max-width: 260px;
+		@media #{$xxl}{
+			right: 400px;
+			top: 80px;
+			max-width: 240px;
+		}
+		@media #{$xl,$lg,$md,$sm,$xs}{
+			display: none;
+		}
+	}
+	.banner-shape-four {
+		position: absolute;
+		right: -5px;
+		z-index: 2;
+		bottom: 70px;
+		@media #{$xxl}{
+			right: 5px;
+		}
+		@media #{$xl}{
+			right: 20px;
+		}
+		@media #{$lg}{
+			right: 10px;
+		}
+		@media #{$md,$sm,$xs}{
+			display: none;
+		}
+	}
+	.banner-shape-five {
+		position: absolute;
+		left: 0px;
+		z-index: 2;
+		bottom: 0;
+		@media #{$sm,$xs}{
+			display: none;
+		}
+	}
+	.banner-wrapper-three {
+		position: relative;
+		z-index: 10;
+	}
+	.subtitle {
+		color: var(--bd-white);
+		display: block;
+		margin-bottom: 15px;
+ 	    font-size: 18px;
+		@media #{$xxs}{
+			font-size: 16px;
+		}
+	}
+	.banner-single-item {
+		padding: 225px 0 360px;
+		position: relative;
+		@media #{$xl} {
+			padding: 185px 0 320px;
+		}
+		@media #{$lg,$sm} {
+			padding: 165px 0 270px;
+		}
+		@media #{$md} {
+			padding: 175px 0 270px;
+		}
+		@media #{$xs} {
+			padding: 140px 0 250px;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 100%;
+			background: var(--bd-black);
+			opacity: 0.60;
+			top: 0;
+			left: 0;
+		}
+	}
+	.banner-title {
+		display: block;
+		font-size: 80px;
+		color: var(--bd-white);
+		@media #{$xxl} {
+			font-size: 66px;
+		}
+		@media #{$xl} {
+			font-size: 60px;
+		}
+		@media #{$lg} {
+			font-size: 56px;
+		}
+		@media #{$md} {
+			font-size: 50px;
+		}
+		@media #{$sm} {
+			font-size: 46px;
+		}
+		@media #{$xs} {
+			font-size: 60px;
+		}
+		@media #{$xs} {
+			font-size: 44px;
+		}
+		@media #{$xxs} {
+			font-size: 32px;
+		}
+		.inner {
+			display: flex;
+		}
+		.arrow-shape {
+			margin-right: 30px;
+			display: block;
+			@media #{$md} {
+				margin-right: 10px;
+				max-width: 30px;
+			}
+			@media #{$xs,$sm,$md} {
+				max-width: 30px;
+			}
+			@media #{$xxs} {
+				margin-right: 10px;
+				max-width: 15px;
+			}
+		}
+	}
+	.banner-thumb {
+		min-height: 500px;
+		@media #{$sm,$md,$lg} {
+			min-height: 360px;
+		}
+		@media #{$xs} {
+			min-height: 280px;
+		}
+	}
+}
+.from-inner {
+    position: relative;
+    margin-top: -160px;
+}
+.banner-from-two {
+	position: relative;
+	z-index: 10;
+	.bd-tab {
+		.nav-tabs {
+			display: inline-flex;
+			background: var(theme-bg-primary);
+			align-items: center;
+			@media #{$xs,$sm,$md} {
+				width: 100%;
+			}
+			.nav-link {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 34px;
+				height: 70px;
+				background: var(--bd-white);
+				color: var(--bd-black);
+				font-size: 20px;
+				font-weight: var(--bd-fw-medium);
+				gap: 20px;
+				@media #{$xs,$sm} {
+					padding: 0px 15px;
+					height: 65px;
+					font-size: 18px;
+					gap: 7px;
+				}
+				&.active {
+					background-color: var(--bd-primary);
+					color: #fff;
+
+				}
+				span{
+					i{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+	.banner-booking-select {
+		display: inline-flex;
+		align-items: center;
+		gap: 20px;
+		width: 943px;
+		justify-content: space-between;
+		@media #{$xs,$sm,$md,$lg} {
+			width: 100%;
+		}
+		@media #{$xs,$sm} {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+	.banner-submit {
+		@media #{$xs,$sm,$md} {
+			width: 100%;
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
+.booking-select {
+	&:not(:last-child) {
+		width: 100%;
+	}
+}
+.from-type-wrapper {
+	.booking-select {
+		width: max-content;
+		height: 26px;
+		@media #{$xs} {
+			width: 100%;
+		}
+		.nice-select {
+			border: 0;
+			height: inherit;
+			padding: 0;
+			width: max-content;
+			@media #{$xs} {
+				width: 100%;
+			}
+			&:after {
+				right: -22px;
+				@media #{$xs} {
+					right: 0px;
+				}
+			}
+			.list {
+				width: max-content;
+				@media #{$xs} {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.inner-wrapper {
+    padding: 40px;
+    background: var(--bd-white);
+    filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.05));
+    display: inline-block;
+	width: 100%;
+	@media #{$xs,$sm,$md,$lg} {
+		width: 100%;
+	}
+	@media #{$xs} {
+		padding: 20px;
+	}
+}
+.from-type-wrapper {
+	display: inline-flex;
+    align-items: center;
+    gap: 30px 65px;
+    margin-bottom: 20px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+	}
+}

@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Shortcodes
+/*----------------------------------------*/
+
+/* Badge */
+.bd-badge {
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 0px 15px;
+    color: var(--bd-black);
+    line-height: 1;
+    text-align: center;
+    background-color: var(--bd-white);
+	height: 26px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 93px;
+	&.primary {
+		background: var(--bd-primary);
+		color: var(--bd-white);
+	}
+	&.warning {
+		background: var(--bd-warning);
+		color: var(--bd-white);
+	}
+	&.danger {
+		color: var(--bd-white);
+		background: var(--bd-danger);
+	}
+	&.success {
+		color: var(--bd-white);
+		background: var(--bd-success);
+	}
+	&.info {
+		color: var(--bd-white);
+		background: var(--bd-info);
+	}
+	&.black {
+		color: var(--bd-white);
+		background: var(--bd-black);
+	}
+}
+
+.bd-badge-sq {
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.property-table-wrapper {
+	.bd-badge {
+		min-width: 105px;
+	}
+}

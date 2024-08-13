@@ -1,0 +1,164 @@
+@use "../../utils" as *;
+/*----------------------------------------*/
+/*  2.2 Video
+/*----------------------------------------*/
+
+.bd-video-area{
+    &.style-one{
+        min-height: 550px;
+        @media #{$xl}{
+            min-height: 500px;
+        }
+        @media #{$lg}{
+            min-height: 450px;
+        }
+        @media #{$md}{
+            min-height: 400px;
+        }
+        @media #{$sm}{
+            min-height: 350px;
+        }
+        @media #{$xs}{
+            min-height: 300px;
+        }
+        &:hover{
+            .video-play{
+                .bd-play-btn{
+                    &::before{
+                        border: 1px dashed var(--bd-white);
+                        -webkit-animation-name: rotate-infinite;
+                        -webkit-animation-duration: 8s;
+                        -webkit-animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: linear;
+                    }
+                }
+            }
+        }
+        .video-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &::before{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background: rgba(4, 4, 4, 0.3);
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+        }
+        .video-play{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 5;
+            .bd-play-btn{
+                width: 80px;
+                height: 80px;
+                font-size: 20px;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: calc(100% + 10px);
+                    height: calc(100% + 10px);
+                    left: -5px;
+                    top: -5px;
+                    border-radius: 50%;
+                    border: 1px dashed var(--bd-primary);
+                }
+                &:hover{
+                    background: var(--bd-white);
+                    i{
+                        color: var(--bd-black);
+                    }
+                }
+            }
+        }
+    }
+    &.style-two{
+        min-height: 550px;
+        position: relative;
+        @media #{$xl}{
+            min-height: 500px;
+        }
+        @media #{$lg}{
+            min-height: 450px;
+        }
+        @media #{$md}{
+            min-height: 400px;
+        }
+        @media #{$sm}{
+            min-height: 350px;
+        }
+        @media #{$xs}{
+            min-height: 300px;
+        }
+        .video-bg-thumb {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &::before{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background: rgba(4, 4, 4, 0.4);
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+        }
+        .video-play{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            .play-btn {
+                width: 130px;
+                height: 130px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-weight: var(--bd-fw-medium);
+                overflow: hidden;
+                position: relative;
+                border: 1px solid var(--bd-white);
+                transition: .7s;
+                &:hover{
+                    > span.dot{
+                        width: 470px;
+                        height: 470px;
+                    }
+                    border-color: var(--bd-primary);
+                }
+                > span.dot{
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    left: 0;
+                    top: 0;
+                    border-radius: 50%;
+                    transition: .7s;
+                        transition-timing-function: ease;
+                    transform: translate(-50%,-50%);
+                    transition-timing-function: linear;
+                    z-index: -1;
+                    background: var(--bd-primary);
+                }
+                .text{
+                    color: var(--bd-white);
+                }
+            }
+        }
+    }
+}

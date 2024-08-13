@@ -1,0 +1,128 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.22 Services details css
+/*----------------------------------------*/
+
+.services-details{
+    &-newsletter{
+        background: var(--bd-black);
+        margin-bottom: 30px;
+        padding: 30px 30px;
+        text-align: center;
+        @media #{$xxs}{
+            padding: 20px 20px;
+        }
+        .subtitle{
+            font-size: 16px;
+            color: var(--bd-primary);
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .title{
+            font-size: 28px;
+            color: var(--bd-white);
+            margin-bottom: 20px;
+        }
+    }
+    &-form{
+        .bd-common-form{
+            input{
+                height: 50px;
+                background-color: var(--bd-white);
+                color: var(--bd-black);
+                padding-right: 70px;
+            }
+            button{
+                width: 50px;
+                height: 50px;
+                background: var(--bd-primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: .3s;
+                i{
+                    color: var(--bd-white);
+                    transition: .3s;
+                }
+                &:hover{
+                    i{
+                        color: var(--bd-black);
+                    }
+                }
+            }
+        }
+    }
+    &-thumb{
+        min-height: 510px;
+        @media #{$xs}{
+            min-height: 400px;
+        }
+    }
+    &-bg-thumb{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .7;
+        }
+    }
+    &-play-btn{
+        margin-bottom: 30px;
+        .bd-play-btn{
+            &:hover{
+                background: var(--bd-white);
+                i{
+                    color: var(--bd-black);
+                }
+            }
+        }
+    }
+    &-sidebar-content{
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        text-align: center;
+        padding: 20px 20px;
+        span{
+            color: rgba(255,255,255,.7);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .support-text{
+            font-size: 24px;
+            color: var(--bd-white);
+            margin-bottom: 20px;
+            @media #{$xs}{
+                font-size: 22px;
+            }
+        }
+        .contact-call{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--bd-white);
+            justify-content: center;
+            margin-bottom: 30px;
+            a{
+                &:hover{
+                    color: var(--bd-primary);
+                }
+            }
+        }
+    }
+}

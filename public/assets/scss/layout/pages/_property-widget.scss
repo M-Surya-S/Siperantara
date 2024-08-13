@@ -1,0 +1,204 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.15 Product Widget CSS
+/*----------------------------------------*/
+
+.bd-property-widget{
+    &-title{
+        font-weight: 500;
+        font-size: 18px;
+        border-bottom: 1px solid #EEEEEE;
+        padding-bottom: 5px;
+        margin-bottom: 25px;
+        &.no-border{
+            border: 0;
+            padding-bottom: 0;
+            margin-bottom: 14px;
+        }
+    }
+
+    &-checkbox{
+        & ul {
+            & li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                 gap: 10px 15px;
+                span{
+                    color: var(--bd-text-primary);
+                }
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                & input{
+                    display: none;
+
+                    .single-widget-category input:checked + label::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                label{
+                    font-size: 16px;
+                    color: var(--bd-taxonomy);
+                    position: relative;
+                    padding-left: 26px;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &-categories{
+        & ul{
+            & li{
+                list-style: none;
+                width: 100%;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                & a{
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: var(--bd-taxonomy);
+                    position: relative;
+                    padding-left: 16px;
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        top: 10px;
+                        left: 0;
+                        width: 6px;
+                        height: 6px;
+                        text-align: center;
+                        background-color: #E7E7E7;
+                        border-radius: 50%;
+                        @extend %bd-transition-3;
+                    }
+
+                    &:hover{
+                        color: var(--bd-primary);
+                        &::after{
+                            background-color: var(--bd-primary);
+                        }
+                        & span{
+                            background-color: var(--bd-primary);
+                            border-color: var(--bd-primary);
+                            color: var(--bd-white);;
+                        }
+                    }
+
+                    & span{
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 1;
+                        border: 1px solid #EAEAEA;
+                        padding: 5px 6px 3px;
+                        @extend %bd-transition-3;
+                    }
+                }
+            }
+        }
+    }
+    &-checkbox-circle{
+        position: relative;
+        &-list{
+            & ul{
+                & li{
+                    list-style: none;
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    &:not(:last-child){
+                        margin-bottom: 5px;
+                    }
+
+                    &:hover{
+                        & .bd-shop-widget-checkbox-circle-number{
+                            background-color: var(--bd-primary);
+                            border-color: var(--bd-primary);
+                            color: var(--bd-white);;
+                        }
+                    }
+                }
+            }
+        }
+        &-number{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+            padding: 5px 6px 3px;
+            @extend %bd-transition-3;
+        }
+
+        
+        & .bd-shop-widget-checkbox-circle-self{
+            position: absolute;
+            content: '';
+            top: 4px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            z-index: -1;
+            border-radius: 50%;
+            transition: 2s;
+        }
+        
+        & input{
+            display: none;
+
+            .single-widget-category input:checked + label::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:checked{
+                & ~ label{
+                    &::before{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        label{
+            font-size: 16px;
+            color: #55585B;
+            position: relative;
+            padding-left: 26px;
+            
+            &::before{
+                position: absolute;
+                content: url('../img/product/icons/check-2.svg');
+                top: 3px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                text-align: center;
+                visibility: hidden;
+                opacity: 0;
+                color: var(--bd-white);;
+                transition: 1s;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

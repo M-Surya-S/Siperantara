@@ -1,0 +1,319 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.16 Property CSS
+/*----------------------------------------*/
+
+.property-item{
+    &.style-one{
+        &:hover {
+            &:hover {
+                .thumb {
+                    img {
+                        transform: scale3d(1.07, 1.07, 1.07);
+                    }
+                }
+            }
+        }
+        .thumb {
+            overflow: hidden;
+            margin-bottom: 20px;
+            img {
+                height: 350px;
+                width: 100%;
+                transition: all 1.1s cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .content {
+            & > .title {
+                font-size: 24px;
+                margin-bottom: 10px;
+                @media #{$lg} {
+                    font-size: 22px;
+                }
+                @media #{$md,$sm,$xs} {
+                    font-size: 20px;
+                }
+                a {
+                    &:hover {
+                        color: var(--bd-primary);
+                    }
+                }
+            }
+            .info{
+                color: var(--bd-text-primary);
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+            .price{
+                span{
+                    color: var(--bd-primary);
+                    font-size: 18px;
+                }
+            }
+        }
+        .meta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+    }
+        .bd-meta {
+           .meta-item {
+            .icon {
+                color: #B9B9B9;
+                font-size: 20px;
+            }
+           }
+        }
+    }
+}
+// style two */
+.property-content {
+        margin-right: 60px;
+        @media #{$xs, $sm, $md,$lg}{
+            margin-right: 0;
+        }
+        .title {
+            margin-bottom: 20px;
+            @media #{$md}{
+                font-size: 30px;
+            }
+        }
+        .house-info {
+            .room {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 15px;
+                @media #{$xs, $sm, $md, $lg, $xl}{
+                    margin-bottom: 15px;
+                }
+                border-bottom: 1px solid var(--bd-border-primary);
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                span {
+                    color: var(--bd-taxonomy);
+                    border-bottom: none;
+                }
+            }
+        }
+        .description{
+            margin-bottom: 35px;
+        }
+    .offer-tour-btn{
+        margin-top: 45px;
+        @media #{$xs, $sm, $md}{
+            margin-bottom: 45px;
+            text-align: center;
+        }
+    }
+}
+/* property panel */
+.row-custom {
+    &.property-panel {
+        display: flex;
+        margin: 0 -15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @media #{$xs, $sm, $md} {
+            padding: 0;
+        }
+        .col-custom {
+            flex: .4;
+            width: 80px;
+            height: 500px;
+            background-size: cover;
+            margin: 10px;
+            background: #FFFFFF;
+            border: 1px solid var(--bd-border-primary);
+            padding: 30px 27px;
+            transition: 0.3s;
+            cursor: pointer;
+            @media #{$xl} {
+                padding: 40px 40px;
+            }
+            @media #{$md} {
+                padding: 40px 25px;
+            }
+            @media #{$xs} {
+                padding: 40px 10px;
+                width: 50px;
+            }
+            &.active {
+                flex: 7;
+                padding: 0;
+                & .bd-panel-item {
+                    display: none;
+                }
+                & .bd-panel-item-2 {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                    transition-delay: 0.3s;
+                    transition: .3s;
+                }
+            }
+        }
+        .bd-panel-title {
+            width: 200px;
+            transform: rotate(90deg) translate(90px, 88px);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 0px;
+            color: #000000;
+            margin-bottom: 0;
+            @media #{$xs}{
+                font-size: 18px;
+            }
+            &.child-one {
+                transform: rotate(270deg) translate(-365px, -88px);
+            }
+            &.child-two {
+                transform: rotate(270deg) translate(-370px, -88px);
+            }
+            &.child-three {
+                transform: rotate(270deg) translate(-365px, -88px);
+            }
+        }
+        .bd-panel-content {
+            text-align: center;
+            & span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                color: #000000;
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+            }
+        }
+        .bd-panel-content-2 {
+            img {
+                width: 100%;
+                height: 500px;
+            }
+        }
+        .bd-panel-item-2 {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(.7);
+        }
+    }
+}
+.bd-property-btn {
+    margin-top: 45px;
+}
+/* property inner style */
+.bd-property-top{
+    position: relative;
+    &-select{
+        & .nice-select{
+            background-color: #F9F9F9;
+            border-radius: 0;
+            font-size: 14px;
+            color: var(--bd-black);
+            height: 40px;
+            line-height: 38px;
+            padding: 0 25px;
+            min-width: 204px;
+            float: none;
+            @media #{$xs}{
+                max-width: 280px;
+            }
+            &::after{
+                right: 20px;
+                color: #767A7D;
+            }
+
+            &.open{
+                & .list{
+                    @include transform(scale(1) translateY(0px));
+                }
+            }
+
+            & .list{
+                margin-top: 0;
+                border-radius: 0;
+                transform-origin: center center;
+                @include transform(scale(.9) translateY(0px));
+                width: 100%;
+                padding: 10px 0;
+                & .option{
+                    line-height: 1.2;
+                    min-height: inherit;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    &-filter{
+        margin-left: 16px;
+        @media #{$xs}{
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+    &-result{
+        & p{
+            font-weight: 400;
+            font-size: 16px;
+            color: #818487;
+            margin-bottom: 0;
+        }
+    }
+    &-tab{
+        margin-right: 22px;
+        @media #{$xs}{
+            margin-right: 10px;
+        }
+        & .nav-tabs{
+            & .nav-item{
+                & .nav-link{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    color: #818487;
+                    border: 1px solid var(--bd-border-primary);
+                    border-radius: 0;
+                    margin-right: 6px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    @media #{$xxs}{
+                        margin-right: 0;
+                    }
+                    & svg{
+                        color: var(--bd-black);
+                    }
+                    &.active{
+                        color: var(--bd-black);
+                        border-color: var(--bd-black);
+                    }
+                }
+            }
+        }
+    }
+    &-right{
+        @media #{$sm, $xs}{
+            margin-top: 30px;
+        }
+        &:not(.bd-shop-top-right-2){
+            @media #{$lg, $md, $sm, $xs}{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+/* Property Tab Hide & Show CSS */
+.property-content {
+    &.propertyTabContent {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}

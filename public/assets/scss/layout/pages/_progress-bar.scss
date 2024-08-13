@@ -1,0 +1,122 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.21 progress css
+/*----------------------------------------*/
+
+.single-progress-bar {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+	gap: 15px;
+	position: relative;
+}
+
+.single-progress-bar .rating-text {
+	color: var(--bd-gray);
+	font-weight: var(--bd-fw-medium);
+	flex-basis: 2%;
+}
+
+.single-progress-bar .progress {
+	background-color: #F7F3FF;
+}
+.progress {
+	width: 100%;
+	border-radius: 0;
+	height: 18px;
+}
+.progress .progress-bar.bg-1 {
+	background-color: #07BB98;
+}
+.progress .progress-bar.bg-2 {
+	background-color: #A5E562;
+}
+.progress .progress-bar.bg-3 {
+	background-color: #DDEF08;
+}
+.progress .progress-bar.bg-4 {
+	background-color: #FFC107;
+}
+.progress .progress-bar.bg-5 {
+	background-color: #FF6125;
+}
+
+.single-progress-bar .value-text {
+	color: var(--bd-black);
+	font-weight: var(--bd-fw-medium);
+	width: 38px;
+}
+.single-progress-bar .number {
+	color: var(--bd-gray);
+	font-weight: var(--bd-fw-medium);
+}
+
+.reallow {
+    &-progress {
+        &-bar {
+            overflow: hidden;
+
+            & .progress {
+                height: 10px !important;
+                overflow: visible;
+                width: 100% !important;
+                & .progress-bar {
+                    background-color: var(--bd-primary);
+                    position: relative;
+                    overflow: visible !important;
+
+                    &.bg-2 {
+                        background-color: var(--bd-success);
+                    }
+
+                    &.bg-3 {
+                        background-color: var(--bd-info);
+                    }
+
+                    &.bg-4 {
+                        background-color: var(--bd-warning);
+                    }
+
+                    &.bg-5 {
+                        background-color: var(--bd-dark);
+                    }
+                }
+            }
+            @media #{$md, $sm, $xs} {
+                padding-left: 0 !important;
+            }
+        }
+        &-wrapper {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            &.space-bottom {
+                &:not(:last-child) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+        &-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--bd-black);
+
+            span {
+                color: var(--bd-text-primary);
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        &-percentage {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--bd-black);
+        }
+    }
+}

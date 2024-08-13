@@ -1,0 +1,23 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.11 Error  css
+/*----------------------------------------*/
+.error-bg {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.error-wrapper {
+	margin-bottom: 100px;
+	p {
+		color: rgba($color: $white, $alpha: .70);
+		margin-bottom: 20px;
+	}
+}
+.error-heading-title {
+	font-size: 100px;
+	color: var(--bd-white);
+	margin-bottom: 10px;
+}

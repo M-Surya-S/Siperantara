@@ -1,0 +1,60 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.7 Widget css
+/*----------------------------------------*/
+
+.mail-title {
+    font-size: 35px;
+    color: var(--bd-primary);
+    margin-bottom: 20px;
+	display: inline-block;
+ 	 position: relative;
+	 z-index: 1;
+	 &::before{
+		content: "";
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		margin: auto;
+		left: 0;
+		bottom: -2px;
+		right: 0;
+		border-bottom: 2px solid var(--bd-primary);
+		transition: 0.5s cubic-bezier(0.24, 0.74, 0.58, 1);
+		z-index: -1;
+	 }
+	 &:hover{
+		&::before{
+			width: 100%;
+		}
+	 }
+	@media #{$lg} {
+		font-size: 32px;
+	}
+	@media #{$md} {
+		font-size: 28px;
+	}
+	@media #{$sm} {
+		font-size: 25px;
+	}
+	@media #{$xs} {
+		font-size: 22px;
+	}
+}
+.bd-cta-area {
+	&.style-one {
+		padding: 140px 0 150px;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		@media #{$md} {
+			padding: 120px 0 130px;
+		}
+		@media #{$sm} {
+			padding: 100px 0 110px;
+		}
+		@media #{$xs} {
+			padding: 80px 0 90px;
+		}
+	}
+}

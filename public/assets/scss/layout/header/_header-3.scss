@@ -1,0 +1,204 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.2 Header Style 3
+/*----------------------------------------*/
+.header-padding {
+    padding-left: 160px;
+    padding-right: 160px;
+
+    @media #{$xxl,$xl,$lg,$md} {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media #{$sm,$xs} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media #{$xxs} {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.header-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .header-menu {
+        text-align: start;
+    }
+}
+
+.header-style-three {
+    .header-menu-wrapper {
+        .header-hamburger {
+            display: none;
+        }
+    }
+
+    position: relative;
+    max-width: 1920px;
+    padding: 20px 100px 0 100px;
+
+    @media #{$lg,$md} {
+        padding: 15px 35px 0 35px;
+    }
+
+    @media #{$xs, $sm} {
+        padding: 15px 35px 0 35px;
+    }
+
+    @media #{$xxs} {
+        padding: 15px 35px 0 35px;
+    }
+
+    &::before {
+        background: var(--bd-black);
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .header-inner {
+        border-bottom: 1px solid var(--bd-rgba-color);
+        padding-bottom: 15px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            border-bottom: none;
+        }
+    }
+
+    &.bd-sticky {
+        background-color: var(--bd-white);
+
+        .main-menu-white {
+            li {
+                a {
+                    color: var(--bd-black);
+                }
+            }
+        }
+
+        .logo-black {
+            display: block;
+        }
+
+        .logo-white {
+            display: none;
+        }
+    }
+}
+
+.header-right {
+    &.style-three {
+        .inner-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: all .8s ease-in-out;
+
+            a {
+                line-height: 24px;
+                display: block;
+            }
+
+            .address {
+                color: var(--bd-white);
+                font-size: 14px;
+                margin-bottom: 0;
+
+                &:hover {
+                    color: var(--bd-primary);
+                }
+            }
+
+            .schedule {
+                font-size: 14px;
+                p {
+                    color: rgba($white, $alpha: 0.7);
+                    margin: 0;
+                }
+            }
+
+            .contact {
+
+                .contact-number,
+                .email {
+                    color: var(--bd-white);
+                    font-size: 14px;
+                    font-weight: var(--bd-fw-normal);
+
+                    &:hover {
+                        color: var(--bd-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-style-three {
+    .header-menu-wrapper {
+        .header-logo {
+            display: none;
+        }
+    }
+
+    &.bd-sticky {
+        max-width: 1920px;
+        padding: 0 35px;
+
+        .header-menu {
+            display: flex;
+            align-items: center;
+            gap: 0 35px;
+        }
+
+        .bd-btn.btn-white {
+            color: var(--bd-white);
+            background-color: var(--bd-black);
+        }
+
+        .bd-btn.btn-white span svg * {
+            fill: var(--bd-white);
+        }
+
+        &.header-style-three {
+            padding-top: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .header-inner {
+            display: none;
+        }
+
+        .header-menu-wrapper .header-logo {
+            display: block;
+        }
+
+        .header-menu {
+            display: flex;
+            align-items: center;
+            gap: 0 35px;
+        }
+
+        .header-menu-wrapper {
+            .header-hamburger {
+                display: block;
+            }
+        }
+    }
+}
