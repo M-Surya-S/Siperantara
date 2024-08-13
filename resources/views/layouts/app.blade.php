@@ -25,7 +25,7 @@
 
 
 <body>
-        
+
     <!-- filter search form modal start -->
     <div id="searchFilter" class="modal custom-modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -306,13 +306,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="offcanvas-btn mb-25">
-                        <h4 class="offcanvas-title-meta">Account</h4>
-                        <div class="header-btn-wrap gap-10">
-                            <a class="bd-btn btn-style text-btn" href="sign-in.html">Log In</a>
-                            <a class="bd-btn btn-style text-btn" href="contact.html">Get Started</a>
-                        </div>
-                    </div>
+
                     <div class="offcanvas-social">
                         <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
                         <ul>

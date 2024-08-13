@@ -8,13 +8,13 @@
     <div class="header-area header-primary has-border-bottom" id="header-sticky">
         <div class="header-inner">
             <div class="header-logo">
-                <a href="index.html"><img src="assets/images/logo/logo_siperantara.png" alt="Logo"></a>
+                <a href="/"><img src="assets/images/logo/logo_siperantara.png" alt="Logo"></a>
             </div>
             <div class="header-menu">
                 <nav class="bd-main-menu" id="mobile-menu">
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="home-one.html">Home</a>
+                            <a href="/">Home</a>
 
                         </li>
 
@@ -68,7 +68,7 @@
                         </li> -->
 
                         <li class="menu-item-has-children">
-                            <a href="property.html">Property</a>
+                            <a href="/property">Property</a>
 
                         </li>
 
@@ -81,7 +81,7 @@
                             </ul>
                         </li>
 
-                        <li class="has-mega-menu is-menu-none">
+                        {{-- <li class="has-mega-menu is-menu-none">
                             <a href="#">Elements</a>
                             <ul class="mega-menu mega-style-two">
                                 <li>
@@ -126,7 +126,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                         <!-- <li class="menu-item-has-children">
                             <a href="#">Dashboard</a>

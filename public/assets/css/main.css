@@ -41,7 +41,7 @@
 		3.5 badge
 		3.6 breadcrumb
 		3.7 buttons
-		3.8 carousel 
+		3.8 carousel
 		3.9 color
 		3.10 cursor
 		3.11 feature
@@ -205,7 +205,7 @@
   --bd-warning: #FFBD1F;
   --bd-danger: #dc3545;
   --bd-light: #f8f9fa;
-  --bd-dark: #212529;
+  --bd-dark: #000;
   --bs-primary-rgb: #FFBD1F;
   /** @font weight declaration */
   --bd-fw-normal: normal;
@@ -532,7 +532,7 @@ figure {
 }
 
 /*----------------------------------------
-    Body Overlay 
+    Body Overlay
 -----------------------------------------*/
 .body-overlay {
   background-color: var(--bd-black);
@@ -765,7 +765,7 @@ html {
 }
 
 /*---------------------------------
-    Typography css start 
+    Typography css start
 ---------------------------------*/
 body {
   color: var(--bd-black);
@@ -3299,7 +3299,7 @@ a .bd-icon-btn.hover-style i {
 }
 
 /*----------------------------------------*/
-/*  2.0 Section Title  
+/*  2.0 Section Title
 /*----------------------------------------*/
 /* section title */
 .section-title {
@@ -6662,7 +6662,7 @@ input:checked + .switch:before {
 }
 
 /*----------------------------------------*/
-/*  3.5.4 Header Common Style 
+/*  3.5.4 Header Common Style
 /*----------------------------------------*/
 .header-inner {
   display: flex;
@@ -22552,7 +22552,7 @@ blockquote cite::before {
 }
 
 /*----------------------------------------*/
-/*  2.11 Nice Select 
+/*  2.11 Nice Select
 /*----------------------------------------*/
 .nice-select {
   -webkit-tap-highlight-color: transparent;
@@ -22713,7 +22713,7 @@ blockquote cite::before {
 }
 
 /*----------------------------------------*/
-/*  2.11 Range Slider 
+/*  2.11 Range Slider
 /*----------------------------------------*/
 .ui-button-icon-only, .ui-controlgroup-vertical .ui-controlgroup-item {
   box-sizing: border-box;

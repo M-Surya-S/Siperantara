@@ -19,3 +19,12 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/property', function () {
+    return view('property');
+});
+Route::get('/agent', function () {
+    return view('detail.detail-agent');
+});
+Route::get('/property-details', function () {
+    return view('detail.detail-property');
+});

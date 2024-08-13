@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="footer-btn-wrap text-lg-end">
-                            <a class="bd-btn btn-style btn-hover-x hover-white" href="contact.html"><i class="fa-regular fa-arrow-right-long"></i>Get In Touch</a>
+                            <a class="bd-btn btn-style btn-hover-x hover-white" href="/contact"><i class="fa-regular fa-arrow-right-long"></i>Get In Touch</a>
                         </div>
                     </div>
                 </div>

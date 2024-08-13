@@ -1086,7 +1086,7 @@
         <!-- Featured area end -->
 
         <!-- Daily update area start -->
-        <section class="bd-daily-update-area section-space-bottom">
+        {{-- <section class="bd-daily-update-area section-space-bottom">
             <div class="container">
                 <div class="row g-5 align-items-xl-center">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -1143,11 +1143,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Daily update area end -->
 
         <!-- brand area start -->
-        <div class="bd-brand-area">
+        {{-- <div class="bd-brand-area">
             <div class="container">
                 <div class="brand-section-wrapper section-title-space">
                     <div class="line"></div>
@@ -1211,7 +1211,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- brand area end -->
 
         <!-- Apartments Plan Area Start -->
@@ -1473,7 +1473,7 @@
         <!-- Whychoose area end -->
 
         <!-- Neighbor area start -->
-        <section class="bd-neighbour-area section-space black-bg" data-background="assets/images/shapes/line.png">
+        {{-- <section class="bd-neighbour-area section-space black-bg" data-background="assets/images/shapes/line.png">
             <div class="container">
                 <div class="row gy-30 align-items-center section-title-space">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -1580,7 +1580,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Neighbour area enb -->
 
         <!-- team area start -->
@@ -1597,7 +1597,7 @@
                                     </span>
                                     <h2 class="section-title title-animation">Our skilled lead reallow agents</h2>
                                 </div>
-                                <a class="bd-half-outline-btn" href="agent-grid.html"><span class="text">Discover
+                                <a class="bd-half-outline-btn" href="/agent"><span class="text">Discover
                                         More</span></a>
                             </div>
                             <div class="pagination-wrapper">
@@ -2101,7 +2101,7 @@
         <!-- Blog area end -->
 
         <!-- Contact area start -->
-        <section class="bd-contact-area section-space">
+        {{-- <section class="bd-contact-area section-space">
             <div class="container">
                 <div class="row align-items-center gy-30">
                     <div class="col-xxl-4 col-xl-5 col-lg-5">
@@ -2207,7 +2207,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Contact area end -->
 
     </main>
