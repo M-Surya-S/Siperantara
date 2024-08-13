@@ -1974,7 +1974,7 @@
         <!-- benefits area end -->
 
         <!-- Blog area start -->
-        <section class="bd-blog-area section-space p-relative theme-bg-primary">
+        {{-- <section class="bd-blog-area section-space p-relative theme-bg-primary">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -2093,7 +2093,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Blog area end -->
 
         <!-- Contact area start -->
