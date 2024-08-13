@@ -1,7 +1,7 @@
 <!-- Header area start -->
 <header>
     <!-- Header top bar start -->
-    
+
     <!-- Header top bar end -->
 
     <!-- main header start -->
@@ -15,7 +15,7 @@
                     <ul>
                         <li class="menu-item-has-children">
                             <a href="home-one.html">Home</a>
-                           
+
                         </li>
 
                         <!-- <li class="has-mega-menu">
@@ -69,7 +69,7 @@
 
                         <li class="menu-item-has-children">
                             <a href="property.html">Property</a>
-                            
+
                         </li>
 
                         <li class="menu-item-has-children">
@@ -145,7 +145,7 @@
                         </li> -->
 
                         <li class="menu-item-has-children">
-                            <a href="contact.html">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
