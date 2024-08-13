@@ -21,8 +21,8 @@
                     <div class="footer-widget footer-1-col-1">
                         <div class="footer-wrapper-content">
                             <div class="footer-widget-logo">
-                                <a href="#">
-                                    <img src="assets/images/logo/logo-white.svg" alt="logo not found">
+                                <a href="/">
+                                    <img src="assets/images/logo/logo_siperantara_white.png" alt="logo not found">
                                 </a>
                             </div>
                             <div class="footer-contact-info">
@@ -111,12 +111,12 @@
         <div class="container">
             <div class="footer-copyright-wrap">
                 <div class="logo">
-                    <a href="#">
-                        <img src="assets/images/logo/logo-white.svg" alt="footer logo not found">
+                    <a href="/">
+                        <img style="max-height: 18px" src="assets/images/logo/logo_siperantara_white.png" alt="footer logo not found">
                     </a>
                 </div>
                 <div class="footer-copyright">
-                    <p class="description underline"> © <span id="year"></span> design by <a href="#">Reallow.</a> All Right
+                    <p class="description underline"> © <span id="year"></span> design by Siperantara. All Right
                         Reserved.</p>
                 </div>
             </div>
