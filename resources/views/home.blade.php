@@ -1762,7 +1762,7 @@
         <!-- video area end -->
 
         <!-- Testimonial area start -->
-        <section class="bd-testimonial-area fix section-space theme-bg-primary">
+        {{-- <section class="bd-testimonial-area fix section-space theme-bg-primary">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-5 col-xl-5 col-lg-6">
@@ -1889,7 +1889,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Testimonial area end -->
 
         <!-- benefits area start -->
