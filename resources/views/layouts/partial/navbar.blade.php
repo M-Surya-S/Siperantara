@@ -73,12 +73,8 @@
                         </li>
 
                         <li class="menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="dp-menu">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                            </ul>
+                            <a href="/guide">Guide</a>
+
                         </li>
 
                         {{-- <li class="has-mega-menu is-menu-none">

@@ -14,8 +14,8 @@
                             <div class="bd-breadcrumb-content text-center">
                                 <h1 class="bd-breadcrumb-title">Agent Grid</h1>
                                 <div class="bd-breadcrumb-list">
-                                    <span><a href="index.html"><i class="icon-home"></i>Home</a></span>
-                                    <span>Agent Grid</span>
+                                    <span><a href="/"><i class="icon-home"></i>Home</a></span>
+                                    <span>Detail Agent</span>
                                 </div>
                             </div>
                         </div>

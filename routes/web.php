@@ -28,3 +28,6 @@ Route::get('/agent', function () {
 Route::get('/property-details', function () {
     return view('detail.detail-property');
 });
+Route::get('/guide', function () {
+    return view('guide');
+});

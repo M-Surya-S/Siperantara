@@ -272,7 +272,7 @@
                     </div> -->
                     <div class="mobile-menu fix mb-25"></div>
                     <div class="offcanvas-about d-none d-lg-block mb-25">
-                        <h4 class="offcanvas-title-meta">About Reallow</h4>
+                        <h4 class="offcanvas-title-meta">About SIPERANTARA</h4>
                         <p>The Property of real estate where you can embark on a journey to discover your perfect lifestyle
                             home and floors and countertops space.</p>
                     </div>

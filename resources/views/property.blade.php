@@ -13,7 +13,7 @@
                             <div class="bd-breadcrumb-content text-center">
                                 <h1 class="bd-breadcrumb-title">Property</h1>
                                 <div class="bd-breadcrumb-list">
-                                    <span><a href="index.html"><i class="icon-home"></i>Home</a></span>
+                                    <span><a href="/"><i class="icon-home"></i>Home</a></span>
                                     <span>Property</span>
                                 </div>
                             </div>
