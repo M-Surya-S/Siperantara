@@ -130,7 +130,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            {{-- <div class="bottom">
+                                            <div class="bottom">
                                                 <div class="agent-social-wrapper">
                                                     <div class="bd-social">
                                                         <ul>
@@ -139,8 +139,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-
-                                            </div> --}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

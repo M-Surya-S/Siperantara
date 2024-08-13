@@ -27,197 +27,197 @@
                                         </div>
                                     </div>
                                     <!-- <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-7">
-                                            <form action="#">
-                                                <div class="banner-from-wrapper wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration=".9s">
-                                                    <div class="bd-tab">
-                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                            <li class="nav-item" role="presentation">
-                                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#property-buy-tab-pane" type="button" role="tab" aria-controls="property-buy-tab-pane" aria-selected="true">Buy</button>
-                                                            </li>
-                                                            <li class="nav-item" role="presentation">
-                                                                <button class="nav-link" id="property-tab" data-bs-toggle="tab" data-bs-target="#property-sell-tab-pane" type="button" role="tab" aria-controls="property-sell-tab-pane" aria-selected="false">Sell</button>
-                                                            </li>
-                                                            <li class="nav-item" role="presentation">
-                                                                <button class="nav-link" id="rent-tab" data-bs-toggle="tab" data-bs-target="#property-rent-tab-pane" type="button" role="tab" aria-controls="property-rent-tab-pane" aria-selected="false">Rent</button>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="tab-content" id="myTabContent1">
-                                                            <div class="tab-pane fade show active" id="property-buy-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                                                <div class="banner-booking-select">
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Property type</option>
-                                                                            <option value="2">Residential</option>
-                                                                            <option value="2">Commercial</option>
-                                                                            <option value="3">Industrial</option>
-                                                                            <option value="4">Personal Property</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Location</option>
-                                                                            <option value="2">United State</option>
-                                                                            <option value="3">Tokyo</option>
-                                                                            <option value="4">Dubai</option>
-                                                                            <option value="4">Shanghai</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Price</option>
-                                                                            <option value="2">$1,000,000</option>
-                                                                            <option value="3">$2,000,000</option>
-                                                                            <option value="3">$5,000,000</option>
-                                                                            <option value="3">$10,000,000</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-advanced">
-                                                                        <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
-                                                                viewBox="0 0 16 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
-                                                                   fill="black" />
-                                                             </svg>
-                                                          </span>
-                                                                            <span>Advanced</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="banner-submit">
-                                                                        <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
-                                                                            <span>
-                                                             <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
-                                                                   stroke="white" stroke-linecap="round"
-                                                                   stroke-linejoin="round" />
-                                                             </svg>
-                                                          </span>
-                                                                            Search
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="property-sell-tab-pane" role="tabpanel" aria-labelledby="property-tab" tabindex="0">
-                                                                <div class="banner-booking-select">
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Property type</option>
-                                                                            <option value="2">Residential</option>
-                                                                            <option value="2">Commercial</option>
-                                                                            <option value="3">Industrial</option>
-                                                                            <option value="4">Personal Property</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Location</option>
-                                                                            <option value="2">United State</option>
-                                                                            <option value="3">Tokyo</option>
-                                                                            <option value="4">Dubai</option>
-                                                                            <option value="4">Shanghai</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Price</option>
-                                                                            <option value="2">$1,000,000</option>
-                                                                            <option value="3">$2,000,000</option>
-                                                                            <option value="3">$5,000,000</option>
-                                                                            <option value="3">$10,000,000</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-advanced">
-                                                                        <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
-                                                                viewBox="0 0 16 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
-                                                                   fill="black" />
-                                                             </svg>
-                                                          </span>
-                                                                            <span>Advanced</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="banner-submit">
-                                                                        <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
-                                                                            <span>
-                                                             <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
-                                                                   stroke="white" stroke-linecap="round"
-                                                                   stroke-linejoin="round" />
-                                                             </svg>
-                                                          </span>
-                                                                            Search
-                                                                        </button>
+                                                <form action="#">
+                                                    <div class="banner-from-wrapper wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration=".9s">
+                                                        <div class="bd-tab">
+                                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#property-buy-tab-pane" type="button" role="tab" aria-controls="property-buy-tab-pane" aria-selected="true">Buy</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link" id="property-tab" data-bs-toggle="tab" data-bs-target="#property-sell-tab-pane" type="button" role="tab" aria-controls="property-sell-tab-pane" aria-selected="false">Sell</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link" id="rent-tab" data-bs-toggle="tab" data-bs-target="#property-rent-tab-pane" type="button" role="tab" aria-controls="property-rent-tab-pane" aria-selected="false">Rent</button>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content" id="myTabContent1">
+                                                                <div class="tab-pane fade show active" id="property-buy-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                                                    <div class="banner-booking-select">
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Property type</option>
+                                                                                <option value="2">Residential</option>
+                                                                                <option value="2">Commercial</option>
+                                                                                <option value="3">Industrial</option>
+                                                                                <option value="4">Personal Property</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Location</option>
+                                                                                <option value="2">United State</option>
+                                                                                <option value="3">Tokyo</option>
+                                                                                <option value="4">Dubai</option>
+                                                                                <option value="4">Shanghai</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Price</option>
+                                                                                <option value="2">$1,000,000</option>
+                                                                                <option value="3">$2,000,000</option>
+                                                                                <option value="3">$5,000,000</option>
+                                                                                <option value="3">$10,000,000</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-advanced">
+                                                                            <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
+                                                                    viewBox="0 0 16 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
+                                                                       fill="black" />
+                                                                 </svg>
+                                                              </span>
+                                                                                <span>Advanced</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="banner-submit">
+                                                                            <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
+                                                                                <span>
+                                                                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
+                                                                       stroke="white" stroke-linecap="round"
+                                                                       stroke-linejoin="round" />
+                                                                 </svg>
+                                                              </span>
+                                                                                Search
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="property-rent-tab-pane" role="tabpanel" aria-labelledby="rent-tab" tabindex="0">
-                                                                <div class="banner-booking-select">
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Property type</option>
-                                                                            <option value="2">Residential</option>
-                                                                            <option value="2">Commercial</option>
-                                                                            <option value="3">Industrial</option>
-                                                                            <option value="4">Personal Property</option>
-                                                                        </select>
+                                                                <div class="tab-pane fade" id="property-sell-tab-pane" role="tabpanel" aria-labelledby="property-tab" tabindex="0">
+                                                                    <div class="banner-booking-select">
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Property type</option>
+                                                                                <option value="2">Residential</option>
+                                                                                <option value="2">Commercial</option>
+                                                                                <option value="3">Industrial</option>
+                                                                                <option value="4">Personal Property</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Location</option>
+                                                                                <option value="2">United State</option>
+                                                                                <option value="3">Tokyo</option>
+                                                                                <option value="4">Dubai</option>
+                                                                                <option value="4">Shanghai</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Price</option>
+                                                                                <option value="2">$1,000,000</option>
+                                                                                <option value="3">$2,000,000</option>
+                                                                                <option value="3">$5,000,000</option>
+                                                                                <option value="3">$10,000,000</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-advanced">
+                                                                            <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
+                                                                    viewBox="0 0 16 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
+                                                                       fill="black" />
+                                                                 </svg>
+                                                              </span>
+                                                                                <span>Advanced</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="banner-submit">
+                                                                            <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
+                                                                                <span>
+                                                                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
+                                                                       stroke="white" stroke-linecap="round"
+                                                                       stroke-linejoin="round" />
+                                                                 </svg>
+                                                              </span>
+                                                                                Search
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Location</option>
-                                                                            <option value="2">United State</option>
-                                                                            <option value="3">Tokyo</option>
-                                                                            <option value="4">Dubai</option>
-                                                                            <option value="4">Shanghai</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-select">
-                                                                        <select>
-                                                                            <option value="1">Price</option>
-                                                                            <option value="2">$1,000,000</option>
-                                                                            <option value="3">$2,000,000</option>
-                                                                            <option value="3">$5,000,000</option>
-                                                                            <option value="3">$10,000,000</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="booking-advanced">
-                                                                        <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
-                                                                viewBox="0 0 16 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
-                                                                   fill="black" />
-                                                             </svg>
-                                                          </span>
-                                                                            <span>Advanced</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="banner-submit">
-                                                                        <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
-                                                                            <span>
-                                                             <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                   d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
-                                                                   stroke="white" stroke-linecap="round"
-                                                                   stroke-linejoin="round" />
-                                                             </svg>
-                                                          </span>
-                                                                            Search
-                                                                        </button>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="property-rent-tab-pane" role="tabpanel" aria-labelledby="rent-tab" tabindex="0">
+                                                                    <div class="banner-booking-select">
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Property type</option>
+                                                                                <option value="2">Residential</option>
+                                                                                <option value="2">Commercial</option>
+                                                                                <option value="3">Industrial</option>
+                                                                                <option value="4">Personal Property</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Location</option>
+                                                                                <option value="2">United State</option>
+                                                                                <option value="3">Tokyo</option>
+                                                                                <option value="4">Dubai</option>
+                                                                                <option value="4">Shanghai</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-select">
+                                                                            <select>
+                                                                                <option value="1">Price</option>
+                                                                                <option value="2">$1,000,000</option>
+                                                                                <option value="3">$2,000,000</option>
+                                                                                <option value="3">$5,000,000</option>
+                                                                                <option value="3">$10,000,000</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="booking-advanced">
+                                                                            <button type="button" class="title" data-bs-toggle="modal" data-bs-target="#searchFilter"> <span><svg width="16" height="18"
+                                                                    viewBox="0 0 16 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M5 2.00001C4.73478 2.00001 4.48043 2.10537 4.29289 2.2929C4.10536 2.48044 4 2.73479 4 3.00001C4 3.26523 4.10536 3.51958 4.29289 3.70712C4.48043 3.89465 4.73478 4.00001 5 4.00001C5.26522 4.00001 5.51957 3.89465 5.70711 3.70712C5.89464 3.51958 6 3.26523 6 3.00001C6 2.73479 5.89464 2.48044 5.70711 2.2929C5.51957 2.10537 5.26522 2.00001 5 2.00001ZM2.17 2.00001C2.3766 1.41448 2.75974 0.907443 3.2666 0.548799C3.77346 0.190154 4.37909 -0.00244141 5 -0.00244141C5.62091 -0.00244141 6.22654 0.190154 6.7334 0.548799C7.24026 0.907443 7.6234 1.41448 7.83 2.00001H15C15.2652 2.00001 15.5196 2.10537 15.7071 2.2929C15.8946 2.48044 16 2.73479 16 3.00001C16 3.26523 15.8946 3.51958 15.7071 3.70712C15.5196 3.89465 15.2652 4.00001 15 4.00001H7.83C7.6234 4.58554 7.24026 5.09258 6.7334 5.45122C6.22654 5.80986 5.62091 6.00246 5 6.00246C4.37909 6.00246 3.77346 5.80986 3.2666 5.45122C2.75974 5.09258 2.3766 4.58554 2.17 4.00001H1C0.734784 4.00001 0.48043 3.89465 0.292893 3.70712C0.105357 3.51958 0 3.26523 0 3.00001C0 2.73479 0.105357 2.48044 0.292893 2.2929C0.48043 2.10537 0.734784 2.00001 1 2.00001H2.17ZM11 8.00001C10.7348 8.00001 10.4804 8.10537 10.2929 8.2929C10.1054 8.48044 10 8.73479 10 9.00001C10 9.26523 10.1054 9.51958 10.2929 9.70712C10.4804 9.89465 10.7348 10 11 10C11.2652 10 11.5196 9.89465 11.7071 9.70712C11.8946 9.51958 12 9.26523 12 9.00001C12 8.73479 11.8946 8.48044 11.7071 8.2929C11.5196 8.10537 11.2652 8.00001 11 8.00001ZM8.17 8.00001C8.3766 7.41448 8.75974 6.90744 9.2666 6.5488C9.77346 6.19015 10.3791 5.99756 11 5.99756C11.6209 5.99756 12.2265 6.19015 12.7334 6.5488C13.2403 6.90744 13.6234 7.41448 13.83 8.00001H15C15.2652 8.00001 15.5196 8.10537 15.7071 8.2929C15.8946 8.48044 16 8.73479 16 9.00001C16 9.26523 15.8946 9.51958 15.7071 9.70712C15.5196 9.89465 15.2652 10 15 10H13.83C13.6234 10.5855 13.2403 11.0926 12.7334 11.4512C12.2265 11.8099 11.6209 12.0025 11 12.0025C10.3791 12.0025 9.77346 11.8099 9.2666 11.4512C8.75974 11.0926 8.3766 10.5855 8.17 10H1C0.734784 10 0.48043 9.89465 0.292893 9.70712C0.105357 9.51958 0 9.26523 0 9.00001C0 8.73479 0.105357 8.48044 0.292893 8.2929C0.48043 8.10537 0.734784 8.00001 1 8.00001H8.17ZM5 14C4.73478 14 4.48043 14.1054 4.29289 14.2929C4.10536 14.4804 4 14.7348 4 15C4 15.2652 4.10536 15.5196 4.29289 15.7071C4.48043 15.8947 4.73478 16 5 16C5.26522 16 5.51957 15.8947 5.70711 15.7071C5.89464 15.5196 6 15.2652 6 15C6 14.7348 5.89464 14.4804 5.70711 14.2929C5.51957 14.1054 5.26522 14 5 14ZM2.17 14C2.3766 13.4145 2.75974 12.9074 3.2666 12.5488C3.77346 12.1902 4.37909 11.9976 5 11.9976C5.62091 11.9976 6.22654 12.1902 6.7334 12.5488C7.24026 12.9074 7.6234 13.4145 7.83 14H15C15.2652 14 15.5196 14.1054 15.7071 14.2929C15.8946 14.4804 16 14.7348 16 15C16 15.2652 15.8946 15.5196 15.7071 15.7071C15.5196 15.8947 15.2652 16 15 16H7.83C7.6234 16.5855 7.24026 17.0926 6.7334 17.4512C6.22654 17.8099 5.62091 18.0025 5 18.0025C4.37909 18.0025 3.77346 17.8099 3.2666 17.4512C2.75974 17.0926 2.3766 16.5855 2.17 16H1C0.734784 16 0.48043 15.8947 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H2.17Z"
+                                                                       fill="black" />
+                                                                 </svg>
+                                                              </span>
+                                                                                <span>Advanced</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="banner-submit">
+                                                                            <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
+                                                                                <span>
+                                                                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                       d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
+                                                                       stroke="white" stroke-linecap="round"
+                                                                       stroke-linejoin="round" />
+                                                                 </svg>
+                                                              </span>
+                                                                                Search
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </form>
-                                        </div> -->
+                                                </form>
+                                            </div> -->
                                 </div>
                             </div>
                         </div>
@@ -309,8 +309,8 @@
                                 </div>
                             </div>
                             <!-- <div class="about-btn">
-                                    <a class="bd-half-outline-btn" href="about.html"><span class="text">know More</span></a>
-                                </div> -->
+                                        <a class="bd-half-outline-btn" href="about.html"><span class="text">know More</span></a>
+                                    </div> -->
                         </div>
                     </div>
                     <div class="col-xxl-8 col-xl-8 col-lg-7">
@@ -522,27 +522,27 @@
                         </div>
                     </div>
                     <!-- <div class="swiper-slide">
-                            <div class="filter-item">
-                                <div class="filter-content">
-                                    <div class="icon">
-                                        <span>
-                                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                     <path
-                                        d="M38.2736 34.7615H35.038V16.367L36.8586 17.578C37.5283 18.0237 38.3936 18.0235 39.0632 17.5781C39.6192 17.2083 39.9511 16.5888 39.9511 15.921C39.9511 15.2532 39.6191 14.6338 39.0632 14.264L34.733 11.3835C34.4713 11.2094 34.1179 11.2805 33.9438 11.5421C33.7697 11.8039 33.8408 12.1573 34.1025 12.3313L38.4327 15.2119C38.6741 15.3724 38.8126 15.6308 38.8126 15.9209C38.8126 16.211 38.6741 16.4694 38.4326 16.6301C38.146 16.8207 37.7757 16.8207 37.4891 16.6301L20.5598 5.36843C20.2197 5.14233 19.7802 5.14226 19.4402 5.36858L2.51078 16.6301C2.22422 16.8208 1.85398 16.8208 1.56742 16.6301C1.32594 16.4695 1.1875 16.2111 1.1875 15.921C1.1875 15.6309 1.32602 15.3725 1.56742 15.2119L20 2.95038L31.1571 10.3722C31.419 10.5466 31.7723 10.4753 31.9463 10.2136C32.1205 9.95179 32.0494 9.59843 31.7877 9.42436L20.5598 1.95522C20.2197 1.72913 19.7802 1.72905 19.4402 1.95538L13.9093 5.63452V5.14155H14.0737C14.4816 5.14155 14.8134 4.80968 14.8134 4.40186V2.67483C14.8134 2.26702 14.4815 1.93515 14.0737 1.93515H8.05148C7.64359 1.93515 7.3118 2.26702 7.3118 2.67483V4.40194C7.3118 4.80976 7.64359 5.14163 8.05148 5.14163H8.21586V9.42186L0.936797 14.264C0.380781 14.6338 0.0489062 15.2533 0.0489062 15.9211C0.0489062 16.5889 0.380859 17.2083 0.936797 17.5781C1.27164 17.8009 1.65531 17.9123 2.03914 17.9123C2.42281 17.9123 2.80664 17.8008 3.14141 17.5781L4.96195 16.3671V26.5066C4.96195 26.8211 5.2168 27.0759 5.53125 27.0759C5.84563 27.0759 6.10055 26.8211 6.10055 26.5066V15.6098L20 6.36351L33.8995 15.6096V34.7614H6.10047V30.069C6.10047 29.7546 5.84563 29.4998 5.53117 29.4998C5.2168 29.4998 4.96188 29.7546 4.96188 30.069V34.7614H1.72641C0.774453 34.7615 0 35.5359 0 36.4879C0 37.4398 0.774453 38.2143 1.72641 38.2143H38.2736C39.2255 38.2143 40 37.4398 40 36.4879C40 35.5359 39.2255 34.7615 38.2736 34.7615ZM12.7708 6.39194L9.35438 8.66452V5.14163H12.7708V6.39194ZM8.45039 3.07366H13.6749V4.00312H8.45039V3.07366ZM38.2736 37.0758H1.72641C1.40227 37.0758 1.13852 36.812 1.13852 36.4879C1.13852 36.1637 1.40227 35.8999 1.72641 35.8999H38.2736C38.5977 35.8999 38.8615 36.1637 38.8615 36.4879C38.8615 36.812 38.5977 37.0758 38.2736 37.0758Z"
-                                        fill="black" />
-                                     <path
-                                        d="M28.7702 18.4035C27.6516 17.1371 26.341 16.4642 24.875 16.4031C22.6927 16.3135 20.7948 17.6162 20.0001 18.2564C19.2055 17.6162 17.3071 16.3142 15.1253 16.4031C13.6592 16.4642 12.3487 17.1372 11.2301 18.4035C9.89206 19.9182 9.39089 21.5704 9.7405 23.314C10.7972 28.5855 19.3865 32.8058 19.7516 32.9829C19.83 33.021 19.915 33.04 20 33.04C20.085 33.04 20.17 33.021 20.2485 32.9829C20.6136 32.8058 29.2029 28.5855 30.2598 23.314C30.6093 21.5704 30.1082 19.9182 28.7702 18.4035ZM29.1437 23.0892C28.2914 27.3455 21.4039 31.1061 20 31.8326C18.5961 31.1061 11.7087 27.3455 10.8564 23.0892C10.5771 21.6942 10.9784 20.4081 12.0833 19.1572C12.9873 18.1339 14.0246 17.59 15.1667 17.5409C15.2253 17.5383 15.2832 17.5371 15.3415 17.5371C17.6042 17.5371 19.5865 19.3998 19.6062 19.4186C19.8259 19.6292 20.1729 19.6292 20.3933 19.4192C20.4141 19.3995 22.4965 17.4406 24.8335 17.541C25.9755 17.5901 27.0129 18.1339 27.9168 19.1573C29.0217 20.4081 29.423 21.6942 29.1437 23.0892Z"
-                                        fill="#ED6E5A" />
-                                  </svg>
-                               </span>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="title"><a href="property.html">Bungalow</a></h6>
+                                <div class="filter-item">
+                                    <div class="filter-content">
+                                        <div class="icon">
+                                            <span>
+                                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                         <path
+                                            d="M38.2736 34.7615H35.038V16.367L36.8586 17.578C37.5283 18.0237 38.3936 18.0235 39.0632 17.5781C39.6192 17.2083 39.9511 16.5888 39.9511 15.921C39.9511 15.2532 39.6191 14.6338 39.0632 14.264L34.733 11.3835C34.4713 11.2094 34.1179 11.2805 33.9438 11.5421C33.7697 11.8039 33.8408 12.1573 34.1025 12.3313L38.4327 15.2119C38.6741 15.3724 38.8126 15.6308 38.8126 15.9209C38.8126 16.211 38.6741 16.4694 38.4326 16.6301C38.146 16.8207 37.7757 16.8207 37.4891 16.6301L20.5598 5.36843C20.2197 5.14233 19.7802 5.14226 19.4402 5.36858L2.51078 16.6301C2.22422 16.8208 1.85398 16.8208 1.56742 16.6301C1.32594 16.4695 1.1875 16.2111 1.1875 15.921C1.1875 15.6309 1.32602 15.3725 1.56742 15.2119L20 2.95038L31.1571 10.3722C31.419 10.5466 31.7723 10.4753 31.9463 10.2136C32.1205 9.95179 32.0494 9.59843 31.7877 9.42436L20.5598 1.95522C20.2197 1.72913 19.7802 1.72905 19.4402 1.95538L13.9093 5.63452V5.14155H14.0737C14.4816 5.14155 14.8134 4.80968 14.8134 4.40186V2.67483C14.8134 2.26702 14.4815 1.93515 14.0737 1.93515H8.05148C7.64359 1.93515 7.3118 2.26702 7.3118 2.67483V4.40194C7.3118 4.80976 7.64359 5.14163 8.05148 5.14163H8.21586V9.42186L0.936797 14.264C0.380781 14.6338 0.0489062 15.2533 0.0489062 15.9211C0.0489062 16.5889 0.380859 17.2083 0.936797 17.5781C1.27164 17.8009 1.65531 17.9123 2.03914 17.9123C2.42281 17.9123 2.80664 17.8008 3.14141 17.5781L4.96195 16.3671V26.5066C4.96195 26.8211 5.2168 27.0759 5.53125 27.0759C5.84563 27.0759 6.10055 26.8211 6.10055 26.5066V15.6098L20 6.36351L33.8995 15.6096V34.7614H6.10047V30.069C6.10047 29.7546 5.84563 29.4998 5.53117 29.4998C5.2168 29.4998 4.96188 29.7546 4.96188 30.069V34.7614H1.72641C0.774453 34.7615 0 35.5359 0 36.4879C0 37.4398 0.774453 38.2143 1.72641 38.2143H38.2736C39.2255 38.2143 40 37.4398 40 36.4879C40 35.5359 39.2255 34.7615 38.2736 34.7615ZM12.7708 6.39194L9.35438 8.66452V5.14163H12.7708V6.39194ZM8.45039 3.07366H13.6749V4.00312H8.45039V3.07366ZM38.2736 37.0758H1.72641C1.40227 37.0758 1.13852 36.812 1.13852 36.4879C1.13852 36.1637 1.40227 35.8999 1.72641 35.8999H38.2736C38.5977 35.8999 38.8615 36.1637 38.8615 36.4879C38.8615 36.812 38.5977 37.0758 38.2736 37.0758Z"
+                                            fill="black" />
+                                         <path
+                                            d="M28.7702 18.4035C27.6516 17.1371 26.341 16.4642 24.875 16.4031C22.6927 16.3135 20.7948 17.6162 20.0001 18.2564C19.2055 17.6162 17.3071 16.3142 15.1253 16.4031C13.6592 16.4642 12.3487 17.1372 11.2301 18.4035C9.89206 19.9182 9.39089 21.5704 9.7405 23.314C10.7972 28.5855 19.3865 32.8058 19.7516 32.9829C19.83 33.021 19.915 33.04 20 33.04C20.085 33.04 20.17 33.021 20.2485 32.9829C20.6136 32.8058 29.2029 28.5855 30.2598 23.314C30.6093 21.5704 30.1082 19.9182 28.7702 18.4035ZM29.1437 23.0892C28.2914 27.3455 21.4039 31.1061 20 31.8326C18.5961 31.1061 11.7087 27.3455 10.8564 23.0892C10.5771 21.6942 10.9784 20.4081 12.0833 19.1572C12.9873 18.1339 14.0246 17.59 15.1667 17.5409C15.2253 17.5383 15.2832 17.5371 15.3415 17.5371C17.6042 17.5371 19.5865 19.3998 19.6062 19.4186C19.8259 19.6292 20.1729 19.6292 20.3933 19.4192C20.4141 19.3995 22.4965 17.4406 24.8335 17.541C25.9755 17.5901 27.0129 18.1339 27.9168 19.1573C29.0217 20.4081 29.423 21.6942 29.1437 23.0892Z"
+                                            fill="#ED6E5A" />
+                                      </svg>
+                                   </span>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title"><a href="property.html">Bungalow</a></h6>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div> -->
+                            </div> -->
                     <div class="swiper-slide">
                         <div class="filter-item">
                             <div class="filter-content">
@@ -1624,8 +1624,7 @@
                                     <div class="swiper-slide">
                                         <div class="team-item style-two">
                                             <div class="thumb">
-                                                <figure><img
-                                                            src="assets/images/agent/agent-01.png" alt="Image">
+                                                <figure><img src="assets/images/agent/agent-01.png" alt="Image">
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
@@ -1634,7 +1633,15 @@
                                                     </h3>
                                                     <span class="info">Siperantara Agent</span>
                                                 </div>
-                                                >
+                                                <div class="team-social">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                        </li>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1655,10 +1662,10 @@
                                                     <ul>
                                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                                         </li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-facebook-f"></i></a></li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                        </li>
                                                         <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
                                                         </li>
                                                     </ul>
@@ -1683,10 +1690,10 @@
                                                     <ul>
                                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                                         </li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-facebook-f"></i></a></li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                        </li>
                                                         <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
                                                         </li>
                                                     </ul>
@@ -1711,10 +1718,10 @@
                                                     <ul>
                                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                                                         </li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-facebook-f"></i></a></li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                        </li>
                                                         <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
                                                         </li>
                                                     </ul>
