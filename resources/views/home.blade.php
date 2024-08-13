@@ -1595,7 +1595,7 @@
                                         <i class="icon-home"></i>
                                         Team members
                                     </span>
-                                    <h2 class="section-title title-animation">Our skilled lead reallow agents</h2>
+                                    <h2 class="section-title title-animation">Our skilled lead Siperantara agents</h2>
                                 </div>
                                 <a class="bd-half-outline-btn" href="/agent"><span class="text">Discover
                                         More</span></a>
@@ -1624,28 +1624,17 @@
                                     <div class="swiper-slide">
                                         <div class="team-item style-two">
                                             <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="assets/images/agent/agent-01.png" alt="Image"></a>
+                                                <figure><img
+                                                            src="assets/images/agent/agent-01.png" alt="Image">
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
                                                 <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Sarah Johnson</a>
+                                                    <h3 class="title">Sarah Johnson
                                                     </h3>
-                                                    <span class="info">Senior Real Estate Agent</span>
+                                                    <span class="info">Siperantara Agent</span>
                                                 </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-facebook-f"></i></a></li>
-                                                        <li><a href="#"><i
-                                                                    class="fa-brands fa-linkedin-in"></i></a></li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                >
                                             </div>
                                         </div>
                                     </div>

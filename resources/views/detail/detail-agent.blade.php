@@ -85,15 +85,15 @@
                                     <div class="agent-item style-one wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                                         <div class="thumb-wrapper">
                                             <div class="thumb">
-                                                <a href="agent-details.html">
+
                                                     <figure><img src="assets/images/agent/agent-01.png" alt="agent thumb not found"></figure>
-                                                </a>
+
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="top">
                                                 <div class="review">
-                                                    <h3 class="title"><a href="agent-details.html">Sarah John</a> </h3>
+                                                    <h3 class="title">Sarah John</h3>
                                                     <div class="bd-rating">
                                                         <span><i class="fa-solid fa-star"></i></span>
                                                         <span><i class="fa-solid fa-star"></i></span>
@@ -103,7 +103,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="info underline">Company Agent at
-                                      <a href="agent-details.html">Modern House Real Estate</a>
+                                      Siperantara
                                    </span>
                                             </div>
                                             <div class="contact-list-wrapper">
@@ -130,7 +130,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div class="bottom">
+                                            {{-- <div class="bottom">
                                                 <div class="agent-social-wrapper">
                                                     <div class="bd-social">
                                                         <ul>
@@ -141,10 +141,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="agent-text-link underline">
-                                                    <a href="agent-details.html">View More</a>
-                                                </div>
-                                            </div>
+
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
