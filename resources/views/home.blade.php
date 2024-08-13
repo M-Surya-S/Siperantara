@@ -19,7 +19,7 @@
                                             data-wow-duration=".7s">
                                             <h1 class="banner-title">
                                                 <span>Where</span>
-                                                <span class="strock-text"><b>Dream Find</b></span>
+                                                <span class="strock-text"><b>Dreams Find</b></span>
                                                 <span class="text-gradient"><img class="arrow-shape"
                                                         src="assets/images/shapes/banner-arrow.svg" alt="banner-arrow">A
                                                     Home</span>

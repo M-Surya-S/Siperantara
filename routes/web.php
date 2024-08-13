@@ -14,20 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home']);
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['title' => 'Contact']);
 });
 Route::get('/property', function () {
-    return view('property');
+    return view('property', ['title' => 'Property']);
 });
 Route::get('/agent', function () {
-    return view('detail.detail-agent');
+    return view('detail.detail-agent', ['title' => 'Agent']);
 });
 Route::get('/property-details', function () {
-    return view('detail.detail-property');
+    return view('detail.detail-property', ['title' => 'Detail Property']);
 });
 Route::get('/guide', function () {
-    return view('guide');
+    return view('guide', ['title' => 'Guide']);
 });
