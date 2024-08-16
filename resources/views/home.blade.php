@@ -255,9 +255,9 @@
                             <h2 class="section-title title-animation">What we provide</h2>
                         </div>
 
-                    </div>
-                </div>
-                <div class="row g-5 justify-content-between justify-content-md-center">
+                 </div>
+                  </div>
+                 <div class="row g-5 justify-content-between justify-content-md-center">
 
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">

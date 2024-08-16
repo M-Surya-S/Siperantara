@@ -28,6 +28,18 @@ Route::get('/agent', function () {
 Route::get('/property-details', function () {
     return view('detail.detail-property', ['title' => 'Detail Property']);
 });
+Route::get('/buyers-guide', function () {
+    return view('detail.detail-buyers', ['title' => 'Buyers Guide']);
+});
+Route::get('/seller-guide', function () {
+    return view('detail.detail-seller', ['title' => 'Seller Guide']);
+});
 Route::get('/guide', function () {
     return view('guide', ['title' => 'Guide']);
+});
+Route::get('/blog', function () {
+    return view('blog', ['title' => 'Blog']);
+});
+Route::get('/blog-details', function () {
+    return view('detail.detail-blog', ['title' => 'Blog Details']);
 });

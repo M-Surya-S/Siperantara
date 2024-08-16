@@ -21288,6 +21288,13 @@ blockquote cite::before {
   padding: 40px 40px;
   transition: all 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 }
+.guides-item.style-one {
+    background-color: var(--bd-white);
+    text-align: center;
+    padding: 40px 40px;
+    transition: all 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    border: 3px solid black;
+  }
 .services-item.style-one:hover {
   transform: translate3d(0, -3px, 0);
 }
