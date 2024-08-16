@@ -16937,6 +16937,13 @@ blockquote cite::before {
 }
 
 /* footer css */
+.footer-btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
+
 .demo-footer-wrapper {
   position: relative;
   z-index: 5;
