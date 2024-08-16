@@ -6951,10 +6951,10 @@ input:checked + .switch:before {
 .banner-style-one .banner-bg {
   position: absolute;
   bottom: 0;
-  height: 300px;
-  width: 60.4%;
-  right: 0;
-  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  /* z-index: -1; */
 }
 .banner-style-one .banner-content {
   max-width: 550px;

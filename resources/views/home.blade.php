@@ -10,7 +10,7 @@
                     <!-- if ypu active slider then duplicate "swiper-slide" -->
                     <div class="swiper-slide banner_more_item">
                         <div class="banner-inner p-relative">
-                            <div class="banner-bg" data-background="assets/images/shapes/banner-bg.svg">
+                            <div class="banner-bg" data-background="assets/images/banner/banner-home-02.png">
                             </div>
                             <div class="container p-relative">
                                 <div class="row justify-content-between">
@@ -236,7 +236,7 @@
             </div>
             <div class="banner-bg-thumb jarallax">
                 <div class="banner-thumb include-bg jarallax-img"
-                    data-background="assets/images/banner/banner-thumb-01.png">
+                    data-background="assets/images/banner/banner-home-01.png">
                 </div>
             </div>
         </section>
