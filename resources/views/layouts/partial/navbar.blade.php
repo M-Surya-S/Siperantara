@@ -69,7 +69,11 @@
 
                         <li class="menu-item-has-children">
                             <a href="/property">Property</a>
-
+                            <ul class="dp-menu">
+                                <li><a href="home-one.html">New Develop</a></li>
+                                <li><a href="home-two.html">Buy or Rent</a></li>
+                                <li><a href="home-three.html">Sell</a></li>
+                            </ul>
                         </li>
 
                         <li class="menu-item-has-children">

@@ -12,7 +12,7 @@
                     <div class="col-xl-10">
                         <div class="bd-breadcrumb">
                             <div class="bd-breadcrumb-content text-center">
-                                <h1 class="bd-breadcrumb-title">Agent Grid</h1>
+                                <h1 class="bd-breadcrumb-title">Agent</h1>
                                 <div class="bd-breadcrumb-list">
                                     <span><a href="/"><i class="icon-home"></i>Home</a></span>
                                     <span>Detail Agent</span>

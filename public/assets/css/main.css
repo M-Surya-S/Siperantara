@@ -177,7 +177,7 @@
   /** @color declaration */
   /* Common Color */
   --bd-white: #ffffff;
-  --bd-black: #071B1E;
+  --bd-black: #000000;
   --bd-placeholder: rgba(0, 0, 0, 0.5);
   --bd-selection: #262626;
   /* Heading Color */
@@ -189,10 +189,10 @@
   --bd-text-primary: #000;
   --bd-text-secondary: #CCE2FA;
   --bd-taxonomy: #000;
-  --bd-label: rgba(7, 27, 30, .8);
+  --bd-label: rgb(7, 27, 30);
   /* Background Color */
   --theme-bg-primary: #F0F6F8;
-  --theme-bg-secondary: #060615;
+  --theme-bg-secondary: #000000;
   --theme-rating-color:#EC8D1D;
   /* Border Color */
   --bd-border-primary: hsl(0, 0%, 90%);
