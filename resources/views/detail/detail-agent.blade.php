@@ -15,7 +15,7 @@
                                 <h1 class="bd-breadcrumb-title">Agent</h1>
                                 <div class="bd-breadcrumb-list">
                                     <span><a href="/"><i class="icon-home"></i>Home</a></span>
-                                    <span>Detail Agent</span>
+                                    <span>Agent</span>
                                 </div>
                             </div>
                         </div>
