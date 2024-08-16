@@ -73,11 +73,11 @@
                         <h3 class="footer-widget-title">Category</h3>
                         <div class="footer-widget-links">
                             <ul>
-                                <li class="underline"><a href="#">Modern House</a></li>
-                                <li class="underline"><a href="#">Cottage House</a></li>
-                                <li class="underline"><a href="#">Cabin House</a></li>
-                                <li class="underline"><a href="#">Rambler House</a></li>
-                                <li class="underline"><a href="#">Villa House</a></li>
+                                <li class="underline"><a href="#">Residential</a></li>
+                                <li class="underline"><a href="#">Commercial</a></li>
+                                <li class="underline"><a href="#">Industrial</a></li>
+                                <li class="underline"><a href="#">Land</a></li>
+
                             </ul>
                         </div>
                     </div>

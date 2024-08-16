@@ -243,104 +243,74 @@
         <!-- Banner area end -->
 
         <!-- About area Start -->
-        <section class="bd-about-area section-space p-relative">
+        <section class="bd-services-item section-space theme-bg-primary">
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-xxl-4 col-xl-4 col-lg-5">
-                        <div class="about-content style-one">
-                            <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3">
-                                <span class="section-subtitle uppercase">
-                                    <i class="icon-home"></i>
-                                    since from 1990
-                                </span>
-                                <h2 class="section-title title-animation is-br-none">Solutions that <br> inspire progress
-                                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6">
+                        <div class="section-title-wrapper anim-wrapper section-title-space text-center animation-style-3">
+                            <span class="section-subtitle uppercase">
+                                <i class="icon-home"></i>
+                                Our Services
+                            </span>
+                            <h2 class="section-title title-animation">What we provide</h2>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row g-5 justify-content-between justify-content-md-center">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                            <span class="icon"><i class="icon-buy-home"></i></span>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="services-details.html">Buy a home</a>
+                                </h3>
+                                <p class="description">Choose us for your real estate needs and experience unparalleled
+                                    expertise and dedication.</p>
                             </div>
-                            <div class="about-tab">
-                                <div class="bd-tab">
-                                    <ul class="nav nav-tabs" id="myTab1" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="expertise-tab" data-bs-toggle="tab"
-                                                data-bs-target="#expertise-tab-pane" type="button" role="tab"
-                                                aria-controls="expertise-tab-pane" aria-selected="true">Expertise</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="results-tab" data-bs-toggle="tab"
-                                                data-bs-target="#results-tab-pane" type="button" role="tab"
-                                                aria-controls="results-tab-pane" aria-selected="false">Results</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
-                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
-                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="expertise-tab-pane" role="tabpanel"
-                                            aria-labelledby="expertise-tab" tabindex="0">
-                                            <div class="about-tab-contnent">
-                                                <p class="description">Choose us for your real estate needs and experience
-                                                    unparalleled expertise and dedication. With years of industry
-                                                    experience, our
-                                                    team boasts an in depth understanding of the market.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="results-tab-pane" role="tabpanel"
-                                            aria-labelledby="results-tab" tabindex="0">
-                                            <div class="about-tab-contnent">
-                                                <p class="description">The result of working in real estate involves
-                                                    several key
-                                                    steps, whether you are an agent, broker, or investor. Pursue continuing
-                                                    education
-                                                    to stay updated on real estate best practices.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="quality-tab-pane" role="tabpanel"
-                                            aria-labelledby="quality-tab" tabindex="0">
-                                            <div class="about-tab-contnent">
-                                                <p class="description">Working quality in real estate is crucial for
-                                                    achieving
-                                                    success and maintaining a positive reputation.It encompasses various
-                                                    aspects such
-                                                    as professionalism, knowledge and client service</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="btn-inner">
+                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                        more</span></a>
                             </div>
-                            <!-- <div class="about-btn">
-                                        <a class="bd-half-outline-btn" href="about.html"><span class="text">know More</span></a>
-                                    </div> -->
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-8 col-lg-7">
-                        <div class="about-thumb-wrap style-one">
-                            <div class="round-box-inner">
-                                <div class="round-box">
-                                    <span class="round one"></span>
-                                    <span class="round two"></span>
-                                    <span class="round three"></span>
-                                </div>
-                                <div class="round-icon">
-                                    <figure><img src="assets/images/icons/house.png" alt="image"></figure>
-                                </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                            <span class="icon"><i class="icon-sell-property"></i></span>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="services-details.html">Sell a property</a>
+                                </h3>
+                                <p class="description">With years of industry experience, our team boasts an in depth
+                                    understanding of the market knowledge.</p>
                             </div>
-                            <div class="thumb-one">
-                                <figure> <img src="assets/images/about/about-thumb-01.png" alt="image"></figure>
+                            <div class="btn-inner">
+                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                        more</span></a>
                             </div>
-                            <div class="thumb-two-inner">
-                                <div class="thumb-two">
-                                    <figure><img src="assets/images/about/about-thumb-02.png" alt="image"></figure>
-                                </div>
-                                <div class="thumb-two">
-                                    <figure> <img src="assets/images/about/about-thumb-03.png" alt="image"></figure>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                            <span class="icon"><i class="icon-rent-property"></i></span>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="services-details.html">Rent a property</a>
+                                </h3>
+                                <p class="description">The rent property kitchen invites you to whip up delicious meals,
+                                    while
+                                    the cozy bedroom promises sleep</p>
+                            </div>
+                            <div class="btn-inner">
+                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                        more</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- About area end -->
 
         <!-- Filter area start -->
@@ -845,67 +815,98 @@
         <!-- Filter area end -->
 
         <!-- Services area start -->
-        <section class="bd-services-item section-space theme-bg-primary">
+        <section class="bd-about-area section-space p-relative">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-6 col-xl-6 col-lg-6">
-                        <div class="section-title-wrapper anim-wrapper section-title-space text-center animation-style-3">
-                            <span class="section-subtitle uppercase">
-                                <i class="icon-home"></i>
-                                Our Services
-                            </span>
-                            <h2 class="section-title title-animation">What we provide</h2>
+                <div class="row g-5 align-items-center">
+                    <div class="col-xxl-4 col-xl-4 col-lg-5">
+                        <div class="about-content style-one">
+                            <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3">
+                                <span class="section-subtitle uppercase">
+                                    <i class="icon-home"></i>
+                                    since from 1990
+                                </span>
+                                <h2 class="section-title title-animation is-br-none">Solutions that <br> inspire progress
+                                </h2>
+                            </div>
+                            <div class="about-tab">
+                                <div class="bd-tab">
+                                    <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="expertise-tab" data-bs-toggle="tab"
+                                                data-bs-target="#expertise-tab-pane" type="button" role="tab"
+                                                aria-controls="expertise-tab-pane" aria-selected="true">Expertise</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="results-tab" data-bs-toggle="tab"
+                                                data-bs-target="#results-tab-pane" type="button" role="tab"
+                                                aria-controls="results-tab-pane" aria-selected="false">Results</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
+                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
+                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="expertise-tab-pane" role="tabpanel"
+                                            aria-labelledby="expertise-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">Choose us for your real estate needs and experience
+                                                    unparalleled expertise and dedication. With years of industry
+                                                    experience, our
+                                                    team boasts an in depth understanding of the market.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="results-tab-pane" role="tabpanel"
+                                            aria-labelledby="results-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">The result of working in real estate involves
+                                                    several key
+                                                    steps, whether you are an agent, broker, or investor. Pursue continuing
+                                                    education
+                                                    to stay updated on real estate best practices.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="quality-tab-pane" role="tabpanel"
+                                            aria-labelledby="quality-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">Working quality in real estate is crucial for
+                                                    achieving
+                                                    success and maintaining a positive reputation.It encompasses various
+                                                    aspects such
+                                                    as professionalism, knowledge and client service</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="about-btn">
+                                        <a class="bd-half-outline-btn" href="about.html"><span class="text">know More</span></a>
+                                    </div> -->
                         </div>
-
                     </div>
-                </div>
-                <div class="row g-5 justify-content-between justify-content-md-center">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <span class="icon"><i class="icon-buy-home"></i></span>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="services-details.html">Buy a home</a>
-                                </h3>
-                                <p class="description">Choose us for your real estate needs and experience unparalleled
-                                    expertise and dedication.</p>
+                    <div class="col-xxl-8 col-xl-8 col-lg-7">
+                        <div class="about-thumb-wrap style-one">
+                            <div class="round-box-inner">
+                                <div class="round-box">
+                                    <span class="round one"></span>
+                                    <span class="round two"></span>
+                                    <span class="round three"></span>
+                                </div>
+                                <div class="round-icon">
+                                    <figure><img src="assets/images/icons/house.png" alt="image"></figure>
+                                </div>
                             </div>
-                            <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
-                                        more</span></a>
+                            <div class="thumb-one">
+                                <figure> <img src="assets/images/about/about-thumb-01.png" alt="image"></figure>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
-                            <span class="icon"><i class="icon-sell-property"></i></span>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="services-details.html">Sell a property</a>
-                                </h3>
-                                <p class="description">With years of industry experience, our team boasts an in depth
-                                    understanding of the market knowledge.</p>
-                            </div>
-                            <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
-                                        more</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                            <span class="icon"><i class="icon-rent-property"></i></span>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="services-details.html">Rent a property</a>
-                                </h3>
-                                <p class="description">The rent property kitchen invites you to whip up delicious meals,
-                                    while
-                                    the cozy bedroom promises sleep</p>
-                            </div>
-                            <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
-                                        more</span></a>
+                            <div class="thumb-two-inner">
+                                <div class="thumb-two">
+                                    <figure><img src="assets/images/about/about-thumb-02.png" alt="image"></figure>
+                                </div>
+                                <div class="thumb-two">
+                                    <figure> <img src="assets/images/about/about-thumb-03.png" alt="image"></figure>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1215,7 +1216,7 @@
         <!-- brand area end -->
 
         <!-- Apartments Plan Area Start -->
-        <div class="bd-apartment-area section-space">
+        {{-- <div class="bd-apartment-area section-space">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -1406,7 +1407,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Apartments Plan Area End -->
 
         <!-- Whychoose area start -->
@@ -1889,7 +1890,7 @@
         <!-- Testimonial area end -->
 
         <!-- benefits area start -->
-        <section class="bd-benefits-area section-space">
+        {{-- <section class="bd-benefits-area section-space">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -1970,7 +1971,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- benefits area end -->
 
         <!-- Blog area start -->

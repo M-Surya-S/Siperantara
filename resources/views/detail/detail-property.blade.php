@@ -334,8 +334,8 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
-                        <h4 class="property-details-title-two"> Apartment Plans</h4>
-                        <div class="property-details-floor-plan wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+
+                        {{-- <div class="property-details-floor-plan wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="apartments-tab">
@@ -488,7 +488,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <h4 class="property-details-title-two"> Apartment Video</h4>
                         <div class="property-details-video">
                             <div class="bd-video-area style-one position-relative">
@@ -659,7 +659,7 @@
                             </div>
                         </div>
                         <!-- featured properties start -->
-                        <div class="sidebar-properties-wrapper">
+                        {{-- <div class="sidebar-properties-wrapper">
                             <div class="swiper featured__properties">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -743,7 +743,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- featured properties end -->
                         <!-- latest post start -->
                         {{--  --}}

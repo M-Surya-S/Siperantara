@@ -73,6 +73,11 @@
                         </li>
 
                         <li class="menu-item-has-children">
+                            <a href="/agent">Agent</a>
+
+                        </li>
+
+                        <li class="menu-item-has-children">
                             <a href="/guide">Guide</a>
 
                         </li>
