@@ -11,11 +11,11 @@
                     <div class="col-xl-10">
                         <div class="bd-breadcrumb">
                             <div class="bd-breadcrumb-content text-center">
-                                <h1 class="bd-breadcrumb-title">Join Us as an Agent</h1>
+                                <h1 class="bd-breadcrumb-title">Sell Your Property</h1>
                                 <div class="bd-breadcrumb-list">
                                     <span><a href="/"><i class="icon-home"></i>Home</a></span>
-                                    <span><a href="/agent">Agent</a></span>
-                                    <span>Join Us</span>
+                                    <span><a href="/property">Property</a></span>
+                                    <span>Sell</span>
                                 </div>
                             </div>
                         </div>
@@ -32,13 +32,13 @@
             <div class="row gy-24 justify-content-between">
                 <div class="col-xxl-5 col-xl-5 col-lg-6">
                     <div class="section-title-wrapper anim-wrapper animation-style-3 mb-30">
-                        <h2 class="section-title title-animation mb-20">Become Siperantara Agent </h2>
+                        <h2 class="section-title title-animation mb-20">Sell Your Property at Siperantara</h2>
                         <div class="section-divider mb-25"></div>
                         <!-- Added section for checkmarks and text -->
                         <div class="checkmark-list">
                             <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>lorem ipsum</span>
+                                <span>Lorem ipsum</span>
                             </div>
                             <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>

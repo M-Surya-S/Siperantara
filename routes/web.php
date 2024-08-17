@@ -16,40 +16,54 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
 });
+
 Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact']);
 });
+
 Route::get('/property', function () {
     return view('property', ['title' => 'Property']);
 });
+
 Route::get('/agent', function () {
     return view('detail.detail-agent', ['title' => 'Agent']);
 });
+
 Route::get('/property-details', function () {
-    return view('detail.detail-property', ['title' => 'Detail Property']);
+    return view('detail.detail-property', ['title' => 'Property Detail']);
 });
+
 Route::get('/buyers-guide', function () {
     return view('detail.detail-buyers-guide', ['title' => 'Buyers Guide']);
 });
+
 Route::get('/seller-guide', function () {
     return view('detail.detail-seller-guide', ['title' => 'Seller Guide']);
 });
 Route::get('/guide', function () {
     return view('guide', ['title' => 'Guide']);
 });
+
 Route::get('/blog', function () {
     return view('blog', ['title' => 'Blog']);
 });
+
 Route::get('/blog-details', function () {
     return view('detail.detail-blog', ['title' => 'Blog Details']);
 });
+
 Route::get('/buyers-guide-download', function () {
     return view('detail.buyers-guide-download', ['title' => 'Buyers Guide']);
 });
+
 Route::get('/seller-guide-download', function () {
     return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
 });
+
 Route::get('/join-agent', function () {
     return view('detail.join-agent', ['title' => 'Agent']);
 });
 
+Route::get('/sell', function () {
+    return view('detail.sell-property', ['title' => 'Sell']);
+});

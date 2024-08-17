@@ -15,64 +15,14 @@
                     <ul>
                         <li class="menu-item-has-children">
                             <a href="/">Home</a>
-
                         </li>
-
-                        <!-- <li class="has-mega-menu">
-                            <a href="#">Pages</a>
-                            <ul class="mega-menu mega-style-two">
-                                <li>
-                                    <a href="#" class="title">Page Layout One</a>
-                                    <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="agent-grid.html">Agent Grid</a></li>
-                                        <li><a href="agent-list.html">Agent List</a></li>
-                                        <li><a href="agent-details.html">Agent Details</a></li>
-                                        <li><a href="services.html">Service</a></li>
-                                        <li><a href="services-details.html">Services Details</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Page Layout Two</a>
-                                    <ul>
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
-                                        <li><a href="order.html">Order</a></li>
-                                        <li><a href="error-page.html">Error 404</a></li>
-                                        <li><a href="privacy-policy.html">Privacy & Policy</a></li>
-                                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Page Layout Three</a>
-                                    <ul>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="shop-v2.html">Shop V2</a></li>
-                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Page Layout Four</a>
-                                    <ul>
-                                        <li><a href="testimonial.html">Testimonial</a></li>
-                                        <li><a href="sign-in.html">Login</a></li>
-                                        <li><a href="sign-up.html">Register</a></li>
-                                        <li><a href="otp.html">OTP</a></li>
-                                        <li><a href="forgot.html">Forgot Password</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li> -->
 
                         <li class="menu-item-has-children">
                             <a href="/property">Property</a>
                             <ul class="dp-menu">
-                                <li><a href="home-one.html">New Develop</a></li>
-                                <li><a href="home-two.html">Buy or Rent</a></li>
-                                <li><a href="home-three.html">Sell</a></li>
+                                <li><a href="/property">New Develop</a></li>
+                                <li><a href="/property">Buy or Rent</a></li>
+                                <li><a href="/sell">Sell</a></li>
                             </ul>
                         </li>
 
@@ -81,78 +31,12 @@
                             <ul class="dp-menu">
                                 <li><a href="/agent">Find Agent</a></li>
                                 <li><a href="/join-agent">Join us</a></li>
-
                             </ul>
-
                         </li>
 
                         <li class="menu-item-has-children">
                             <a href="/guide">Guide</a>
-
                         </li>
-
-                        {{-- <li class="has-mega-menu is-menu-none">
-                            <a href="#">Elements</a>
-                            <ul class="mega-menu mega-style-two">
-                                <li>
-                                    <a href="#" class="title">Elements Layout 01</a>
-                                    <ul>
-                                        <li><a href="style-guide.html">Style Guide</a></li>
-                                        <li><a href="elements-accordion.html">Accordion</a></li>
-                                        <li><a href="elements-about.html">About Us</a></li>
-                                        <li><a href="elements-advancetab.html">Advance Tab</a></li>
-                                        <li><a href="elements-blog.html">Blog</a></li>
-                                        <li><a href="elements-brand.html">Brand</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Elements Layout 02</a>
-                                    <ul>
-                                        <li><a href="elements-breadcrumb.html">Breadcrumb</a></li>
-                                        <li><a href="elements-buttons.html">Button</a></li>
-                                        <li><a href="elements-cta.html">Call To Action</a></li>
-                                        <li><a href="elements-counter.html">Counter</a></li>
-                                        <li><a href="elements-property.html">Property</a></li>
-                                        <li><a href="elements-form.html">Form</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Elements Layout 03</a>
-                                    <ul>
-                                        <li><a href="elements-footer.html">Footer Style</a></li>
-                                        <li><a href="elements-icomoon.html">Icomoon Fonts Icon</a></li>
-                                        <li><a href="elements-pricing.html">Pricing</a></li>
-                                        <li><a href="elements-social.html">Social Share</a></li>
-                                        <li><a href="elements-team.html">Team</a></li>
-                                        <li><a href="elements-testimonial.html">Testimonial</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="title">Elements Layout 04</a>
-                                    <ul>
-                                        <li><a href="elements-why-chose.html">Why Chose Us</a></li>
-                                        <li><a href="elements-service.html">Service</a></li>
-                                        <li><a href="#">More Coming</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li> --}}
-
-                        <!-- <li class="menu-item-has-children">
-                            <a href="#">Dashboard</a>
-                            <ul class="dp-menu">
-                                <li><a href="dashboard.html">Dashboard</a></li>
-                                <li><a href="my-property.html">My Property</a></li>
-                                <li><a href="my-property-card.html">Property Card</a></li>
-                                <li><a href="property-add.html">Add Property</a></li>
-                                <li><a href="property-edit.html">Property Edit</a></li>
-                                <li><a href="app-invoice.html">Invoices List</a></li>
-                                <li><a href="app-invoice-preview.html">Invoices Preview</a></li>
-                                <li><a href="favorite.html">Favorites</a></li>
-                                <li><a href="reviews.html">Reviews</a></li>
-                                <li><a href="profile.html">Profile</a></li>
-                            </ul>
-                        </li> -->
 
                         <li class="menu-item-has-children">
                             <a href="/contact">Contact</a>
@@ -162,9 +46,6 @@
             </div>
             <div class="header-right style-one">
                 <div class="header-action">
-                    <!-- <div class="header-btn-wrap d-none d-sm-block">
-                        <a class="bd-half-outline-btn" href="contact.html"><span class="text">Add Property</span></a>
-                    </div> -->
                     <div class="header-hamburger">
                         <div class="sidebar-toggle">
                             <button><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -72,14 +72,14 @@
                             <span class="icon"><i class="icon-rent-property"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-details.html">New Develop</a>
+                                    <a href="/property">New Develop</a>
                                 </h3>
                                 <p class="description">The rent property kitchen invites you to whip up delicious meals,
                                     while
                                     the cozy bedroom promises sleep</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                <a class="bd-half-outline-btn" href="/property"><span class="text">Learn
                                         more</span></a>
                             </div>
                         </div>
@@ -108,13 +108,13 @@
                             <span class="icon"><i class="icon-sell-property"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-details.html">Sell</a>
+                                    <a href="/sell">Sell</a>
                                 </h3>
                                 <p class="description">With years of industry experience, our team boasts an in depth
                                     understanding of the market knowledge.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                <a class="bd-half-outline-btn" href="/sell"><span class="text">Learn
                                         more</span></a>
                             </div>
                         </div>
