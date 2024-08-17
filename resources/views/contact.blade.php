@@ -35,7 +35,6 @@
                         <h5 class="contact-title mb-15">Call Us On</h5>
                         <div class="contact-content">
                             <a href="tel:+415864872899">+415-864-8728-99</a>
-                            <a href="tel:+415864872997">+415-864-8729-97</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +44,6 @@
                         <h5 class="contact-title mb-15">Email Us</h5>
                         <div class="contact-content">
                             <a href="mailto:support@Reallow.com">support@Reallow.com</a>
-                            <a href="mailto:contact@Reallow.com">contact@Reallow.com</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +53,6 @@
                         <h5 class="contact-title mb-15">Our Location</h5>
                         <div class="contact-content">
                             <a target="_blank" href="#">1426 Center StreetBend</a>
-                            <a target="_blank" href="#">97702, California, USA</a>
                         </div>
                     </div>
                 </div>

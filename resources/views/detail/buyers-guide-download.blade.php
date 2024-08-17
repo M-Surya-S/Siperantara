@@ -14,6 +14,7 @@
                                 <h1 class="bd-breadcrumb-title">Buyer's Guide</h1>
                                 <div class="bd-breadcrumb-list">
                                     <span><a href="/"><i class="icon-home"></i>Home</a></span>
+                                    <span><a href="/guide">Guide</a></span>
                                     <span>Buyer's Guide</span>
                                 </div>
                             </div>
@@ -50,7 +51,7 @@
                     <div class="contact-wrapper style-one">
                         <div class="contact-from">
                             <div class="row g-5 align-items-center justify-content-center">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="form-input-box has-icon icon-right">
                                         <div class="form-input">
                                             <input name="name2" type="text" placeholder="Your Name">
@@ -58,7 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="form-input-box has-icon icon-right">
                                         <div class="form-input">
                                             <input name="email2" type="text" placeholder="Your Email">
@@ -66,7 +67,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="form-input-box has-icon icon-right">
                                         <div class="form-input">
                                             <input name="number2" type="text" placeholder="Your Phone">
@@ -78,7 +79,7 @@
                                 <div class="col-lg-12 text-center">
                                     <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">Download</button>
                                 </div>
-                                <div class="col-lg-12 text-center mt-4">
+                                <div class="col-lg-12 text-center mt-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="consentCheckbox">
                                         <label class="form-check-label" for="consentCheckbox">
