@@ -6,7 +6,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="footer-cta-content">
-                            <h3 class="title">Start your journey with our reallow property</h3>
+                            <h3 class="title">Start your journey with our Siperantara property</h3>
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
