@@ -43,3 +43,10 @@ Route::get('/blog', function () {
 Route::get('/blog-details', function () {
     return view('detail.detail-blog', ['title' => 'Blog Details']);
 });
+Route::get('/buyers-guide-download', function () {
+    return view('detail.buyers-guide-download', ['title' => 'Buyers Guide']);
+});
+Route::get('/seller-guide-download', function () {
+    return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
+});
+

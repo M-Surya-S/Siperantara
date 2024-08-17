@@ -16935,6 +16935,24 @@ blockquote cite::before {
 .footer-demo-description {
   color: rgba(255, 255, 255, 0.7);
 }
+/* CSS for Consent Checkbox and Text */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust space between button and consent text */
+}
+
+.form-check-input {
+    margin-right: 10px; /* Space between checkbox and text */
+}
+
+.form-check-label {
+    font-size: 14px; /* Adjust text size as needed */
+    line-height: 1.5; /* Improve readability */
+    text-align: justify; /* Justify the text */
+    max-width: 100%; /* Ensure text doesn’t overflow */
+}
+
 
 /* footer css */
 .footer-btn-wrap {
@@ -16942,6 +16960,29 @@ blockquote cite::before {
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
+.checkmark-list {
+    margin-top: 20px; /* Atur jarak antara divider dan daftar centang */
+}
+
+.checkmark-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Atur jarak antar baris */
+}
+
+.checkmark-item i {
+    color: #FFBD1F; /* Warna ikon centang, bisa disesuaikan */
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+.checkmark-item span {
+    font-size: 16px; /* Ukuran font untuk teks */
+}
+
+
+.contact-form-spacing {
+    padding-top: 100px; /* Atur nilai sesuai kebutuhan */
 }
 
 .demo-footer-wrapper {
