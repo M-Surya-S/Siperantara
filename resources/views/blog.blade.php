@@ -33,7 +33,7 @@
                     <div class="postbox__wrapper">
                         <article class="postbox__item format-image mb-50 transition-3">
                             <div class="postbox__thumb w-img">
-                                <a href="blog-details.html">
+                                <a href="/blog-details">
                                     <img src="assets/images/blog/postbox/blog-post-01.png" alt="image">
                                 </a>
                             </div>

@@ -78,6 +78,11 @@
 
                         <li class="menu-item-has-children">
                             <a href="/agent">Agent</a>
+                            <ul class="dp-menu">
+                                <li><a href="/agent">Find Agent</a></li>
+                                <li><a href="/join-agent">Join us</a></li>
+
+                            </ul>
 
                         </li>
 

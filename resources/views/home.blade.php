@@ -90,13 +90,13 @@
                             <span class="icon"><i class="icon-buy-home"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-details.html">Buy or Rent</a>
+                                    <a href="/property">Buy or Rent</a>
                                 </h3>
                                 <p class="description">Choose us for your real estate needs and experience unparalleled
                                     expertise and dedication.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="services-details.html"><span class="text">Learn
+                                <a class="bd-half-outline-btn" href="/property"><span class="text">Learn
                                         more</span></a>
                             </div>
                         </div>
@@ -620,7 +620,7 @@
                                                 <a class="bd-badge" href="property-details.html">For Sale</a>
                                             </div>
                                             <div class="thumb">
-                                                <a href="property-details.html">
+                                                <a href="/property-details">
                                                     <figure>
                                                         <img src="assets/images/featured/featured-thumb-01.png"
                                                             alt="Image">
@@ -632,7 +632,7 @@
                                             <div class="price">
                                                 <span>$14,000/mo</span>
                                             </div>
-                                            <h3 class="title"><a href="property-details.html">Equestrian family home</a>
+                                            <h3 class="title"><a href="/property-details">Equestrian family home</a>
                                             </h3>
                                             <span class="info">California, CA, USA</span>
                                             <div class="bd-meta">

@@ -49,4 +49,7 @@ Route::get('/buyers-guide-download', function () {
 Route::get('/seller-guide-download', function () {
     return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
 });
+Route::get('/join-agent', function () {
+    return view('detail.join-agent', ['title' => 'Agent']);
+});
 
