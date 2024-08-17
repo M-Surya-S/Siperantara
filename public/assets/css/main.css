@@ -19896,10 +19896,10 @@ blockquote cite::before {
 .property-details-info-list {
   background: var(--theme-bg-primary);
   position: relative;
-  padding: 30px 40px 30px;
+  padding: 30px 30px 30px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 50px;

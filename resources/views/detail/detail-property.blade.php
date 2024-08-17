@@ -76,9 +76,6 @@
                                     <i class="fa-regular fa-calendar-days"></i>
                                     June 29, 2022
                                 </li>
-                                <li class="property-details-comments">
-                                    <i class="fa-light fa-comments"></i>40 Comments
-                                </li>
                             </ul>
                         </div>
                         <h2 class="property-details-title">Penthouse large property</h2>
@@ -104,8 +101,9 @@
                                 <li><label>Rooms:</label> <span>8</span></li>
                                 <li><label>Baths:</label> <span>3</span></li>
                                 <li><label>Year built:</label> <span>1990</span></li>
+                                <li><label>Certificate:</label> <span>SLF</span></li>
                             </ul>
-                            <ul>
+                            <ul class="property-details-info-list-right">
                                 <li><label>Lot Area:</label> <span>PT30 </span></li>
                                 <li><label>Lot dimensions:</label> <span>150 sqft</span></li>
                                 <li><label>Beds:</label> <span>9</span></li>
