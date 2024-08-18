@@ -171,7 +171,7 @@
                 }
             })
 
-            // Main Cursor Moving 
+            // Main Cursor Moving
             tl.to(".cursor1", {
                 ease: "power2.out"
             })

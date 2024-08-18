@@ -22,6 +22,46 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard', ['title' => 'Dashboard']);
 });
 
+Route::get('/my-property', function () {
+    return view('admin.my-property', ['title' => 'My Property']);
+});
+
+Route::get('/add-property', function () {
+    return view('admin.add-property', ['title' => 'Add Property']);
+});
+
+Route::get('/add-agent', function () {
+    return view('admin.add-agent', ['title' => 'Add Agent']);
+});
+
+Route::get('/edit-property', function () {
+    return view('admin.edit-property', ['title' => 'Edit Property']);
+});
+
+Route::get('/my-agent', function () {
+    return view('admin.my-agent', ['title' => 'My Agent']);
+});
+
+Route::get('/edit-agent', function () {
+    return view('admin.edit-agent', ['title' => 'Edit Agent']);
+});
+
+Route::get('/sell-property', function () {
+    return view('admin.customer.sell-property', ['title' => 'Edit Agent']);
+});
+
+Route::get('/join-agent-admin', function () {
+    return view('admin.customer.join-agent', ['title' => 'Join Agent']);
+});
+
+Route::get('/download-guide', function () {
+    return view('admin.customer.download-guide', ['title' => 'Download Guide']);
+});
+
+
+
+
+
 // main web
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
