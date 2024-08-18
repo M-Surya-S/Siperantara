@@ -1,370 +1,389 @@
 @extends('layouts.app')
 @section('content')
-<main>
+    <main>
 
-    <!-- property slider area start -->
-    <div class="bd-property-details-area fix pt-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="property-details-wrapper">
-                        <div class="swiper property-details-active">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class=" property-details-item">
-                                        <div class="property-details-item-thumb">
-                                            <img src="assets/images/property/details/property-details-slider-thumb-01.png" alt="">
+        <!-- property slider area start -->
+        <div class="bd-property-details-area fix pt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="property-details-wrapper">
+                            <div class="swiper property-details-active">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class=" property-details-item">
+                                            <div class="property-details-item-thumb">
+                                                <img src="assets/images/property/details/property-details-slider-thumb-01.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class=" property-details-item">
+                                            <div class="property-details-item-thumb">
+                                                <img src="assets/images/property/details/property-details-slider-thumb-02.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class=" property-details-item">
+                                            <div class="property-details-item-thumb">
+                                                <img src="assets/images/property/details/property-details-slider-thumb-03.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class=" property-details-item">
+                                            <div class="property-details-item-thumb">
+                                                <img src="assets/images/property/details/property-details-slider-thumb-04.png"
+                                                    alt="">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class=" property-details-item">
-                                        <div class="property-details-item-thumb">
-                                            <img src="assets/images/property/details/property-details-slider-thumb-02.png" alt="">
-                                        </div>
-                                    </div>
+                                <!-- If we need navigation buttons -->
+                                <div class="property-details-navigation d-none d-sm-block">
+                                    <button class="property-details-button-prev circle-btn is-bg-white"><i
+                                            class="fa-regular fa-arrow-left-long"></i></button>
+                                    <button class="property-details-button-next circle-btn is-bg-white"><i
+                                            class="fa-regular fa-arrow-right-long"></i></button>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class=" property-details-item">
-                                        <div class="property-details-item-thumb">
-                                            <img src="assets/images/property/details/property-details-slider-thumb-03.png" alt="">
-                                        </div>
-                                    </div>
+                                <!-- If we need pagination -->
+                                <div class="pagination-wrapper d-block d-sm-none">
+                                    <div class="bd-swiper-dot text-center"></div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class=" property-details-item">
-                                        <div class="property-details-item-thumb">
-                                            <img src="assets/images/property/details/property-details-slider-thumb-04.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need navigation buttons -->
-                            <div class="property-details-navigation d-none d-sm-block">
-                                <button class="property-details-button-prev circle-btn is-bg-white"><i
-                             class="fa-regular fa-arrow-left-long"></i></button>
-                                <button class="property-details-button-next circle-btn is-bg-white"><i
-                             class="fa-regular fa-arrow-right-long"></i></button>
-                            </div>
-                            <!-- If we need pagination -->
-                            <div class="pagination-wrapper d-block d-sm-none">
-                                <div class="bd-swiper-dot text-center"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- property slider area end -->
+        <!-- property slider area end -->
 
-    <!-- property details content start -->
-    <section class="bd-property-details-area section-space-medium">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-xl-8 col-lg-8">
-                    <div class="property-details-content-inner">
-                        <div class="property-details-meta">
-                            <ul>
-                                <li class="property-details-category">
-                                    <a class="is-bg-orange" href="#">Featured</a>
-                                </li>
-                                <li class="property-details-category">
-                                    <a class="is-bg-transparent" href="#">For Rent</a>
-                                </li>
-                                <li class="property-details-date">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    June 29, 2022
-                                </li>
-                            </ul>
-                        </div>
-                        <h2 class="property-details-title">Penthouse large property</h2>
-                        <span class="property-details-location">
-                    <i class="fa-regular fa-location-dot"></i>
-                    27 Division St, New York
-                 </span>
-                        <h4 class="property-details-title-two">Description</h4>
-                        <div class="property-details-descrip-text">
-                            <p>This property type offers highlight key features, e.g., modern amenities, luxurious living
-                                spaces, a serene neighborhood. The specific rooms or areas, kitchen, living room, master
-                                bedroom boasts specific details, granite countertops, stainless steel appliances, a cozy
-                                fireplace. Enjoy outdoor features, a spacious backyard, stunning views, a private pool
-                                perfect for activities, e.g., entertaining guests, relaxing weekends.</p>
-                            <p>Situated in the heart of Neighborhood/City, this property provides easy access to key
-                                locations, top-rated schools, shopping centers, major highways</p>
-                        </div>
-                        <h4 class="property-details-title-two">Property Details</h4>
-                        <div class="property-details-info-list wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <ul>
-                                <li><label>Property ID:</label> <span>PT30</span></li>
-                                <li><label>Home Area: </label> <span>150 sqft</span></li>
-                                <li><label>Rooms:</label> <span>8</span></li>
-                                <li><label>Baths:</label> <span>3</span></li>
-                                <li><label>Year built:</label> <span>1990</span></li>
-                                <li><label>Certificate:</label> <span>SLF</span></li>
-                            </ul>
-                            <ul class="property-details-info-list-right">
-                                <li><label>Lot Area:</label> <span>PT30 </span></li>
-                                <li><label>Lot dimensions:</label> <span>150 sqft</span></li>
-                                <li><label>Beds:</label> <span>9</span></li>
-                                <li><label>Price:</label> <span>5</span></li>
-                                <li><label>Property Status:</label> <span>For Sale</span></li>
-                            </ul>
-                        </div>
-                        <h4 class="property-details-title-two">Property Features</h4>
-                        <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <ul>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-modern-living"></i>
-                             </span>
-                                        <div>
-                                            <h6>Living Room</h6>
-                                            <span class="descrip">20 x 16 sq feet</span>
+        <!-- property details content start -->
+        <section class="bd-property-details-area section-space-medium">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="property-details-content-inner">
+                            <div class="property-details-meta">
+                                <ul>
+                                    <li class="property-details-category">
+                                        <a class="is-bg-orange" href="#">Featured</a>
+                                    </li>
+                                    <li class="property-details-category">
+                                        <a class="is-bg-transparent" href="#">For Rent</a>
+                                    </li>
+                                    <li class="property-details-date">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        June 29, 2022
+                                    </li>
+                                </ul>
+                            </div>
+                            <h2 class="property-details-title mb-5">Penthouse large property</h2>
+                            <h4 class="property-details-title-two mb-5"><i>$ 18.000/mo</i></h4>
+                            <span class="property-details-location">
+                                <i class="fa-regular fa-location-dot"></i>
+                                27 Division St, New York
+                            </span>
+                            <h4 class="property-details-title-two">Description</h4>
+                            <div class="property-details-descrip-text">
+                                <p>This property type offers highlight key features, e.g., modern amenities, luxurious
+                                    living
+                                    spaces, a serene neighborhood. The specific rooms or areas, kitchen, living room, master
+                                    bedroom boasts specific details, granite countertops, stainless steel appliances, a cozy
+                                    fireplace. Enjoy outdoor features, a spacious backyard, stunning views, a private pool
+                                    perfect for activities, e.g., entertaining guests, relaxing weekends.</p>
+                                <p>Situated in the heart of Neighborhood/City, this property provides easy access to key
+                                    locations, top-rated schools, shopping centers, major highways</p>
+                            </div>
+                            <h4 class="property-details-title-two">Property Details</h4>
+                            <div class="property-details-info-list wow bdFadeInUp" data-wow-delay=".3s"
+                                data-wow-duration="1s">
+                                <ul>
+                                    <li><label>Property ID:</label> <span>PT30</span></li>
+                                    <li><label>Home Area: </label> <span>150 sqft</span></li>
+                                    <li><label>Rooms:</label> <span>8</span></li>
+                                    <li><label>Baths:</label> <span>3</span></li>
+                                    <li><label>Year built:</label> <span>1990</span></li>
+                                    <li><label>Certificate:</label> <span>SLF</span></li>
+                                </ul>
+                                <ul>
+                                    <li><label>Lot Area:</label> <span>PT30 </span></li>
+                                    <li><label>Lot dimensions:</label> <span>150 sqft</span></li>
+                                    <li><label>Beds:</label> <span>9</span></li>
+                                    <li><label>Price:</label> <span>5</span></li>
+                                    <li><label>Property Status:</label> <span>For Sale</span></li>
+                                </ul>
+                            </div>
+                            <h4 class="property-details-title-two">Property Features</h4>
+                            <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
+                                data-wow-duration="1s">
+                                <ul>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-modern-living"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Living Room</h6>
+                                                <span class="descrip">20 x 16 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-garage"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Garage</h6>
+                                                <span class="descrip">40 x 20 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-dining-area"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Dining Area</h6>
+                                                <span class="descrip">25 x 20 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-bedroom"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Bedroom</h6>
+                                                <span class="descrip">15 x 10 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-bathroom"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Bathroom</h6>
+                                                <span class="descrip">10 x 15 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-gym-area"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Gym Area</h6>
+                                                <span class="descrip">35 x 25 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-garden"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Garden</h6>
+                                                <span class="descrip">40 x 30 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon">
+                                                <i class="icon-parking-area"></i>
+                                            </span>
+                                            <div>
+                                                <h6>Parking</h6>
+                                                <span class="descrip">45 x 30 sq feet</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="property-details-title-two"> Our Property Gallery</h4>
+                            <div class="property-details-gallery wow bdFadeInUp" data-wow-delay=".3s"
+                                data-wow-duration="1s">
+                                <div class="row g-5">
+                                    <div class="col-md-6">
+                                        <div class="property-details-gallery-thumb">
+                                            <img src="assets/images/gallery/property-details-gallery-01.png"
+                                                alt="image not found">
                                         </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-garage"></i>
-                             </span>
-                                        <div>
-                                            <h6>Garage</h6>
-                                            <span class="descrip">40 x 20 sq feet</span>
+                                    <div class="col-md-6">
+                                        <div class="property-details-gallery-thumb mb-30">
+                                            <img src="assets/images/gallery/property-details-gallery-02.png"
+                                                alt="image not found">
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-dining-area"></i>
-                             </span>
-                                        <div>
-                                            <h6>Dining Area</h6>
-                                            <span class="descrip">25 x 20 sq feet</span>
+                                        <div class="property-details-gallery-thumb">
+                                            <img src="assets/images/gallery/property-details-gallery-03.png"
+                                                alt="image not found">
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-bedroom"></i>
-                             </span>
-                                        <div>
-                                            <h6>Bedroom</h6>
-                                            <span class="descrip">15 x 10 sq feet</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-bathroom"></i>
-                             </span>
-                                        <div>
-                                            <h6>Bathroom</h6>
-                                            <span class="descrip">10 x 15 sq feet</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-gym-area"></i>
-                             </span>
-                                        <div>
-                                            <h6>Gym Area</h6>
-                                            <span class="descrip">35 x 25 sq feet</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-garden"></i>
-                             </span>
-                                        <div>
-                                            <h6>Garden</h6>
-                                            <span class="descrip">40 x 30 sq feet</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="property-details-feature-list-item">
-                                        <span class="icon">
-                                <i class="icon-parking-area"></i>
-                             </span>
-                                        <div>
-                                            <h6>Parking</h6>
-                                            <span class="descrip">45 x 30 sq feet</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4 class="property-details-title-two"> Our Property Gallery</h4>
-                        <div class="property-details-gallery wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <div class="row g-5">
-                                <div class="col-md-6">
-                                    <div class="property-details-gallery-thumb">
-                                        <img src="assets/images/gallery/property-details-gallery-01.png" alt="image not found">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="property-details-gallery-thumb mb-30">
-                                        <img src="assets/images/gallery/property-details-gallery-02.png" alt="image not found">
-                                    </div>
-                                    <div class="property-details-gallery-thumb">
-                                        <img src="assets/images/gallery/property-details-gallery-03.png" alt="image not found">
-                                    </div>
+                            </div>
+                            <h4 class="property-details-title-two"> Benefits </h4>
+                            <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s"
+                                data-wow-duration="1s">
+                                <div class="property-details-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Mosque/Prayer Room
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Square Footage
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Square Footage
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Living Spaces
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Flooring
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="property-details-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Energy Efficiency
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Parking
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Security Features
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Landscaping
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Accessibility Features
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="property-details-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            HVAC System
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Cylinder Gas
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Plumbing System
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Sports Area
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            internet and Connectivity
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <h4 class="property-details-title-two"> Benefits </h4>
-                        <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <div class="property-details-benefits-list">
-                                <ul>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Mosque/Prayer Room
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Square Footage
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Square Footage
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Living Spaces
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Flooring
-                                    </li>
-                                </ul>
+                            <h4 class="property-details-title-two"> Location</h4>
+                            <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s"
+                                data-wow-duration="1s">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
                             </div>
-                            <div class="property-details-benefits-list">
-                                <ul>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Energy Efficiency
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Parking
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Security Features
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Landscaping
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Accessibility Features
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="property-details-benefits-list">
-                                <ul>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        HVAC System
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Cylinder Gas
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Plumbing System
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        Sports Area
-                                    </li>
-                                    <li>
-                                        <span class="list-icon">
-                                <i class="fa-solid fa-check"></i>
-                             </span>
-                                        internet and Connectivity
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h4 class="property-details-title-two"> Location</h4>
-                        <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                    <div class="agent-sidebar-wrapper bd-sidebar-sticky">
-                        <div class="agent-details-widget mb-35">
-                            <h3 class="sidebar-widget-title">Contact</h3>
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <div class="input-box">
-                                        <input type="text" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="input-box">
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="agent-sidebar-wrapper bd-sidebar-sticky">
+                            <div class="agent-details-widget mb-35">
+                                <h3 class="sidebar-widget-title">Contact</h3>
+                                <div class="row g-3">
+                                    <div class="col-xl-12">
                                         <div class="input-box">
-                                            <input type="email" placeholder="Email">
+                                            <input type="text" placeholder="Name">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="input-box">
-                                        <input type="text" placeholder="Phone">
+                                    <div class="col-xl-12">
+                                        <div class="input-box">
+                                            <div class="input-box">
+                                                <input type="email" placeholder="Email">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="input-box">
-                                        <textarea cols="30" rows="10" placeholder="Write Massage"></textarea>
+                                    <div class="col-xl-12">
+                                        <div class="input-box">
+                                            <input type="text" placeholder="Phone">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="agent-details-btn">
-                                        <button class="bd-btn btn-style btn-hover-x w-100 btn-black" type="submit">Send
-                                            Email</button>
+                                    <div class="col-xl-12">
+                                        <div class="input-box">
+                                            <textarea cols="30" rows="10" placeholder="Write Massage"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="agent-details-btn">
+                                            <button class="bd-btn btn-style btn-hover-x w-100 btn-black"
+                                                type="submit">Send
+                                                Email</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -372,9 +391,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- property details content end -->
+        </section>
+        <!-- property details content end -->
 
-</main>
+    </main>
 @endsection

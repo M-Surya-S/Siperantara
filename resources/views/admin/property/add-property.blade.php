@@ -66,10 +66,21 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12 mt-20">
+                                                <div class="form-input-box">
+                                                    <div class="form-input-title">
+                                                        <label for="propertyTag">Address
+                                                            <span>*</span></label>
+                                                    </div>
+                                                    <div class="form-input">
+                                                        <input name="propertyTag" id="propertyTag" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="property-details-content mb-20">
-                                        <h4 class="property-details-title-two">Property Content</h4>
+                                        <h4 class="property-details-title-two">Description</h4>
                                         <div class="form-input">
                                             <textarea id="tinymce_simple_textarea"></textarea>
                                         </div>
@@ -428,44 +439,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-12">
-                                                <button type="submit" class="bd-half-outline-btn"><span class="text">Add More
-                                                        Benefits </span></button>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="property-details-location mb-20">
-                                        <h4 class="property-details-title-two">Location</h4>
-                                        <div class="property-details-location-map">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89245.36062680863!2d25.596462799999998!3d45.652478099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b862aa214f1%3A0x6cf5f2ef54391e0f!2sBra%C8%99ov%2C%20Romania!5e0!3m2!1sen!2sbd!4v1707640089632!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        </div>
-                                    </div>
-                                    <div class="property-details-plans mb-20">
-                                        <h4 class="property-details-title-two">Apartment Plans</h4>
-                                        <div class="property-gallery-dropzone">
-                                            <div class="dropzone dz-clickable" id="newMyDropzone">
-                                                <div class="dz-default dz-message"><i
-                                                        class="fa-thin fa-cloud-arrow-up"></i>
-                                                    <h6>Drop files here or click to upload.</h6><span
-                                                        class="note needsclick">(This is just a demo
-                                                        dropzone. Selected files are
-                                                        not actually uploaded.)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="property-details-location mb-20">
-                                        <h4 class="property-details-title-two">Apartment Video</h4>
-                                        <div class="apartment-video-link">
-                                            <div class="form-input-box">
-                                                <div class="form-input-title">
-                                                    <label for="apartmentVideoLink">Apartment Video
-                                                        Link<span>*</span></label>
-                                                </div>
-                                                <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
-                                                </div>
-                                            </div>
+                                        <h4 class="property-details-title-two">Link G-Maps Location</h4>
+                                        <div class="form-input">
+                                            <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
                                         </div>
                                     </div>
                                 </div>
