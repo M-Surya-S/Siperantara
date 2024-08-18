@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// admin dashboard
+Route::get('/login', function () {
+    return view('admin.auth.login');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard', ['title' => 'Dashboard']);
+});
+
+// main web
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
 });
