@@ -23,55 +23,44 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/my-property', function () {
-    return view('admin.my-property', ['title' => 'My Property']);
+    return view('admin.property.my-property', ['title' => 'My Property']);
 });
-
 Route::get('/add-property', function () {
-    return view('admin.add-property', ['title' => 'Add Property']);
+    return view('admin.property.add-property', ['title' => 'Add Property']);
 });
-
-Route::get('/add-agent', function () {
-    return view('admin.add-agent', ['title' => 'Add Agent']);
-});
-
 Route::get('/edit-property', function () {
-    return view('admin.edit-property', ['title' => 'Edit Property']);
+    return view('admin.property.edit-property', ['title' => 'Edit Property']);
 });
 
 Route::get('/my-agent', function () {
-    return view('admin.my-agent', ['title' => 'My Agent']);
+    return view('admin.agent.my-agent', ['title' => 'My Agent']);
 });
-
+Route::get('/add-agent', function () {
+    return view('admin.agent.add-agent', ['title' => 'Add Agent']);
+});
 Route::get('/edit-agent', function () {
-    return view('admin.edit-agent', ['title' => 'Edit Agent']);
-});
-
-Route::get('/add-blog', function () {
-    return view('admin.add-blog', ['title' => 'Add Blog']);
+    return view('admin.agent.edit-agent', ['title' => 'Edit Agent']);
 });
 
 Route::get('/my-blog', function () {
-    return view('admin.my-blog', ['title' => 'My Blog']);
+    return view('admin.blog.my-blog', ['title' => 'My Blog']);
 });
-
+Route::get('/add-blog', function () {
+    return view('admin.blog.add-blog', ['title' => 'Add Blog']);
+});
 Route::get('/edit-blog', function () {
-    return view('admin.edit-blog', ['title' => 'Edit Blog']);
+    return view('admin.blog.edit-blog', ['title' => 'Edit Blog']);
 });
 
 Route::get('/sell-property', function () {
     return view('admin.customer.sell-property', ['title' => 'Edit Agent']);
 });
-
 Route::get('/join-agent-admin', function () {
     return view('admin.customer.join-agent', ['title' => 'Join Agent']);
 });
-
 Route::get('/download-guide', function () {
     return view('admin.customer.download-guide', ['title' => 'Download Guide']);
 });
-
-
-
 
 
 // main web

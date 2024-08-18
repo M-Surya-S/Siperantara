@@ -43,8 +43,7 @@
                 </div>
             </div>
             <div class="banner-bg-thumb jarallax">
-                <div class="banner-thumb include-bg jarallax-img"
-                    data-background="assets/images/banner/banner-home-01.png">
+                <div class="banner-thumb include-bg jarallax-img" data-background="assets/images/banner/banner-home-01.png">
                 </div>
             </div>
         </section>
@@ -79,8 +78,7 @@
                                     the cozy bedroom promises sleep</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property"><span class="text">Learn
-                                        more</span></a>
+                                <a class="bd-half-outline-btn" href="/property"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -96,8 +94,7 @@
                                     expertise and dedication.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property"><span class="text">Learn
-                                        more</span></a>
+                                <a class="bd-half-outline-btn" href="/property"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -114,8 +111,7 @@
                                     understanding of the market knowledge.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/sell"><span class="text">Learn
-                                        more</span></a>
+                                <a class="bd-half-outline-btn" href="/sell"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -825,8 +821,7 @@
                                     </span>
                                     <h2 class="section-title title-animation">Our skilled lead Siperantara agents</h2>
                                 </div>
-                                <a class="bd-half-outline-btn" href="/agent"><span class="text">Discover
-                                        More</span></a>
+                                <a class="bd-half-outline-btn" href="/join-agent"><span class="text">Join Us</span></a>
                             </div>
                             <div class="pagination-wrapper">
                                 <div class="common-nav-pre">

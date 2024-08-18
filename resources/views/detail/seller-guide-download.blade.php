@@ -32,7 +32,7 @@
             <div class="row gy-24 justify-content-between">
                 <div class="col-xxl-5 col-xl-5 col-lg-6">
                     <div class="section-title-wrapper anim-wrapper animation-style-3 mb-30">
-                        <h2 class="section-title title-animation mb-20">Download Our Seller     Guide</h2>
+                        <h2 class="section-title title-animation mb-20">Download Our Seller Guide</h2>
                         <div class="section-divider mb-25"></div>
                         <!-- Added section for checkmarks and text -->
                         <div class="checkmark-list">

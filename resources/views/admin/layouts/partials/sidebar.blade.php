@@ -2,7 +2,7 @@
     <div class="sidebar-logo-wrap d-flex justify-content-between align-items-center">
         <div class="logo-details">
             <a href="index.html">
-                <img src="assets/images/logo/logo-black.svg" alt="logo not found">
+                <img src="assets/images/logo/logo_siperantara.png" alt="logo not found">
             </a>
         </div>
     </div>
