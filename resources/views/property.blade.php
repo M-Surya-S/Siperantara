@@ -508,104 +508,59 @@
                         <div class="property-sidebar-wrapper bd-sidebar-sticky">
                             <!-- type -->
                             <div class="property-widget">
-                                <h3 class="property-widget-title">Property Type</h3>
+                                <h3 class="property-widget-title">Filter</h3>
                                 <div class="property-widget-content">
-                                    <div class="bd-property-widget-checkbox">
-                                        <ul class="filter-items filter-checkbox">
-                                            <li class="filter-item checkbox">
-                                                <input id="villa" type="checkbox">
-                                                <label for="villa">Villa</label>
-                                                <span>100</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="studio" type="checkbox">
-                                                <label for="studio">Studio</label>
-                                                <span>50</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="apartment" type="checkbox">
-                                                <label for="apartment">Apartment</label>
-                                                <span>80</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="office" type="checkbox">
-                                                <label for="office">Office</label>
-                                                <span>90</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="house" type="checkbox">
-                                                <label for="house">Luxury House</label>
-                                                <span>150</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="flat" type="checkbox">
-                                                <label for="flat">Flat</label>
-                                                <span>200</span>
-                                            </li>
-                                        </ul><!-- .filter-items -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- benefits -->
-                            <div class="property-widget">
-                                <h3 class="property-widget-title">Benefits</h3>
-                                <div class="property-widget-content">
-                                    <div class="bd-property-widget-checkbox">
-                                        <ul class="filter-items filter-checkbox">
-                                            <li class="filter-item checkbox">
-                                                <input id="modern_house" type="checkbox">
-                                                <label for="modern_house">Modern House</label>
-                                                <span>100</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="car_parking" type="checkbox">
-                                                <label for="car_parking"> Car Parking</label>
-                                                <span>50</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="dining_area" type="checkbox">
-                                                <label for="dining_area">Dining Area</label>
-                                                <span>10</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="bedroom" type="checkbox">
-                                                <label for="bedroom">Bedroom</label>
-                                                <span>20</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="sports_area" type="checkbox">
-                                                <label for="sports_area">Sports Area</label>
-                                                <span>30</span>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="security_camera" type="checkbox">
-                                                <label for="security_camera">Security Camera</label>
-                                                <span>60</span>
-                                            </li>
-                                        </ul><!-- .filter-items -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- categories -->
-                            <div class="property-widget">
-                                <h3 class="property-widget-title">Categories</h3>
-                                <div class="bd-property-widget-content">
-                                    <div class="bd-property-widget-categories">
-                                        <ul>
-                                            <li><a href="#">Buying <span>10</span></a></li>
-                                            <li><a href="#">Renting <span>18</span></a></li>
-                                            <li><a href="#">Market Update <span>22</span></a></li>
-                                            <li><a href="#">House Construction <span>17</span></a></li>
-                                            <li><a href="#">Selling <span>22</span></a></li>
-                                            <li><a href="#">Investment<span>14</span></a></li>
-                                        </ul>
+                                    <div class="banner-booking-select">
+                                        <div class="booking-select mb-10">
+                                            <select>
+                                                <option value="default">Bedrooms</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="booking-select mb-10">
+                                            <select>
+                                                <option value="default">Bathrooms</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="booking-select mb-30">
+                                            <select>
+                                                <option value="default">Floors</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="banner-submit">
+                                            <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
+                                                <span>
+                                                    <svg width="17" height="18" viewBox="0 0 17 18"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
+                                                            stroke="white" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                Search
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- Property area end -->
 
