@@ -302,6 +302,7 @@ h6, i[class^=flaticon-], .body-overlay {
   background-color: var(--theme-bg-primary);
 }
 
+
 /*----------------------------------------
    Icomoon customize
 -----------------------------------------*/
@@ -316,6 +317,53 @@ i[class^=icon-] {
 }
 .icomoon-icon i {
   margin-right: 5px;
+}
+
+/* Style untuk item dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Menampilkan menu dropdown saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /*----------------------------------------
