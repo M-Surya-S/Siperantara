@@ -9,17 +9,7 @@
                     <div class="card-title-wrap">
                         <h6 class="card-subtitle">My Property List</h6>
                     </div>
-                    <div class="card-dropdown">
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="card-body">
                     <div class="property-table-wrapper">

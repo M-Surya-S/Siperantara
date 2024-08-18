@@ -46,6 +46,18 @@ Route::get('/edit-agent', function () {
     return view('admin.edit-agent', ['title' => 'Edit Agent']);
 });
 
+Route::get('/add-blog', function () {
+    return view('admin.add-blog', ['title' => 'Add Blog']);
+});
+
+Route::get('/my-blog', function () {
+    return view('admin.my-blog', ['title' => 'My Blog']);
+});
+
+Route::get('/edit-blog', function () {
+    return view('admin.edit-blog', ['title' => 'Edit Blog']);
+});
+
 Route::get('/sell-property', function () {
     return view('admin.customer.sell-property', ['title' => 'Edit Agent']);
 });

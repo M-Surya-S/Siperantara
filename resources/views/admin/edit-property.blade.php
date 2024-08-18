@@ -179,6 +179,16 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="form-input-box">
+                                                    <div class="form-input-title">
+                                                        <label for="PropertyStatus">Certificate:<span>*</span></label>
+                                                    </div>
+                                                    <div class="form-input">
+                                                        <input name="PropertyStatus" id="PropertyStatus" type="text" value="2024">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="property-details-features mb-20">

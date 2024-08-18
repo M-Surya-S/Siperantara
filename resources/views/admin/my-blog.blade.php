@@ -18,9 +18,9 @@
                                 <thead>
                                     <tr>
                                         <th>Photo</th>
-                                        <th>Agent</th>
+                                        <th>Blog Tittle</th>
+                                        <th>Writter</th>
                                         <th>Date</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -69,6 +69,12 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div class="recent-activity-price-box">
+                                                <h5 class="mb-5">$15,000</h5>
+                                                <p>Monthly</p>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <ul class="recent-activity-list">
                                                 <li class="property-date mb-5">Add Date: <span class="property-add-date">June
                                         17, 2024</span></li>
@@ -79,8 +85,9 @@
                                         <td><span class="bd-badge success">Active</span></td>
                                         <td>
                                             <div class="d-flex align-items-center justify-content-start gap-10">
-
-                                                <a href="/edit-agent" class="action-button edit"><i
+                                                <a href="property-details.html" class="action-button download"><i
+                                        class="fa-regular fa-eye"></i></a>
+                                                <a href="/edit-blog" class="action-button edit"><i
                                         class="fa-sharp fa-light fa-pen"></i></a>
                                                 <button class="action-button delete"><i
                                         class="fa-regular fa-trash"></i></button>
@@ -132,6 +139,12 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div class="recent-activity-price-box">
+                                                <h5 class="mb-5">$85,000</h5>
+                                                <p>Monthly</p>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <ul class="recent-activity-list">
                                                 <li class="property-date mb-5">Add Date: <span class="property-add-date">June
                                         13, 2024</span></li>
@@ -142,7 +155,8 @@
                                         <td><span class="bd-badge warning">Processing</span></td>
                                         <td>
                                             <div class="d-flex align-items-center justify-content-start gap-10">
-
+                                                <a href="property-details.html" class="action-button download"><i
+                                        class="fa-regular fa-eye"></i></a>
                                                 <a href="property-details.html" class="action-button edit"><i
                                         class="fa-sharp fa-light fa-pen"></i></a>
                                                 <button class="action-button delete"><i
@@ -195,6 +209,12 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div class="recent-activity-price-box">
+                                                <h5 class="mb-5">$1,80,000</h5>
+                                                <p>Yearly</p>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <ul class="recent-activity-list">
                                                 <li class="property-date mb-5">Add Date: <span class="property-add-date">June
                                         10, 2024</span></li>
@@ -205,6 +225,8 @@
                                         <td><span class="bd-badge danger">Pending</span></td>
                                         <td>
                                             <div class="d-flex align-items-center justify-content-start gap-10">
+                                                <a href="property-details.html" class="action-button download"><i
+                                        class="fa-regular fa-eye"></i></a>
                                                 <a href="property-details.html" class="action-button edit"><i
                                         class="fa-sharp fa-light fa-pen"></i></a>
                                                 <button class="action-button delete"><i
@@ -257,6 +279,12 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div class="recent-activity-price-box">
+                                                <h5 class="mb-5">$14,000</h5>
+                                                <p>Monthly</p>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <ul class="recent-activity-list">
                                                 <li class="property-date mb-5">Add Date: <span class="property-add-date">June
                                         06, 2024</span></li>
@@ -267,7 +295,8 @@
                                         <td><span class="bd-badge info">Closed</span></td>
                                         <td>
                                             <div class="d-flex align-items-center justify-content-start gap-10">
-
+                                                <a href="property-details.html" class="action-button download"><i
+                                        class="fa-regular fa-eye"></i></a>
                                                 <a href="property-details.html" class="action-button edit"><i
                                         class="fa-sharp fa-light fa-pen"></i></a>
                                                 <button class="action-button delete"><i

@@ -14,6 +14,8 @@
                 <li><a href="/add-property"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>Add Property</a></li>
                 <li><a href="/my-agent"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>Agent</a></li>
                 <li><a href="/add-agent"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>Add Agent</a></li>
+                <li><a href="/my-blog"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>My Blog</a></li>
+                <li><a href="/add-blog"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>Add Blog</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle"><span><i class="fa-sharp fa-light fa-building-circle-arrow-right"></i></span>Customer</a>
                     <ul class="dropdown-menu">
