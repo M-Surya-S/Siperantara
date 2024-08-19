@@ -7,7 +7,7 @@
             <div class="card-wrapper">
                 <div class="card-header d-flex align-items-center justify-content-between mb-30">
                     <div class="card-title-wrap">
-                        <h6 class="card-subtitle">My Property List</h6>
+                        <h6 class="card-subtitle">My Blog List</h6>
                     </div>
 
                 </div>

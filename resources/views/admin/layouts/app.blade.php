@@ -48,7 +48,6 @@
         <header class="app-header">
             <div class="app-header-inner">
                 <div class="app-header-left">
-
                 </div>
                 <div class="app-header-right">
                     <div class="app-header-admin p-relative">
@@ -74,7 +73,7 @@
         <!-- app header end -->
 
         <!-- app-sidebar start -->
-        @extends('admin.layouts.partials.sidebar')
+        @include('admin.layouts.partials.sidebar')
         <!-- app-sidebar end -->
 
         <!-- app body content start -->

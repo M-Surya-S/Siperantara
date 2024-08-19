@@ -264,12 +264,6 @@
                             </button>
                         </div>
                     </div>
-                    <!-- <div class="offcanvas-search mb-0">
-                        <form action="#">
-                            <input type="text" name="offcanvasSearch" placeholder="Search here">
-                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div> -->
                     <div class="mobile-menu fix mb-25"></div>
                     <div class="offcanvas-about d-none d-lg-block mb-25">
                         <h4 class="offcanvas-title-meta">About SIPERANTARA</h4>

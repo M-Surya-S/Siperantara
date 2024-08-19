@@ -26,7 +26,7 @@
                                             <label for="propertyTitle">Name<span>*</span></label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="propertyTitle" id="propertyTitle" type="text" value="Penthouse large property">
+                                            <input name="propertyTitle" id="propertyTitle" type="text">
                                         </div>
                                     </div>
                                     <div class="property-pricing mb-20">
@@ -38,7 +38,7 @@
                                                             <label for="propertyPrice">Address<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="propertyPrice" id="propertyPrice" type="text" value="$14,000">
+                                                            <input name="propertyPrice" id="propertyPrice" type="text">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -49,7 +49,7 @@
                                                         <label for="propertyDiscount">Email<span>*</span></label>
                                                     </div>
                                                     <div class="form-input">
-                                                        <input name="propertyDiscount" id="propertyDiscount" type="text" value="5.00%">
+                                                        <input name="propertyDiscount" id="propertyDiscount" type="text">
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,7 +60,7 @@
                                                             <span>*</span></label>
                                                     </div>
                                                     <div class="form-input">
-                                                        <input name="propertyTag" id="propertyTag" type="text" value="For Rent">
+                                                        <input name="propertyTag" id="propertyTag" type="text">
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@
                                                     <label for="apartmentVideoLink">Instagram Link<span>*</span></label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url" value="https://www.youtube.com/watch?v=go7QYaQR494">
+                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
                                                 </div>
                                             </div>
                                             <div class="form-input-box mb-10">
@@ -82,7 +82,7 @@
                                                     <label for="apartmentVideoLink">LinkedIn Link<span>*</span></label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url" value="https://www.youtube.com/watch?v=go7QYaQR494">
+                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
                                                 </div>
                                             </div>
                                             <div class="form-input-box mb-10">
@@ -90,7 +90,7 @@
                                                     <label for="apartmentVideoLink">Facebook Link<span>*</span></label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url" value="https://www.youtube.com/watch?v=go7QYaQR494">
+                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
                                                 </div>
                                             </div>
                                             <div class="form-input-box">
@@ -98,7 +98,7 @@
                                                     <label for="apartmentVideoLink">Twitter Link<span>*</span></label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url" value="https://www.youtube.com/watch?v=go7QYaQR494">
+                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
                                                 </div>
                                             </div>
                                         </div>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="bd-btn btn-style btn-hover-x hover-white">Update</button>
+                            <button type="submit" class="bd-btn btn-style btn-hover-x hover-white">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -115,5 +115,4 @@
         </div>
     </div>
 </div>
-
 @endsection
