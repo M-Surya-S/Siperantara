@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PropertyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +20,10 @@ Route::get('/login', function () {
     return view('admin.auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard', ['title' => 'Dashboard']);
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard/my-property', [PropertyController::class, 'index']);
+Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
 
-Route::get('/my-property', function () {
-    return view('admin.property.my-property', ['title' => 'My Property']);
-});
 Route::get('/add-property', function () {
     return view('admin.property.add-property', ['title' => 'Add Property']);
 });

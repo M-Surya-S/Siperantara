@@ -8,20 +8,20 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="assets/css/plugins/chosen.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/dropzone.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
-    <link rel="stylesheet" href="assets/css/vendor/icomoon.css">
-    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/chosen.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/nouislider.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/dropzone.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/fontawesome-pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/spacing.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 </head>
 
 <body>
@@ -55,7 +55,7 @@
                             <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="admin-wrapper">
                             <span class="admin-thumb">
-                                <img class="avatar-sm" src="assets/images/agent/agent-01.png" alt="image">
+                                <img class="avatar-sm" src="{{ asset('assets/images/agent/agent-01.png') }}" alt="image">
                             </span>
                                 <span class="admin-meta">
                                 <span class="admin-meta-name">Jhon Smith</span>
@@ -90,29 +90,29 @@
     <!-- Backtotop end -->
 
     <!-- JS here -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/plugins/waypoints.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins/meanmenu.min.js"></script>
-    <script src="assets/js/plugins/swiper.min.js"></script>
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <script src="assets/js/plugins/wow.js"></script>
-    <script src="assets/js/vendor/magnific-popup.min.js"></script>
-    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/vendor/purecounter.js"></script>
-    <script src="assets/js/plugins/nouislider.min.js"></script>
-    <script src="assets/js/plugins/nice-select.min.js"></script>
-    <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
-    <script src="assets/js/plugins/SplitText.min.js"></script>
-    <script src="assets/js/plugins/gsap.min.js"></script>
-    <script src="assets/js/plugins/bd-cursor.js"></script>
-    <script src="assets/js/plugins/jarallax.min.js"></script>
-    <script src="assets/js/plugins/dropzone.min.js"></script>
-    <script src="assets/js/plugins/tinymce.min.js"></script>
-    <script src="assets/js/plugins/apexcharts.min.js"></script>
-    <script src="assets/js/vendor/ajax-form.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/meanmenu.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/purecounter.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/nouislider.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/SplitText.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/gsap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/bd-cursor.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/jarallax.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/dropzone.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/tinymce.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
