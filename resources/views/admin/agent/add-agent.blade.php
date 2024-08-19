@@ -11,7 +11,7 @@
                                 <div class="property-details-thumb details-slide-full mb-30">
                                     <div class="property-thumb-chnage">
                                         <div class="property-thumb-preview">
-                                            <div class="property-thumb-preview-box" id="imagePreview" style="background-image: url('assets/images/blog/blog-thumb-01.png');">
+                                    <div class="property-thumb-preview-box" id="imagePreview" style="background-image: url('{{ asset('assets/images/blog/image-mockup.png') }}');">
                                             </div>
                                         </div>
                                         <div class="property-thumb-edit">

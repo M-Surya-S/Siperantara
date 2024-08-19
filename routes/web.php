@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\AgentController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\Customer\DownloadGuideController;
+use App\Http\Controllers\Admin\Customer\JoinAgentController;
+use App\Http\Controllers\Admin\Customer\SellPropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PropertyController;
 use Illuminate\Support\Facades\Route;
@@ -15,54 +20,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// admin dashboard
+// DASHBOARD ADMIN
 Route::get('/login', function () {
     return view('admin.auth.login');
 });
-
 Route::get('/dashboard', [DashboardController::class, 'index']);
+
+// Property
 Route::get('/dashboard/my-property', [PropertyController::class, 'index']);
 Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
-
-Route::get('/add-property', function () {
-    return view('admin.property.add-property', ['title' => 'Add Property']);
-});
-Route::get('/edit-property', function () {
+Route::get('/dashboard/edit-property', function () {
     return view('admin.property.edit-property', ['title' => 'Edit Property']);
 });
 
-Route::get('/my-agent', function () {
-    return view('admin.agent.my-agent', ['title' => 'My Agent']);
-});
-Route::get('/add-agent', function () {
-    return view('admin.agent.add-agent', ['title' => 'Add Agent']);
-});
+// Agent
+Route::get('/dashboard/my-agent', [AgentController::class, 'index']);
+Route::get('/dashboard/add-agent', [AgentController::class, 'create']);
 Route::get('/edit-agent', function () {
     return view('admin.agent.edit-agent', ['title' => 'Edit Agent']);
 });
 
-Route::get('/my-blog', function () {
-    return view('admin.blog.my-blog', ['title' => 'My Blog']);
-});
-Route::get('/add-blog', function () {
-    return view('admin.blog.add-blog', ['title' => 'Add Blog']);
-});
+// Blog
+Route::get('/dashboard/my-blog', [BlogController::class, 'index']);
+Route::get('/dashboard/add-blog', [BlogController::class, 'create']);
 Route::get('/edit-blog', function () {
     return view('admin.blog.edit-blog', ['title' => 'Edit Blog']);
 });
 
-Route::get('/sell-property', function () {
-    return view('admin.customer.sell-property', ['title' => 'Edit Agent']);
-});
-Route::get('/join-agent-admin', function () {
-    return view('admin.customer.join-agent', ['title' => 'Join Agent']);
-});
-Route::get('/download-guide', function () {
-    return view('admin.customer.download-guide', ['title' => 'Download Guide']);
-});
+// Customer
+Route::get('/dashboard/sell-property', [SellPropertyController::class, 'index']);
+Route::get('/dashboard/join-agent', [JoinAgentController::class, 'index']);
+Route::get('/dashboard/download-guide', [DownloadGuideController::class, 'index']);
 
 
-// main web
+// WEBSITE UTAMA
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
 });

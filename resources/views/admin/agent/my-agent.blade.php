@@ -29,7 +29,7 @@
                                         <td style="width: 280px;">
                                             <div class="property-thumb-wrapper">
                                                 <div class="property-thumb image-hover-effect-two position-relative">
-                                                    <img src="assets/images/blog/blog-thumb-01.png" alt="image">
+                                                    <img src="{{ asset('assets/images/blog/blog-thumb-01.png') }}" alt="image">
                                                     <div class="property-thumb-date">
                                                         <div class="bd-badge-sq theme-bg">
                                                             <div class="d-block">
