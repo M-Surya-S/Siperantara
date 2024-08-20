@@ -12,7 +12,7 @@ class Property extends Model
     protected $table = 'property';
     protected $fillable = [
         'property_id',
-        'image_1',
+        'image',
         'property_title',
         'property_price',
         'discount',
@@ -25,7 +25,7 @@ class Property extends Model
         'rooms',
         'beds',
         'baths',
-        'veranda/balcony',
+        'veranda_balcony',
         'year_built',
         'property_status',
         'certificate',
@@ -37,8 +37,29 @@ class Property extends Model
         'gym_area',
         'garden',
         'parking',
-        'image_2',
         'benefits',
         'link_location',
     ];
+
+    public static function generatePropertyId()
+    {
+        // Mengambil ID terakhir yang ada di database
+        $lastProperty = Property::orderBy('property_id', 'desc')->first();
+
+        // Jika tidak ada ID, set ke ID00001
+        if (!$lastProperty) {
+            $nextId = 'ID0001';
+        } else {
+            // Ambil angka dari ID terakhir
+            $lastIdNumber = (int)substr($lastProperty->property_id, 2);
+
+            // Tambahkan 1 pada angka tersebut
+            $nextIdNumber = $lastIdNumber + 1;
+
+            // Format ulang menjadi ID dengan leading zeros
+            $nextId = 'ID' . str_pad($nextIdNumber, 4, '0', STR_PAD_LEFT);
+        }
+
+        return $nextId;
+    }
 }

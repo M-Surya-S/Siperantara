@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('property', function (Blueprint $table) {
-            $table->id('property_id');
-            $table->string('image_1');
+            $table->string('property_id')->primary();
+            $table->json('image');
             $table->string('property_title');
             $table->string('property_price');
-            $table->string('discount');
+            $table->string('discount')->nullable();
             $table->string('property_tag');
             $table->string('address');
             $table->string('description');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('rooms');
             $table->string('beds');
             $table->string('baths');
-            $table->string('veranda/balcony');
+            $table->string('veranda_balcony');
             $table->string('year_built');
             $table->string('property_status');
             $table->string('certificate');
@@ -41,10 +41,8 @@ return new class extends Migration
             $table->string('garden');
             $table->string('parking');
             // Property Gallery
-            $table->string('image_2');
             $table->json('benefits');
             $table->string('link_location');
-            $table->enum('status', ['Dijual', 'Terjual', 'Disewa', 'Tersewa']);
             $table->timestamps();
         });
     }

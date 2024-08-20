@@ -46,8 +46,7 @@
                                             <td>
                                                 <div class="property-title-box d-flex align-items-center gap-10">
                                                     <div>
-                                                        <h3 class="property-title underline"><a
-                                                                href="property-details.html">Equestrian family home</a></h3>
+                                                        <h3 class="property-title underline">Equestrian family home</h3>
                                                         <div class="property-info-box mb-5">
                                                             <div class="bd-meta">
                                                                 <div class="meta-item">
@@ -90,12 +89,12 @@
                                             <td><span class="bd-badge success">Active</span></td>
                                             <td>
                                                 <div class="d-flex align-items-center justify-content-start gap-10">
-                                                    <a href="property-details.html" class="action-button download"><i
-                                                            class="fa-regular fa-eye"></i></a>
-                                                    <a href="/edit-property" class="action-button edit"><i
-                                                            class="fa-sharp fa-light fa-pen"></i></a>
-                                                    <button class="action-button delete"><i
-                                                            class="fa-regular fa-trash"></i></button>
+                                                    <a href="/edit-property" class="action-button edit">
+                                                        <i class="fa-sharp fa-light fa-pen"></i>
+                                                    </a>
+                                                    <button class="action-button delete">
+                                                        <i class="fa-regular fa-trash"></i>
+                                                    </button>
                                                 </div>
                                             </td>
                                         </tr>

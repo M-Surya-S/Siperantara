@@ -29,6 +29,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 // Property
 Route::get('/dashboard/my-property', [PropertyController::class, 'index']);
 Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
+Route::post('/dashboard/add-property', [PropertyController::class, 'store'])->name('add-property.store');
 Route::get('/dashboard/edit-property', function () {
     return view('admin.property.edit-property', ['title' => 'Edit Property']);
 });
