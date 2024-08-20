@@ -38,16 +38,20 @@
                                                 <h3 class="property-title">Equestrian family home</h3>
                                             </td>
                                             <td>
-                                                <p>Monthly</p>
+                                                <p>Muhammad Surya Saniansyah</p>
                                             </td>
                                             <td>
-                                                <p>17 Agustus 2024</p>
+                                                <ul class="recent-activity-list">
+                                                    <li class="property-date mb-5">Add Date: <span
+                                                            class="property-add-date">June
+                                                            17, 2024</span></li>
+                                                    <li class="property-date">Last Date: <span
+                                                            class="property-last-date">July 31,
+                                                            2024</span></li>
+                                                </ul>
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center justify-content-start gap-10">
-                                                    <a href="property-details.html" class="action-button download">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </a>
                                                     <a href="/edit-blog" class="action-button edit">
                                                         <i class="fa-sharp fa-light fa-pen"></i>
                                                     </a>

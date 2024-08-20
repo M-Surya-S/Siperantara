@@ -44,6 +44,7 @@ return new class extends Migration
             $table->string('image_2');
             $table->json('benefits');
             $table->string('link_location');
+            $table->enum('status', ['Dijual', 'Terjual', 'Disewa', 'Tersewa']);
             $table->timestamps();
         });
     }
