@@ -91,17 +91,6 @@
                                         <div class="property-details-meta mb-20">
                                             <h4 class="property-details-title-two">Property Details</h4>
                                             <div class="row g-5">
-                                                {{-- <div class="col-xl-3 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
-                                                            <label for="propertyID">Property ID:
-                                                                <span>*</span></label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input id="propertyID" type="text" name="property_id" required>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
