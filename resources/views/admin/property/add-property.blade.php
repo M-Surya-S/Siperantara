@@ -423,7 +423,7 @@
                                         <div class="property-details-location mb-20">
                                             <h4 class="property-details-title-two mb-5">Link G-Maps Location</h4>
                                             <div class="form-input">
-                                                <input id="apartmentLocationLink" type="url" name="link_location">
+                                                <input id="apartmentLocationLink" type="url" name="link_location" required>
                                             </div>
                                         </div>
                                     </div>

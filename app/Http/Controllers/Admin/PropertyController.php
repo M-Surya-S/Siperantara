@@ -14,7 +14,8 @@ class PropertyController extends Controller
     public function index()
     {
         $title = 'Property';
-        return view('admin.property.my-property', compact('title'));
+        $propertys = Property::all();
+        return view('admin.property.my-property', compact('title', 'propertys'));
     }
 
     /**
@@ -107,7 +108,9 @@ class PropertyController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $property = Property::findOrFail($id);
+        $title = 'Edit Property';
+        return view('admin.property.edit-property', compact('title','property'));
     }
 
     /**
@@ -115,7 +118,73 @@ class PropertyController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $property = Property::findOrFail($id);
+
+        $existingImagePath = json_decode($property->image);
+        
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $uploadedFiles = $request->file('image');
+            $filePaths = [];
+                foreach ($uploadedFiles as $file) {
+                    $path = $file->store('public/property/image');
+                    $filePaths[] = $path;
+                }
+            $property->update([
+                'image' => json_encode($filePaths),
+            ]);
+        } else {
+            $property->update([
+                'image' => $existingImagePath,
+            ]);
+        }
+
+        // Collecting benefits
+        $benefits = [
+            $request->benefit_1,
+            $request->benefit_2,
+            $request->benefit_3,
+            $request->benefit_4,
+            $request->benefit_5,
+            $request->benefit_6,
+            $request->benefit_7,
+            $request->benefit_8,
+            $request->benefit_9,
+            $request->benefit_10,
+            $request->benefit_11,
+            $request->benefit_12,
+        ];
+
+        $property->update([
+            'property_title' => $request->property_title,
+            'property_price' => $request->property_price,
+            'discount' => $request->discount,
+            'property_tag' => $request->property_tag,
+            'address' => $request->address,
+            'description' => $request->description,
+            'lot_area' => $request->lot_area,
+            'home_area' => $request->home_area,
+            'lot_dimensions' => $request->lot_dimensions,
+            'rooms' => $request->rooms,
+            'beds' => $request->beds,
+            'baths' => $request->baths,
+            'veranda_balcony' => $request->veranda_balcony,
+            'year_built' => $request->year_built,
+            'property_status' => $request->property_status,
+            'certificate' => $request->certificate,
+            'living_room' => $request->living_room,
+            'garage' => $request->garage,
+            'dining_area' => $request->dining_area,
+            'bedroom' => $request->bedroom,
+            'bathroom' => $request->bathroom,
+            'gym_area' => $request->gym_area,
+            'garden' => $request->garden,
+            'parking' => $request->parking,
+            'benefits' => json_encode($benefits),
+            'link_location' => $request->link_location,
+        ]);
+
+        return redirect(url('dashboard/my-property'));
     }
 
     /**

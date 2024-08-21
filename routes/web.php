@@ -30,9 +30,8 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/dashboard/my-property', [PropertyController::class, 'index']);
 Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
 Route::post('/dashboard/add-property', [PropertyController::class, 'store'])->name('add-property.store');
-Route::get('/dashboard/edit-property', function () {
-    return view('admin.property.edit-property', ['title' => 'Edit Property']);
-});
+Route::get('/dashboard/edit-property/{id}', [PropertyController::class, 'edit'])->name('edit-property.edit');
+Route::post('/dashboard/update-property/{id}', [PropertyController::class, 'update'])->name('update-property.update');
 
 // Agent
 Route::get('/dashboard/my-agent', [AgentController::class, 'index']);

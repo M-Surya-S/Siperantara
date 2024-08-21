@@ -26,78 +26,97 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="table-custom">
-                                            <td style="width: 280px;">
-                                                <div class="property-thumb-wrapper">
-                                                    <div class="property-thumb image-hover-effect-two position-relative">
-                                                        <img src="{{ asset('assets/images/blog/blog-thumb-01.png') }}"
-                                                            alt="image">
-                                                        <div class="property-thumb-date">
-                                                            <div class="bd-badge-sq theme-bg">
-                                                                <div class="d-block">
-                                                                    <h5 class="badge-title">17</h5>
-                                                                    <span>June</span>
+                                        @foreach ($propertys as $property)
+                                            <tr class="table-custom">
+                                                <td style="width: 280px;">
+                                                    <div class="property-thumb-wrapper">
+                                                        <div
+                                                            class="property-thumb image-hover-effect-two position-relative">
+                                                            @php
+                                                                $filePaths = json_decode($property->image);
+                                                            @endphp
+                                                            @foreach ($filePaths as $filePath)
+                                                                <img class="" src="{{ Storage::url($filePath) }}" alt="image">
+                                                                @break
+                                                            @endforeach
+                                                            <div class="property-thumb-date">
+                                                                <div class="bd-badge-sq theme-bg">
+                                                                    <div class="d-block">
+                                                                        <h5 class="badge-title">
+                                                                            {{ \Carbon\Carbon::parse($property->created_at)->format('d') }}
+                                                                        </h5>
+                                                                        <span>{{ \Carbon\Carbon::parse($property->created_at)->format('M') }}</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="property-title-box d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <h3 class="property-title underline">Equestrian family home</h3>
-                                                        <div class="property-info-box mb-5">
-                                                            <div class="bd-meta">
-                                                                <div class="meta-item">
-                                                                    <span class="icon"><i
-                                                                            class="fa-regular fa-bed-front"></i></span><span
-                                                                        class="title">3 bad</span>
-                                                                </div>
-                                                                <div class="meta-item">
-                                                                    <span class="icon"><i
-                                                                            class="fa-duotone fa-shower"></i></span><span
-                                                                        class="title">4 bath</span>
-                                                                </div>
-                                                                <div class="meta-item">
-                                                                    <span class="icon"><i
-                                                                            class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                        class="title">1200 sqft</span>
+                                                </td>
+                                                <td>
+                                                    <div class="property-title-box d-flex align-items-center gap-10">
+                                                        <div>
+                                                            <h3 class="property-title underline">{{ $property->property_title }}</h3>
+                                                            <div class="property-info-box mb-5">
+                                                                <div class="bd-meta">
+                                                                    <div class="meta-item">
+                                                                        <span class="icon"><i
+                                                                                class="fa-regular fa-bed-front"></i></span><span
+                                                                            class="title">{{ $property->beds }} bed</span>
+                                                                    </div>
+                                                                    <div class="meta-item">
+                                                                        <span class="icon"><i
+                                                                                class="fa-duotone fa-shower"></i></span><span
+                                                                            class="title">{{ $property->baths }} bath</span>
+                                                                    </div>
+                                                                    <div class="meta-item">
+                                                                        <span class="icon"><i
+                                                                                class="fa-regular fa-arrows-maximize"></i></span><span
+                                                                            class="title">{{ $property->lot_area }} sqft</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <p class="property-location">{{ $property->address }}</p>
                                                         </div>
-                                                        <p class="property-location">California, CA, USA</p>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="recent-activity-price-box">
-                                                    <h5 class="mb-5">$15,000</h5>
-                                                    <p>Monthly</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="recent-activity-list">
-                                                    <li class="property-date mb-5">Add Date: <span
-                                                            class="property-add-date">June
-                                                            17, 2024</span></li>
-                                                    <li class="property-date">Last Date: <span
-                                                            class="property-last-date">July 31,
-                                                            2024</span></li>
-                                                </ul>
-                                            </td>
-                                            <td><span class="bd-badge success">Active</span></td>
-                                            <td>
-                                                <div class="d-flex align-items-center justify-content-start gap-10">
-                                                    <a href="/edit-property" class="action-button edit">
-                                                        <i class="fa-sharp fa-light fa-pen"></i>
-                                                    </a>
-                                                    <button class="action-button delete">
-                                                        <i class="fa-regular fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td>
+                                                    <div class="recent-activity-price-box">
+                                                        <h5 class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</h5>
+                                                        @if ($property->property_status == 'Disewa' or $property->property_status == 'Tersewa')
+                                                            <p>Monthly</p>
+                                                        @endif
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <ul class="recent-activity-list">
+                                                        <li class="property-date mb-5">Add Date: <span
+                                                                class="property-add-date">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></li>
+                                                        <li class="property-date">Last Update: <span
+                                                                class="property-last-date">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    @if ($property->property_status == 'Dijual' or $property->property_status == 'Disewa')
+                                                        <span class="bd-badge warning">{{ $property->property_status }}</span>
+                                                    @elseif ($property->property_status == 'Terjual' or $property->property_status == 'Tersewa')
+                                                        <span class="bd-badge success">{{ $property->property_status }}</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-start gap-10">
+                                                        <a href="#" class="action-button download">
+                                                            <i class="fa-regular fa-eye"></i>
+                                                        </a>
+                                                        <a href="{{ route('edit-property.edit', $property->property_id) }}" class="action-button edit">
+                                                            <i class="fa-sharp fa-light fa-pen"></i>
+                                                        </a>
+                                                        <button class="action-button delete">
+                                                            <i class="fa-regular fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

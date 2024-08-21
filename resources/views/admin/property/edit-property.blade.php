@@ -1,34 +1,27 @@
 @extends('admin.layouts.app')
+
 @section('content-admin')
     <div class="app-content-wrapper">
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-10">
                 <div class="card-wrapper">
                     <div class="card-body">
-                        <form action="#">
+                        <form action="{{ route('update-property.update', $property->property_id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
                             <div class="property-details-wrapper">
                                 <div class="property-details mb-25">
-                                    <div class="property-details-thumb details-slide-full mb-30">
-                                        <div class="property-thumb-chnage">
-                                            <div class="property-thumb-preview">
-                                                <div class="property-thumb-preview-box" id="imagePreview"
-                                                    style="background-image: url('assets/images/blog/blog-thumb-01.png');">
-                                                </div>
-                                            </div>
-                                            <div class="property-thumb-edit">
-                                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg">
-                                                <label for="imageUpload">Click images here</label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="property-details-content">
+                                        <div class="form-input-box mb-40">
+                                            <h1 class="property-details-title ">EDIT PROPERTY</h1>
+                                        </div>
                                         <div class="form-input-box mb-20">
                                             <div class="form-input-title">
                                                 <label for="propertyTitle">Property Title <span>*</span></label>
                                             </div>
                                             <div class="form-input">
-                                                <input name="propertyTitle" id="propertyTitle" type="text"
-                                                    value="Penthouse large property">
+                                                <input id="propertyTitle" type="text" name="property_title"
+                                                    value="{{ $property->property_title }}" required>
                                             </div>
                                         </div>
                                         <div class="property-pricing mb-20">
@@ -41,8 +34,9 @@
                                                                     Price<span>*</span></label>
                                                             </div>
                                                             <div class="form-input">
-                                                                <input name="propertyPrice" id="propertyPrice"
-                                                                    type="text" value="$14,000">
+                                                                <input id="propertyPrice" type="text"
+                                                                    name="property_price"
+                                                                    value="{{ $property->property_price }}" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -53,8 +47,8 @@
                                                             <label for="propertyDiscount">Discount</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="propertyDiscount" id="propertyDiscount"
-                                                                type="text" value="5.00%">
+                                                            <input id="propertyDiscount" type="text" name="discount"
+                                                                value="{{ $property->discount }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,8 +59,8 @@
                                                                 <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="propertyTag" id="propertyTag" type="text"
-                                                                value="For Rent">
+                                                            <input id="propertyTag" type="text" name="property_tag"
+                                                                value="{{ $property->property_tag }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -77,8 +71,8 @@
                                                                 <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="propertyTag" id="propertyTag" type="text"
-                                                                value="27 Division St, New York">
+                                                            <input id="propertyTag" type="text" name="address"
+                                                                value="{{ $property->address }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -87,7 +81,7 @@
                                         <div class="property-details-content mb-20">
                                             <h4 class="property-details-title-two">Description</h4>
                                             <div class="form-input">
-                                                <textarea id="tinymce_simple_textarea">Hello, World!</textarea>
+                                                <textarea id="tinymce_simple_textarea" name="description" required>{{ $property->description }}</textarea>
                                             </div>
                                         </div>
                                         <div class="property-details-meta mb-20">
@@ -96,23 +90,11 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="propertyID">Property ID:
-                                                                <span>*</span></label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input name="propertyID" id="propertyID" type="text"
-                                                                value="PT30">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
                                                             <label for="lotArea">Lot Area:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="lotArea" id="lotArea" type="text"
-                                                                value="PT30">
+                                                            <input id="lotArea" type="text" name="lot_area"
+                                                                value="{{ $property->lot_area }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -122,8 +104,8 @@
                                                             <label for="homeArea">Home Area:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="homeArea" id="homeArea" type="text"
-                                                                value="150 sqft">
+                                                            <input id="homeArea" type="text" name="home_area"
+                                                                value="{{ $property->home_area }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -134,8 +116,8 @@
                                                                 dimensions:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="lotDimensions" id="lotDimensions" type="text"
-                                                                value="150 sqft">
+                                                            <input id="lotDimensions" type="text" name="lot_dimensions"
+                                                                value="{{ $property->lot_dimensions }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -145,8 +127,8 @@
                                                             <label for="numberOfRoom">Rooms:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="numberOfRoom" id="numberOfRoom" type="text"
-                                                                value="08">
+                                                            <input id="numberOfRoom" type="text" name="rooms"
+                                                                value="{{ $property->rooms }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -156,8 +138,8 @@
                                                             <label for="numberOfBeds">Beds:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="numberOfBeds" id="numberOfBeds" type="text"
-                                                                value="08">
+                                                            <input id="numberOfBeds" type="text" name="beds"
+                                                                value="{{ $property->beds }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -167,8 +149,8 @@
                                                             <label for="numberOfBaths">Baths:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="numberOfBaths" id="numberOfBaths" type="text"
-                                                                value="08">
+                                                            <input id="numberOfBaths" type="text" name="baths"
+                                                                value="{{ $property->baths }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -179,9 +161,9 @@
                                                                 for="numberOfVerandaBalcony">Veranda/Balcony:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="numberOfVerandaBalcony"
-                                                                id="numberOfVerandaBalcony" type="text"
-                                                                value="05">
+                                                            <input id="numberOfVerandaBalcony" type="text"
+                                                                name="veranda_balcony"
+                                                                value="{{ $property->veranda_balcony }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -191,8 +173,8 @@
                                                             <label for="builtYear">Year built:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="builtYear" id="builtYear" type="text"
-                                                                value="2024">
+                                                            <input id="builtYear" type="text" name="year_built"
+                                                                value="{{ $property->year_built }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -203,8 +185,9 @@
                                                                 Status:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="PropertyStatus" id="PropertyStatus"
-                                                                type="text" value="2024">
+                                                            <input id="PropertyStatus" type="text"
+                                                                name="property_status"
+                                                                value="{{ $property->property_status }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -214,8 +197,8 @@
                                                             <label for="PropertyStatus">Certificate:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="PropertyStatus" id="PropertyStatus"
-                                                                type="text" value="SLF">
+                                                            <input id="PropertyStatus" type="text" name="certificate"
+                                                                value="{{ $property->certificate }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -231,8 +214,8 @@
                                                                 Room<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="livingRoom" id="livingRoom" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="livingRoom" type="text" name="living_room"
+                                                                value="{{ $property->living_room }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -242,8 +225,8 @@
                                                             <label for="garage">Garage <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="garage" id="garage" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="garage" type="text" name="garage"
+                                                                value="{{ $property->garage }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -254,8 +237,8 @@
                                                                 Area<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="diningArea" id="diningArea" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="diningArea" type="text" name="dining_area"
+                                                                value="{{ $property->dining_area }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -265,8 +248,8 @@
                                                             <label for="bedroom">Bedroom <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="bedroom" id="bedroom" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="bedroom" type="text" name="bedroom"
+                                                                value="{{ $property->bedroom }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -276,8 +259,8 @@
                                                             <label for="bathroom">Bathroom <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="bathroom" id="bathroom" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="bathroom" type="text" name="bathroom"
+                                                                value="{{ $property->bathroom }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -287,8 +270,8 @@
                                                             <label for="gymArea">Gym Area <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="gymArea" id="gymArea" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="gymArea" type="text" name="gym_area"
+                                                                value="{{ $property->gym_area }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -298,8 +281,8 @@
                                                             <label for="garden">Garden <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="garden" id="garden" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="garden" type="text" name="garden"
+                                                                value="{{ $property->garden }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -309,8 +292,8 @@
                                                             <label for="parking">Parking <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="parking" id="parking" type="text"
-                                                                value="20 x 16 sq feet">
+                                                            <input id="parking" type="text" name="parking"
+                                                                value="{{ $property->parking }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -319,32 +302,24 @@
                                         <div class="property-details-gallery mb-20">
                                             <h4 class="property-details-title-two">Property Gallery</h4>
                                             <div class="property-gallery-dropzone">
-                                                <div class="dropzone dz-clickable dz-started" id="myDropzone">
-                                                    <div class="dz-default dz-message"><span>Upload your file
-                                                            here</span></div>
-                                                    <div class="dz-preview dz-image-preview">
-                                                        <div class="dz-image">
-                                                            <img data-dz-thumbnail="" alt="image"
-                                                                src="assets/images/blog/blog-thumb-01.png">
+                                                <div class="dropzone dz-clickable dz-started text-center" id="myDropzone">
+                                                    <div class="property-thumb-chnage">
+                                                        @php
+                                                            $filePaths = json_decode($property->image);
+                                                        @endphp
+                                                        @foreach ($filePaths as $filePath)
+                                                            <div class="dz-preview dz-image-preview">
+                                                                <div class="dz-image">
+                                                                    <img data-dz-thumbnail="" alt="image"
+                                                                        src="{{ Storage::url($filePath) }}">
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                        <div class="property-thumb-edit">
+                                                            <input type='file' id="imageUpload"
+                                                                accept=".png, .jpg, .jpeg" name="image[]" multiple>
+                                                            <label for="imageUpload">Update images here</label>
                                                         </div>
-                                                        <a class="dz-remove remove-btn" href="javascript:undefined;"
-                                                            data-dz-remove="">Remove file</a>
-                                                    </div>
-                                                    <div class="dz-preview dz-image-preview">
-                                                        <div class="dz-image">
-                                                            <img data-dz-thumbnail="" alt="image"
-                                                                src="assets/images/blog/blog-thumb-02.png">
-                                                        </div>
-                                                        <a class="dz-remove remove-btn" href="javascript:undefined;"
-                                                            data-dz-remove="">Remove file</a>
-                                                    </div>
-                                                    <div class="dz-preview dz-image-preview">
-                                                        <div class="dz-image">
-                                                            <img data-dz-thumbnail="" alt="image"
-                                                                src="assets/images/blog/blog-thumb-03.png">
-                                                        </div>
-                                                        <a class="dz-remove remove-btn" href="javascript:undefined;"
-                                                            data-dz-remove="">Remove file</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,6 +327,9 @@
                                         <div class="property-details-features mb-20">
                                             <h4 class="property-details-title-two">Benefits</h4>
                                             <div class="row gy-5">
+                                                @php
+                                                    $benefits = json_decode($property->benefits);
+                                                @endphp
                                                 <div class="col-xl-4 col-lg-6 col-md-12">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
@@ -359,8 +337,8 @@
                                                                 1</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList1"
-                                                                type="text" value="Mosque/Prayer Room">
+                                                            <input id="advantagesList1" type="text" name="benefit_1"
+                                                                value="{{ $benefits[0] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -371,8 +349,8 @@
                                                                 2</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList2"
-                                                                type="text" value="Square Footage">
+                                                            <input id="advantagesList1" type="text" name="benefit_2"
+                                                                value="{{ $benefits[1] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -383,8 +361,8 @@
                                                                 3</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList3"
-                                                                type="text" value="Living Spaces">
+                                                            <input id="advantagesList1" type="text" name="benefit_3"
+                                                                value="{{ $benefits[2] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -395,8 +373,8 @@
                                                                 4</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList4"
-                                                                type="text" value="Flooring">
+                                                            <input id="advantagesList1" type="text" name="benefit_4"
+                                                                value="{{ $benefits[3] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -407,8 +385,8 @@
                                                                 5</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList5"
-                                                                type="text" value="Energy Efficiency">
+                                                            <input id="advantagesList1" type="text" name="benefit_5"
+                                                                value="{{ $benefits[4] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -419,8 +397,8 @@
                                                                 6</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList6"
-                                                                type="text" value="Parking">
+                                                            <input id="advantagesList1" type="text" name="benefit_6"
+                                                                value="{{ $benefits[5] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -431,8 +409,8 @@
                                                                 7</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList7"
-                                                                type="text" value="Security Features">
+                                                            <input id="advantagesList1" type="text" name="benefit_7"
+                                                                value="{{ $benefits[6] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -443,8 +421,8 @@
                                                                 8</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList8"
-                                                                type="text" value="Landscaping">
+                                                            <input id="advantagesList1" type="text" name="benefit_8"
+                                                                value="{{ $benefits[7] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -455,8 +433,8 @@
                                                                 9</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList9"
-                                                                type="text" value="Accessibility Features">
+                                                            <input id="advantagesList1" type="text" name="benefit_9"
+                                                                value="{{ $benefits[8] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -467,8 +445,8 @@
                                                                 10</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList10"
-                                                                type="text" value="HVAC System">
+                                                            <input id="advantagesList1" type="text" name="benefit_10"
+                                                                value="{{ $benefits[9] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -479,8 +457,8 @@
                                                                 11</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList11"
-                                                                type="text" value="Cylinder Gas">
+                                                            <input id="advantagesList1" type="text" name="benefit_11"
+                                                                value="{{ $benefits[10] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -491,8 +469,8 @@
                                                                 12</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="advantagesList" id="advantagesList12"
-                                                                type="text" value="Plumbing System">
+                                                            <input id="advantagesList1" type="text" name="benefit_12"
+                                                                value="{{ $benefits[11] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -501,7 +479,8 @@
                                         <div class="property-details-location mb-20">
                                             <h4 class="property-details-title-two">Link G-Maps Location</h4>
                                             <div class="form-input">
-                                                <input name="apartmentVideoLink" id="apartmentVideoLink" type="url" value="https://www.youtube.com/watch?v=go7QYaQR494">
+                                                <input id="apartmentLocationLink" type="url" name="link_location"
+                                                    value="{{ $property->link_location }}" required>
                                             </div>
                                         </div>
                                     </div>
