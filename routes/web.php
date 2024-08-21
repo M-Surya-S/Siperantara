@@ -36,9 +36,9 @@ Route::post('/dashboard/update-property/{id}', [PropertyController::class, 'upda
 // Agent
 Route::get('/dashboard/my-agent', [AgentController::class, 'index']);
 Route::get('/dashboard/add-agent', [AgentController::class, 'create']);
-Route::get('/edit-agent', function () {
-    return view('admin.agent.edit-agent', ['title' => 'Edit Agent']);
-});
+Route::post('/dashboard/add-agent', [AgentController::class, 'store'])->name('add-agent.store');
+Route::get('/dashboard/edit-agent/{id}', [AgentController::class, 'edit'])->name('edit-agent.edit');
+Route::post('/dashboard/update-agent/{id}', [AgentController::class, 'update'])->name('update-agent.update');
 
 // Blog
 Route::get('/dashboard/my-blog', [BlogController::class, 'index']);

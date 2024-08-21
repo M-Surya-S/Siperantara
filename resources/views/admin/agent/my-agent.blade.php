@@ -24,46 +24,45 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="table-custom">
-                                            <td style="width: 280px;">
-                                                <div class="property-thumb-wrapper">
-                                                    <div class="property-thumb image-hover-effect-two position-relative">
-                                                        <img src="{{ asset('assets/images/blog/blog-thumb-01.png') }}"
-                                                            alt="image">
+                                        @foreach ($agents as $agent)
+                                            <tr class="table-custom">
+                                                <td style="width: 280px;">
+                                                    <div class="property-thumb-wrapper">
+                                                        <div class="property-thumb image-hover-effect-two position-relative text-center">
+                                                            <img src="{{ Storage::url($agent->image) }}" alt="image">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="property-title-box d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <h3 class="property-title underline">Equestrian family home</h3>
-                                                        <p class="mb-5">California, CA, USA</p>
-                                                        <p class="mb-5">testing@gmail.com</p>
-                                                        <p class="mb-5">0812-1212-1212</p>
+                                                </td>
+                                                <td>
+                                                    <div class="property-title-box d-flex align-items-center gap-10">
+                                                        <div>
+                                                            <h3 class="property-title underline">{{ $agent->name }}</h3>
+                                                            <p class="mb-5">{{ $agent->address }}</p>
+                                                            <p class="mb-5">{{ $agent->email }}</p>
+                                                            <p class="mb-5">{{ $agent->phone_number }}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="recent-activity-list">
-                                                    <li class="property-date mb-5">Add Date: <span
-                                                            class="property-add-date">June
-                                                            17, 2024</span></li>
-                                                    <li class="property-date">Last Date: <span
-                                                            class="property-last-date">July 31,
-                                                            2024</span></li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center justify-content-start gap-10">
-                                                    <a href="/edit-agent" class="action-button edit">
-                                                        <i class="fa-sharp fa-light fa-pen"></i>
-                                                    </a>
-                                                    <button class="action-button delete">
-                                                        <i class="fa-regular fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td>
+                                                    <ul class="recent-activity-list">
+                                                        <li class="property-date mb-5">Add Date: <span
+                                                                class="property-add-date">{{ \Carbon\Carbon::parse($agent->created_at)->format('d M Y') }}</span></li>
+                                                        <li class="property-date">Last Upate: <span
+                                                                class="property-last-date">{{ \Carbon\Carbon::parse($agent->updated_at)->format('d M Y') }}</span></li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-start gap-10">
+                                                        <a href="{{ route('edit-agent.edit', $agent->id) }}" class="action-button edit">
+                                                            <i class="fa-sharp fa-light fa-pen"></i>
+                                                        </a>
+                                                        <button class="action-button delete">
+                                                            <i class="fa-regular fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

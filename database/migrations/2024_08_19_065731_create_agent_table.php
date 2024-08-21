@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('address');
             $table->string('email');
             $table->string('phone_number');
-            $table->string('instagram_link');
-            $table->string('linkedin_link');
-            $table->string('facebook_link');
-            $table->string('twitter_link');
+            $table->string('instagram_link')->nullable();
+            $table->string('linkedin_link')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('twitter_link')->nullable();
             $table->timestamps();
         });
     }

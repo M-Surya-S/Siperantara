@@ -5,7 +5,8 @@
         <div class="col-xl-10 col-md-10">
             <div class="card-wrapper">
                 <div class="card-body">
-                    <form action="#">
+                    <form action="{{ route('add-agent.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="property-details-wrapper">
                             <div class="property-details mb-25">
                                 <div class="property-details-thumb details-slide-full mb-30">
@@ -15,7 +16,7 @@
                                             </div>
                                         </div>
                                         <div class="property-thumb-edit">
-                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image" required>
                                             <label for="imageUpload">Upload Images</label>
                                         </div>
                                     </div>
@@ -26,7 +27,7 @@
                                             <label for="propertyTitle">Name<span>*</span></label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="propertyTitle" id="propertyTitle" type="text">
+                                            <input id="propertyTitle" type="text" name="name" required>
                                         </div>
                                     </div>
                                     <div class="property-pricing mb-20">
@@ -38,7 +39,7 @@
                                                             <label for="propertyPrice">Address<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input name="propertyPrice" id="propertyPrice" type="text">
+                                                            <input id="propertyPrice" type="text" name="address" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -49,7 +50,7 @@
                                                         <label for="propertyDiscount">Email<span>*</span></label>
                                                     </div>
                                                     <div class="form-input">
-                                                        <input name="propertyDiscount" id="propertyDiscount" type="text">
+                                                        <input id="propertyDiscount" type="email" name="email" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,7 +61,7 @@
                                                             <span>*</span></label>
                                                     </div>
                                                     <div class="form-input">
-                                                        <input name="propertyTag" id="propertyTag" type="text">
+                                                        <input id="propertyTag" type="text" name="phone_number" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,34 +72,34 @@
                                         <div class="apartment-video-link">
                                             <div class="form-input-box mb-10">
                                                 <div class="form-input-title">
-                                                    <label for="apartmentVideoLink">Instagram Link<span>*</span></label>
+                                                    <label for="apartmentVideoLink">Instagram Link</label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
+                                                    <input id="apartmentVideoLink" type="url" name="instagram_link">
                                                 </div>
                                             </div>
                                             <div class="form-input-box mb-10">
                                                 <div class="form-input-title">
-                                                    <label for="apartmentVideoLink">LinkedIn Link<span>*</span></label>
+                                                    <label for="apartmentVideoLink">LinkedIn Link</label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
+                                                    <input id="apartmentVideoLink" type="url" name="linkedin_link">
                                                 </div>
                                             </div>
                                             <div class="form-input-box mb-10">
                                                 <div class="form-input-title">
-                                                    <label for="apartmentVideoLink">Facebook Link<span>*</span></label>
+                                                    <label for="apartmentVideoLink">Facebook Link</label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
+                                                    <input id="apartmentVideoLink" type="url" name="facebook_link">
                                                 </div>
                                             </div>
                                             <div class="form-input-box">
                                                 <div class="form-input-title">
-                                                    <label for="apartmentVideoLink">Twitter Link<span>*</span></label>
+                                                    <label for="apartmentVideoLink">Twitter Link</label>
                                                 </div>
                                                 <div class="form-input">
-                                                    <input name="apartmentVideoLink" id="apartmentVideoLink" type="url">
+                                                    <input id="apartmentVideoLink" type="url" name="twitter_link">
                                                 </div>
                                             </div>
                                         </div>
