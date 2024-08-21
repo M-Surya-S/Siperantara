@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -100,6 +101,10 @@ class BlogController extends Controller
     public function destroy(string $id)
     {
         $blog = Blog::findOrfail($id);
+
+        // Hapus file gambar dari storage
+        Storage::delete($blog->image);
+
         $blog->delete();
         return redirect(url('dashboard/my-blog'));
     }

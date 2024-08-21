@@ -66,7 +66,6 @@
                                                                 <i class="fa-regular fa-trash"></i>
                                                             </button>
                                                         </form>
-
                                                     </div>
                                                 </td>
                                             </tr>

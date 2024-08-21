@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Agent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AgentController extends Controller
 {
@@ -109,6 +110,12 @@ class AgentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $agent = Agent::findOrfail($id);
+
+        // Hapus file gambar dari storage
+        Storage::delete($agent->image);
+        
+        $agent->delete();
+        return redirect(url('dashboard/my-agent'));
     }
 }

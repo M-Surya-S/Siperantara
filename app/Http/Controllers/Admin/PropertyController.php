@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PropertyController extends Controller
 {
@@ -33,7 +34,7 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
         $property_id = Property::generatePropertyId();
-        
+
         // Handle image upload
         $uploadedFiles = $request->file('image');
         $filePaths = [];
@@ -110,7 +111,7 @@ class PropertyController extends Controller
     {
         $property = Property::findOrFail($id);
         $title = 'Edit Property';
-        return view('admin.property.edit-property', compact('title','property'));
+        return view('admin.property.edit-property', compact('title', 'property'));
     }
 
     /**
@@ -121,15 +122,15 @@ class PropertyController extends Controller
         $property = Property::findOrFail($id);
 
         $existingImagePath = json_decode($property->image);
-        
+
         // Handle image upload
         if ($request->hasFile('image')) {
             $uploadedFiles = $request->file('image');
             $filePaths = [];
-                foreach ($uploadedFiles as $file) {
-                    $path = $file->store('public/property/image');
-                    $filePaths[] = $path;
-                }
+            foreach ($uploadedFiles as $file) {
+                $path = $file->store('public/property/image');
+                $filePaths[] = $path;
+            }
             $property->update([
                 'image' => json_encode($filePaths),
             ]);
@@ -192,6 +193,18 @@ class PropertyController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $property = Property::findOrFail($id);
+        
+        // Ambil path gambar dari properti
+        $filePaths = json_decode($property->image);
+
+        // Hapus setiap file gambar dari storage
+        if ($filePaths) {
+            foreach ($filePaths as $filePath) {
+                Storage::delete($filePath);
+            }
+        }
+        $property->delete();
+        return redirect(url('dashboard/my-property'));
     }
 }

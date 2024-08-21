@@ -32,6 +32,7 @@ Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
 Route::post('/dashboard/add-property', [PropertyController::class, 'store'])->name('add-property.store');
 Route::get('/dashboard/edit-property/{id}', [PropertyController::class, 'edit'])->name('edit-property.edit');
 Route::post('/dashboard/update-property/{id}', [PropertyController::class, 'update'])->name('update-property.update');
+Route::delete('/dashboard/delete-property/{id}', [PropertyController::class, 'destroy'])->name('delete-property.destroy');
 
 // Agent
 Route::get('/dashboard/my-agent', [AgentController::class, 'index']);
@@ -39,7 +40,7 @@ Route::get('/dashboard/add-agent', [AgentController::class, 'create']);
 Route::post('/dashboard/add-agent', [AgentController::class, 'store'])->name('add-agent.store');
 Route::get('/dashboard/edit-agent/{id}', [AgentController::class, 'edit'])->name('edit-agent.edit');
 Route::post('/dashboard/update-agent/{id}', [AgentController::class, 'update'])->name('update-agent.update');
-Route::delete('/dashboard/delete-agent/{id}', [BlogController::class, 'destroy'])->name('delete-agent.destroy');
+Route::delete('/dashboard/delete-agent/{id}', [AgentController::class, 'destroy'])->name('delete-agent.destroy');
 
 // Blog
 Route::get('/dashboard/my-blog', [BlogController::class, 'index']);

@@ -110,9 +110,15 @@
                                                         <a href="{{ route('edit-property.edit', $property->property_id) }}" class="action-button edit">
                                                             <i class="fa-sharp fa-light fa-pen"></i>
                                                         </a>
-                                                        <button class="action-button delete">
-                                                            <i class="fa-regular fa-trash"></i>
-                                                        </button>
+                                                        <form
+                                                            action="{{ route('delete-property.destroy', $property->property_id) }}"
+                                                            method="POST" style="display: inline;">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="action-button delete">
+                                                                <i class="fa-regular fa-trash"></i>
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>
