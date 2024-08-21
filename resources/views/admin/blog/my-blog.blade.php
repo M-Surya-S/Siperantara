@@ -25,42 +25,52 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="table-custom">
-                                            <td style="width: 280px;">
-                                                <div class="property-thumb-wrapper">
-                                                    <div class="property-thumb image-hover-effect-two position-relative">
-                                                        <img src="{{ asset('assets/images/blog/blog-thumb-01.png') }}"
-                                                            alt="image">
+                                        @foreach ($blogs as $blog)
+                                            <tr class="table-custom">
+                                                <td style="width: 280px;">
+                                                    <div class="property-thumb-wrapper">
+                                                        <div
+                                                            class="property-thumb image-hover-effect-two position-relative text-center">
+                                                            <img src="{{ Storage::url($blog->image) }}" alt="image">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <h3 class="property-title">Equestrian family home</h3>
-                                            </td>
-                                            <td>
-                                                <p>Muhammad Surya Saniansyah</p>
-                                            </td>
-                                            <td>
-                                                <ul class="recent-activity-list">
-                                                    <li class="property-date mb-5">Add Date: <span
-                                                            class="property-add-date">June
-                                                            17, 2024</span></li>
-                                                    <li class="property-date">Last Date: <span
-                                                            class="property-last-date">July 31,
-                                                            2024</span></li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center justify-content-start gap-10">
-                                                    <a href="/edit-blog" class="action-button edit">
-                                                        <i class="fa-sharp fa-light fa-pen"></i>
-                                                    </a>
-                                                    <button class="action-button delete">
-                                                        <i class="fa-regular fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td>
+                                                    <h3 class="property-title">{{ $blog->blog_title }}</h3>
+                                                </td>
+                                                <td>
+                                                    <p>{{ $blog->writter }}</p>
+                                                </td>
+                                                <td>
+                                                    <ul class="recent-activity-list">
+                                                        <li class="property-date mb-5">Add Date: <span
+                                                                class="property-add-date">{{ \Carbon\Carbon::parse($blog->created_at)->format('d M Y') }}</span>
+                                                        </li>
+                                                        <li class="property-date">Last Update: <span
+                                                                class="property-last-date">{{ \Carbon\Carbon::parse($blog->updated_at)->format('d M Y') }}</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center justify-content-start gap-10">
+                                                        <a href="{{ route('edit-blog.edit', $blog->id) }}"
+                                                            class="action-button edit">
+                                                            <i class="fa-sharp fa-light fa-pen"></i>
+                                                        </a>
+                                                        <form
+                                                            action="{{ route('delete-blog.destroy', $blog->id) }}"
+                                                            method="POST" style="display: inline;">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="action-button delete">
+                                                                <i class="fa-regular fa-trash"></i>
+                                                            </button>
+                                                        </form>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

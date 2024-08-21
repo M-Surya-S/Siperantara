@@ -39,13 +39,15 @@ Route::get('/dashboard/add-agent', [AgentController::class, 'create']);
 Route::post('/dashboard/add-agent', [AgentController::class, 'store'])->name('add-agent.store');
 Route::get('/dashboard/edit-agent/{id}', [AgentController::class, 'edit'])->name('edit-agent.edit');
 Route::post('/dashboard/update-agent/{id}', [AgentController::class, 'update'])->name('update-agent.update');
+Route::delete('/dashboard/delete-agent/{id}', [BlogController::class, 'destroy'])->name('delete-agent.destroy');
 
 // Blog
 Route::get('/dashboard/my-blog', [BlogController::class, 'index']);
 Route::get('/dashboard/add-blog', [BlogController::class, 'create']);
-Route::get('/edit-blog', function () {
-    return view('admin.blog.edit-blog', ['title' => 'Edit Blog']);
-});
+Route::post('/dashboard/add-blog', [BlogController::class, 'store'])->name('add-blog.store');
+Route::get('/dashboard/edit-blog/{id}', [BlogController::class, 'edit'])->name('edit-blog.edit');
+Route::post('/dashboard/update-blog/{id}', [BlogController::class, 'update'])->name('update-blog.update');
+Route::delete('/dashboard/delete-blog/{id}', [BlogController::class, 'destroy'])->name('delete-blog.destroy');
 
 // Customer
 Route::get('/dashboard/sell-property', [SellPropertyController::class, 'index']);

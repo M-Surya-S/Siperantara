@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +14,8 @@ class BlogController extends Controller
     public function index()
     {
         $title = 'Blog';
-        return view('admin.blog.my-blog', compact('title'));
+        $blogs = Blog::all();
+        return view('admin.blog.my-blog', compact('title', 'blogs'));
     }
 
     /**
@@ -30,7 +32,17 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Handle image upload
+        $filepath = $request->file('image')->store('public/blog/image');
+
+        Blog::create([
+            'image' => $filepath,
+            'blog_title' => $request->blog_title,
+            'writter' => $request->writter,
+            'blog_content' => $request->blog_content,
+        ]);
+
+        return redirect(url('dashboard/my-blog'));
     }
 
     /**
@@ -46,7 +58,9 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title = 'Edit Blog';
+        $blog = Blog::findOrFail($id);
+        return view('admin.blog.edit-blog', compact('title', 'blog'));
     }
 
     /**
@@ -54,7 +68,30 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+
+        $existingImage = $blog->image;
+
+        if ($request->has('image')) {
+            // Handle image upload
+            $filepath = $request->file('image')->store('public/blog/image');
+            $blog->update([
+                'image' => $filepath,
+            ]);
+
+        } else {
+            $blog->update([
+                'image' => $existingImage,
+            ]);
+        }
+
+        $blog->update([
+            'blog_title' => $request->blog_title,
+            'writter' => $request->writter,
+            'blog_content' => $request->blog_content,
+        ]);
+
+        return redirect(url('dashboard/my-blog'));
     }
 
     /**
@@ -62,6 +99,8 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $blog = Blog::findOrfail($id);
+        $blog->delete();
+        return redirect(url('dashboard/my-blog'));
     }
 }

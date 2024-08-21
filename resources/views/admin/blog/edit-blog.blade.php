@@ -6,17 +6,18 @@
         <div class="col-xl-10 col-md-10">
             <div class="card-wrapper">
                 <div class="card-body">
-                    <form action="#">
+                    <form action="{{ route('update-blog.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="property-details-wrapper">
                             <div class="property-details mb-25">
                                 <div class="property-details-thumb details-slide-full mb-30">
                                     <div class="property-thumb-chnage">
                                         <div class="property-thumb-preview">
-                                            <div class="property-thumb-preview-box" id="imagePreview" style="background-image: url('assets/images/blog/image-mockup.png');">
+                                            <div class="property-thumb-preview-box" id="imagePreview" style="background-image: url('{{ Storage::url($blog->image) }}');">
                                             </div>
                                         </div>
                                         <div class="property-thumb-edit">
-                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image">
                                             <label for="imageUpload">Click images here</label>
                                         </div>
                                     </div>
@@ -27,21 +28,21 @@
                                             <label for="propertyTitle">Blog Title <span>*</span></label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="propertyTitle" id="propertyTitle" type="text">
+                                            <input id="propertyTitle" type="text" name="blog_title" value="{{ $blog->blog_title }}" required>
                                         </div>
                                     </div>
                                     <div class="form-input-box mb-20">
                                         <div class="form-input-title">
-                                            <label for="propertyTitle">Writter <span>*</span></label>
+                                            <label for="propertyTitle">Writter <span>*</span</label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="propertyTitle" id="propertyTitle" type="text">
+                                            <input id="propertyTitle" type="text" name="writter" value="{{ $blog->writter }}" required>
                                         </div>
                                     </div>
                                     <div class="property-details-content mb-20">
                                         <h4 class="property-details-title-two">Blog Content</h4>
                                         <div class="form-input">
-                                            <textarea id="tinymce_simple_textarea"></textarea>
+                                            <textarea id="tinymce_simple_textarea" name="blog_content" required>{{ $blog->blog_content }}</textarea>
                                         </div>
                                     </div>
                                 </div>

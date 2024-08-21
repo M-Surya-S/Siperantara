@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('blog_title');
             $table->string('writter');
-            $table->string('blog_content');
+            $table->text('blog_content');
             $table->timestamps();
         });
     }
