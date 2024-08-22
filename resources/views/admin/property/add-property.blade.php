@@ -43,7 +43,7 @@
                                                                     Price<span>*</span></label>
                                                             </div>
                                                             <div class="form-input">
-                                                                <input id="propertyPrice" type="text" name="property_price" required>
+                                                                <input id="propertyPrice" type="number" name="property_price" placeholder="Masukkan angka saja" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -54,7 +54,7 @@
                                                             <label for="propertyDiscount">Discount</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="propertyDiscount" type="text" name="discount">
+                                                            <input id="propertyDiscount" type="text" placeholder="Contoh: 20" name="discount">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,7 +65,7 @@
                                                                 <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="propertyTag" type="text" name="property_tag" required>
+                                                            <input id="propertyTag" type="text" name="property_tag" placeholder="Residental, Comercial, Industrial, Land" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -76,7 +76,7 @@
                                                                 <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="propertyTag" type="text" name="address" required>
+                                                            <input id="propertyTag" type="text" name="address" placeholder="Masukkan alamat lengkap" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -85,7 +85,7 @@
                                         <div class="property-details-content mb-20">
                                             <h4 class="property-details-title-two">Description</h4>
                                             <div class="form-input">
-                                                <textarea id="tinymce_simple_textarea" name="description" required></textarea>
+                                                <textarea id="tinymce_simple_textarea" name="description" placeholder="Deskripsi dari properti" required></textarea>
                                             </div>
                                         </div>
                                         <div class="property-details-meta mb-20">
@@ -94,20 +94,20 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="lotArea">Lot Area:<span>*</span></label>
+                                                            <label for="lotArea">Lot Area (m²):<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="lotArea" type="text" name="lot_area" required>
+                                                            <input id="lotArea" type="text" name="lot_area" placeholder="Contoh: 10 m²" required>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="homeArea">Home Area:<span>*</span></label>
+                                                            <label for="homeArea">Home Area (m²):<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="homeArea" type="text" name="home_area" required>
+                                                            <input id="homeArea" type="text" name="home_area" placeholder="Contoh: 10 m²" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -118,7 +118,7 @@
                                                                 dimensions:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="lotDimensions" type="text" name="lot_dimensions" required>
+                                                            <input id="lotDimensions" type="text" name="lot_dimensions" placeholder="Contoh: 10m x 10m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                                             <label for="numberOfRoom">Rooms:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="numberOfRoom" type="text" name="rooms" required>
+                                                            <input id="numberOfRoom" type="text" name="rooms" placeholder="Jumlah Ruangan" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -138,7 +138,7 @@
                                                             <label for="numberOfBeds">Beds:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="numberOfBeds" type="text" name="beds" required>
+                                                            <input id="numberOfBeds" type="text" name="beds" placeholder="Jumlah Kamar Tidur" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,7 +148,7 @@
                                                             <label for="numberOfBaths">Baths:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="numberOfBaths" type="text" name="baths" required>
+                                                            <input id="numberOfBaths" type="text" name="baths" placeholder="Jumlah Kamar Mandi" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -156,10 +156,10 @@
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label
-                                                                for="numberOfVerandaBalcony">Veranda/Balcony:<span>*</span></label>
+                                                                for="numberOfVerandaBalcony">Veranda/Balcony:</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="numberOfVerandaBalcony" type="text" name="veranda_balcony" required>
+                                                            <input id="numberOfVerandaBalcony" type="text" name="veranda_balcony" placeholder="Jumlah Veranda/Balcony" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -169,22 +169,22 @@
                                                             <label for="builtYear">Year built:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="builtYear" type="text" name="year_built" required>
+                                                            <input id="builtYear" type="text" name="year_built" placeholder="Contoh: 2010" required>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="col-xl-6 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="PropertyStatus">Property
                                                                 Status:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="PropertyStatus" type="text" name="property_status" required>
+                                                            <input id="PropertyStatus" type="text" name="property_status" placeholder="Dijual, Disewa, Terjual, Tersewa" required>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                <div class="col-xl-6 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="PropertyStatus">Certificate:<span>*</span></label>
@@ -206,7 +206,7 @@
                                                                 Room<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="livingRoom" type="text" name="living_room" required>
+                                                            <input id="livingRoom" type="text" name="living_room" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -216,7 +216,7 @@
                                                             <label for="garage">Garage <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="garage" type="text" name="garage" required>
+                                                            <input id="garage" type="text" name="garage" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,7 +227,7 @@
                                                                 Area<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="diningArea" type="text" name="dining_area" required>
+                                                            <input id="diningArea" type="text" name="dining_area" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -237,7 +237,7 @@
                                                             <label for="bedroom">Bedroom <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="bedroom" type="text" name="bedroom" required>
+                                                            <input id="bedroom" type="text" name="bedroom" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -247,7 +247,7 @@
                                                             <label for="bathroom">Bathroom <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="bathroom" type="text" name="bathroom" required>
+                                                            <input id="bathroom" type="text" name="bathroom" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -257,7 +257,7 @@
                                                             <label for="gymArea">Gym Area <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="gymArea" type="text" name="gym_area" required>
+                                                            <input id="gymArea" type="text" name="gym_area" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -267,7 +267,7 @@
                                                             <label for="garden">Garden <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="garden" type="text" name="garden" required>
+                                                            <input id="garden" type="text" name="garden" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -277,7 +277,7 @@
                                                             <label for="parking">Parking <span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="parking" type="text" name="parking" required>
+                                                            <input id="parking" type="text" name="parking" placeholder="Contoh: 5m x 3m" required>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -82,8 +82,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h2 class="property-details-title mb-5">Penthouse large property</h2>
-                            <h4 class="property-details-title-two mb-5"><i>$ 18.000/mo</i></h4>
+                            <h2 class="property-details-title">Penthouse large property</h2>
                             <span class="property-details-location">
                                 <i class="fa-regular fa-location-dot"></i>
                                 27 Division St, New York
