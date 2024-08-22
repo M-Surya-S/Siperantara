@@ -13,7 +13,7 @@
                                     <div class="swiper-slide">
                                         <div class=" property-details-item">
                                             <div class="property-details-item-thumb">
-                                                <img src="assets/images/property/details/property-details-slider-thumb-01.png"
+                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-01.png') }}"
                                                     alt="">
                                             </div>
                                         </div>
@@ -21,7 +21,7 @@
                                     <div class="swiper-slide">
                                         <div class=" property-details-item">
                                             <div class="property-details-item-thumb">
-                                                <img src="assets/images/property/details/property-details-slider-thumb-02.png"
+                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-02.png') }}"
                                                     alt="">
                                             </div>
                                         </div>
@@ -29,7 +29,7 @@
                                     <div class="swiper-slide">
                                         <div class=" property-details-item">
                                             <div class="property-details-item-thumb">
-                                                <img src="assets/images/property/details/property-details-slider-thumb-03.png"
+                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-03.png') }}"
                                                     alt="">
                                             </div>
                                         </div>
@@ -37,7 +37,7 @@
                                     <div class="swiper-slide">
                                         <div class=" property-details-item">
                                             <div class="property-details-item-thumb">
-                                                <img src="assets/images/property/details/property-details-slider-thumb-04.png"
+                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-04.png') }}"
                                                     alt="">
                                             </div>
                                         </div>
@@ -71,10 +71,10 @@
                             <div class="property-details-meta">
                                 <ul>
                                     <li class="property-details-category">
-                                        <a class="is-bg-orange" href="#">Featured</a>
+                                        <a class="is-bg-orange">Featured</a>
                                     </li>
                                     <li class="property-details-category">
-                                        <a class="is-bg-transparent" href="#">For Rent</a>
+                                        <a class="is-bg-transparent">For Rent</a>
                                     </li>
                                     <li class="property-details-date">
                                         <i class="fa-regular fa-calendar-days"></i>
@@ -217,17 +217,17 @@
                                 <div class="row g-5">
                                     <div class="col-md-6">
                                         <div class="property-details-gallery-thumb">
-                                            <img src="assets/images/gallery/property-details-gallery-01.png"
+                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-01.png') }}"
                                                 alt="image not found">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="property-details-gallery-thumb mb-30">
-                                            <img src="assets/images/gallery/property-details-gallery-02.png"
+                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-02.png') }}"
                                                 alt="image not found">
                                         </div>
                                         <div class="property-details-gallery-thumb">
-                                            <img src="assets/images/gallery/property-details-gallery-03.png"
+                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-03.png') }}"
                                                 alt="image not found">
                                         </div>
                                     </div>

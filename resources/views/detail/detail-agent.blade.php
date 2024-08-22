@@ -5,7 +5,7 @@
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="assets/images/breadcrumb/breadcrumb-thumb-01.png"></div>
+            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}"></div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -40,7 +40,7 @@
                                             data-wow-duration="1s">
                                             <div class="thumb-wrapper">
                                                 <div class="thumb">
-                                                    <figure><img src="assets/images/agent/agent-01.png"
+                                                    <figure><img src="{{ asset('assets/images/agent/agent-01.png') }}"
                                                             alt="agent thumb not found"></figure>
                                                 </div>
                                             </div>

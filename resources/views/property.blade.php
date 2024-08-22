@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     <main>
         <!-- Breadcrumb area start -->
@@ -13,7 +14,7 @@
                                 <div class="bd-breadcrumb-content text-center">
                                     <h1 class="bd-breadcrumb-title">Property</h1>
                                     <div class="bd-breadcrumb-list">
-                                        <span><a href="index.html"><i class="icon-home"></i>Home</a></span>
+                                        <span><a href="/"><i class="icon-home"></i>Home</a></span>
                                         <span>Property</span>
                                     </div>
                                 </div>
@@ -103,7 +104,7 @@
                                                             <span>$14,000/mo</span>
                                                         </div>
                                                         <div class="thumb">
-                                                            <a href="/property-details">
+                                                            <a href="/property/detail">
                                                                 <figure>
                                                                     <img src="assets/images/featured/featured-thumb-08.png"
                                                                         alt="image">
@@ -112,7 +113,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="content">
-                                                        <h3 class="title"><a href="/property-details">Equestrian
+                                                        <h3 class="title"><a href="/property/detail">Equestrian
                                                                 family home</a></h3>
                                                         <span class="info">California, CA, USA</span>
                                                         <div class="bd-meta">
@@ -138,18 +139,12 @@
                                                     <div class="bd-meta-profile">
                                                         <div class="bd-profile-info">
                                                             <div class="thumb">
-                                                                <a href="agent-details.html">
+                                                                <a>
                                                                     <img src="assets/images/user/user-thumb-01.png"
                                                                         alt="Profile image not found">
                                                                 </a>
                                                             </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
+                                                            <h6 class="profile-title"><span>By </span>Tomas D.</h6>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -10,7 +10,7 @@
                     <!-- if ypu active slider then duplicate "swiper-slide" -->
                     <div class="swiper-slide banner_more_item">
                         <div class="banner-inner p-relative">
-                            <div class="banner-bg" data-background="assets/images/banner/banner-home-02.png">
+                            <div class="banner-bg" data-background="{{ asset('assets/images/banner/banner-home-02.png') }}">
                             </div>
                             <div class="container p-relative">
                                 <div class="row justify-content-between">
@@ -21,7 +21,7 @@
                                                 <span>Where</span>
                                                 <span class="strock-text"><b>Dreams Find</b></span>
                                                 <span class="text-gradient"><img class="arrow-shape"
-                                                        src="assets/images/shapes/banner-arrow.svg" alt="banner-arrow">A
+                                                        src="{{ asset('assets/images/shapes/banner-arrow.svg') }}" alt="banner-arrow">A
                                                     Home</span>
                                             </h1>
                                         </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="banner-bg-thumb jarallax">
-                <div class="banner-thumb include-bg jarallax-img" data-background="assets/images/banner/banner-home-01.png">
+                <div class="banner-thumb include-bg jarallax-img" data-background="{{ asset('assets/images/banner/banner-home-01.png') }}">
                 </div>
             </div>
         </section>
@@ -105,13 +105,13 @@
                             <span class="icon"><i class="icon-sell-property"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/sell">Sell</a>
+                                    <a href="/property/sell">Sell</a>
                                 </h3>
                                 <p class="description">With years of industry experience, our team boasts an in depth
                                     understanding of the market knowledge.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/sell"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/sell"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -197,18 +197,18 @@
                                     <span class="round three"></span>
                                 </div>
                                 <div class="round-icon">
-                                    <figure><img src="assets/images/icons/house.png" alt="image"></figure>
+                                    <figure><img src="{{ asset('assets/images/icons/house.png') }}" alt="image"></figure>
                                 </div>
                             </div>
                             <div class="thumb-one">
-                                <figure> <img src="assets/images/about/about-thumb-01.png" alt="image"></figure>
+                                <figure> <img src="{{ asset('assets/images/about/about-thumb-01.png') }}" alt="image"></figure>
                             </div>
                             <div class="thumb-two-inner">
                                 <div class="thumb-two">
-                                    <figure><img src="assets/images/about/about-thumb-02.png" alt="image"></figure>
+                                    <figure><img src="{{ asset('assets/images/about/about-thumb-02.png') }}" alt="image"></figure>
                                 </div>
                                 <div class="thumb-two">
-                                    <figure> <img src="assets/images/about/about-thumb-03.png" alt="image"></figure>
+                                    <figure> <img src="{{ asset('assets/images/about/about-thumb-03.png') }}" alt="image"></figure>
                                 </div>
                             </div>
                         </div>
@@ -564,7 +564,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title">Warehouse</h6>
+                                    <h6 class="title"><a href="property.html">Warehouse</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -612,13 +612,13 @@
                                     <div class="featured-item style-one">
                                         <div class="thumb-wrapper">
                                             <div class="badge-wrap">
-                                                <a class="bd-badge" href="property-details.html">Featured</a>
-                                                <a class="bd-badge" href="property-details.html">For Sale</a>
+                                                <a class="bd-badge">Featured</a>
+                                                <a class="bd-badge">For Sale</a>
                                             </div>
                                             <div class="thumb">
-                                                <a href="/property-details">
+                                                <a href="/property/detail">
                                                     <figure>
-                                                        <img src="assets/images/featured/featured-thumb-01.png"
+                                                        <img src="{{ asset('assets/images/featured/featured-thumb-01.png') }}"
                                                             alt="Image">
                                                     </figure>
                                                 </a>
@@ -628,7 +628,7 @@
                                             <div class="price">
                                                 <span>$14,000/mo</span>
                                             </div>
-                                            <h3 class="title"><a href="/property-details">Equestrian family home</a>
+                                            <h3 class="title"><a href="/property/detail">Equestrian family home</a>
                                             </h3>
                                             <span class="info">California, CA, USA</span>
                                             <div class="bd-meta">
@@ -660,7 +660,7 @@
                                             <div class="thumb">
                                                 <a href="property-details.html">
                                                     <figure>
-                                                        <img src="assets/images/featured/featured-thumb-02.png"
+                                                        <img src="{{ asset('assets/images/featured/featured-thumb-02.png') }}"
                                                             alt="Image">
                                                     </figure>
                                                 </a>
@@ -703,7 +703,7 @@
                                             <div class="thumb">
                                                 <a href="property-details.html">
                                                     <figure>
-                                                        <img src="assets/images/featured/featured-thumb-03.png"
+                                                        <img src="{{ asset('assets/images/featured/featured-thumb-03.png') }}"
                                                             alt="Image">
                                                     </figure>
                                                 </a>
@@ -821,7 +821,7 @@
                                     </span>
                                     <h2 class="section-title title-animation">Our skilled lead Siperantara agents</h2>
                                 </div>
-                                <a class="bd-half-outline-btn" href="/join-agent"><span class="text">Join Us</span></a>
+                                <a class="bd-half-outline-btn" href="/agent/join"><span class="text">Join Us</span></a>
                             </div>
                             <div class="pagination-wrapper">
                                 <div class="common-nav-pre">
@@ -847,7 +847,7 @@
                                     <div class="swiper-slide">
                                         <div class="team-item style-two">
                                             <div class="thumb">
-                                                <figure><img src="assets/images/agent/agent-01.png" alt="Image">
+                                                <figure><img src="{{ asset('assets/images/agent/agent-01.png') }}" alt="Image">
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
@@ -872,7 +872,7 @@
                                         <div class="team-item style-two">
                                             <div class="thumb">
                                                 <figure><a href="agent-details.html"><img
-                                                            src="assets/images/agent/agent-02.png" alt="Image"></a>
+                                                            src="{{ asset('assets/images/agent/agent-02.png') }}" alt="Image"></a>
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
@@ -900,7 +900,7 @@
                                         <div class="team-item style-two">
                                             <div class="thumb">
                                                 <figure><a href="agent-details.html"><img
-                                                            src="assets/images/agent/agent-05.png" alt="Image"></a>
+                                                            src="{{ asset('assets/images/agent/agent-05.png') }}" alt="Image"></a>
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
@@ -928,7 +928,7 @@
                                         <div class="team-item style-two">
                                             <div class="thumb">
                                                 <figure><a href="agent-details.html"><img
-                                                            src="assets/images/agent/agent-04.png" alt="Image"></a>
+                                                            src="{{ asset('assets/images/agent/agent-04.png') }}" alt="Image"></a>
                                                 </figure>
                                             </div>
                                             <div class="content-inner">
@@ -963,7 +963,7 @@
 
         <!-- video area start -->
         <div class="bd-video-area style-one position-relative jarallax">
-            <div class="video-bg-thumb include-bg jarallax-img" data-background="assets/images/bg/video-bg-home-01.png">
+            <div class="video-bg-thumb include-bg jarallax-img" data-background="{{ asset('assets/images/bg/video-bg-home-01.png') }}">
             </div>
             <div class="container">
                 <div class="row justify-content-center">

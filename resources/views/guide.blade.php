@@ -4,7 +4,8 @@
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="assets/images/breadcrumb/breadcrumb-thumb-01.png"></div>
+            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}">
+            </div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -43,14 +44,14 @@
                             {{-- <span class="icon"><i class="icon-rent-property"></i></span> --}}
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/buyers-guide">Buyer's Guide</a>
+                                    <a href="/guide/buyers">Buyer's Guide</a>
                                 </h3>
                                 <p class="description">The rent property kitchen invites you to whip up delicious meals,
                                     while
                                     the cozy bedroom promises sleep</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/buyers-guide"><span class="text">Read
+                                <a class="bd-half-outline-btn" href="/guide/buyers"><span class="text">Read
                                         more</span></a>
                             </div>
                         </div>
@@ -61,13 +62,13 @@
                             {{-- <span class="icon"><i class="icon-buy-home"></i></span> --}}
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/seller-guide">Seller Guide</a>
+                                    <a href="/guide/seller">Seller Guide</a>
                                 </h3>
                                 <p class="description">Choose us for your real estate needs and experience unparalleled
                                     expertise and dedication.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/seller-guide"><span class="text">Read
+                                <a class="bd-half-outline-btn" href="/guide/seller"><span class="text">Read
                                         more</span></a>
                             </div>
                         </div>

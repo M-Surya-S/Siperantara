@@ -8,6 +8,10 @@ use App\Http\Controllers\Admin\Customer\SellPropertyController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PropertyController;
+use App\Http\Controllers\AgentHomeController;
+use App\Http\Controllers\GuideController;
+use App\Http\Controllers\HomeControlller;
+use App\Http\Controllers\PropertyHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,58 +63,52 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+// Home
+Route::get('/', [HomeControlller::class, 'index']);
 
-Route::get('/', function () {
-    return view('home', ['title' => 'Home']);
-});
-
-Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact']);
-});
-
-Route::get('/property', function () {
-    return view('property', ['title' => 'Property']);
-});
-
-Route::get('/agent', function () {
-    return view('detail.detail-agent', ['title' => 'Agent']);
-});
-
-Route::get('/property-details', function () {
+// Property
+Route::get('/property', [PropertyHomeController::class, 'index']);
+Route::get('/property/detail', function () {
     return view('detail.detail-property', ['title' => 'Property Detail']);
 });
-
-Route::get('/buyers-guide', function () {
-    return view('detail.detail-buyers-guide', ['title' => 'Buyers Guide']);
+Route::get('/property/sell', function () {
+    return view('detail.sell-property', ['title' => 'Sell']);
 });
 
-Route::get('/seller-guide', function () {
-    return view('detail.detail-seller-guide', ['title' => 'Seller Guide']);
-});
-Route::get('/guide', function () {
-    return view('guide', ['title' => 'Guide']);
-});
-
-Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog']);
-});
-
-Route::get('/blog-details', function () {
-    return view('detail.detail-blog', ['title' => 'Blog Details']);
-});
-
-Route::get('/buyers-guide-download', function () {
-    return view('detail.buyers-guide-download', ['title' => 'Buyers Guide']);
-});
-
-Route::get('/seller-guide-download', function () {
-    return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
-});
-
-Route::get('/join-agent', function () {
+// Agent
+Route::get('/agent', [AgentHomeController::class, 'index']);
+Route::get('/agent/join', function () {
     return view('detail.join-agent', ['title' => 'Agent']);
 });
 
-Route::get('/sell', function () {
-    return view('detail.sell-property', ['title' => 'Sell']);
+// Guide
+Route::get('/guide', [GuideController::class, 'index']);
+
+// Buyer's Guide
+Route::get('/guide/buyers', function () {
+    return view('detail.detail-buyers-guide', ['title' => 'Buyers Guide']);
+});
+Route::get('/guide/buyers/download', function () {
+    return view('detail.buyers-guide-download', ['title' => 'Buyers Guide']);
+});
+
+// Seller Guide
+Route::get('/guide/seller', function () {
+    return view('detail.detail-seller-guide', ['title' => 'Seller Guide']);
+});
+Route::get('/guide/seller/download', function () {
+    return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
+});
+
+// Blog
+Route::get('/blog', function () {
+    return view('blog', ['title' => 'Blog']);
+});
+Route::get('/blog/detail', function () {
+    return view('detail.detail-blog', ['title' => 'Blog Details']);
+});
+
+// Contact
+Route::get('/contact', function () {
+    return view('contact', ['title' => 'Contact']);
 });
