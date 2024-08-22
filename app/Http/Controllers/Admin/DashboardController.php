@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,7 +14,8 @@ class DashboardController extends Controller
     public function index()
     {
         $title = 'Dashboard';
-        return view('admin.dashboard', compact('title'));
+        $propertys = Property::all();
+        return view('admin.dashboard', compact('title', 'propertys'));
     }
 
     /**
