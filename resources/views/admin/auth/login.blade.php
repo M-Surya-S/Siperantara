@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Sign In | Siperantara</title>
+    <title>Login | Siperantara</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
@@ -45,53 +45,35 @@
                 <div class="row gx-0 gy-0 justify-content-center">
                     <div class="col-xl-5">
                         <div class="sign-thumb">
-                            <img src="assets/images/sign/sign-img.png" alt="image">
+                            <img src="assets/images/sign/login-img.png" alt="image">
                         </div>
                     </div>
                     <div class="col-xl-5">
                         <div class="sign-form-wrapper text-center">
-                            <h4 class="title mb-30">Welcome again</h4>
-                            <form class="form">
-                                <div class="input-box mb-15">
-                                    <input type="email" class="input" required placeholder="Email Address">
+                            <h4 class="title mb-80 mt-50">Welcome</h4>
+                    
+                            <!-- Cek apakah ada pesan error di session -->
+                            @if (session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
                                 </div>
+                            @endif
+                    
+                            <form class="form" action="{{ route('login.store') }}" method="POST">
+                                @csrf
                                 <div class="input-box mb-20">
-                                    <input type="password" class="input" required placeholder="Type Password Here">
+                                    <input type="email" class="input" placeholder="Email Address" name="email" value='{{ old('email') }}' required autofocus>
                                 </div>
-                                <div class="sign-meta d-flex justify-content-between mb-20">
-                                    <div class="sign-remember">
-                                        <label class="footer-form-check-label signing-page cursor">
-                                            <input type="checkbox">
-                                            <svg viewBox="0 0 64 64" height="2em" width="2em">
-                                                <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
-                                            </svg> Remember me
-                                        </label>
-                                    </div>
-                                    <div class="sign-forgot">
-                                        <a href="forgot.html" class="sign-link">Forgot Password?</a>
-                                    </div>
+                                <div class="input-box mb-70">
+                                    <input type="password" class="input" placeholder="Password" name="password" required>
                                 </div>
-                                <div class="sign-btn">
+                                <div class="sign-btn mb-60">
                                     <button type="submit" class="bd-btn btn-style btn-hover-x">Sign in</button>
                                 </div>
                             </form>
-                            <div class="sign-meta-divider-wrapper">
-                                <div class="sign-meta-divider-line left-line"></div>
-                                <span class="sign-meta-divider-title">or</span>
-                                <div class="sign-meta-divider-line right-line"></div>
-                            </div>
-                            <div class="sign-in-wrapper mt-30 mb-20">
-                                <div class="social-menu d-flex justify-content-center text-center">
-                                    <ul>
-                                        <li><a class="facebook" href="https://facebook.com/" target="blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a class="twitter" href="https://twitter.com/" target="blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a class="instagram" href="https://www.instagram.com" target="blank"><i class="fa-brands fa-instagram"></i></a></li>
-                                        <li><a class="linkedin" href="https://www.linkedin.com" target="blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
