@@ -58,12 +58,16 @@
                                 <img class="avatar-sm" src="{{ asset('assets/images/agent/agent-01.png') }}" alt="image">
                             </span>
                                 <span class="admin-meta">
-                                <span class="admin-meta-name">Jhon Smith</span>
+                                <span class="admin-meta-name">{{ Auth::user()->name }}</span>
                                 </span>
                                 </span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    @method('POST')
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
                             </ul>
                         </div>
                     </div>

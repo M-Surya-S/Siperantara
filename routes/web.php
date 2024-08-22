@@ -57,6 +57,8 @@ Route::middleware(['admin'])->group(function () {
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);

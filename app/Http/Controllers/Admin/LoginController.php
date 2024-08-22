@@ -23,4 +23,15 @@ class LoginController extends Controller
             return redirect()->back()->with('error', 'Email or Password is incorrect.');
         }
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        // Menghapus sesi pengguna
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/'); 
+    }
 }
