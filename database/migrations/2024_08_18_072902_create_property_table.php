@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('property_tag');
             $table->string('property_category');
             $table->string('address');
-            $table->string('description');
+            $table->text('description');
             // Property Details
             $table->string('lot_area');
             $table->string('home_area');

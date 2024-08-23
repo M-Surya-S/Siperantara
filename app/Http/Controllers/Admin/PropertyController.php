@@ -15,7 +15,25 @@ class PropertyController extends Controller
     public function index()
     {
         $title = 'Property';
-        $propertys = Property::all();
+        $propertys = Property::paginate(10);
+        return view('admin.property.my-property', compact('title', 'propertys'));
+    }
+
+    /**
+     * Search for a listing from the resource.
+     */
+    public function search(Request $request)
+    {
+        $title = 'Property';
+        $search = $request->input('search');
+
+        $propertys = Property::query()
+            ->where('property_title', 'LIKE', "%{$search}%")
+            ->orWhere('address', 'LIKE', "%{$search}%")
+            ->orWhere('property_status', 'LIKE', "%{$search}%")
+            ->orWhere('property_price', 'LIKE', "%{$search}%")
+            ->paginate(10);
+
         return view('admin.property.my-property', compact('title', 'propertys'));
     }
 
@@ -126,16 +144,27 @@ class PropertyController extends Controller
 
         // Handle image upload
         if ($request->hasFile('image')) {
+            // Hapus gambar lama dari storage
+            if ($existingImagePath) {
+                foreach ($existingImagePath as $path) {
+                    Storage::delete($path);
+                }
+            }
+
+            // Upload gambar baru
             $uploadedFiles = $request->file('image');
             $filePaths = [];
             foreach ($uploadedFiles as $file) {
                 $path = $file->store('public/property/image');
                 $filePaths[] = $path;
             }
+
+            // Update path gambar yang baru ke dalam database
             $property->update([
                 'image' => json_encode($filePaths),
             ]);
         } else {
+            // Jika tidak ada gambar baru, tetap gunakan gambar yang ada
             $property->update([
                 'image' => $existingImagePath,
             ]);
@@ -157,6 +186,7 @@ class PropertyController extends Controller
             $request->benefit_12,
         ];
 
+        // Update property fields lainnya
         $property->update([
             'property_title' => $request->property_title,
             'property_price' => $request->property_price,
@@ -190,13 +220,14 @@ class PropertyController extends Controller
         return redirect(url('dashboard/my-property'));
     }
 
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
         $property = Property::findOrFail($id);
-        
+
         // Ambil path gambar dari properti
         $filePaths = json_decode($property->image);
 

@@ -64,7 +64,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mt-20">
+                                                <div class="col-lg-8 mt-20">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyTag">Address
@@ -73,6 +73,18 @@
                                                         <div class="form-input">
                                                             <input id="propertyTag" type="text" name="address"
                                                                 value="{{ $property->address }}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 mt-20">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
+                                                            <label for="propertyTag">Property Category
+                                                                <span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="propertyTag" type="text" name="property_category"
+                                                                value="{{ $property->property_category }}" required>
                                                         </div>
                                                     </div>
                                                 </div>
