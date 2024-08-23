@@ -8,7 +8,7 @@
     <div class="header-area header-primary has-border-bottom" id="header-sticky">
         <div class="header-inner">
             <div class="header-logo">
-                <a href="/"><img src="assets/images/logo/logo_siperantara.png" alt="Logo"></a>
+                <a href="/"><img src="{{ asset('assets/images/logo/logo_siperantara.png') }}" alt="Logo"></a>
             </div>
             <div class="header-menu">
                 <nav class="bd-main-menu" id="mobile-menu">

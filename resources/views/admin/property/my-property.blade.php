@@ -11,7 +11,7 @@
                         </div>
                         <div class="card-title-wrap">
                             <div class="card-title-wrap">
-                                <form action="{{ route('property.search') }}" method="GET" style="display: flex; align-items: center;">
+                                <form action="{{ route('my-property.search') }}" method="GET" style="display: flex; align-items: center;">
                                     <input type="text" name="search" placeholder="Search Property" class="form-control" value="{{ request('search') }}" 
                                         style="flex: 1; margin-right: 10px; padding: 1.5rem; height: calc(1.5em + 0.75rem + 2px);">
                                     <button type="submit" class="btn btn-primary" style="height: calc(1.5em + 0.75rem + 2px); padding: 0 10px;">
@@ -99,7 +99,7 @@
                                                     <td>
                                                         <div class="recent-activity-price-box">
                                                             <p class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</p>
-                                                            @if ($property->property_status == 'Disewa' or $property->property_status == 'Tersewa')
+                                                            @if ($property->property_status == 'For Rent' or $property->property_status == 'Rented Out')
                                                                 <p>Monthly</p>
                                                             @endif
                                                         </div>
@@ -152,9 +152,9 @@
                                             {{-- Link ke halaman sebelumnya --}}
                                             @if ($propertys->onFirstPage())
                                                 <li>
-                                                    <a>
+                                                    <span>
                                                         <i class="fa-regular fa-arrow-left"></i>
-                                                    </a>
+                                                    </span>
                                                 </li>
                                             @else
                                                 <li>
@@ -186,16 +186,15 @@
                                                 </li>
                                             @else
                                                 <li>
-                                                    <a>
+                                                    <span>
                                                         <i class="fa-regular fa-arrow-right"></i>
-                                                    </a>
+                                                    </span>
                                                 </li>
                                             @endif
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>

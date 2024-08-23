@@ -31,7 +31,7 @@ Route::middleware(['admin'])->group(function () {
 
     // Property
     Route::get('/dashboard/my-property', [PropertyController::class, 'index']);
-    Route::get('/dashboard/my-property/search', [PropertyController::class, 'search'])->name('property.search');
+    Route::get('/dashboard/my-property/search', [PropertyController::class, 'search'])->name('my-property.search');
     Route::get('/dashboard/add-property', [PropertyController::class, 'create']);
     Route::post('/dashboard/add-property', [PropertyController::class, 'store'])->name('add-property.store');
     Route::get('/dashboard/edit-property/{id}', [PropertyController::class, 'edit'])->name('edit-property.edit');
@@ -69,9 +69,11 @@ Route::get('/', [HomeControlller::class, 'index']);
 
 // Property
 Route::get('/property', [PropertyHomeController::class, 'index']);
-Route::get('/property/detail', function () {
-    return view('detail.detail-property', ['title' => 'Property Detail']);
-});
+Route::get('/property/search', [PropertyHomeController::class, 'search'])->name('property.search');
+Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->name('property.detail');
+// Route::get('/property/detail', function () {
+//     return view('detail.detail-property', ['title' => 'Property Detail']);
+// });
 Route::get('/property/sell', function () {
     return view('detail.sell-property', ['title' => 'Sell']);
 });

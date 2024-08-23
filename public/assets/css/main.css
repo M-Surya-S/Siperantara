@@ -17609,6 +17609,8 @@ blockquote cite::before {
 /*----------------------------------------*/
 /*  4.25 Testimonial CSS
 /*----------------------------------------*/
+
+
 .testimonials-item.style-one {
   padding: 40px 40px;
   background-color: var(--bd-white);
@@ -19943,11 +19945,11 @@ blockquote cite::before {
 }
 .property-details-info-list {
   background: var(--theme-bg-primary);
-  position: relative;
-  padding: 30px 30px 30px 30px;
+  position: relative ;
+  padding: 30px 80px 30px 80px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 50px;

@@ -5,7 +5,8 @@
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="assets/images/breadcrumb/breadcrumb-thumb-01.png"></div>
+            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}">
+            </div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -30,7 +31,61 @@
         <section class="bd-property-inner-area section-space">
             <div class="container">
                 <div class="row g-5">
-                    <div class="col-xl-8 col-lg-8">
+                    <div class="col-lg-4">
+                        <div class="property-sidebar-wrapper bd-sidebar-sticky">
+                            <!-- type -->
+                            <div class="property-widget">
+                                <h3 class="property-widget-title">Filter</h3>
+                                <div class="property-widget-content">
+                                    <form action="{{ route('property.search') }}" method="GET">
+                                        <div class="banner-booking-select">
+                                            <div class="booking-select mb-10">
+                                                <select name="bedrooms">
+                                                    <option value="">Bedrooms</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                            <div class="booking-select mb-10">
+                                                <select name="bathrooms">
+                                                    <option value="">Bathrooms</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                            <div class="booking-select mb-30">
+                                                <select name="floors">
+                                                    <option value="">Floors</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                            <div class="banner-submit">
+                                                <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
+                                                    <span>
+                                                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                    Search
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
                         <div class="bd-property-main-wrapper">
                             <div class="bd-property-top mb-45">
                                 <div class="row">
@@ -76,7 +131,7 @@
                                             <div class="bd-property-top-select">
                                                 <select>
                                                     <option>Default Sorting</option>
-                                                    <option>Low to Hight</option>
+                                                    <option>Low to High</option>
                                                     <option>High to Low</option>
                                                     <option>New Added</option>
                                                     <option>On Sale</option>
@@ -91,466 +146,131 @@
                                     <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel"
                                         aria-labelledby="grid-tab" tabindex="0">
                                         <div class="row g-5">
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".3s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">Top</span>
-                                                            <span class="bd-badge">Featured</span>
-                                                            <span class="bd-badge">For Sale</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$14,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="/property/detail">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-08.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="/property/detail">Equestrian
-                                                                family home</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">3
-                                                                    bad</span>
+                                            @foreach ($propertys as $property)
+                                                <div class="col-xl-6 col-md-6">
+                                                    <div class="featured-item style-three wow bdFadeInUp"
+                                                        data-wow-delay=".3s" data-wow-duration="1s">
+                                                        <div class="thumb-wrapper">
+                                                            <div class="badge-wrap">
+                                                                <span class="bd-badge">
+                                                                    {{ $property->property_status }}
+                                                                </span>
+                                                                <span class="bd-badge">
+                                                                    {{ $property->property_category }}
+                                                                </span>
                                                             </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">4
-                                                                    bath</span>
+                                                            <div class="price">
+                                                                <span style="
+                                                                    position: relative; 
+                                                                    color: #ffffff; /* Warna teks */
+                                                                    text-shadow: 
+                                                                        0 0 2px rgba(0, 0, 0, 1), /* Outline lebih tebal */
+                                                                        0 0 2px rgba(0, 0, 0, 1); /* Outline lebih tebal tambahan */
+                                                                ">
+                                                                    Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Bulan' : '' }}
+                                                                </span>
                                                             </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">1200 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
                                                             <div class="thumb">
-                                                                <a>
-                                                                    <img src="assets/images/user/user-thumb-01.png"
-                                                                        alt="Profile image not found">
+                                                                <a href="{{ route('property.detail', $property->property_id) }}">
+                                                                    <figure>
+                                                                        @php
+                                                                            $filePaths = json_decode($property->image);
+                                                                        @endphp
+                                                                        @foreach ($filePaths as $filePath)
+                                                                            <img src="{{ Storage::url($filePath) }}" alt="image">
+                                                                            @break
+                                                                        @endforeach
+                                                                    </figure>
                                                                 </a>
                                                             </div>
-                                                            <h6 class="profile-title"><span>By </span>Tomas D.</h6>
+                                                        </div>
+                                                        <div class="content">
+                                                            <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a></h3>
+                                                            <span class="info">{{ $property->address }}</span>
+                                                            <div class="bd-meta">
+                                                                <div class="meta-item">
+                                                                    <span class="icon">
+                                                                        <i class="fa-regular fa-bed-front"></i>
+                                                                    </span>
+                                                                    <span class="title">
+                                                                        {{ $property->beds }} bed
+                                                                    </span>
+                                                                </div>
+                                                                <div class="meta-item">
+                                                                    <span class="icon">
+                                                                        <i class="fa-duotone fa-shower"></i>
+                                                                    </span>
+                                                                    <span class="title">
+                                                                        {{ $property->baths }} bath
+                                                                    </span>
+                                                                </div>
+                                                                <div class="meta-item">
+                                                                    <span class="icon">
+                                                                        <i class="fa-regular fa-arrows-maximize"></i>
+                                                                    </span>
+                                                                    <span class="title">
+                                                                        {{ $property->lot_area }} m²
+                                                                    </span>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".4s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">For Sale</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$82,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="property-details.html">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-09.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="property-details.html">Tranquil
-                                                                Oaks</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">4
-                                                                    bad</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">2
-                                                                    bath</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">1500 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
-                                                            <div class="thumb">
-                                                                <a href="agent-details.html">
-                                                                    <img src="assets/images/user/user-thumb-02.png"
-                                                                        alt="Profile image not found">
-                                                                </a>
-                                                            </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".5s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">Top</span>
-                                                            <span class="bd-badge">For Sale</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$18,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="property-details.html">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-10.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="property-details.html">Whispering
-                                                                Pines Retreat</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">6
-                                                                    bad</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">4
-                                                                    bath</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">2000 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
-                                                            <div class="thumb">
-                                                                <a href="agent-details.html">
-                                                                    <img src="assets/images/user/user-thumb-03.png"
-                                                                        alt="Profile image not found">
-                                                                </a>
-                                                            </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".6s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">Featured</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$14,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="property-details.html">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-11.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="property-details.html">Meadow view
-                                                                Manor</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">7
-                                                                    bad</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">5
-                                                                    bath</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">2200 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
-                                                            <div class="thumb">
-                                                                <a href="agent-details.html">
-                                                                    <img src="assets/images/user/user-thumb-01.png"
-                                                                        alt="Profile image not found">
-                                                                </a>
-                                                            </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".7s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">Top</span>
-                                                            <span class="bd-badge">Featured</span>
-                                                            <span class="bd-badge">For Sale</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$16,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="property-details.html">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-12.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="property-details.html">Sunset Ridge
-                                                                Cottage</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">7
-                                                                    bad</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">5
-                                                                    bath</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">2500 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
-                                                            <div class="thumb">
-                                                                <a href="agent-details.html">
-                                                                    <img src="assets/images/user/user-thumb-02.png"
-                                                                        alt="Profile image not found">
-                                                                </a>
-                                                            </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-6">
-                                                <div class="featured-item style-three wow bdFadeInUp" data-wow-delay=".8s"
-                                                    data-wow-duration="1s">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="badge-wrap">
-                                                            <span class="bd-badge">Featured</span>
-                                                            <span class="bd-badge">For Sale</span>
-                                                        </div>
-                                                        <div class="price">
-                                                            <span>$55,000/mo</span>
-                                                        </div>
-                                                        <div class="thumb">
-                                                            <a href="property-details.html">
-                                                                <figure>
-                                                                    <img src="assets/images/featured/featured-thumb-13.png"
-                                                                        alt="image">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h3 class="title"><a href="property-details.html">Willow brook
-                                                                Estate</a></h3>
-                                                        <span class="info">California, CA, USA</span>
-                                                        <div class="bd-meta">
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-bed-front"></i></span><span
-                                                                    class="title">7
-                                                                    bad</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-duotone fa-shower"></i></span><span
-                                                                    class="title">4
-                                                                    bath</span>
-                                                            </div>
-                                                            <div class="meta-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                    class="title">2600 sqft</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bd-meta-profile">
-                                                        <div class="bd-profile-info">
-                                                            <div class="thumb">
-                                                                <a href="agent-details.html">
-                                                                    <img src="assets/images/user/user-thumb-03.png"
-                                                                        alt="Profile image not found">
-                                                                </a>
-                                                            </div>
-                                                            <h6 class="profile-title"><span>By </span><a
-                                                                    href="agent-details.html">Tomas D.</a>
-                                                            </h6>
-                                                        </div>
-                                                        <div class="profile-arrow">
-                                                            <a class="link" href="agent-details.html"><span><i
-                                                                        class="fa-regular fa-arrow-right-long"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="infinite-pagination d-none">
-                                <a href="shop.html" class="infinite-next-link">Next</a>
                             </div>
                             <div class="pagination__wrapper mt-50">
                                 <div class="basic-pagination">
                                     <nav>
                                         <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-left"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a class="current" href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-right"></i>
-                                                </a>
-                                            </li>
+                                            {{-- Link ke halaman sebelumnya --}}
+                                            @if ($propertys->onFirstPage())
+                                                <li>
+                                                    <span>
+                                                        <i class="fa-regular fa-arrow-left"></i>
+                                                    </span>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ $propertys->previousPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-left"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+
+                                            {{-- Link ke halaman-halaman --}}
+                                            @foreach ($propertys->links()->elements[0] as $page => $url)
+                                                @if ($page == $propertys->currentPage())
+                                                    <li>
+                                                        <a class="current"
+                                                            href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+
+                                            {{-- Link ke halaman berikutnya --}}
+                                            @if ($propertys->hasMorePages())
+                                                <li>
+                                                    <a href="{{ $propertys->nextPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-right"></i>
+                                                    </a>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <span>
+                                                        <i class="fa-regular fa-arrow-right"></i>
+                                                    </span>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="property-sidebar-wrapper bd-sidebar-sticky">
-                            <!-- type -->
-                            <div class="property-widget">
-                                <h3 class="property-widget-title">Filter</h3>
-                                <div class="property-widget-content">
-                                    <div class="banner-booking-select">
-                                        <div class="booking-select mb-10">
-                                            <select>
-                                                <option value="default">Bedrooms</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                        <div class="booking-select mb-10">
-                                            <select>
-                                                <option value="default">Bathrooms</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                        <div class="booking-select mb-30">
-                                            <select>
-                                                <option value="default">Floors</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                        <div class="banner-submit">
-                                            <button class="bd-btn btn-style btn-hover-x btn-black w-100" type="submit">
-                                                <span>
-                                                    <svg width="17" height="18" viewBox="0 0 17 18"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M3.58 13.92L0.5 17M1.389 8.581C1.389 12.768 4.772 16.162 8.944 16.162C13.117 16.162 16.5 12.768 16.5 8.582C16.5 4.393 13.117 1 8.945 1C4.772 1 1.389 4.394 1.389 8.581Z"
-                                                            stroke="white" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                                Search
-                                            </button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

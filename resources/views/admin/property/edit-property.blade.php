@@ -372,7 +372,7 @@
                                                                 2</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_2"
+                                                            <input id="advantagesList1" type="text" name="benefit_5"
                                                                 value="{{ $benefits[1] }}">
                                                         </div>
                                                     </div>
@@ -384,7 +384,7 @@
                                                                 3</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_3"
+                                                            <input id="advantagesList1" type="text" name="benefit_9"
                                                                 value="{{ $benefits[2] }}">
                                                         </div>
                                                     </div>
@@ -396,7 +396,7 @@
                                                                 4</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_4"
+                                                            <input id="advantagesList1" type="text" name="benefit_2"
                                                                 value="{{ $benefits[3] }}">
                                                         </div>
                                                     </div>
@@ -408,7 +408,7 @@
                                                                 5</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_5"
+                                                            <input id="advantagesList1" type="text" name="benefit_6"
                                                                 value="{{ $benefits[4] }}">
                                                         </div>
                                                     </div>
@@ -420,7 +420,7 @@
                                                                 6</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_6"
+                                                            <input id="advantagesList1" type="text" name="benefit_10"
                                                                 value="{{ $benefits[5] }}">
                                                         </div>
                                                     </div>
@@ -432,7 +432,7 @@
                                                                 7</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_7"
+                                                            <input id="advantagesList1" type="text" name="benefit_3"
                                                                 value="{{ $benefits[6] }}">
                                                         </div>
                                                     </div>
@@ -444,7 +444,7 @@
                                                                 8</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_8"
+                                                            <input id="advantagesList1" type="text" name="benefit_7"
                                                                 value="{{ $benefits[7] }}">
                                                         </div>
                                                     </div>
@@ -456,7 +456,7 @@
                                                                 9</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_9"
+                                                            <input id="advantagesList1" type="text" name="benefit_11"
                                                                 value="{{ $benefits[8] }}">
                                                         </div>
                                                     </div>
@@ -468,7 +468,7 @@
                                                                 10</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_10"
+                                                            <input id="advantagesList1" type="text" name="benefit_4"
                                                                 value="{{ $benefits[9] }}">
                                                         </div>
                                                     </div>
@@ -480,7 +480,7 @@
                                                                 11</label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="advantagesList1" type="text" name="benefit_11"
+                                                            <input id="advantagesList1" type="text" name="benefit_8"
                                                                 value="{{ $benefits[10] }}">
                                                         </div>
                                                     </div>

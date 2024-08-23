@@ -10,45 +10,30 @@
                         <div class="property-details-wrapper">
                             <div class="swiper property-details-active">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class=" property-details-item">
-                                            <div class="property-details-item-thumb">
-                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-01.png') }}"
-                                                    alt="">
+                                    @php
+                                        $filePaths = json_decode($property->image);
+                                    @endphp
+                                    @foreach ($filePaths as $filePath)
+                                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                                            style="max-height: 570px; max-width: 1350px; overflow: hidden; ">
+                                            <div class="property-details-item">
+                                                <div
+                                                    class="property-details-item-thumb d-flex justify-content-center align-items-center">
+                                                    <img src="{{ Storage::url($filePath) }}" class="img-fluid"
+                                                        alt="">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class=" property-details-item">
-                                            <div class="property-details-item-thumb">
-                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-02.png') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class=" property-details-item">
-                                            <div class="property-details-item-thumb">
-                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-03.png') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class=" property-details-item">
-                                            <div class="property-details-item-thumb">
-                                                <img src="{{ asset('assets/images/property/details/property-details-slider-thumb-04.png') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <!-- If we need navigation buttons -->
                                 <div class="property-details-navigation d-none d-sm-block">
-                                    <button class="property-details-button-prev circle-btn is-bg-white"><i
-                                            class="fa-regular fa-arrow-left-long"></i></button>
-                                    <button class="property-details-button-next circle-btn is-bg-white"><i
-                                            class="fa-regular fa-arrow-right-long"></i></button>
+                                    <button class="property-details-button-prev circle-btn is-bg-white">
+                                        <i class="fa-regular fa-arrow-left-long"></i>
+                                    </button>
+                                    <button class="property-details-button-next circle-btn is-bg-white">
+                                        <i class="fa-regular fa-arrow-right-long"></i>
+                                    </button>
                                 </div>
                                 <!-- If we need pagination -->
                                 <div class="pagination-wrapper d-block d-sm-none">
@@ -71,250 +56,199 @@
                             <div class="property-details-meta">
                                 <ul>
                                     <li class="property-details-category">
-                                        <a class="is-bg-orange">Featured</a>
+                                        <a class="is-bg-orange">{{ $property->property_status }}</a>
                                     </li>
                                     <li class="property-details-category">
-                                        <a class="is-bg-transparent">For Rent</a>
+                                        <a class="is-bg-transparent">{{ $property->property_category }}</a>
                                     </li>
+                                    @if ($property->property_category != 'Land')
+                                        <li class="property-details-category">
+                                            <a class="is-bg-transparent">{{ $property->property_tag }}</a>
+                                        </li>
+                                    @endif
                                     <li class="property-details-date">
                                         <i class="fa-regular fa-calendar-days"></i>
-                                        June 29, 2022
+                                        {{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}
                                     </li>
                                 </ul>
                             </div>
-                            <h2 class="property-details-title">Penthouse large property</h2>
+                            <h2 class="property-details-title">{{ $property->property_title }}</h2>
                             <span class="property-details-location">
                                 <i class="fa-regular fa-location-dot"></i>
-                                27 Division St, New York
+                                {{ $property->address }}
                             </span>
                             <h4 class="property-details-title-two">Description</h4>
                             <div class="property-details-descrip-text">
-                                <p>This property type offers highlight key features, e.g., modern amenities, luxurious
-                                    living
-                                    spaces, a serene neighborhood. The specific rooms or areas, kitchen, living room, master
-                                    bedroom boasts specific details, granite countertops, stainless steel appliances, a cozy
-                                    fireplace. Enjoy outdoor features, a spacious backyard, stunning views, a private pool
-                                    perfect for activities, e.g., entertaining guests, relaxing weekends.</p>
-                                <p>Situated in the heart of Neighborhood/City, this property provides easy access to key
-                                    locations, top-rated schools, shopping centers, major highways</p>
+                                <p>{{ $property->description }}</p>
                             </div>
                             <h4 class="property-details-title-two">Property Details</h4>
                             <div class="property-details-info-list wow bdFadeInUp" data-wow-delay=".3s"
                                 data-wow-duration="1s">
                                 <ul>
-                                    <li><label>Property ID:</label> <span>PT30</span></li>
-                                    <li><label>Home Area: </label> <span>150 sqft</span></li>
-                                    <li><label>Rooms:</label> <span>8</span></li>
-                                    <li><label>Baths:</label> <span>3</span></li>
-                                    <li><label>Year built:</label> <span>1990</span></li>
-                                    <li><label>Certificate:</label> <span>SLF</span></li>
+                                    <li><label>Property Status:</label> <span>{{ $property->property_status }}</span></li>
+                                    <li><label>Price:</label> <span>Rp
+                                            {{ number_format((int) $property->property_price, 0, ',', '.') }}{{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Bulan' : '' }}</span>
+                                    </li>
+                                    <li><label>Rooms:</label> <span>{{ $property->rooms }}</span></li>
+                                    <li><label>Floors:</label> <span>{{ $property->floors }}</span></li>
+                                    <li><label>Baths:</label> <span>{{ $property->baths }}</span></li>
+                                    <li><label>Beds:</label> <span>{{ $property->beds }}</span></li>
                                 </ul>
                                 <ul>
-                                    <li><label>Lot Area:</label> <span>PT30 </span></li>
-                                    <li><label>Lot dimensions:</label> <span>150 sqft</span></li>
-                                    <li><label>Beds:</label> <span>9</span></li>
-                                    <li><label>Floors:</label> <span>3</span></li>
-                                    <li><label>Price:</label> <span>5</span></li>
-                                    <li><label>Property Status:</label> <span>For Sale</span></li>
+                                    <li><label>Property ID:</label> <span>{{ $property->property_id }}</span></li>
+                                    <li><label>Lot Area:</label> <span>{{ $property->lot_area }} m²</span></li>
+                                    <li><label>Home Area: </label> <span>{{ $property->home_area }}
+                                            {{ $property->home_area == '-' ? '' : 'm²' }}</span></li>
+                                    <li><label>Lot dimensions:</label> <span>{{ $property->lot_dimensions }}</span></li>
+                                    <li><label>Certificate:</label> <span>{{ $property->certificate }}</span></li>
+                                    <li><label>Year built:</label> <span>{{ $property->year_built }}</span></li>
                                 </ul>
                             </div>
-                            <h4 class="property-details-title-two">Property Features</h4>
-                            <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
-                                data-wow-duration="1s">
-                                <ul>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-modern-living"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Living Room</h6>
-                                                <span class="descrip">20 x 16 sq feet</span>
+                            @if ($property->property_category != 'Land')
+                                <h4 class="property-details-title-two">Property Features</h4>
+                                <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
+                                    data-wow-duration="1s">
+                                    <ul>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-modern-living"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Living Room</h6>
+                                                    <span class="descrip">{{ $property->living_room }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-garage"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Garage</h6>
-                                                <span class="descrip">40 x 20 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-garage"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Garage</h6>
+                                                    <span class="descrip">{{ $property->garage }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-dining-area"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Dining Area</h6>
-                                                <span class="descrip">25 x 20 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-dining-area"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Dining Area</h6>
+                                                    <span class="descrip">{{ $property->dining_area }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-bedroom"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Bedroom</h6>
-                                                <span class="descrip">15 x 10 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-bedroom"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Bedroom</h6>
+                                                    <span class="descrip">{{ $property->bedroom }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-bathroom"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Bathroom</h6>
-                                                <span class="descrip">10 x 15 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-bathroom"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Bathroom</h6>
+                                                    <span class="descrip">{{ $property->bathroom }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-gym-area"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Gym Area</h6>
-                                                <span class="descrip">35 x 25 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-gym-area"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Gym Area</h6>
+                                                    <span class="descrip">{{ $property->gym_area }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-garden"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Garden</h6>
-                                                <span class="descrip">40 x 30 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-garden"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Garden</h6>
+                                                    <span class="descrip">{{ $property->garden }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="property-details-feature-list-item">
-                                            <span class="icon">
-                                                <i class="icon-parking-area"></i>
-                                            </span>
-                                            <div>
-                                                <h6>Parking</h6>
-                                                <span class="descrip">45 x 30 sq feet</span>
+                                        </li>
+                                        <li>
+                                            <div class="property-details-feature-list-item">
+                                                <span class="icon">
+                                                    <i class="icon-parking-area"></i>
+                                                </span>
+                                                <div>
+                                                    <h6>Parking</h6>
+                                                    <span class="descrip">{{ $property->garden }}</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endif
                             <h4 class="property-details-title-two"> Benefits </h4>
                             <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s"
                                 data-wow-duration="1s">
+                                @php
+                                    $benefits = json_decode($property->benefits);
+                                    $first_benefits = array_slice($benefits, 0, 4);
+                                    $second_benefits = array_slice($benefits, 4, 4);
+                                    $third_benefits = array_slice($benefits, 8, 4);
+                                @endphp
                                 <div class="property-details-benefits-list">
                                     <ul>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Mosque/Prayer Room
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Square Footage
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Square Footage
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Living Spaces
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Flooring
-                                        </li>
+                                        @foreach ($first_benefits as $benefit)
+                                            @if ($benefit != null)
+                                                <li>
+                                                    <span class="list-icon">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span>
+                                                    {{ $benefit }}
+                                                </li>
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <div class="property-details-benefits-list">
                                     <ul>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Energy Efficiency
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Parking
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Security Features
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Landscaping
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Accessibility Features
-                                        </li>
+                                        @foreach ($second_benefits as $benefit)
+                                            @if ($benefit != null)
+                                                <li>
+                                                    <span class="list-icon">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span>
+                                                    {{ $benefit }}
+                                                </li>
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <div class="property-details-benefits-list">
                                     <ul>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            HVAC System
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Cylinder Gas
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Plumbing System
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Sports Area
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            internet and Connectivity
-                                        </li>
+                                        @foreach ($third_benefits as $benefit)
+                                            @if ($benefit != null)
+                                                <li>
+                                                    <span class="list-icon">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </span>
+                                                    {{ $benefit }}
+                                                </li>
+                                            @endif
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
