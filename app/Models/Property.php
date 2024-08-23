@@ -19,6 +19,7 @@ class Property extends Model
         'property_price',
         'discount',
         'property_tag',
+        'property_category',
         'address',
         'description',
         'lot_area',

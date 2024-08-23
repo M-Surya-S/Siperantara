@@ -48,7 +48,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-3">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyDiscount">Discount</label>
@@ -58,7 +58,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-5">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyTag">Property Tag
@@ -69,7 +69,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 mt-20">
+                                                <div class="col-lg-7 mt-20">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyTag">Address
@@ -77,6 +77,17 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="propertyTag" type="text" name="address" placeholder="Masukkan alamat lengkap" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5 mt-20">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
+                                                            <label for="propertyTag">Property Category
+                                                                <span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="propertyTag" type="text" name="property_category" placeholder="Houses, Apartments, Land, Shophouse, Warehouse" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -180,7 +191,7 @@
                                                                 Status:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
-                                                            <input id="PropertyStatus" type="text" name="property_status" placeholder="Dijual, Disewa, Terjual, Tersewa" required>
+                                                            <input id="PropertyStatus" type="text" name="property_status" placeholder="Dalam Pembangunan, Dijual, Disewa, Terjual, Tersewa" required>
                                                         </div>
                                                     </div>
                                                 </div>

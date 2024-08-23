@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('property_price');
             $table->string('discount')->nullable();
             $table->string('property_tag');
+            $table->string('property_category');
             $table->string('address');
             $table->string('description');
             // Property Details
