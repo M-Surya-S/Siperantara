@@ -211,28 +211,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h4 class="property-details-title-two"> Our Property Gallery</h4>
-                            <div class="property-details-gallery wow bdFadeInUp" data-wow-delay=".3s"
-                                data-wow-duration="1s">
-                                <div class="row g-5">
-                                    <div class="col-md-6">
-                                        <div class="property-details-gallery-thumb">
-                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-01.png') }}"
-                                                alt="image not found">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="property-details-gallery-thumb mb-30">
-                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-02.png') }}"
-                                                alt="image not found">
-                                        </div>
-                                        <div class="property-details-gallery-thumb">
-                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-03.png') }}"
-                                                alt="image not found">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <h4 class="property-details-title-two"> Benefits </h4>
                             <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s"
                                 data-wow-duration="1s">

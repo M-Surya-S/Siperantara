@@ -11,7 +11,8 @@
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="footer-btn-wrap text-lg-end">
-                            <a class="bd-btn btn-style btn-hover-x hover-white" href="/contact"><i class="fa-regular fa-arrow-right-long"></i>Get In Touch</a>
+                            <a class="bd-btn btn-style btn-hover-x hover-white" href="/contact"><i
+                                    class="fa-regular fa-arrow-right-long"></i>Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -22,15 +23,16 @@
                         <div class="footer-wrapper-content">
                             <div class="footer-widget-logo">
                                 <a href="/">
-                                    <img src="assets/images/logo/logo_siperantara_white.png" alt="logo not found">
+                                    <img src="{{ asset('assets/images/logo/logo_siperantara_white.png') }}"
+                                        alt="logo not found">
                                 </a>
                             </div>
                             <div class="footer-contact-info">
                                 <div class="footer-contact-item">
                                     <div class="footer-info-icon">
                                         <span>
-                             <i class="fa-regular fa-location-dot"></i>
-                          </span>
+                                            <i class="fa-regular fa-location-dot"></i>
+                                        </span>
                                     </div>
                                     <div class="footer-contact-text">
                                         <span><a href="#">27 Division St, New York</a></span>
@@ -39,8 +41,8 @@
                                 <div class="footer-contact-item">
                                     <div class="footer-info-icon">
                                         <span>
-                             <i class="fa-regular fa-phone"></i>
-                          </span>
+                                            <i class="fa-regular fa-phone"></i>
+                                        </span>
                                     </div>
                                     <div class="footer-contact-text">
                                         <span><a href="tel:+1(800)123456789">+00 (123) 456 889</a></span>
@@ -49,8 +51,8 @@
                                 <div class="footer-contact-item">
                                     <div class="footer-info-icon">
                                         <span>
-                             <i class="fa-sharp fa-solid fa-envelope"></i>
-                          </span>
+                                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                                        </span>
                                     </div>
                                     <div class="footer-contact-text">
                                         <span><a href="mailto:reallow@mail.com">reallow@mail.com</a></span>
@@ -97,7 +99,10 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-8">
                     <div class="footer-widget footer-1-col-4">
                         <div class="footer-google-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
                     </div>
@@ -105,12 +110,13 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright-area style-one include-bg" data-background="assets/images/bg/copy-right-bg.png">
+    <div class="footer-copyright-area style-one include-bg" data-background="{{ asset('assets/images/bg/copy-right-bg.png') }}">
         <div class="container">
             <div class="footer-copyright-wrap">
                 <div class="logo">
                     <a href="/">
-                        <img style="max-height: 18px" src="assets/images/logo/logo_siperantara_white.png" alt="footer logo not found">
+                        <img style="max-height: 18px" src="{{ asset('assets/images/logo/logo_siperantara_white.png') }}"
+                            alt="footer logo not found">
                     </a>
                 </div>
                 <div class="footer-copyright">
