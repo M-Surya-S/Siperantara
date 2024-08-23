@@ -169,6 +169,17 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
+                                                            <label for="PropertyStatus">floors:<span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="PropertyStatus" type="text" name="floors"
+                                                                value="{{ $property->floors }}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
                                                             <label
                                                                 for="numberOfVerandaBalcony">Veranda/Balcony:<span>*</span></label>
                                                         </div>
@@ -193,6 +204,17 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
+                                                            <label for="PropertyStatus">Certificate:<span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="PropertyStatus" type="text" name="certificate"
+                                                                value="{{ $property->certificate }}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
                                                             <label for="PropertyStatus">Property
                                                                 Status:<span>*</span></label>
                                                         </div>
@@ -200,17 +222,6 @@
                                                             <input id="PropertyStatus" type="text"
                                                                 name="property_status"
                                                                 value="{{ $property->property_status }}" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
-                                                            <label for="PropertyStatus">Certificate:<span>*</span></label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input id="PropertyStatus" type="text" name="certificate"
-                                                                value="{{ $property->certificate }}" required>
                                                         </div>
                                                     </div>
                                                 </div>

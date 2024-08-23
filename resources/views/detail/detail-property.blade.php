@@ -113,6 +113,7 @@
                                     <li><label>Lot Area:</label> <span>PT30 </span></li>
                                     <li><label>Lot dimensions:</label> <span>150 sqft</span></li>
                                     <li><label>Beds:</label> <span>9</span></li>
+                                    <li><label>Floors:</label> <span>3</span></li>
                                     <li><label>Price:</label> <span>5</span></li>
                                     <li><label>Property Status:</label> <span>For Sale</span></li>
                                 </ul>

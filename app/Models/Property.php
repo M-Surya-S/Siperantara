@@ -28,6 +28,7 @@ class Property extends Model
         'rooms',
         'beds',
         'baths',
+        'floors',
         'veranda_balcony',
         'year_built',
         'property_status',

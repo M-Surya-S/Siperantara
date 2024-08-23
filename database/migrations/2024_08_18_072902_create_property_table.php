@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('rooms');
             $table->string('beds');
             $table->string('baths');
+            $table->string('floors');
             $table->string('veranda_balcony');
             $table->string('year_built');
             $table->string('property_status');

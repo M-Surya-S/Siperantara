@@ -166,6 +166,16 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
+                                                            <label for="PropertyStatus">Floors:<span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="PropertyStatus" type="text" name="floors" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
                                                             <label
                                                                 for="numberOfVerandaBalcony">Veranda/Balcony:</label>
                                                         </div>
@@ -184,6 +194,16 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
+                                                            <label for="PropertyStatus">Certificate:<span>*</span></label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="PropertyStatus" type="text" name="certificate" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
@@ -192,16 +212,6 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="PropertyStatus" type="text" name="property_status" placeholder="Dalam Pembangunan, Dijual, Disewa, Terjual, Tersewa" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
-                                                            <label for="PropertyStatus">Certificate:<span>*</span></label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input id="PropertyStatus" type="text" name="certificate" required>
                                                         </div>
                                                     </div>
                                                 </div>
