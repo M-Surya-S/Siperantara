@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class HomeControlller extends Controller
@@ -12,7 +13,8 @@ class HomeControlller extends Controller
     public function index()
     {
         $title = 'Home';
-        return view('home', compact('title'));
+        $featuredPropertys = Property::where('featured', 'Yes')->take(3)->get();
+        return view('home', compact('title', 'featuredPropertys'));
     }
 
     /**

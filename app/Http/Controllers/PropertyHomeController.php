@@ -36,6 +36,16 @@ class PropertyHomeController extends Controller
             $query->where('floors', $request->input('floors'));
         }
 
+        if ($request->has('status')) {
+            $status = $request->input('status');
+    
+            if ($status == 'new-develop') {
+                $query->where('property_status', 'New Develop');
+            } elseif ($status == 'buy-or-rent') {
+                $query->whereIn('property_status', ['For Sale', 'For Rent']);
+            }
+        }
+
         $title = 'Property';
         $propertys = $query->paginate(6);
         return view('property', compact('title', 'propertys'));

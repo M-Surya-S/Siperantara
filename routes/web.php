@@ -71,9 +71,6 @@ Route::get('/', [HomeControlller::class, 'index']);
 Route::get('/property', [PropertyHomeController::class, 'index']);
 Route::get('/property/search', [PropertyHomeController::class, 'search'])->name('property.search');
 Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->name('property.detail');
-// Route::get('/property/detail', function () {
-//     return view('detail.detail-property', ['title' => 'Property Detail']);
-// });
 Route::get('/property/sell', function () {
     return view('detail.sell-property', ['title' => 'Sell']);
 });

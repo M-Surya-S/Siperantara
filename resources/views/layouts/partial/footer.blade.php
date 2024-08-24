@@ -89,8 +89,8 @@
                         <h3 class="footer-widget-title">Services</h3>
                         <div class="footer-widget-links">
                             <ul>
-                                <li class="underline"><a href="property-details.html">New Develop</a></li>
-                                <li class="underline"><a href="about.html">Buy or Rent</a></li>
+                                <li class="underline"><a href="/property/search?status=new-develop">New Develop</a></li>
+                                <li class="underline"><a href="/property/search?status=buy-or-rent">Buy or Rent</a></li>
                                 <li class="underline"><a href="contact.html">Sell</a></li>
                             </ul>
                         </div>

@@ -148,37 +148,24 @@
                                         <div class="row g-5">
                                             @foreach ($propertys as $property)
                                                 <div class="col-xl-6 col-md-6">
-                                                    <div class="featured-item style-three wow bdFadeInUp"
+                                                    <div class="featured-item style-one wow bdFadeInUp"
                                                         data-wow-delay=".3s" data-wow-duration="1s">
                                                         <div class="thumb-wrapper">
                                                             <div class="badge-wrap">
-                                                                <span class="bd-badge">
-                                                                    {{ $property->property_status }}
-                                                                </span>
-                                                                <span class="bd-badge">
-                                                                    {{ $property->property_category }}
-                                                                </span>
+                                                                @if ($property->featured == 'Yes')
+                                                                    <a class="bd-badge">Featured</a>
+                                                                @endif
+                                                                <a class="bd-badge">{{ $property->property_status }}</a>
+                                                                <a class="bd-badge">{{ $property->property_category }}</a>
                                                             </div>
-                                                            <div class="price">
-                                                                <span style="
-                                                                    position: relative; 
-                                                                    color: #ffffff; /* Warna teks */
-                                                                    text-shadow: 
-                                                                        0 0 2px rgba(0, 0, 0, 1), /* Outline lebih tebal */
-                                                                        0 0 2px rgba(0, 0, 0, 1); /* Outline lebih tebal tambahan */
-                                                                ">
-                                                                    Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
-                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Bulan' : '' }}
-                                                                </span>
-                                                            </div>
+                                                            @php
+                                                                $filePaths = json_decode($property->image);
+                                                            @endphp
                                                             <div class="thumb">
                                                                 <a href="{{ route('property.detail', $property->property_id) }}">
                                                                     <figure>
-                                                                        @php
-                                                                            $filePaths = json_decode($property->image);
-                                                                        @endphp
                                                                         @foreach ($filePaths as $filePath)
-                                                                            <img src="{{ Storage::url($filePath) }}" alt="image">
+                                                                            <img src="{{ Storage::url($filePath) }}" alt="Image">
                                                                             @break
                                                                         @endforeach
                                                                     </figure>
@@ -186,32 +173,33 @@
                                                             </div>
                                                         </div>
                                                         <div class="content">
-                                                            <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a></h3>
+                                                            <div class="price">
+                                                                <span>
+                                                                    Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>
+                                                            </h3>
                                                             <span class="info">{{ $property->address }}</span>
                                                             <div class="bd-meta">
+                                                                @if ($property->beds != '-')
+                                                                    <div class="meta-item">
+                                                                        <span class="icon"><i
+                                                                                class="fa-regular fa-bed-front"></i></span><span
+                                                                            class="title">{{ $property->beds }} bed</span>
+                                                                    </div>
+                                                                @endif
+                                                                @if ($property->baths != '-')
+                                                                    <div class="meta-item">
+                                                                        <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
+                                                                            class="title">{{ $property->baths }} bath</span>
+                                                                    </div>
+                                                                @endif
                                                                 <div class="meta-item">
-                                                                    <span class="icon">
-                                                                        <i class="fa-regular fa-bed-front"></i>
-                                                                    </span>
-                                                                    <span class="title">
-                                                                        {{ $property->beds }} bed
-                                                                    </span>
-                                                                </div>
-                                                                <div class="meta-item">
-                                                                    <span class="icon">
-                                                                        <i class="fa-duotone fa-shower"></i>
-                                                                    </span>
-                                                                    <span class="title">
-                                                                        {{ $property->baths }} bath
-                                                                    </span>
-                                                                </div>
-                                                                <div class="meta-item">
-                                                                    <span class="icon">
-                                                                        <i class="fa-regular fa-arrows-maximize"></i>
-                                                                    </span>
-                                                                    <span class="title">
-                                                                        {{ $property->lot_area }} m²
-                                                                    </span>
+                                                                    <span class="icon"><i
+                                                                            class="fa-regular fa-arrows-maximize"></i></span><span
+                                                                        class="title">{{ $property->lot_area }} m²</span>
                                                                 </div>
                                                             </div>
                                                         </div>

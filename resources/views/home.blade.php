@@ -31,16 +31,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- if you active slider then remove "d-none" -->
-                <div class="banner-nav-btn banner-one-navigation d-none">
-                    <div class="banner-pagination">
-                        <div class="swiper-pagination bd-pagination justify-content-center"></div>
-                    </div>
-                    <div class="banner-navigation-btn">
-                        <button class="Reallow-navigation-prev"><i class="fa-regular fa-angle-left"></i></button>
-                        <button class="Reallow-navigation-next"><i class="fa-regular fa-angle-right"></i></button>
-                    </div>
-                </div>
             </div>
             <div class="banner-bg-thumb jarallax">
                 <div class="banner-thumb include-bg jarallax-img" data-background="{{ asset('assets/images/banner/banner-home-01.png') }}">
@@ -61,45 +51,40 @@
                             </span>
                             <h2 class="section-title title-animation">What we provide</h2>
                         </div>
-
                     </div>
                 </div>
                 <div class="row g-5 justify-content-between justify-content-md-center">
-
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                             <span class="icon"><i class="icon-rent-property"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/property">New Develop</a>
+                                    <a href="/property/search?status=new-develop">New Develop</a>
                                 </h3>
                                 <p class="description">The rent property kitchen invites you to whip up delicious meals,
                                     while
                                     the cozy bedroom promises sleep</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/search?status=new-develop"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                             <span class="icon"><i class="icon-buy-home"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/property">Buy or Rent</a>
+                                    <a href="/property/search?status=buy-or-rent">Buy or Rent</a>
                                 </h3>
                                 <p class="description">Choose us for your real estate needs and experience unparalleled
                                     expertise and dedication.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/search?status=buy-or-rent"><span class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                             <span class="icon"><i class="icon-sell-property"></i></span>
@@ -585,20 +570,21 @@
                             </span>
                             <h2 class="section-title title-animation">Discover our featured listings</h2>
                         </div>
-
                     </div>
                     <div class="col-xxl-3 col-xl-3 col-lg-6">
                         <div class="common-nav-pre">
                             <!-- If we need navigation buttons -->
                             <div class="common-navigation justify-content-lg-end justify-content-start">
-                                <button class="common-slider-button-prev"><i
-                                        class="fa-regular fa-arrow-left"></i></button>
+                                <button class="common-slider-button-prev">
+                                    <i class="fa-regular fa-arrow-left"></i>
+                                </button>
                                 <!-- If we need pagination -->
                                 <div class="why-choos-pagination">
                                     <div class="bd-swiper-dot text-center"></div>
                                 </div>
-                                <button class="common-slider-button-next"><i
-                                        class="fa-regular fa-arrow-right-long"></i></button>
+                                <button class="common-slider-button-next">
+                                    <i class="fa-regular fa-arrow-right-long"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -608,134 +594,65 @@
                         <div class="swiper common-carousel-active wow bdFadeInUp" data-wow-delay=".3s"
                             data-wow-duration="1s">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="featured-item style-one">
-                                        <div class="thumb-wrapper">
-                                            <div class="badge-wrap">
-                                                <a class="bd-badge">Featured</a>
-                                                <a class="bd-badge">For Sale</a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="/property/detail">
-                                                    <figure>
-                                                        <img src="{{ asset('assets/images/featured/featured-thumb-01.png') }}"
-                                                            alt="Image">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="price">
-                                                <span>$14,000/mo</span>
-                                            </div>
-                                            <h3 class="title"><a href="/property/detail">Equestrian family home</a>
-                                            </h3>
-                                            <span class="info">California, CA, USA</span>
-                                            <div class="bd-meta">
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-bed-front"></i></span><span
-                                                        class="title">3 bad</span>
+                                @foreach ($featuredPropertys as $property)
+                                    <div class="swiper-slide">
+                                        <div class="featured-item style-one">
+                                            <div class="thumb-wrapper">
+                                                <div class="badge-wrap">
+                                                    @if ($property->featured == 'Yes')
+                                                        <a class="bd-badge">Featured</a>
+                                                    @endif
+                                                    <a class="bd-badge">{{ $property->property_status }}</a>
+                                                    <a class="bd-badge">{{ $property->property_category }}</a>
                                                 </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
-                                                        class="title">4
-                                                        bath</span>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-arrows-maximize"></i></span><span
-                                                        class="title">1200 sqft</span>
+                                                @php
+                                                    $filePaths = json_decode($property->image);
+                                                @endphp
+                                                <div class="thumb">
+                                                    <a href="{{ route('property.detail', $property->property_id) }}">
+                                                        <figure>
+                                                            @foreach ($filePaths as $filePath)
+                                                                <img src="{{ Storage::url($filePath) }}" alt="Image">
+                                                                @break
+                                                            @endforeach
+                                                        </figure>
+                                                    </a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="featured-item style-one">
-                                        <div class="thumb-wrapper">
-                                            <div class="badge-wrap">
-                                                <a class="bd-badge" href="property-details.html">For Sale</a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="property-details.html">
-                                                    <figure>
-                                                        <img src="{{ asset('assets/images/featured/featured-thumb-02.png') }}"
-                                                            alt="Image">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="price">
-                                                <span>$82,000/mo</span>
-                                            </div>
-                                            <h3 class="title"><a href="property-details.html">Luxury Land in rego
-                                                    park</a></h3>
-                                            <span class="info">California, CA, USA</span>
-                                            <div class="bd-meta">
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-bed-front"></i></span><span
-                                                        class="title">2 bad</span>
+                                            <div class="content">
+                                                <div class="price">
+                                                    <span>
+                                                        Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                                        {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
+                                                    </span>
                                                 </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
-                                                        class="title">3
-                                                        bath</span>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-arrows-maximize"></i></span><span
-                                                        class="title">1000 sqft</span>
+                                                <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>
+                                                </h3>
+                                                <span class="info">{{ $property->address }}</span>
+                                                <div class="bd-meta">
+                                                    @if ($property->beds != '-')
+                                                        <div class="meta-item">
+                                                            <span class="icon"><i
+                                                                    class="fa-regular fa-bed-front"></i></span><span
+                                                                class="title">{{ $property->beds }} bed</span>
+                                                        </div>
+                                                    @endif
+                                                    @if ($property->baths != '-')
+                                                        <div class="meta-item">
+                                                            <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
+                                                                class="title">{{ $property->baths }} bath</span>
+                                                        </div>
+                                                    @endif
+                                                    <div class="meta-item">
+                                                        <span class="icon"><i
+                                                                class="fa-regular fa-arrows-maximize"></i></span><span
+                                                            class="title">{{ $property->lot_area }} m²</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="featured-item style-one">
-                                        <div class="thumb-wrapper">
-                                            <div class="badge-wrap">
-                                                <a class="bd-badge" href="property-details.html">Featured</a>
-                                                <a class="bd-badge" href="property-details.html">For Sale</a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="property-details.html">
-                                                    <figure>
-                                                        <img src="{{ asset('assets/images/featured/featured-thumb-03.png') }}"
-                                                            alt="Image">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <div class="price">
-                                                <span>$18,000/mo</span>
-                                            </div>
-                                            <h3 class="title"><a href="property-details.html">Villa on hollywood
-                                                    estate</a></h3>
-                                            <span class="info">California, CA, USA</span>
-                                            <div class="bd-meta">
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-bed-front"></i></span><span
-                                                        class="title">6 bad</span>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
-                                                        class="title">5
-                                                        bath</span>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <span class="icon"><i
-                                                            class="fa-regular fa-arrows-maximize"></i></span><span
-                                                        class="title">1400 sqft</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
