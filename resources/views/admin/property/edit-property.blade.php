@@ -64,7 +64,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-8 mt-20">
+                                                <div class="col-lg-4 mt-20">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyTag">Address
@@ -73,6 +73,17 @@
                                                         <div class="form-input">
                                                             <input id="propertyTag" type="text" name="address"
                                                                 value="{{ $property->address }}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 mt-20">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
+                                                            <label for="propertyDiscount">Featured</label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="propertyDiscount" type="text" name="featured" 
+                                                                value="{{ $property->featured }}">
                                                         </div>
                                                     </div>
                                                 </div>

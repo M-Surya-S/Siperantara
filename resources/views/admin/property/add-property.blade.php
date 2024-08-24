@@ -74,7 +74,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-7 mt-20">
+                                                <div class="col-lg-4 mt-20">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
                                                             <label for="propertyTag">Address
@@ -83,6 +83,17 @@
                                                         <div class="form-input">
                                                             <input id="propertyTag" type="text" name="address"
                                                                 placeholder="Masukkan alamat lengkap" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 mt-20">
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-title">
+                                                            <label for="propertyDiscount">Featured</label>
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <input id="propertyDiscount" type="text" name="featured" 
+                                                                placeholder="Yes or No (default No)">
                                                         </div>
                                                     </div>
                                                 </div>
