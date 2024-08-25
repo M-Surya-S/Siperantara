@@ -59,11 +59,10 @@
                             <span class="icon"><i class="icon-rent-property"></i></span>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="/property/search?status=new-develop">New Develop</a>
+                                    <a href="/property/search?status=new-develop">New Developments</a>
                                 </h3>
-                                <p class="description">The rent property kitchen invites you to whip up delicious meals,
-                                    while
-                                    the cozy bedroom promises sleep</p>
+                                <p class="description">We assist developers in marketing their projects, helping to generate more high-quality leads and prospects.
+                                </p>
                             </div>
                             <div class="btn-inner">
                                 <a class="bd-half-outline-btn" href="/property/search?status=new-develop"><span class="text">Click Here</span></a>
@@ -77,8 +76,8 @@
                                 <h3 class="title">
                                     <a href="/property/search?status=buy-or-rent">Buy or Rent</a>
                                 </h3>
-                                <p class="description">Choose us for your real estate needs and experience unparalleled
-                                    expertise and dedication.</p>
+                                <p class="description">Whether you're a first-time homebuyer or an investor, we help you find the best properties by offering diverse and quality options.
+                                </p>
                             </div>
                             <div class="btn-inner">
                                 <a class="bd-half-outline-btn" href="/property/search?status=buy-or-rent"><span class="text">Click Here</span></a>
@@ -92,8 +91,7 @@
                                 <h3 class="title">
                                     <a href="/property/sell">Sell</a>
                                 </h3>
-                                <p class="description">With years of industry experience, our team boasts an in depth
-                                    understanding of the market knowledge.</p>
+                                <p class="description">We support our clients in marketing their secondary properties with tailored strategies and marketing plans designed specifically for them.</p>
                             </div>
                             <div class="btn-inner">
                                 <a class="bd-half-outline-btn" href="/property/sell"><span class="text">Click Here</span></a>

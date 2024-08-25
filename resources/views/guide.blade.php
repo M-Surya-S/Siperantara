@@ -46,9 +46,9 @@
                                 <h3 class="title">
                                     <a href="/guide/buyers">Buyer's Guide</a>
                                 </h3>
-                                <p class="description">The rent property kitchen invites you to whip up delicious meals,
-                                    while
-                                    the cozy bedroom promises sleep</p>
+                                <p class="description">Before you start your journey to owning your dream property, download our buyer's guide for a complete overview of the process from start to finish.
+
+                                </p>
                             </div>
                             <div class="btn-inner">
                                 <a class="bd-half-outline-btn" href="/guide/buyers"><span class="text">Read
@@ -64,8 +64,7 @@
                                 <h3 class="title">
                                     <a href="/guide/seller">Seller Guide</a>
                                 </h3>
-                                <p class="description">Choose us for your real estate needs and experience unparalleled
-                                    expertise and dedication.</p>
+                                <p class="description">To ensure your property sale is effective and delivers the best results, download our seller's guide for a step-by-step plan to successfully market or sell your property.</p>
                             </div>
                             <div class="btn-inner">
                                 <a class="bd-half-outline-btn" href="/guide/seller"><span class="text">Read
