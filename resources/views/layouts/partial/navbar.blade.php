@@ -20,7 +20,7 @@
                         <li class="menu-item-has-children">
                             <a href="/property">Property</a>
                             <ul class="dp-menu">
-                                <li><a href="/property/search?status=new-develop">New Develop</a></li>
+                                <li><a href="/property/new-develop">New Develop</a></li>
                                 <li><a href="/property/search?status=buy-or-rent">Buy or Rent</a></li>
                                 <li><a href="/property/sell">Sell</a></li>
                             </ul>
