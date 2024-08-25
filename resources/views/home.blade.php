@@ -686,10 +686,11 @@
                                 <span><i class="icon-solution"></i></span>
                             </div>
                             <div class="content">
-                                <h3 class="title">Easy Solution
+                                <h3 class="title">Top Listing
                                 </h3>
-                                <p class="description">Choose us for your real estate needs and experience unparalleled
-                                    expertise and dedication.</p>
+                                <p class="description">We offer a wide range of properties tailored to your needs, from residential to commercial and industrial options.
+
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -700,10 +701,10 @@
                                 <span><i class="icon-flexibility"></i></span>
                             </div>
                             <div class="content">
-                                <h3 class="title">Full Flexibility
+                                <h3 class="title">Transparency
                                 </h3>
-                                <p class="description">Investing in multi-unit properties such as duplexes, or apartment
-                                    buildings flexibility in terms of rental</p>
+                                <p class="description">We prioritize a transparent buying and selling process. There’s no price or commission markup—you’re fully informed and involved in every step of the transaction.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -714,10 +715,9 @@
                                 <span><i class="icon-efficiency"></i></span>
                             </div>
                             <div class="content">
-                                <h3 class="title">Cost Effective
+                                <h3 class="title">Professionalism
                                 </h3>
-                                <p class="description">Consider not only the purchase price but also additional costs like
-                                    closing costs, taxes, and repairs</p>
+                                <p class="description"> Whether you're entrusting us with your property or searching for one through us, we guarantee the highest standards of service that a property agency can provide. We prioritize ethics and always act in the best interest of our clients.</p>
                             </div>
                         </div>
                     </div>
