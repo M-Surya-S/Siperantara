@@ -689,7 +689,7 @@
                             <div class="icon">
                                 <span><i class="icon-solution"></i></span>
                             </div>
-                            <div class="content">
+                            <div class="content mb-75">
                                 <h3 class="title">Top Listing
                                 </h3>
                                 <p class="description">We offer a wide range of properties tailored to your needs, from residential to commercial and industrial options.
@@ -704,7 +704,7 @@
                             <div class="icon">
                                 <span><i class="icon-flexibility"></i></span>
                             </div>
-                            <div class="content">
+                            <div class="content mb-25">
                                 <h3 class="title">Transparency
                                 </h3>
                                 <p class="description">We prioritize a transparent buying and selling process. There’s no price or commission markup—you’re fully informed and involved in every step of the transaction.
