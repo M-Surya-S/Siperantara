@@ -10,11 +10,11 @@
         <div class="sidebar-nav">
             <ul>
                 <li><a href="{{ url('/dashboard') }}"><span><i class="fa-sharp fa-light fa-table-columns"></i></span>Dashboard</a></li>
-                <li><a href="{{ url('/dashboard/my-property') }}"><span><i class="fa-sharp fa-light fa-house-building"></i></span>My Property</a></li>
+                <li><a href="{{ url('/dashboard/my-property') }}"><span><i class="fa-sharp fa-light fa-house-building"></i></span>Property</a></li>
                 <li><a href="{{ url('/dashboard/add-property') }}"><span><i class="fa-sharp fa-light fa-layer-plus"></i></span>Add Property</a></li>
                 <li><a href="{{ url('/dashboard/my-agent') }}"><span><i class="fa-sharp fa-light fa-user-tie"></i></span>Agent</a></li>
                 <li><a href="{{ url('/dashboard/add-agent') }}"><span><i class="fa-sharp fa-light fa-layer-plus"></i></span>Add Agent</a></li>
-                <li><a href="{{ url('/dashboard/my-blog') }}"><span><i class="fa-sharp fa-light fa-newspaper"></i></span>My Blog</a></li>
+                <li><a href="{{ url('/dashboard/my-blog') }}"><span><i class="fa-sharp fa-light fa-newspaper"></i></span>Blog</a></li>
                 <li><a href="{{ url('/dashboard/add-blog') }}"><span><i class="fa-sharp fa-light fa-layer-plus"></i></span>Add Blog</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle"><span><i class="fa-sharp fa-light fa-user"></i></span>Customer</a>

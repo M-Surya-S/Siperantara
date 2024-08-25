@@ -40,6 +40,7 @@ Route::middleware(['admin'])->group(function () {
 
     // Agent
     Route::get('/dashboard/my-agent', [AgentController::class, 'index']);
+    Route::get('/dashboard/my-agent/search', [AgentController::class, 'search'])->name('my-agent.search');
     Route::get('/dashboard/add-agent', [AgentController::class, 'create']);
     Route::post('/dashboard/add-agent', [AgentController::class, 'store'])->name('add-agent.store');
     Route::get('/dashboard/edit-agent/{id}', [AgentController::class, 'edit'])->name('edit-agent.edit');
@@ -48,6 +49,7 @@ Route::middleware(['admin'])->group(function () {
 
     // Blog
     Route::get('/dashboard/my-blog', [BlogController::class, 'index']);
+    Route::get('/dashboard/my-blog/search', [BlogController::class, 'search'])->name('my-blog.search');
     Route::get('/dashboard/add-blog', [BlogController::class, 'create']);
     Route::post('/dashboard/add-blog', [BlogController::class, 'store'])->name('add-blog.store');
     Route::get('/dashboard/edit-blog/{id}', [BlogController::class, 'edit'])->name('edit-blog.edit');

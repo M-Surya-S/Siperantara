@@ -112,83 +112,89 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($propertys as $property)
-                                            <tr class="table-custom">
-                                                <td style="width: 280px;">
-                                                    <div class="property-thumb-wrapper">
-                                                        <div class="property-thumb image-hover-effect-two position-relative">
-                                                            @php
-                                                                $filePaths = json_decode($property->image);
-                                                            @endphp
-                                                            @foreach ($filePaths as $filePath)
-                                                                <img class="" src="{{ Storage::url($filePath) }}" alt="image">
-                                                                @break
-                                                            @endforeach
-                                                            <div class="property-thumb-date">
-                                                                <div class="bd-badge-sq theme-bg">
-                                                                    <div class="d-block">
-                                                                        <h5 class="badge-title">
-                                                                            {{ \Carbon\Carbon::parse($property->created_at)->format('d') }}
-                                                                        </h5>
-                                                                        <span>{{ \Carbon\Carbon::parse($property->created_at)->format('M') }}</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="property-title-box d-flex align-items-center gap-10">
-                                                        <div>
-                                                            <h3 class="property-title underline">{{ $property->property_title }}</h3>
-                                                            <div class="property-info-box mb-5">
-                                                                <div class="bd-meta">
-                                                                    <div class="meta-item">
-                                                                        <span class="icon"><i
-                                                                                class="fa-regular fa-bed-front"></i></span><span
-                                                                            class="title">{{ $property->beds }} bed</span>
-                                                                    </div>
-                                                                    <div class="meta-item">
-                                                                        <span class="icon"><i
-                                                                                class="fa-duotone fa-shower"></i></span><span
-                                                                            class="title">{{ $property->baths }} bath</span>
-                                                                    </div>
-                                                                    <div class="meta-item">
-                                                                        <span class="icon"><i
-                                                                                class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                            class="title">{{ $property->lot_area }} sqft</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <p class="property-location">{{ $property->address }}</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="recent-activity-price-box">
-                                                        <h5 class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</h5>
-                                                        @if ($property->property_status == 'Disewa' or $property->property_status == 'Tersewa')
-                                                            <p>Monthly</p>
-                                                        @endif
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <ul class="recent-activity-list">
-                                                        <li class="property-date mb-5">Add Date: <span
-                                                                class="property-add-date">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></li>
-                                                        <li class="property-date">Last Update: <span
-                                                                class="property-last-date">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    @if ($property->property_status == 'Dijual' or $property->property_status == 'Disewa')
-                                                        <span class="bd-badge warning">{{ $property->property_status }}</span>
-                                                    @elseif ($property->property_status == 'Terjual' or $property->property_status == 'Tersewa')
-                                                        <span class="bd-badge success">{{ $property->property_status }}</span>
-                                                    @endif
-                                                </td>
+                                        @if ($propertys->isEmpty())
+                                            <tr>
+                                                <td colspan="6" class="text-center">No properties found.</td>
                                             </tr>
-                                        @endforeach
+                                        @else
+                                            @foreach ($propertys as $property)
+                                                <tr class="table-custom">
+                                                    <td style="width: 280px;">
+                                                        <div class="property-thumb-wrapper">
+                                                            <div class="property-thumb image-hover-effect-two position-relative">
+                                                                @php
+                                                                    $filePaths = json_decode($property->image);
+                                                                @endphp
+                                                                @foreach ($filePaths as $filePath)
+                                                                    <img class="" src="{{ Storage::url($filePath) }}" alt="image">
+                                                                    @break
+                                                                @endforeach
+                                                                <div class="property-thumb-date">
+                                                                    <div class="bd-badge-sq theme-bg">
+                                                                        <div class="d-block">
+                                                                            <h5 class="badge-title">
+                                                                                {{ \Carbon\Carbon::parse($property->created_at)->format('d') }}
+                                                                            </h5>
+                                                                            <span>{{ \Carbon\Carbon::parse($property->created_at)->format('M') }}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="property-title-box d-flex align-items-center gap-10">
+                                                            <div>
+                                                                <h3 class="property-title underline">{{ $property->property_title }}</h3>
+                                                                <div class="property-info-box mb-5">
+                                                                    <div class="bd-meta">
+                                                                        <div class="meta-item">
+                                                                            <span class="icon"><i
+                                                                                    class="fa-regular fa-bed-front"></i></span><span
+                                                                                class="title">{{ $property->beds }} bed</span>
+                                                                        </div>
+                                                                        <div class="meta-item">
+                                                                            <span class="icon"><i
+                                                                                    class="fa-duotone fa-shower"></i></span><span
+                                                                                class="title">{{ $property->baths }} bath</span>
+                                                                        </div>
+                                                                        <div class="meta-item">
+                                                                            <span class="icon"><i
+                                                                                    class="fa-regular fa-arrows-maximize"></i></span><span
+                                                                                class="title">{{ $property->lot_area }} sqft</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="property-location">{{ $property->address }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="recent-activity-price-box">
+                                                            <h5 class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</h5>
+                                                            @if ($property->property_status == 'Disewa' or $property->property_status == 'Tersewa')
+                                                                <p>Monthly</p>
+                                                            @endif
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="recent-activity-list">
+                                                            <li class="property-date mb-5">Add Date: <span
+                                                                    class="property-add-date">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></li>
+                                                            <li class="property-date">Last Update: <span
+                                                                    class="property-last-date">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
+                                                            <span class="bd-badge warning">{{ $property->property_status }}</span>
+                                                        @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rent Out')
+                                                            <span class="bd-badge success">{{ $property->property_status }}</span>
+                                                        @endif
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>

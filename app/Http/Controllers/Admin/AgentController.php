@@ -15,7 +15,22 @@ class AgentController extends Controller
     public function index()
     {
         $title = 'Agent';
-        $agents = Agent::all();
+        $agents = Agent::paginate(10);
+        return view('admin.agent.my-agent', compact('title', 'agents'));
+    }
+
+    /**
+     * Search for a listing from the resource.
+     */
+    public function search(Request $request)
+    {
+        $title = 'Agent';
+        $search = $request->input('search');
+
+        $agents = Agent::query()
+            ->where('name', 'LIKE', "%{$search}%")
+            ->paginate(10);
+
         return view('admin.agent.my-agent', compact('title', 'agents'));
     }
 

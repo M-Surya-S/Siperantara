@@ -15,8 +15,24 @@ class BlogController extends Controller
     public function index()
     {
         $title = 'Blog';
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(10);
         return view('admin.blog.my-blog', compact('title', 'blogs'));
+    }
+
+    /**
+     * Search for a listing from the resource.
+     */
+    public function search(Request $request)
+    {
+        $title = 'Blog';
+        $search = $request->input('search');
+
+        $blogs = Blog::query()
+            ->where('blog_title', 'LIKE', "%{$search}%")
+            ->orWhere('writter', 'LIKE', "%{$search}%")
+            ->paginate(10);
+
+        return view('admin.property.my-blog', compact('title', 'blogs'));
     }
 
     /**
