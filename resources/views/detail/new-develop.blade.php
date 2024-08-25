@@ -27,13 +27,112 @@
         </section>
         <!-- Breadcrumb area end -->
 
+
+        <!-- Services area start -->
+        <section class="bd-about-area section-space p-relative">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xxl-4 col-xl-4 col-lg-5">
+                        <div class="about-content style-one">
+                            <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3 mb-20">
+                                <span class="section-subtitle uppercase">
+                                    <i class="icon-home"></i>
+                                    Developments
+                                </span>
+                                <h2 class="section-title title-animation">Grand City
+                                </h2>
+                            </div>
+                            <div class="about-tab">
+                                <div class="bd-tab">
+                                    <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="expertise-tab" data-bs-toggle="tab"
+                                                data-bs-target="#expertise-tab-pane" type="button" role="tab"
+                                                aria-controls="expertise-tab-pane" aria-selected="true">Expertise</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="results-tab" data-bs-toggle="tab"
+                                                data-bs-target="#results-tab-pane" type="button" role="tab"
+                                                aria-controls="results-tab-pane" aria-selected="false">Results</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
+                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
+                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="expertise-tab-pane" role="tabpanel"
+                                            aria-labelledby="expertise-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">Choose us for your real estate needs and experience
+                                                    unparalleled expertise and dedication. With years of industry
+                                                    experience, our
+                                                    team boasts an in depth understanding of the market.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="results-tab-pane" role="tabpanel"
+                                            aria-labelledby="results-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">The result of working in real estate involves
+                                                    several key
+                                                    steps, whether you are an agent, broker, or investor. Pursue continuing
+                                                    education
+                                                    to stay updated on real estate best practices.</p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="quality-tab-pane" role="tabpanel"
+                                            aria-labelledby="quality-tab" tabindex="0">
+                                            <div class="about-tab-contnent">
+                                                <p class="description">Working quality in real estate is crucial for
+                                                    achieving
+                                                    success and maintaining a positive reputation.It encompasses various
+                                                    aspects such
+                                                    as professionalism, knowledge and client service</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-8 col-xl-8 col-lg-7">
+                        <div class="about-thumb-wrap style-one">
+                            <div class="round-box-inner">
+                                <div class="round-box">
+                                    <span class="round one"></span>
+                                    <span class="round two"></span>
+                                    <span class="round three"></span>
+                                </div>
+                                <div class="round-icon">
+                                    <figure><img src="{{ asset('assets/images/icons/house.png') }}" alt="image"></figure>
+                                </div>
+                            </div>
+                            <div class="thumb-one">
+                                <figure> <img src="{{ asset('assets/images/about/about-thumb-01.png') }}" alt="image"></figure>
+                            </div>
+                            <div class="thumb-two-inner">
+                                <div class="thumb-two">
+                                    <figure><img src="{{ asset('assets/images/about/about-thumb-02.png') }}" alt="image"></figure>
+                                </div>
+                                <div class="thumb-two">
+                                    <figure> <img src="{{ asset('assets/images/about/about-thumb-03.png') }}" alt="image"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services area end -->
+
         <!-- Property area start -->
         <section class="bd-property-inner-area section-space">
             <div class="container">
                 <div class="row g-5">
-                    <div class="col-lg-4">
+                    {{-- <div class="col-lg-4">
                         <div class="property-sidebar-wrapper bd-sidebar-sticky">
-                            <!-- type -->
+
                             <div class="property-widget">
                                 <h3 class="property-widget-title">Filter</h3>
                                 <div class="property-widget-content">
@@ -84,12 +183,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-8">
                         <div class="bd-property-main-wrapper">
                             <div class="bd-property-top mb-45">
                                 <div class="row">
-                                    <div class="col-xl-6">
+                                    {{-- <div class="col-xl-6">
                                         <div class="bd-property-top-left d-flex align-items-center ">
                                             <div class="bd-property-top-tab bd-tab">
                                                 <ul class="nav nav-tabs" id="productTab" role="tablist">
@@ -138,7 +237,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <div class="bd-property-items-wrapper bd-property-item-primary">
