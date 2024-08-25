@@ -75,10 +75,10 @@
                         <h3 class="footer-widget-title">Category</h3>
                         <div class="footer-widget-links">
                             <ul>
-                                <li class="underline"><a href="#">Residential</a></li>
-                                <li class="underline"><a href="#">Commercial</a></li>
-                                <li class="underline"><a href="#">Industrial</a></li>
-                                <li class="underline"><a href="#">Land</a></li>
+                                <li class="underline"><a href="/property/search?tag=residental">Residential</a></li>
+                                <li class="underline"><a href="/property/search?tag=commercial">Commercial</a></li>
+                                <li class="underline"><a href="/property/search?tag=industrial">Industrial</a></li>
+                                <li class="underline"><a href="/property/search?tag=land">Land</a></li>
 
                             </ul>
                         </div>

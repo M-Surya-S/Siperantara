@@ -203,6 +203,7 @@
         </section>
         <!-- Services area end -->
 
+        <!-- Slider Icon area -->
         <section class="bd-filter-area section-space-bottom">
             <div class="swiper swiper-width-auto filter-active">
                 <div class="swiper-wrapper">
@@ -229,7 +230,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Houses</a></h6>
+                                    <h6 class="title"><a href="#">Houses</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +294,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Apartments</a></h6>
+                                    <h6 class="title"><a href="#">Apartments</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -325,7 +326,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Land</a></h6>
+                                    <h6 class="title"><a href="#">Land</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +351,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Shophouse</a></h6>
+                                    <h6 class="title"><a href="#">Shophouse</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -375,7 +376,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Warehouse</a></h6>
+                                    <h6 class="title"><a href="#">Warehouse</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +404,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Houses</a></h6>
+                                    <h6 class="title"><a href="#">Houses</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +468,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Apartments</a></h6>
+                                    <h6 class="title"><a href="#">Apartments</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -499,7 +500,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Land</a></h6>
+                                    <h6 class="title"><a href="#">Land</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -524,7 +525,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Shophouse</a></h6>
+                                    <h6 class="title"><a href="#">Shophouse</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -549,7 +550,7 @@
                                     </span>
                                 </div>
                                 <div class="content">
-                                    <h6 class="title"><a href="property.html">Warehouse</a></h6>
+                                    <h6 class="title"><a href="#">Warehouse</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -557,6 +558,7 @@
                 </div>
             </div>
         </section>
+        <!-- Slider Icon area end -->
 
         <!-- Featured area start -->
         <section class="bd-featured-area section-space">

@@ -46,6 +46,20 @@ class PropertyHomeController extends Controller
             }
         }
 
+        if ($request->has('tag')) {
+            $tag = $request->input('tag');
+    
+            if ($tag == 'residental') {
+                $query->where('property_tag', 'Residental');
+            } elseif ($tag == 'commercial') {
+                $query->where('property_tag', 'Commercial');
+            } elseif ($tag == 'industrial') {
+                $query->where('property_tag', 'Industrial');
+            } elseif ($tag == 'land') {
+                $query->where('property_tag', 'Land');
+            }
+        }
+
         $title = 'Property';
         $propertys = $query->paginate(6);
         return view('property', compact('title', 'propertys'));

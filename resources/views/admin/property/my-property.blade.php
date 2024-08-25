@@ -113,9 +113,9 @@
                                                         </ul>
                                                     </td>
                                                     <td>
-                                                        @if ($property->property_status == 'Dijual' or $property->property_status == 'Disewa')
+                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
                                                             <span class="bd-badge warning">{{ $property->property_status }}</span>
-                                                        @elseif ($property->property_status == 'Terjual' or $property->property_status == 'Tersewa')
+                                                        @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rented Out')
                                                             <span class="bd-badge success">{{ $property->property_status }}</span>
                                                         @endif
                                                     </td>
