@@ -60,6 +60,22 @@ class PropertyHomeController extends Controller
             }
         }
 
+        if ($request->has('category')) {
+            $category = $request->input('category');
+
+            if ($category == 'houses') {
+                $query->where('property_category', 'Houses');
+            } elseif ($category == 'apartments') {
+                $query->where('property_category', 'Apartments');
+            } elseif ($category == 'land') {
+                $query->where('property_category', 'Land');
+            } elseif ($category == 'shophouse') {
+                $query->where('property_category', 'Shophouse');
+            } elseif ($category == 'wherehouse') {
+                $query->where('property_category', 'Wherehouse');
+            }
+        }
+
         $title = 'Property';
         $propertys = $query->paginate(6);
         return view('property', compact('title', 'propertys'));
