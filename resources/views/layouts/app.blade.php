@@ -87,7 +87,7 @@
                                         <i class="fal fa-map-marker-alt"></i></a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a target="_blank" href="#">1426 Center StreetBend, 97702, California, USA</a>
+                                    <a target="_blank" href="#">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
@@ -95,7 +95,7 @@
                                     <a href="tel:+415864872899"><i class="far fa-phone"></i></a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="tel:+415864872899">+415-864-8728-99</a>
+                                    <a href="tel:+415864872899">+62 811-517-1010</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
@@ -103,7 +103,7 @@
                                     <a href="mailto:support@Reallow.com"><i class="fal fa-envelope"></i></a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="mailto:support@Reallow.com">support@Reallow.com</a>
+                                    <a href="mailto:support@Reallow.com">Siperantararealestate@gmail.com</a>
                                 </div>
                             </li>
                         </ul>

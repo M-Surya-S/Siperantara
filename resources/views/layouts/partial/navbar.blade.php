@@ -30,7 +30,7 @@
                             <a href="/agent">Agent</a>
                             <ul class="dp-menu">
                                 <li><a href="/agent">Find Agent</a></li>
-                                <li><a href="/agent/join-agent">Join us</a></li>
+                                <li><a href="/agent/join">Join us</a></li>
                             </ul>
                         </li>
 

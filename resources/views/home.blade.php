@@ -21,7 +21,8 @@
                                                 <span>Where</span>
                                                 <span class="strock-text"><b>Dreams Find</b></span>
                                                 <span class="text-gradient"><img class="arrow-shape"
-                                                        src="{{ asset('assets/images/shapes/banner-arrow.svg') }}" alt="banner-arrow">A
+                                                        src="{{ asset('assets/images/shapes/banner-arrow.svg') }}"
+                                                        alt="banner-arrow">A
                                                     Home</span>
                                             </h1>
                                         </div>
@@ -33,7 +34,8 @@
                 </div>
             </div>
             <div class="banner-bg-thumb jarallax">
-                <div class="banner-thumb include-bg jarallax-img" data-background="{{ asset('assets/images/banner/banner-home-01.png') }}">
+                <div class="banner-thumb include-bg jarallax-img"
+                    data-background="{{ asset('assets/images/banner/banner-home-01.png') }}">
                 </div>
             </div>
         </section>
@@ -61,11 +63,13 @@
                                 <h3 class="title">
                                     <a href="/property/search?status=new-develop">New Developments</a>
                                 </h3>
-                                <p class="description">We assist developers in marketing their projects, helping to generate more high-quality leads and prospects.
+                                <p class="description">We assist developers in marketing their projects, helping to generate
+                                    more high-quality leads and prospects.
                                 </p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property/search?status=new-develop"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/search?status=new-develop"><span
+                                        class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -76,11 +80,13 @@
                                 <h3 class="title">
                                     <a href="/property/search?status=buy-or-rent">Buy or Rent</a>
                                 </h3>
-                                <p class="description">Whether you're a first-time homebuyer or an investor, we help you find the best properties by offering diverse and quality options.
+                                <p class="description">Whether you're a first-time homebuyer or an investor, we help you
+                                    find the best properties by offering diverse and quality options.
                                 </p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property/search?status=buy-or-rent"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/search?status=buy-or-rent"><span
+                                        class="text">Click Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -91,10 +97,12 @@
                                 <h3 class="title">
                                     <a href="/property/sell">Sell</a>
                                 </h3>
-                                <p class="description">We support our clients in marketing their secondary properties with tailored strategies and marketing plans designed specifically for them.</p>
+                                <p class="description">We support our clients in marketing their secondary properties with
+                                    tailored strategies and marketing plans designed specifically for them.</p>
                             </div>
                             <div class="btn-inner">
-                                <a class="bd-half-outline-btn" href="/property/sell"><span class="text">Click Here</span></a>
+                                <a class="bd-half-outline-btn" href="/property/sell"><span class="text">Click
+                                        Here</span></a>
                             </div>
                         </div>
                     </div>
@@ -180,18 +188,22 @@
                                     <span class="round three"></span>
                                 </div>
                                 <div class="round-icon">
-                                    <figure><img src="{{ asset('assets/images/icons/house.png') }}" alt="image"></figure>
+                                    <figure><img src="{{ asset('assets/images/icons/house.png') }}" alt="image">
+                                    </figure>
                                 </div>
                             </div>
                             <div class="thumb-one">
-                                <figure> <img src="{{ asset('assets/images/about/about-thumb-01.png') }}" alt="image"></figure>
+                                <figure> <img src="{{ asset('assets/images/about/about-thumb-01.png') }}" alt="image">
+                                </figure>
                             </div>
                             <div class="thumb-two-inner">
                                 <div class="thumb-two">
-                                    <figure><img src="{{ asset('assets/images/about/about-thumb-02.png') }}" alt="image"></figure>
+                                    <figure><img src="{{ asset('assets/images/about/about-thumb-02.png') }}"
+                                            alt="image"></figure>
                                 </div>
                                 <div class="thumb-two">
-                                    <figure> <img src="{{ asset('assets/images/about/about-thumb-03.png') }}" alt="image"></figure>
+                                    <figure> <img src="{{ asset('assets/images/about/about-thumb-03.png') }}"
+                                            alt="image"></figure>
                                 </div>
                             </div>
                         </div>
@@ -619,259 +631,323 @@
                                                         <figure>
                                                             @foreach ($filePaths as $filePath)
                                                                 <img src="{{ Storage::url($filePath) }}" alt="Image">
-                                                                @break
-                                                            @endforeach
-                                                        </figure>
-                                                    </a>
-                                                </div>
+                                                            @break
+                                                        @endforeach
+                                                    </figure>
+                                                </a>
                                             </div>
-                                            <div class="content">
-                                                <div class="price">
-                                                    <span>
-                                                        Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
-                                                        {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
-                                                    </span>
-                                                </div>
-                                                <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>
-                                                </h3>
-                                                <span class="info">{{ $property->address }}</span>
-                                                <div class="bd-meta">
-                                                    @if ($property->beds != '-')
-                                                        <div class="meta-item">
-                                                            <span class="icon"><i
-                                                                    class="fa-regular fa-bed-front"></i></span><span
-                                                                class="title">{{ $property->beds }} bed</span>
-                                                        </div>
-                                                    @endif
-                                                    @if ($property->baths != '-')
-                                                        <div class="meta-item">
-                                                            <span class="icon"><i class="fa-duotone fa-shower"></i></span><span
-                                                                class="title">{{ $property->baths }} bath</span>
-                                                        </div>
-                                                    @endif
+                                        </div>
+                                        <div class="content">
+                                            <div class="price">
+                                                <span>
+                                                    Rp
+                                                    {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
+                                                </span>
+                                            </div>
+                                            <h3 class="title"><a
+                                                    href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>
+                                            </h3>
+                                            <span class="info">{{ $property->address }}</span>
+                                            <div class="bd-meta">
+                                                @if ($property->beds != '-')
                                                     <div class="meta-item">
                                                         <span class="icon"><i
-                                                                class="fa-regular fa-arrows-maximize"></i></span><span
-                                                            class="title">{{ $property->lot_area }} m²</span>
+                                                                class="fa-regular fa-bed-front"></i></span><span
+                                                            class="title">{{ $property->beds }} bed</span>
                                                     </div>
+                                                @endif
+                                                @if ($property->baths != '-')
+                                                    <div class="meta-item">
+                                                        <span class="icon"><i
+                                                                class="fa-duotone fa-shower"></i></span><span
+                                                            class="title">{{ $property->baths }} bath</span>
+                                                    </div>
+                                                @endif
+                                                <div class="meta-item">
+                                                    <span class="icon"><i
+                                                            class="fa-regular fa-arrows-maximize"></i></span><span
+                                                        class="title">{{ $property->lot_area }} m²</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
-                            </div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Featured area end -->
+        </div>
+    </section>
+    <!-- Featured area end -->
 
-        <!-- Whychoose area start -->
-        <section class="bd-whychoose-ara section-space theme-bg-primary">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-6 col-xl-6 col-lg-6">
-                        <div class="section-title-wrapper anim-wrapper section-title-space text-center animation-style-3">
-                            <span class="section-subtitle uppercase">
-                                <i class="icon-home"></i>
-                                Why choose us
-                            </span>
-                            <h2 class="section-title title-animation">Why choose SIPERANTARA</h2>
-                        </div>
-
+    <!-- Whychoose area start -->
+    <section class="bd-whychoose-ara section-space theme-bg-primary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="section-title-wrapper anim-wrapper section-title-space text-center animation-style-3">
+                        <span class="section-subtitle uppercase">
+                            <i class="icon-home"></i>
+                            Why choose us
+                        </span>
+                        <h2 class="section-title title-animation">Why choose SIPERANTARA</h2>
                     </div>
                 </div>
-                <div class="row g-5">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".3s"
-                            data-wow-duration="1s">
-                            <div class="icon">
-                                <span><i class="icon-solution"></i></span>
-                            </div>
-                            <div class="content mb-75">
-                                <h3 class="title">Top Listing
-                                </h3>
-                                <p class="description">We offer a wide range of properties tailored to your needs, from residential to commercial and industrial options.
+            </div>
+            <div class="row g-5">
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".3s"
+                        data-wow-duration="1s">
+                        <div class="icon">
+                            <span><i class="icon-solution"></i></span>
+                        </div>
+                        <div class="content mb-75">
+                            <h3 class="title">Top Listing
+                            </h3>
+                            <p class="description">We offer a wide range of properties tailored to your needs, from
+                                residential to commercial and industrial options.
 
-                                </p>
-                            </div>
+                            </p>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".5s"
-                            data-wow-duration="1s">
-                            <div class="icon">
-                                <span><i class="icon-flexibility"></i></span>
-                            </div>
-                            <div class="content mb-25">
-                                <h3 class="title">Transparency
-                                </h3>
-                                <p class="description">We prioritize a transparent buying and selling process. There’s no price or commission markup—you’re fully informed and involved in every step of the transaction.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".5s"
+                        data-wow-duration="1s">
+                        <div class="icon">
+                            <span><i class="icon-flexibility"></i></span>
+                        </div>
+                        <div class="content mb-25">
+                            <h3 class="title">Transparency
+                            </h3>
+                            <p class="description">We prioritize a transparent buying and selling process. There’s no
+                                price or commission markup—you’re fully informed and involved in every step of the
+                                transaction.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".7s"
-                            data-wow-duration="1s">
-                            <div class="icon">
-                                <span><i class="icon-efficiency"></i></span>
-                            </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="why-choose-item style-one wow bdFadeInUp" data-wow-delay=".7s"
+                        data-wow-duration="1s">
+                        <div class="icon">
+                            <span><i class="icon-efficiency"></i></span>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Professionalism
+                            </h3>
+                            <p class="description"> Whether you're entrusting us with your property or searching for
+                                one through us, we guarantee the highest standards of service that a property agency can
+                                provide. We prioritize ethics and always act in the best interest of our clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-4">
+                    <div class="testimonials-info-wrapper">
+                        <div class="testimonials-info-item">
                             <div class="content">
-                                <h3 class="title">Professionalism
-                                </h3>
-                                <p class="description"> Whether you're entrusting us with your property or searching for one through us, we guarantee the highest standards of service that a property agency can provide. We prioritize ethics and always act in the best interest of our clients.</p>
+                                <h2 class="title"><span data-purecounter-duration="1" data-purecounter-end="1200"
+                                        class="purecounter">1200+</span>+</h2>
+                                <p class="description">Properties Sold</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-4">
+                    <div class="testimonials-info-wrapper">
+                        <div class="testimonials-info-item">
+                            <div class="content">
+                                <h2 class="title"><span data-purecounter-duration="1" data-purecounter-end="1000"
+                                        class="purecounter">1000+</span>+</h2>
+                                <p class="description">Customers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-4">
+                    <div class="testimonials-info-wrapper">
+                        <div class="testimonials-info-item">
+                            <div class="content">
+                                <h2 class="title"><span data-purecounter-duration="1" data-purecounter-end="500"
+                                        class="purecounter">500+</span>+</h2>
+                                <p class="description">Review</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Whychoose area end -->
+        </div>
+    </section>
+    <!-- Whychoose area end -->
 
-        <!-- team area start -->
-        <div class="bd-team-area section-space fix">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-xxl-4 col-xl-4">
-                        <div class="team-content-inner d-flex flex-column justify-content-between h-100">
-                            <div class="team-intro-content style-one">
-                                <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3">
-                                    <span class="section-subtitle uppercase">
-                                        <i class="icon-home"></i>
-                                        Team members
-                                    </span>
-                                    <h2 class="section-title title-animation">Our skilled lead Siperantara agents</h2>
-                                </div>
-                                <a class="bd-half-outline-btn" href="/agent/join"><span class="text">Join Us</span></a>
+    <!-- Testimonial area start -->
+    {{-- <section class="bd-testimonial-area section-space p-relative z-index-11 theme-bg-primary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="section-title-wrapper anim-wrapper section-title-space text-center animation-style-3">
+                        <span class="section-subtitle uppercase">
+                            <i class="icon-home"></i>
+                            Why choose us
+                        </span>
+                        <h2 class="section-title title-animation">Why choose SIPERANTARA</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+
+            </div>
+        </div>
+    </section> --}}
+    <!-- Testimonial area end -->
+
+    <!-- team area start -->
+    <div class="bd-team-area section-space fix">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xxl-4 col-xl-4">
+                    <div class="team-content-inner d-flex flex-column justify-content-between h-100">
+                        <div class="team-intro-content style-one">
+                            <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3">
+                                <span class="section-subtitle uppercase">
+                                    <i class="icon-home"></i>
+                                    Team members
+                                </span>
+                                <h2 class="section-title title-animation">Our skilled lead Siperantara agents</h2>
                             </div>
-                            <div class="pagination-wrapper">
-                                <div class="common-nav-pre">
-                                    <!-- If we need navigation buttons -->
-                                    <div class="common-navigation justify-content-start">
-                                        <button class="common-slider-button-prev"><i
-                                                class="fa-regular fa-arrow-left"></i></button>
-                                        <!-- If we need pagination -->
-                                        <div class="team-pagination">
-                                            <div class="team-slider-dot text-center"></div>
-                                        </div>
-                                        <button class="common-slider-button-next"><i
-                                                class="fa-regular fa-arrow-right"></i></button>
+                            <a class="bd-half-outline-btn" href="/agent/join"><span class="text">Join Us</span></a>
+                        </div>
+                        <div class="pagination-wrapper">
+                            <div class="common-nav-pre">
+                                <!-- If we need navigation buttons -->
+                                <div class="common-navigation justify-content-start">
+                                    <button class="common-slider-button-prev"><i
+                                            class="fa-regular fa-arrow-left"></i></button>
+                                    <!-- If we need pagination -->
+                                    <div class="team-pagination">
+                                        <div class="team-slider-dot text-center"></div>
                                     </div>
+                                    <button class="common-slider-button-next"><i
+                                            class="fa-regular fa-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-8">
-                        <div class="team-slider-inner wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                            <div class="swiper team-slider-active">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><img src="{{ asset('assets/images/agent/agent-01.png') }}" alt="Image">
-                                                </figure>
+                </div>
+                <div class="col-xxl-8 col-xl-8">
+                    <div class="team-slider-inner wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                        <div class="swiper team-slider-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="team-item style-two">
+                                        <div class="thumb">
+                                            <figure><img src="{{ asset('assets/images/agent/agent-01.png') }}"
+                                                    alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="content-inner">
+                                            <div class="content">
+                                                <h3 class="title">Sarah Johnson
+                                                </h3>
+                                                <span class="info">Siperantara Agent</span>
                                             </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title">Sarah Johnson
-                                                    </h3>
-                                                    <span class="info">Siperantara Agent</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="team-social">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                    </li>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-02.png') }}" alt="Image"></a>
-                                                </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-item style-two">
+                                        <div class="thumb">
+                                            <figure><a href="agent-details.html"><img
+                                                        src="{{ asset('assets/images/agent/agent-02.png') }}"
+                                                        alt="Image"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="content-inner">
+                                            <div class="content">
+                                                <h3 class="title"><a href="agent-details.html">Todd C. Rivera</a>
+                                                </h3>
+                                                <span class="info">Real Estate Advisors</span>
                                             </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Todd C. Rivera</a>
-                                                    </h3>
-                                                    <span class="info">Real Estate Advisors</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="team-social">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-05.png') }}" alt="Image"></a>
-                                                </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-item style-two">
+                                        <div class="thumb">
+                                            <figure><a href="agent-details.html"><img
+                                                        src="{{ asset('assets/images/agent/agent-05.png') }}"
+                                                        alt="Image"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="content-inner">
+                                            <div class="content">
+                                                <h3 class="title"><a href="agent-details.html">Melvin K. Thorne</a>
+                                                </h3>
+                                                <span class="info">Pinnacle Real Estate</span>
                                             </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Melvin K. Thorne</a>
-                                                    </h3>
-                                                    <span class="info">Pinnacle Real Estate</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="team-social">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-04.png') }}" alt="Image"></a>
-                                                </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="team-item style-two">
+                                        <div class="thumb">
+                                            <figure><a href="agent-details.html"><img
+                                                        src="{{ asset('assets/images/agent/agent-04.png') }}"
+                                                        alt="Image"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="content-inner">
+                                            <div class="content">
+                                                <h3 class="title"><a href="agent-details.html">Burt M. Guthrie</a>
+                                                </h3>
+                                                <span class="info">Found Property Group</span>
                                             </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Burt M. Guthrie</a>
-                                                    </h3>
-                                                    <span class="info">Found Property Group</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="team-social">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -882,27 +958,29 @@
                 </div>
             </div>
         </div>
-        <!-- team area end -->
+    </div>
+    <!-- team area end -->
 
-        <!-- video area start -->
-        <div class="bd-video-area style-one position-relative jarallax">
-            <div class="video-bg-thumb include-bg jarallax-img" data-background="{{ asset('assets/images/bg/video-bg-home-01.png') }}">
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                        <div class="video-content text-center">
-                            <div class="video-play">
-                                <a href="https://www.youtube.com/watch?v=go7QYaQR494" class="bd-play-btn popup-video"><i
-                                        class="fa-duotone fa-play"></i></a>
-                            </div>
+    <!-- video area start -->
+    <div class="bd-video-area style-one position-relative jarallax">
+        <div class="video-bg-thumb include-bg jarallax-img"
+            data-background="{{ asset('assets/images/bg/video-bg-home-01.png') }}">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="video-content text-center">
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=go7QYaQR494" class="bd-play-btn popup-video"><i
+                                    class="fa-duotone fa-play"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- video area end -->
+    </div>
+    <!-- video area end -->
 
-    </main>
-    <!-- Body main wrapper end -->
+</main>
+<!-- Body main wrapper end -->
 @endsection

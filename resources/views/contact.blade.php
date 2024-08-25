@@ -33,8 +33,9 @@
                     <div class="contact-box">
                         <div class="contact-icon mb-30"><i class="fa-light fa-phone-volume"></i></div>
                         <h5 class="contact-title mb-15">Call Us On</h5>
-                        <div class="contact-content">
-                            <a href="tel:+415864872899">+415-864-8728-99</a>
+                        <div class="contact-content mb-70">
+                            <a href="tel:+415864872899">+62 811 - 517-1010
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -42,8 +43,8 @@
                     <div class="contact-box">
                         <div class="contact-icon mb-30"><i class="fa-sharp fa-light fa-envelope"></i></div>
                         <h5 class="contact-title mb-15">Email Us</h5>
-                        <div class="contact-content">
-                            <a href="mailto:support@Reallow.com">support@Reallow.com</a>
+                        <div class="contact-content mb-70">
+                            <a href="mailto:support@Reallow.com">Siperantararealestate@gmail.com </a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +53,8 @@
                         <div class="contact-icon mb-30"><i class="fa-sharp fa-light fa-location-dot"></i></div>
                         <h5 class="contact-title mb-15">Our Location</h5>
                         <div class="contact-content">
-                            <a target="_blank" href="#">1426 Center StreetBend</a>
+                            <a target="_blank" href="#">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114
+                            </a>
                         </div>
                     </div>
                 </div>

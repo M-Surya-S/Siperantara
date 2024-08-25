@@ -39,11 +39,12 @@
                             <div class="checkmark-list">
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>lorem ipsum</span>
+                                    <span>Incentive and bonus
+                                    </span>
                                 </div>
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>lorem ipsum</span>
+                                    <span>Training and Certification</span>
                                 </div>
                             </div>
                         </div>

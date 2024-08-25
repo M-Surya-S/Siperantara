@@ -35,7 +35,8 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="#">27 Division St, New York</a></span>
+                                        <span><a href="#">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114
+                                        </a></span>
                                     </div>
                                 </div>
                                 <div class="footer-contact-item">
@@ -45,7 +46,7 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="tel:+1(800)123456789">+00 (123) 456 889</a></span>
+                                        <span><a href="tel:+1(800)123456789">+62 811-517-1010</a></span>
                                     </div>
                                 </div>
                                 <div class="footer-contact-item">
@@ -55,7 +56,7 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="mailto:reallow@mail.com">reallow@mail.com</a></span>
+                                        <span><a href="mailto:reallow@mail.com">Siperantararealestate@gmail.com </a></span>
                                     </div>
                                 </div>
                             </div>
