@@ -42,7 +42,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                             {{-- <span class="icon"><i class="icon-rent-property"></i></span> --}}
-                            <div class="content">
+                            <div class="content mb-55">
                                 <h3 class="title">
                                     <a href="/guide/buyers">Buyer's Guide</a>
                                 </h3>
@@ -77,7 +77,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                             {{-- <span class="icon"><i class="icon-sell-property"></i></span> --}}
-                            <div class="content">
+                            <div class="content mb-80">
                                 <h3 class="title">
                                     <a href="/blog">Blog</a>
                                 </h3>
