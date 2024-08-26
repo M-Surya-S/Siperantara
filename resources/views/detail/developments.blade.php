@@ -13,10 +13,11 @@
                         <div class="col-xl-10">
                             <div class="bd-breadcrumb">
                                 <div class="bd-breadcrumb-content text-center">
-                                    <h1 class="bd-breadcrumb-title">New Developments</h1>
+                                    <h1 class="bd-breadcrumb-title">Development</h1>
                                     <div class="bd-breadcrumb-list">
                                         <span><a href="/"><i class="icon-home"></i>Home</a></span>
-                                        <span>Property</span>
+                                        <span><a href="/property">Property</a></span>
+                                        <span>Development</span>
                                     </div>
                                 </div>
                             </div>
@@ -34,12 +35,12 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-xxl-4 col-xl-4 col-lg-5">
                         <div class="about-content style-one">
-                            <div class="section-title-wrapper anim-wrapper section-title-space animation-style-3 mb-20">
+                            <div class="section-title-wrapper anim-wrapper animation-style-3 mb-20">
                                 <span class="section-subtitle uppercase">
                                     <i class="icon-home"></i>
                                     Developments
                                 </span>
-                                <h2 class="section-title title-animation">Grand City
+                                <h2 class="section-title title-animation">Grand City<br>Balikpapan
                                 </h2>
                             </div>
                             <div class="about-tab">
