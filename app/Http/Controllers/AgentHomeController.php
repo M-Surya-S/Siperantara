@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agent;
 use Illuminate\Http\Request;
 
 class AgentHomeController extends Controller
@@ -12,7 +13,8 @@ class AgentHomeController extends Controller
     public function index()
     {
         $title = 'Agent';
-        return view('guest.agent.agent', compact('title'));
+        $agents = Agent::paginate(9);
+        return view('guest.agent.agent', compact('title', 'agents'));
     }
 
     /**

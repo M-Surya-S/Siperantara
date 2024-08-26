@@ -662,118 +662,49 @@
                         <div class="team-slider-inner wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                             <div class="swiper team-slider-active">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><img src="{{ asset('assets/images/agent/agent-01.png') }}"
-                                                        alt="Image">
-                                                </figure>
-                                            </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title">Sarah Johnson
-                                                    </h3>
-                                                    <span class="info">Siperantara Agent</span>
+                                    @foreach ($agents as $agent)
+                                        <div class="swiper-slide">
+                                            <div class="team-item style-two">
+                                                <div class="thumb">
+                                                    <figure>
+                                                        <img src="{{ Storage::url($agent->image) }}" alt="Image">
+                                                    </figure>
                                                 </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-02.png') }}"
-                                                            alt="Image"></a>
-                                                </figure>
-                                            </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Todd C. Rivera</a>
-                                                    </h3>
-                                                    <span class="info">Real Estate Advisors</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
+                                                <div class="content-inner">
+                                                    <div class="content">
+                                                        <h3 class="title">
+                                                            {{ $agent->name }}
+                                                        </h3>
+                                                        <span class="info">Siperantara Property Agent</span>
+                                                    </div>
+                                                    <div class="team-social">
+                                                        <ul>
+                                                            @if ($agent->instagram_link != null)
+                                                                <li>
+                                                                    <a href="{{ $agent->instagram_link }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                                                </li>
+                                                            @endif
+                                                            @if ($agent->linkedin_link != null)
+                                                                <li>
+                                                                    <a href="{{ $agent->linkedin_link }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                                </li>
+                                                            @endif
+                                                            @if ($agent->facebook_link != null)
+                                                                <li>
+                                                                    <a href="{{ $agent->facebook_link }}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                                                                </li>
+                                                            @endif
+                                                            @if ($agent->twitter_link != null)
+                                                                <li>
+                                                                    <a href="{{ $agent->twitter_link }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                                                </li>
+                                                            @endif
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-05.png') }}"
-                                                            alt="Image"></a>
-                                                </figure>
-                                            </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Melvin K. Thorne</a>
-                                                    </h3>
-                                                    <span class="info">Pinnacle Real Estate</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="team-item style-two">
-                                            <div class="thumb">
-                                                <figure><a href="agent-details.html"><img
-                                                            src="{{ asset('assets/images/agent/agent-04.png') }}"
-                                                            alt="Image"></a>
-                                                </figure>
-                                            </div>
-                                            <div class="content-inner">
-                                                <div class="content">
-                                                    <h3 class="title"><a href="agent-details.html">Burt M. Guthrie</a>
-                                                    </h3>
-                                                    <span class="info">Found Property Group</span>
-                                                </div>
-                                                <div class="team-social">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

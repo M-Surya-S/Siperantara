@@ -112,7 +112,7 @@
                                                         </ul>
                                                     </td>
                                                     <td>
-                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
+                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent')
                                                             <span class="bd-badge warning">{{ $property->property_status }}</span>
                                                         @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rented Out')
                                                             <span class="bd-badge success">{{ $property->property_status }}</span>
@@ -120,7 +120,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="d-flex align-items-center justify-content-start gap-10">
-                                                            <a href="#" class="action-button download">
+                                                            <a href="{{ route('property.detail', $property->property_id) }}" class="action-button download">
                                                                 <i class="fa-regular fa-eye"></i>
                                                             </a>
                                                             <a href="{{ route('edit-property.edit', $property->property_id) }}" class="action-button edit">
@@ -143,7 +143,6 @@
                                     </tbody>
                                 </table>
                             </div>
-
                             <div class="pagination__wrapper mt-30">
                                 <div class="basic-pagination">
                                     <nav>

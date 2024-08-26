@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agent;
 use App\Models\Property;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class HomeControlller extends Controller
     {
         $title = 'Home';
         $featuredPropertys = Property::where('featured', 'Yes')->take(3)->get();
-        return view('guest.home', compact('title', 'featuredPropertys'));
+        $agents = Agent::all();
+        return view('guest.home', compact('title', 'featuredPropertys', 'agents'));
     }
 
     /**
