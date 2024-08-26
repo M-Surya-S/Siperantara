@@ -45,7 +45,7 @@
                 <div class="row gx-0 gy-0 justify-content-center">
                     <div class="col-xl-5">
                         <div class="sign-thumb">
-                            <img src="assets/images/sign/login-img.png" alt="image">
+                            <img src="{{ asset('assets/images/sign/login-img.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="col-xl-5">

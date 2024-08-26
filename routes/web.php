@@ -77,7 +77,7 @@ Route::get('/property/sell', function () {
     return view('detail.sell-property', ['title' => 'Sell']);
 });
 Route::get('/property/development', function () {
-    return view('detail.development', ['title' => 'Development']);
+    return view('detail.developments', ['title' => 'Development']);
 });
 
 // Agent

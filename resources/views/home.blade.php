@@ -143,6 +143,11 @@
                                                 data-bs-target="#quality-tab-pane" type="button" role="tab"
                                                 aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
                                         </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
+                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
+                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
+                                        </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="expertise-tab-pane" role="tabpanel"

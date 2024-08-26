@@ -156,6 +156,7 @@
     <script src="{{ asset('assets/js/plugins/dropzone.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/tinymce.min.js') }}"></script>
     <script src="{{ asset('assets/js/vendor/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/development.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
