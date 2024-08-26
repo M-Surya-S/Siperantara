@@ -76,8 +76,8 @@ Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->
 Route::get('/property/sell', function () {
     return view('detail.sell-property', ['title' => 'Sell']);
 });
-Route::get('/property/new-develop', function () {
-    return view('detail.new-develop', ['title' => 'New Developments']);
+Route::get('/property/development', function () {
+    return view('detail.development', ['title' => 'Development']);
 });
 
 // Agent
