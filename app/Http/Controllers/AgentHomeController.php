@@ -12,7 +12,7 @@ class AgentHomeController extends Controller
     public function index()
     {
         $title = 'Agent';
-        return view('detail.detail-agent', compact('title'));
+        return view('guest.agent.agent', compact('title'));
     }
 
     /**

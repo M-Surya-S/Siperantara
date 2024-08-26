@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('guest.layouts.app')
 @section('content')
     <main>
         <!-- Breadcrumb area start -->
@@ -15,7 +15,7 @@
                                     <h1 class="bd-breadcrumb-title">Our Blog</h1>
                                     <div class="bd-breadcrumb-list">
                                         <span><a href="/"><i class="icon-home"></i>Home</a></span>
-                                        <span>Our Blog</span>
+                                        <span>Blog</span>
                                     </div>
                                 </div>
                             </div>

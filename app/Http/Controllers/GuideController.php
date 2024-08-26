@@ -9,6 +9,6 @@ class GuideController extends Controller
     public function index()
     {
         $title = 'Guide';
-        return view('guide', compact('title'));
+        return view('guest.guide.guide', compact('title'));
     }
 }

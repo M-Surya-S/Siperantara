@@ -14,7 +14,7 @@ class HomeControlller extends Controller
     {
         $title = 'Home';
         $featuredPropertys = Property::where('featured', 'Yes')->take(3)->get();
-        return view('home', compact('title', 'featuredPropertys'));
+        return view('guest.home', compact('title', 'featuredPropertys'));
     }
 
     /**

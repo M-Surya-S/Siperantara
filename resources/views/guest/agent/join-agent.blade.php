@@ -1,22 +1,22 @@
-@extends('layouts.app')
+@extends('guest.layouts.app')
 @section('content')
     <main>
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}"></div>
+            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}">
+            </div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-10">
                             <div class="bd-breadcrumb">
                                 <div class="bd-breadcrumb-content text-center">
-                                    <h1 class="bd-breadcrumb-title">Seller Guide</h1>
+                                    <h1 class="bd-breadcrumb-title">Join Us</h1>
                                     <div class="bd-breadcrumb-list">
                                         <span><a href="/"><i class="icon-home"></i>Home</a></span>
-                                        <span><a href="/guide">Guide</a></span>
-                                        <span><a href="/guide/seller">Seller Guide</a></span>
-                                        <span>Download</span>
+                                        <span><a href="/agent">Agent</a></span>
+                                        <span>Join Us</span>
                                     </div>
                                 </div>
                             </div>
@@ -33,17 +33,18 @@
                 <div class="row gy-24 justify-content-between">
                     <div class="col-xxl-5 col-xl-5 col-lg-6">
                         <div class="section-title-wrapper anim-wrapper animation-style-3 mb-30">
-                            <h2 class="section-title title-animation mb-20">Download Our Seller Guide</h2>
+                            <h2 class="section-title title-animation mb-20">Become Siperantara Agent </h2>
                             <div class="section-divider mb-25"></div>
                             <!-- Added section for checkmarks and text -->
                             <div class="checkmark-list">
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>Every step of the selling process</span>
+                                    <span>Incentive and bonus
+                                    </span>
                                 </div>
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>Helpful terms to familiarize yourself with</span>
+                                    <span>Training and Certification</span>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +80,7 @@
 
                                     <div class="col-lg-12 text-center">
                                         <button class="bd-btn btn-style btn-hover-x btn-black w-100"
-                                            type="submit">Download</button>
+                                            type="submit">Submit</button>
                                     </div>
                                     <div class="col-lg-12 text-center mt-2">
                                         <div class="form-check">

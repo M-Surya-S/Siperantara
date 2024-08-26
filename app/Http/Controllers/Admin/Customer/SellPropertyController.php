@@ -22,7 +22,7 @@ class SellPropertyController extends Controller
     public function create()
     {
         $title = 'Sell Property';
-        return view('detail.sell-property', compact('title'));
+        return view('guest.property.sell-property', compact('title'));
     }
 
     /**

@@ -14,7 +14,7 @@ class PropertyHomeController extends Controller
     {
         $title = 'Property';
         $propertys = Property::paginate(6);
-        return view('property', compact('title', 'propertys'));
+        return view('guest.property.property', compact('title', 'propertys'));
     }
 
     /**
@@ -78,7 +78,7 @@ class PropertyHomeController extends Controller
 
         $title = 'Property';
         $propertys = $query->paginate(6);
-        return view('property', compact('title', 'propertys'));
+        return view('guest.property.property', compact('title', 'propertys'));
     }
 
 
@@ -89,6 +89,6 @@ class PropertyHomeController extends Controller
     {
         $title = 'Property Detail';
         $property = Property::findOrFail($id);
-        return view('detail.detail-property', compact('title', 'property'));
+        return view('guest.property.detail-property', compact('title', 'property'));
     }
 }

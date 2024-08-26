@@ -75,13 +75,13 @@ Route::get('/property/search', [PropertyHomeController::class, 'search'])->name(
 Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->name('property.detail');
 Route::get('/property/sell', [SellPropertyController::class, 'create']);
 Route::get('/property/development', function () {
-    return view('detail.developments', ['title' => 'Development']);
+    return view('guest.property.developments', ['title' => 'Development']);
 });
 
 // Agent
 Route::get('/agent', [AgentHomeController::class, 'index']);
 Route::get('/agent/join', function () {
-    return view('detail.join-agent', ['title' => 'Agent']);
+    return view('guest.agent.join-agent', ['title' => 'Agent']);
 });
 
 // Guide
@@ -89,29 +89,29 @@ Route::get('/guide', [GuideController::class, 'index']);
 
 // Buyer's Guide
 Route::get('/guide/buyers', function () {
-    return view('detail.detail-buyers-guide', ['title' => 'Buyers Guide']);
+    return view('guest.guide.buyers.detail-buyers-guide', ['title' => 'Buyers Guide']);
 });
 Route::get('/guide/buyers/download', function () {
-    return view('detail.buyers-guide-download', ['title' => 'Buyers Guide']);
+    return view('guest.guide.buyers.buyers-guide-download', ['title' => 'Buyers Guide']);
 });
 
 // Seller Guide
 Route::get('/guide/seller', function () {
-    return view('detail.detail-seller-guide', ['title' => 'Seller Guide']);
+    return view('guest.guide.seller.detail-seller-guide', ['title' => 'Seller Guide']);
 });
 Route::get('/guide/seller/download', function () {
-    return view('detail.seller-guide-download', ['title' => 'Seller Guide']);
+    return view('guest.guide.seller.seller-guide-download', ['title' => 'Seller Guide']);
 });
 
 // Blog
 Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog']);
+    return view('guest.blog.blog', ['title' => 'Blog']);
 });
 Route::get('/blog/detail', function () {
-    return view('detail.detail-blog', ['title' => 'Blog Details']);
+    return view('guest.blog.detail-blog', ['title' => 'Blog Detail']);
 });
 
 // Contact
 Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact']);
+    return view('guest.contact', ['title' => 'Contact']);
 });

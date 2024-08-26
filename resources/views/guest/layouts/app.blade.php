@@ -127,13 +127,13 @@
     <!-- Offcanvas area start -->
 
     {{-- navbar --}}
-    @include('layouts.partial.navbar')
+    @include('guest.layouts.partial.navbar')
 
     {{-- main --}}
     @yield('content')
 
     {{-- footer --}}
-    @include('layouts.partial.footer')
+    @include('guest.layouts.partial.footer')
 
     <!-- JS here -->
     <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>

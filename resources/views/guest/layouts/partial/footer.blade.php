@@ -90,7 +90,7 @@
                         <h3 class="footer-widget-title">Property</h3>
                         <div class="footer-widget-links">
                             <ul>
-                                <li class="underline"><a href="/property/search?status=new-develop">Development</a></li>
+                                <li class="underline"><a href="/property/development">Development</a></li>
                                 <li class="underline"><a href="/property/search?status=buy-or-rent">Buy or Rent</a></li>
                                 <li class="underline"><a href="/property/sell">Sell</a></li>
                             </ul>
