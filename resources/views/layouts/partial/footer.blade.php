@@ -87,12 +87,12 @@
                 </div>
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4">
                     <div class="footer-widget footer-1-col-3">
-                        <h3 class="footer-widget-title">Services</h3>
+                        <h3 class="footer-widget-title">Property</h3>
                         <div class="footer-widget-links">
                             <ul>
-                                <li class="underline"><a href="/property/search?status=new-develop">New Develop</a></li>
+                                <li class="underline"><a href="/property/search?status=new-develop">Development</a></li>
                                 <li class="underline"><a href="/property/search?status=buy-or-rent">Buy or Rent</a></li>
-                                <li class="underline"><a href="contact.html">Sell</a></li>
+                                <li class="underline"><a href="/property/sell">Sell</a></li>
                             </ul>
                         </div>
                     </div>

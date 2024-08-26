@@ -120,63 +120,58 @@
                             <div class="section-title-wrapper anim-wrapper animation-style-3 mb-20">
                                 <span class="section-subtitle uppercase">
                                     <i class="icon-home"></i>
-                                    Development
+                                    Sinar Mas Land
                                 </span>
-                                <h2 class="section-title title-animation">Grand City<br>Balikpapan
-                                </h2>
+                                <h2 class="section-title title-animation" id="main-title">Grand City<br>Balikpapan</h2>
                             </div>
                             <div class="about-tab">
                                 <div class="bd-tab">
                                     <ul class="nav nav-tabs" id="myTab1" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="expertise-tab" data-bs-toggle="tab"
-                                                data-bs-target="#expertise-tab-pane" type="button" role="tab"
-                                                aria-controls="expertise-tab-pane" aria-selected="true">Expertise</button>
+                                            <button class="nav-link active" id="townville-tab" data-bs-toggle="tab"
+                                                data-bs-target="#townville-tab-pane" type="button" role="tab"
+                                                aria-controls="townville-tab-pane" aria-selected="true">Townville</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="results-tab" data-bs-toggle="tab"
-                                                data-bs-target="#results-tab-pane" type="button" role="tab"
-                                                aria-controls="results-tab-pane" aria-selected="false">Results</button>
+                                            <button class="nav-link" id="nordville-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nordville-tab-pane" type="button" role="tab"
+                                                aria-controls="nordville-tab-pane" aria-selected="false">Nordville</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
-                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
-                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="quality-tab" data-bs-toggle="tab"
-                                                data-bs-target="#quality-tab-pane" type="button" role="tab"
-                                                aria-controls="quality-tab-pane" aria-selected="false">Quality</button>
+                                            <button class="nav-link" id="hayfield-tab" data-bs-toggle="tab"
+                                                data-bs-target="#hayfield-tab-pane" type="button" role="tab"
+                                                aria-controls="hayfield-tab-pane" aria-selected="false">Hayfield</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="expertise-tab-pane" role="tabpanel"
-                                            aria-labelledby="expertise-tab" tabindex="0">
+                                        <div class="tab-pane fade show active" id="townville-tab-pane" role="tabpanel"
+                                            aria-labelledby="townville-tab" tabindex="0">
                                             <div class="about-tab-contnent">
-                                                <p class="description">Choose us for your real estate needs and experience
-                                                    unparalleled expertise and dedication. With years of industry
-                                                    experience, our
-                                                    team boasts an in depth understanding of the market.</p>
+                                                <p class="description">Townville, the first premium cluster in Balikpapan,
+                                                    offers a minimalist tropical design with lake views, smart home
+                                                    features, and a strategic location near key facilities. It provides a
+                                                    perfect blend of modern comfort, nature, and long-term investment value
+                                                    in the Grand City Balikpapan area.</p>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="results-tab-pane" role="tabpanel"
-                                            aria-labelledby="results-tab" tabindex="0">
+                                        <div class="tab-pane fade" id="nordville-tab-pane" role="tabpanel"
+                                            aria-labelledby="nordville-tab" tabindex="0">
                                             <div class="about-tab-contnent">
-                                                <p class="description">The result of working in real estate involves
-                                                    several key
-                                                    steps, whether you are an agent, broker, or investor. Pursue continuing
-                                                    education
-                                                    to stay updated on real estate best practices.</p>
+                                                <p class="description">Nordville in Grand City Balikpapan offers spacious
+                                                    units with contemporary designs and green line facilities, strategically
+                                                    located between Balikpapan City and IKN. Developed by Sinar Mas Land, it
+                                                    features 24-hour security and a one-gate system, with house types
+                                                    including 88, 117, and 172.</p>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="quality-tab-pane" role="tabpanel"
-                                            aria-labelledby="quality-tab" tabindex="0">
+                                        <div class="tab-pane fade" id="hayfield-tab-pane" role="tabpanel"
+                                            aria-labelledby="hayfield-tab" tabindex="0">
                                             <div class="about-tab-contnent">
-                                                <p class="description">Working quality in real estate is crucial for
-                                                    achieving
-                                                    success and maintaining a positive reputation.It encompasses various
-                                                    aspects such
-                                                    as professionalism, knowledge and client service</p>
+                                                <p class="description">Hayfield Cluster features a modern design on a
+                                                    7.2-hectare site, aligning with the aspirations of millennials who care
+                                                    about environmental sustainability. Grand City Balikpapan emphasizes
+                                                    natural living and sustainable development, harmonizing with the vibrant
+                                                    city life.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,23 +187,35 @@
                                     <span class="round two"></span>
                                     <span class="round three"></span>
                                 </div>
-                                <div class="round-icon">
-                                    <figure><img src="{{ asset('assets/images/icons/house.png') }}" alt="image">
-                                    </figure>
-                                </div>
                             </div>
                             <div class="thumb-one">
-                                <figure> <img src="{{ asset('assets/images/about/about-thumb-01.png') }}" alt="image">
+                                <figure>
+                                    <img id="main-image" src="{{ asset('assets/images/development/townville-1.png') }}"
+                                        data-townville-src="{{ asset('assets/images/development/townville-1.png') }}"
+                                        data-nordville-src="{{ asset('assets/images/development/nordville-1.png') }}"
+                                        data-hayfield-src="{{ asset('assets/images/development/hayfield-1.png') }}"
+                                        alt="image">
                                 </figure>
                             </div>
                             <div class="thumb-two-inner">
                                 <div class="thumb-two">
-                                    <figure><img src="{{ asset('assets/images/about/about-thumb-02.png') }}"
-                                            alt="image"></figure>
+                                    <figure>
+                                        <img id="image-two" src="{{ asset('assets/images/development/townville-2.png') }}"
+                                            data-townville-src="{{ asset('assets/images/development/townville-2.png') }}"
+                                            data-nordville-src="{{ asset('assets/images/development/nordville-2.png') }}"
+                                            data-hayfield-src="{{ asset('assets/images/development/hayfield-2.png') }}"
+                                            alt="image">
+                                    </figure>
                                 </div>
                                 <div class="thumb-two">
-                                    <figure> <img src="{{ asset('assets/images/about/about-thumb-03.png') }}"
-                                            alt="image"></figure>
+                                    <figure>
+                                        <img id="image-three"
+                                            src="{{ asset('assets/images/development/townville-3.png') }}"
+                                            data-townville-src="{{ asset('assets/images/development/townville-3.png') }}"
+                                            data-nordville-src="{{ asset('assets/images/development/nordville-3.png') }}"
+                                            data-hayfield-src="{{ asset('assets/images/development/hayfield-3.png') }}"
+                                            alt="image">
+                                    </figure>
                                 </div>
                             </div>
                         </div>
