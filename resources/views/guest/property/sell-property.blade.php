@@ -38,11 +38,11 @@
                             <div class="checkmark-list">
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>Lorem ipsum</span>
+                                    <span>Every step of the selling process</span>
                                 </div>
                                 <div class="checkmark-item">
                                     <i class="fa-solid fa-check"></i>
-                                    <span>lorem ipsum</span>
+                                    <span>Helpful terms to familiarize yourself with</span>
                                 </div>
                             </div>
                         </div>

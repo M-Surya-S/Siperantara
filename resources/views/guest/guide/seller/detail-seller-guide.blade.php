@@ -39,13 +39,9 @@
                     <div class="col-lg-10">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                             <div class="content">
-                                <h3 class="title">Pre-Search</h3>
-                                <p class="description">The most important thing you should know is how much you can
-                                    comfortably spend on your home. If you're financing your purchase, you'll want to get
-                                    pre-approved by a lender. If you're paying all cash, you'll need to be able to show
-                                    proof of your assets. And remember, even if you're financing, you'll likely need to have
-                                    enough cash available to make a down payment. Depending on the type of financing you
-                                    get, that amount can be 5%, 10%, or even 20% of your total loan.</p>
+                                <h3 class="title">Know Why You’re Selling</h3>
+                                <p class="description">The first place to start for any seller is to ask yourself why you are selling your home.
+                                    Are you moving? Is your family growing and you need more space? Are you looking to capitalize on an advantageous market? </p>
                             </div>
                         </div>
                     </div>
@@ -53,10 +49,10 @@
                     <div class="col-lg-10">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
                             <div class="content">
-                                <h3 class="title">Search</h3>
-                                <p class="description">Aside from knowing the specifics of the home you want (i.e. how many
-                                    bedrooms, bathrooms, etc.), you should create a list of the top two or three
-                                    neighborhoods you want to live in.</p>
+                                <h3 class="title">Look For An Agent</h3>
+                                <p class="description">Not every seller uses an agent to sell their home. However, many sellers rely on an agent's expertise and professional network to help them manage the entire process.
+                                     Of course, all agents bring different levels of experience and commitment.
+                                     If you decide that you want to work with an agent, it is important that you feel comfortable with whom you choose and that expectations. </p>
                             </div>
                         </div>
                     </div>
@@ -64,12 +60,11 @@
                     <div class="col-lg-10">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
                             <div class="content">
-                                <h3 class="title">Contract & Board</h3>
-                                <p class="description">During a sales transaction, an attorney representing a seller will
-                                    draw up a contract for the buyer’s attorney. The buyer—with the help of their agent and
-                                    attorney—will then be allowed to perform due diligence on the property to ensure it
-                                    doesn't have any hidden baggage. Due diligence includes home inspections, appraisals,
-                                    title searches, land surveys, disclosures, and more.</p>
+                                <h3 class="title">Prepare Your Home For the Market</h3>
+                                <p class="description">Getting your home ready to list is often the most demanding step in the selling process
+                                     and is one of the most important factors in determining how successful your sale will be.
+                                      Doing it well can increase the value of the home and bring in larger offers.
+                                      Doing it poorly can turn off potential buyers and lead to low-ball offers. </p>
                             </div>
                         </div>
                     </div>
@@ -77,12 +72,12 @@
                     <div class="col-lg-10">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                             <div class="content">
-                                <h3 class="title">Mortgage & Approval</h3>
-                                <p class="description">If you’re already pre-approved, this part is so much easier! Mortgage
-                                    applications cannot be processed without an executed contract. You can apply for a
-                                    mortgage at the bank that pre-approved you or you can shop around to see if you can get
-                                    a better. Mortgage applications typically require your employment information, assets
-                                    and debts, income, credit history, and details about the home you want to purchase.</p>
+                                <h3 class="title">Market Your Home</h3>
+                                <p class="description">You’ve cleaned, painted, and staged, and you’re just about ready to list. But first,
+                                    you’ll need to have pictures taken of your home. While you might be a good smartphone photographer or even have your own DSLR, hiring
+                                    a professional is almost always the best option. Align with your agent on which features of your home are the biggest selling points.
+                                    Is it the natural light? The views? Certain architectural elements? Remember, pictures are a buyer’s first impression,
+                                    so it’s important they be as inviting as possible. Many agents have photographers they can recommend to you. .</p>
                             </div>
                         </div>
                     </div>
@@ -90,11 +85,10 @@
                     <div class="col-lg-10">
                         <div class="services-item style-one wow bdFadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
                             <div class="content">
-                                <h3 class="title">Closing & Move-In</h3>
-                                <p class="description">After mortgage approval, managing agents generally set a closing date
-                                    and buyer and seller attorneys coordinate with the appropriate banks on available dates
-                                    and times. After closing, you’ve officially purchased your new home. Your search has
-                                    finally come to an end and it's time to celebrate!</p>
+                                <h3 class="title">Receive Offers</h3>
+                                <p class="description">Receiving your first offer is incredibly exciting. However,
+                                    it's important to stay level-headed and know that one offer doesn’t necessarily mean that future offers are
+                                    going to be higher or lower. Every buyer is different. </p>
                             </div>
                         </div>
                     </div>
