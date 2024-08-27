@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="footer-contact-text">
                                         <span>
-                                            <a href="#">
+                                            <a href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6" target="_blank">
                                                 Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114
                                             </a>
                                         </span>
@@ -102,7 +102,7 @@
                     <div class="footer-widget footer-1-col-4">
                         <div class="footer-google-map">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283.0371749908848!2d116.85141257428921!3d-1.2740235650516594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1473ce871d033%3A0x36338eca7b2e7d9f!2sPT.%20HEMPART%20INDONESIA!5e0!3m2!1sid!2sid!4v1724734012917!5m2!1sid!2sid"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
