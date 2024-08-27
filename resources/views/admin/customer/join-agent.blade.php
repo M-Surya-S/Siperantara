@@ -16,59 +16,77 @@
                                 <table class="table mb-0">
                                     <thead>
                                         <tr>
+                                            <th class="text-center">No</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Date</th>
                                         </tr>
                                     </thead>
+                                    @php
+                                        $number = 1;
+                                    @endphp
                                     <tbody>
-                                        <tr class="table-custom">
-                                            <td>
-                                                <div class="property-title-box d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <p class="property-location">California, CA, USA</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                                
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                            </td>
-                                        </tr>
+                                        @foreach ($agents as $index => $agent)
+                                            <tr class="table-custom">
+                                                <td>
+                                                    <p class="property-location text-center">
+                                                        {{ ($agents->currentPage() - 1) * $agents->perPage() + $index + 1 }}
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $agent->name }}</p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $agent->email }}</p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $agent->phone_number }}</p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ Carbon\Carbon::parse($agent->created_at)->format('d M Y') }}</p>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
-
                             <div class="pagination__wrapper mt-30">
                                 <div class="basic-pagination">
                                     <nav>
                                         <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-left"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a class="current" href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-right"></i>
-                                                </a>
-                                            </li>
+                                            {{-- Link ke halaman sebelumnya --}}
+                                            @if ($agents->onFirstPage())
+                                                
+                                            @else
+                                                <li>
+                                                    <a href="{{ $agents->previousPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-left"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                            
+                                            {{-- Link ke halaman-halaman --}}
+                                            @foreach ($agents->links()->elements[0] as $page => $url)
+                                                @if ($page == $agents->currentPage())
+                                                    <li>
+                                                        <a class="current" href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                            
+                                            {{-- Link ke halaman berikutnya --}}
+                                            @if ($agents->hasMorePages())
+                                                <li>
+                                                    <a href="{{ $agents->nextPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-right"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </nav>
                                 </div>

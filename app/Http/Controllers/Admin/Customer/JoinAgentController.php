@@ -14,7 +14,8 @@ class JoinAgentController extends Controller
     public function index()
     {
         $title = 'Join Agent';
-        return view('admin.customer.join-agent', compact('title'));
+        $agents = JoinAgent::paginate(10);
+        return view('admin.customer.join-agent', compact('title', 'agents'));
     }
 
     /**

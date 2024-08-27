@@ -93,14 +93,23 @@ class AgentController extends Controller
 
         $existingImage = $agent->image;
 
-        if ($request->has('image')) {
-            // Handle image upload
-            $filepath = $request->file('image')->store('public/agent/image');
-            $agent->update([
-                'image' => $filepath,
-            ]);
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama dari storage
+            if ($existingImage) {
+                Storage::delete($existingImage);
+            }
 
+            // Upload gambar baru
+            $uploadedFiles = $request->file('image');
+            $path = $uploadedFiles->store('public/agent/image');
+
+            // Update path gambar yang baru ke dalam database
+            $agent->update([
+                'image' => $path,
+            ]);
         } else {
+            // Jika tidak ada gambar baru, tetap gunakan gambar yang ada
             $agent->update([
                 'image' => $existingImage,
             ]);

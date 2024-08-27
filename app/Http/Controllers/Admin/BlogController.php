@@ -90,6 +90,11 @@ class BlogController extends Controller
         $existingImage = $blog->image;
 
         if ($request->has('image')) {
+            // Hapus gambar lama dari storage
+            if ($existingImage) {
+                Storage::delete($existingImage);
+            }
+
             // Handle image upload
             $filepath = $request->file('image')->store('public/blog/image');
             $blog->update([

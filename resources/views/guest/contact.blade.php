@@ -69,7 +69,7 @@
         <!-- Contact address area end -->
 
         <!-- Contact form area start -->
-        <section class="bd-contact-form section-space-bottom">
+        {{-- <section class="bd-contact-form section-space-bottom">
             <div class="container">
                 <div class="row gy-24 justify-content-between">
                     <div class="col-xxl-5 col-xl-5 col-lg-6">
@@ -151,7 +151,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Contact form area end -->
 
         <!-- Google map area start -->
