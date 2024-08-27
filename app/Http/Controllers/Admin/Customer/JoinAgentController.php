@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\JoinAgent;
 use Illuminate\Http\Request;
 
 class JoinAgentController extends Controller
@@ -21,7 +22,8 @@ class JoinAgentController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Agent';
+        return view('guest.agent.join-agent', compact('title'));
     }
 
     /**
@@ -29,7 +31,22 @@ class JoinAgentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        JoinAgent::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+        ]);
+
+        // Membuat pesan WhatsApp berdasarkan input
+        $name = $request->name;
+
+        $message = urlencode("Halo, nama saya $name. Saya tertarik untuk bergabung menjadi agent Siperantara.");
+
+        // Nomor WhatsApp tujuan
+        $whatsappNumber = '6281283800498';
+
+        // Redirect ke WhatsApp
+        return redirect()->away("https://wa.me/$whatsappNumber?text=$message");
     }
 
     /**

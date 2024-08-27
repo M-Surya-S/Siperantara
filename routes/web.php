@@ -81,9 +81,8 @@ Route::get('/property/development', function () {
 
 // Agent
 Route::get('/agent', [AgentHomeController::class, 'index']);
-Route::get('/agent/join', function () {
-    return view('guest.agent.join-agent', ['title' => 'Agent']);
-});
+Route::get('/agent/join', [JoinAgentController::class, 'create']);
+Route::post('/agent/join', [JoinAgentController::class, 'store'])->name('join-agent.store');
 
 // Guide
 Route::get('/guide', [GuideController::class, 'index']);
