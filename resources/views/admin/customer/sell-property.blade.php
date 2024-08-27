@@ -16,25 +16,29 @@
                                 <table class="table mb-0">
                                     <thead>
                                         <tr>
+                                            <th class="text-center">No</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Date</th>
                                         </tr>
                                     </thead>
+                                    @php
+                                        $number = 1;
+                                    @endphp
                                     <tbody>
-                                        @foreach ($sell_propertys as $sell)
+                                        @foreach ($sell_propertys as $index => $sell)
                                             <tr class="table-custom">
                                                 <td>
-                                                    <div class="property-title-box d-flex align-items-center gap-10">
-                                                        <div>
-                                                            <p class="property-location">{{ $sell->name }}</p>
-                                                        </div>
-                                                    </div>
+                                                    <p class="property-location text-center">
+                                                        {{ ($sell_propertys->currentPage() - 1) * $sell_propertys->perPage() + $index + 1 }}
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $sell->name }}</p>
                                                 </td>
                                                 <td>
                                                     <p class="property-location">{{ $sell->email }}</p>
-                                                    
                                                 </td>
                                                 <td>
                                                     <p class="property-location">{{ $sell->phone_number }}</p>
