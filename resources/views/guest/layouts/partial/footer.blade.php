@@ -35,8 +35,11 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="#">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114
-                                        </a></span>
+                                        <span>
+                                            <a href="#">
+                                                Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="footer-contact-item">
@@ -46,7 +49,7 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="tel:+1(800)123456789">+62 811-517-1010</a></span>
+                                        <span><a href="https://wa.me/628115171010" target="_blank">+62 811-517-1010</a></span>
                                     </div>
                                 </div>
                                 <div class="footer-contact-item">
@@ -56,16 +59,14 @@
                                         </span>
                                     </div>
                                     <div class="footer-contact-text">
-                                        <span><a href="mailto:reallow@mail.com">Siperantararealestate@gmail.com </a></span>
+                                        <span><a href="mailto:siperantararealestate@gmail.com">siperantararealestate@gmail.com</a></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="bd-social">
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="https://www.instagram.com/siperantara_real_estate/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@properthree2770" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -71,10 +71,11 @@
                                                             </li>
 
                                                             <li class="contact-list-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-envelope"></i></span>
+                                                                <span class="icon">
+                                                                    <i class="fa-regular fa-envelope"></i>
+                                                                </span>
                                                                 <span class="title">
-                                                                    <p>{{ $agent->email }}</p>
+                                                                    <a href="mailto:{{ $agent->email }}">{{ $agent->email }}</a>
                                                                 </span>
                                                             </li>
                                                             @php
@@ -99,10 +100,13 @@
                                                             @endphp
 
                                                             <li class="contact-list-item">
-                                                                <span class="icon"><i
-                                                                        class="fa-regular fa-phone-volume"></i></span>
+                                                                <span class="icon">
+                                                                    <i class="fa-regular fa-phone-volume"></i>
+                                                                </span>
                                                                 <span class="title">
-                                                                    <p>{{ formatPhoneNumber($agent->phone_number) }}</p>
+                                                                    <a href="https://wa.me/62{{ ltrim($agent->phone_number, '0') }}" target="_blank">
+                                                                        {{ formatPhoneNumber($agent->phone_number) }}
+                                                                    </a>
                                                                 </span>
                                                             </li>
 
