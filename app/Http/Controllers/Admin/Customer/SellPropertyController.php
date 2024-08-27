@@ -38,7 +38,16 @@ class SellPropertyController extends Controller
             'phone_number' => $request->phone_number,
         ]);
 
-        return redirect(url('property/sell'));
+        // Membuat pesan WhatsApp berdasarkan input
+        $name = $request->name;
+
+        $message = urlencode("Halo, nama saya $name. Saya tertarik untuk menjual properti saya melalui Siperantara.");
+
+        // Nomor WhatsApp tujuan
+        $whatsappNumber = '628115171010';
+
+        // Redirect ke WhatsApp
+        return redirect()->away("https://wa.me/$whatsappNumber?text=$message");
     }
 
     /**
