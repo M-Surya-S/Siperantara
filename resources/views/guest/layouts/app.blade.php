@@ -83,27 +83,28 @@
                         <ul>
                             <li class="d-flex align-items-center gap-10">
                                 <div class="offcanvas-contact-icon">
-                                    <a target="_blank" href="#">
-                                        <i class="fal fa-map-marker-alt"></i></a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a target="_blank" href="#">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
                                 <div class="offcanvas-contact-icon">
-                                    <a href="tel:+415864872899"><i class="far fa-phone"></i></a>
+                                    <a href="https://wa.me/628115171010" target="_blank"><i class="far fa-phone"></i></a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="tel:+415864872899">+62 811-517-1010</a>
+                                    <a href="https://wa.me/628115171010" target="_blank">+62 811-517-1010</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
                                 <div class="offcanvas-contact-icon">
-                                    <a href="mailto:support@Reallow.com"><i class="fal fa-envelope"></i></a>
+                                    <a href="mailto:siperantararealestate@gmail.com"><i class="fal fa-envelope"></i></a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a href="mailto:support@Reallow.com">Siperantararealestate@gmail.com</a>
+                                    <a href="mailto:siperantararealestate@gmail.com">siperantararealestate@gmail.com</a>
                                 </div>
                             </li>
                         </ul>
@@ -112,10 +113,8 @@
                     <div class="offcanvas-social">
                         <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/siperantara_real_estate/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/@properthree2770" target="_blank"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
