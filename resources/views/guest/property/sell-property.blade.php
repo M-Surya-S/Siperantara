@@ -4,7 +4,8 @@
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}"></div>
+            <div class="bd-breadcrumb-bg" data-background="{{ asset('assets/images/breadcrumb/breadcrumb-thumb-01.png') }}">
+            </div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -50,7 +51,7 @@
                     <div class="col-xxl-7 col-xl-7 col-lg-7">
                         <div class="contact-wrapper style-one">
                             <div class="contact-from">
-                                <form action="#{{-- route('sell-property.store') --}}" method="POST">
+                                <form action="{{ route('sell-property.store') }}" method="POST">
                                     @csrf
                                     <div class="row g-5 align-items-center justify-content-center">
                                         <div class="col-lg-12">
@@ -108,6 +109,5 @@
             </div>
         </section>
         <!-- Contact form area end -->
-
     </main>
 @endsection

@@ -50,39 +50,57 @@
                     </div>
                     <div class="col-xl-5">
                         <div class="sign-form-wrapper text-center">
-                            <h4 class="title mb-80 mt-50">Welcome</h4>
+                            <h4 class="title {{ session('error') ? 'mt-50 mb-40' : 'mt-60
+                             mb-60' }}">Welcome Again!</h4>
                     
                             <!-- Cek apakah ada pesan error di session -->
                             @if (session('error'))
-                                <div class="alert alert-danger">
+                                <div class="alert alert-danger mt-10">
                                     {{ session('error') }}
                                 </div>
                             @endif
                     
                             <form class="form" action="{{ route('login.store') }}" method="POST">
                                 @csrf
-                                <div class="input-box mb-20">
+                                <div class="input-box mb-20 position-relative">
                                     <input type="email" class="input" placeholder="Email Address" name="email" value='{{ old('email') }}' required autofocus>
                                 </div>
-                                <div class="input-box mb-70">
-                                    <input type="password" class="input" placeholder="Password" name="password" required>
+                                <div class="input-box mb-90 position-relative">
+                                    <input type="password" id="password" class="input" placeholder="Password" name="password" required>
+                                    <span class="toggle-password position-absolute" style="right: 20px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                                        <i class="fa fa-eye" id="eyeIcon"></i>
+                                    </span>
                                 </div>
-                                <div class="sign-btn mb-60">
-                                    <button type="submit" class="bd-btn btn-style btn-hover-x">Sign in</button>
+                                <div class="sign-btn {{ session('error') ? 'mb-25' : 'mb-50' }}">
+                                    <button type="submit" class="bd-btn btn-style btn-hover-x">Login</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
         <!-- sign-in area end -->
-
     </main>
     <!-- Body main wrapper end -->
 
     <!-- JS here -->
+    <script>
+        document.querySelector('.toggle-password').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.getElementById('eyeIcon');
+    
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+    </script>   
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/plugins/waypoints.min.js"></script>
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>

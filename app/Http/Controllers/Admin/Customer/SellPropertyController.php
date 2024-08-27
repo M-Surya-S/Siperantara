@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\SellProperty;
 use Illuminate\Http\Request;
 
 class SellPropertyController extends Controller
@@ -13,7 +14,8 @@ class SellPropertyController extends Controller
     public function index()
     {
         $title = 'Sell Property';
-        return view('admin.customer.sell-property', compact('title'));
+        $sell_propertys = SellProperty::paginate(10);
+        return view('admin.customer.sell-property', compact('title', 'sell_propertys'));
     }
 
     /**
@@ -30,7 +32,13 @@ class SellPropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        SellProperty::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+        ]);
+
+        return redirect(url('property/sell'));
     }
 
     /**

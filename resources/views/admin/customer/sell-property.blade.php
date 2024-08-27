@@ -23,25 +23,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="table-custom">
-                                            <td>
-                                                <div class="property-title-box d-flex align-items-center gap-10">
-                                                    <div>
-                                                        <p class="property-location">California, CA, USA</p>
+                                        @foreach ($sell_propertys as $sell)
+                                            <tr class="table-custom">
+                                                <td>
+                                                    <div class="property-title-box d-flex align-items-center gap-10">
+                                                        <div>
+                                                            <p class="property-location">{{ $sell->name }}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                                
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                            </td>
-                                            <td>
-                                                <p class="property-location">California, CA, USA</p>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $sell->email }}</p>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ $sell->phone_number }}</p>
+                                                </td>
+                                                <td>
+                                                    <p class="property-location">{{ Carbon\Carbon::parse($sell->created_at)->format('d M Y') }}</p>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -50,25 +52,38 @@
                                 <div class="basic-pagination">
                                     <nav>
                                         <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-left"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a class="current" href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-right"></i>
-                                                </a>
-                                            </li>
+                                            {{-- Link ke halaman sebelumnya --}}
+                                            @if ($sell_propertys->onFirstPage())
+                                                
+                                            @else
+                                                <li>
+                                                    <a href="{{ $sell_propertys->previousPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-left"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                            
+                                            {{-- Link ke halaman-halaman --}}
+                                            @foreach ($sell_propertys->links()->elements[0] as $page => $url)
+                                                @if ($page == $sell_propertys->currentPage())
+                                                    <li>
+                                                        <a class="current" href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                            
+                                            {{-- Link ke halaman berikutnya --}}
+                                            @if ($sell_propertys->hasMorePages())
+                                                <li>
+                                                    <a href="{{ $sell_propertys->nextPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-right"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </nav>
                                 </div>
