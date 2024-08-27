@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         $title = 'Dashboard';
-        $propertys = Property::all();
+        $propertys = Property::paginate(10);
         return view('admin.dashboard', compact('title', 'propertys'));
     }
 

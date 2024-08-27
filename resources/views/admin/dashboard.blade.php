@@ -203,25 +203,38 @@
                                 <div class="basic-pagination">
                                     <nav>
                                         <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-left"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a class="current" href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa-regular fa-arrow-right"></i>
-                                                </a>
-                                            </li>
+                                            {{-- Link ke halaman sebelumnya --}}
+                                            @if ($propertys->onFirstPage())
+                                                
+                                            @else
+                                                <li>
+                                                    <a href="{{ $propertys->previousPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-left"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                            
+                                            {{-- Link ke halaman-halaman --}}
+                                            @foreach ($propertys->links()->elements[0] as $page => $url)
+                                                @if ($page == $propertys->currentPage())
+                                                    <li>
+                                                        <a class="current" href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ $url }}">{{ $page }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                            
+                                            {{-- Link ke halaman berikutnya --}}
+                                            @if ($propertys->hasMorePages())
+                                                <li>
+                                                    <a href="{{ $propertys->nextPageUrl() }}">
+                                                        <i class="fa-regular fa-arrow-right"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </nav>
                                 </div>
