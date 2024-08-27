@@ -154,11 +154,7 @@
                                 <ul>
                                     {{-- Link ke halaman sebelumnya --}}
                                     @if ($agents->onFirstPage())
-                                        <li>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-left"></i>
-                                            </span>
-                                        </li>
+                                    
                                     @else
                                         <li>
                                             <a href="{{ $agents->previousPageUrl() }}">
@@ -187,12 +183,6 @@
                                             <a href="{{ $agents->nextPageUrl() }}">
                                                 <i class="fa-regular fa-arrow-right"></i>
                                             </a>
-                                        </li>
-                                    @else
-                                        <li>
-                                            <span>
-                                                <i class="fa-regular fa-arrow-right"></i>
-                                            </span>
                                         </li>
                                     @endif
                                 </ul>

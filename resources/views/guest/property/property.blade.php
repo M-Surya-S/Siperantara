@@ -216,11 +216,7 @@
                                         <ul>
                                             {{-- Link ke halaman sebelumnya --}}
                                             @if ($propertys->onFirstPage())
-                                                <li>
-                                                    <span>
-                                                        <i class="fa-regular fa-arrow-left"></i>
-                                                    </span>
-                                                </li>
+                                                
                                             @else
                                                 <li>
                                                     <a href="{{ $propertys->previousPageUrl() }}">
@@ -249,12 +245,6 @@
                                                     <a href="{{ $propertys->nextPageUrl() }}">
                                                         <i class="fa-regular fa-arrow-right"></i>
                                                     </a>
-                                                </li>
-                                            @else
-                                                <li>
-                                                    <span>
-                                                        <i class="fa-regular fa-arrow-right"></i>
-                                                    </span>
                                                 </li>
                                             @endif
                                         </ul>
