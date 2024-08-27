@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\AgentHomeController;
+use App\Http\Controllers\BlogHomeController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeControlller;
 use App\Http\Controllers\PropertyHomeController;
@@ -104,12 +105,8 @@ Route::get('/guide/seller/download', function () {
 });
 
 // Blog
-Route::get('/blog', function () {
-    return view('guest.blog.blog', ['title' => 'Blog']);
-});
-Route::get('/blog/detail', function () {
-    return view('guest.blog.detail-blog', ['title' => 'Blog Detail']);
-});
+Route::get('/blog', [BlogHomeController::class, 'index']);
+Route::get('/blog/detail/{id}', [BlogHomeController::class, 'show'])->name('blog-detail');
 
 // Contact
 Route::get('/contact', function () {
