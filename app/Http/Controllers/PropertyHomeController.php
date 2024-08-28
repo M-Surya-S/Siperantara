@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Property;
+use App\Models\SendMessage;
 use Illuminate\Http\Request;
 
 class PropertyHomeController extends Controller
@@ -38,7 +39,7 @@ class PropertyHomeController extends Controller
 
         if ($request->has('status')) {
             $status = $request->input('status');
-    
+
             if ($status == 'new-develop') {
                 $query->where('property_status', 'New Develop');
             } elseif ($status == 'buy-or-rent') {
@@ -48,7 +49,7 @@ class PropertyHomeController extends Controller
 
         if ($request->has('tag')) {
             $tag = $request->input('tag');
-    
+
             if ($tag == 'residental') {
                 $query->where('property_tag', 'Residental');
             } elseif ($tag == 'commercial') {
@@ -90,5 +91,27 @@ class PropertyHomeController extends Controller
         $title = 'Property Detail';
         $property = Property::findOrFail($id);
         return view('guest.property.detail-property', compact('title', 'property'));
+    }
+
+    public function sendMessage(Request $request)
+    {
+        SendMessage::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+        ]);
+
+        // Membuat pesan WhatsApp berdasarkan input
+        $name = $request->name;
+        $propertyUrl = url()->current();
+
+        // Membuat pesan dengan encoding URL yang benar
+        $message = urlencode("Halo, nama saya $name. Saya tertarik untuk membeli properti berikut: $propertyUrl");
+
+        // Nomor WhatsApp tujuan
+        $whatsappNumber = '6281283800498';
+
+        // Redirect ke WhatsApp
+        return redirect()->away("https://wa.me/$whatsappNumber?text=$message");
     }
 }

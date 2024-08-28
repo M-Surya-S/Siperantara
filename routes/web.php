@@ -74,6 +74,7 @@ Route::get('/', [HomeControlller::class, 'index']);
 Route::get('/property', [PropertyHomeController::class, 'index']);
 Route::get('/property/search', [PropertyHomeController::class, 'search'])->name('property.search');
 Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->name('property.detail');
+Route::post('/property/detail/{id}', [PropertyHomeController::class, 'sendMessage'])->name('send-message-property');
 Route::get('/property/sell', [SellPropertyController::class, 'create']);
 Route::post('/property/sell', [SellPropertyController::class, 'store'])->name('sell-property.store');
 Route::get('/property/development', function () {

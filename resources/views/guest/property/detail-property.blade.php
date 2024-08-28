@@ -267,37 +267,34 @@
                         <div class="agent-sidebar-wrapper bd-sidebar-sticky">
                             <div class="agent-details-widget mb-35">
                                 <h3 class="sidebar-widget-title">Contact</h3>
-                                <div class="row g-3">
-                                    <div class="col-xl-12">
-                                        <div class="input-box">
-                                            <input type="text" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="input-box">
+                                <form action="{{ route('send-message-property', $property->property_id) }}" method="POST">
+                                    @csrf
+                                    <div class="row g-3">
+                                        <div class="col-xl-12">
                                             <div class="input-box">
-                                                <input type="email" placeholder="Email">
+                                                <input type="text" placeholder="Name" name="name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="input-box">
+                                                <div class="input-box">
+                                                    <input type="email" placeholder="Email (Optional)" name="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="input-box">
+                                                <input type="text" placeholder="Phone" name="phone_number" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="agent-details-btn">
+                                                <button class="bd-btn btn-style btn-hover-x w-100 btn-black"
+                                                    type="submit">Send</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-12">
-                                        <div class="input-box">
-                                            <input type="text" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="input-box">
-                                            <textarea cols="30" rows="10" placeholder="Write Massage"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="agent-details-btn">
-                                            <button class="bd-btn btn-style btn-hover-x w-100 btn-black"
-                                                type="submit">Send
-                                                Email</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
