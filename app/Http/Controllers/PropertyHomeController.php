@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MessageProperty;
 use App\Models\Property;
-use App\Models\SendMessage;
 use Illuminate\Http\Request;
 
 class PropertyHomeController extends Controller
@@ -95,7 +95,7 @@ class PropertyHomeController extends Controller
 
     public function sendMessage(Request $request)
     {
-        SendMessage::create([
+        MessageProperty::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
@@ -109,7 +109,7 @@ class PropertyHomeController extends Controller
         $message = urlencode("Halo, nama saya $name. Saya tertarik untuk membeli properti berikut: $propertyUrl");
 
         // Nomor WhatsApp tujuan
-        $whatsappNumber = '6281283800498';
+        $whatsappNumber = '628115171010';
 
         // Redirect ke WhatsApp
         return redirect()->away("https://wa.me/$whatsappNumber?text=$message");

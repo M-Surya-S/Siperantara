@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AgentController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\Customer\BuyRentController;
 use App\Http\Controllers\Admin\Customer\DownloadGuideController;
 use App\Http\Controllers\Admin\Customer\JoinAgentController;
 use App\Http\Controllers\Admin\Customer\SellPropertyController;
@@ -59,6 +60,7 @@ Route::middleware(['admin'])->group(function () {
 
     // Customer
     Route::get('/dashboard/sell-property', [SellPropertyController::class, 'index']);
+    Route::get('/dashboard/buy-or-rent', [BuyRentController::class, 'index']);
     Route::get('/dashboard/join-agent', [JoinAgentController::class, 'index']);
     Route::get('/dashboard/download-guide', [DownloadGuideController::class, 'index']);
 });

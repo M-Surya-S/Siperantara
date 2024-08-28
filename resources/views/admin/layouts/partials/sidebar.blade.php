@@ -20,6 +20,7 @@
                     <a class="dropdown-toggle"><span><i class="fa-sharp fa-light fa-user"></i></span>Customer</a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ url('/dashboard/sell-property') }}">Sell</a></li>
+                        <li><a href="{{ url('/dashboard/buy-or-rent') }}">Buy or Rent</a></li>
                         <li><a href="{{ url('/dashboard/join-agent') }}">Join Agent</a></li>
                         <li><a href="{{ url('/dashboard/download-guide') }}">Download Guide</a></li>
                     </ul>

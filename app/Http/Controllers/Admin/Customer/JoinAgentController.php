@@ -44,7 +44,7 @@ class JoinAgentController extends Controller
         $message = urlencode("Halo, nama saya $name. Saya tertarik untuk bergabung menjadi agent Siperantara.");
 
         // Nomor WhatsApp tujuan
-        $whatsappNumber = '6281283800498';
+        $whatsappNumber = '628115171010';
 
         // Redirect ke WhatsApp
         return redirect()->away("https://wa.me/$whatsappNumber?text=$message");
