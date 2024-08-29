@@ -61,7 +61,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-input-box has-icon icon-right">
                                                 <div class="form-input">
-                                                    <input name="name" type="text" placeholder="Your Name">
+                                                    <input name="name" type="text" placeholder="Your Name" required>
                                                     <div class=""><span><i class="fa-solid fa-user"></i></span></div>
                                                 </div>
                                             </div>
@@ -69,7 +69,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-input-box has-icon icon-right">
                                                 <div class="form-input">
-                                                    <input name="email" type="text" placeholder="Your Email">
+                                                    <input name="email" type="text" placeholder="Your Email" required>
                                                     <div class=""><span><i class="fa-solid fa-envelope"></i></span></div>
                                                 </div>
                                             </div>
@@ -77,7 +77,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-input-box has-icon icon-right">
                                                 <div class="form-input">
-                                                    <input name="phone_number" type="text" placeholder="Your Phone">
+                                                    <input name="phone_number" type="text" placeholder="Your Phone" required>
                                                     <div class=""><span><i class="fa-solid fa-phone"></i></span></div>
                                                 </div>
                                             </div>

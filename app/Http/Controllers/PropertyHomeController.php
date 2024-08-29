@@ -72,8 +72,8 @@ class PropertyHomeController extends Controller
                 $query->where('property_category', 'Land');
             } elseif ($category == 'shophouse') {
                 $query->where('property_category', 'Shophouse');
-            } elseif ($category == 'wherehouse') {
-                $query->where('property_category', 'Wherehouse');
+            } elseif ($category == 'warehouse') {
+                $query->where('property_category', 'Warehouse');
             }
         }
 
