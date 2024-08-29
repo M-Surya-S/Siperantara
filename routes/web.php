@@ -94,14 +94,10 @@ Route::get('/guide', [GuideController::class, 'index']);
 Route::get('/guide/buyers', [GuideController::class, 'buyers']);
 Route::get('/guide/buyers/download', [GuideController::class, 'buyersIndex']);
 Route::post('/guide/buyers/download', [GuideController::class, 'buyersDownload'])->name('buyers-download');
-
 // Seller Guide
-Route::get('/guide/seller', function () {
-    return view('guest.guide.seller.detail-seller-guide', ['title' => 'Seller Guide']);
-});
-Route::get('/guide/seller/download', function () {
-    return view('guest.guide.seller.seller-guide-download', ['title' => 'Seller Guide']);
-});
+Route::get('/guide/seller', [GuideController::class, 'seller']);
+Route::get('/guide/seller/download', [GuideController::class, 'sellerIndex']);
+Route::post('/guide/seller/download', [GuideController::class, 'sellerDownload'])->name('seller-download');
 
 // Blog
 Route::get('/blog', [BlogHomeController::class, 'index']);
