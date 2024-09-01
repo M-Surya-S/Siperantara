@@ -94,14 +94,14 @@
                     </div>
                 </div>
                 <!-- Centered footer button -->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-12 text-center">
                         <div class="footer-btn-wrap">
                             <a class="bd-btn btn-style btn-hover-x hover-white" href="/guide/seller/download"><i
                                     class="fa-regular fa-arrow-right-long"></i>Download Our Guide</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
 
