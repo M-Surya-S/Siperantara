@@ -109,5 +109,5 @@
             </div>
         </section>
         <!-- Contact form area end -->
-    </main>d
+    </main>
 @endsection
