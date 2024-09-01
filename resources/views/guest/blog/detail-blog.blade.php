@@ -55,7 +55,7 @@
                                                     <i class="fa-brands fa-whatsapp"></i>
                                                 </a>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -85,11 +85,10 @@
                                         </div>
                                         <div class="sidebar-about-content">
                                             <h3 class="sidebar-about-title">
-                                                <a>Ravi O'Leigh</a>
+                                                <a>A.Adam.S</a>
                                             </h3>
-                                            <span class="sidebar-about-designation">Property Manager</span>
-                                            <p>Lorem ligula eget dolor. Aenean massa. Cum sociis que penatibus magnis dis
-                                                parturient</p>
+                                            <span class="sidebar-about-designation">Marketing Executive</span>
+                                            <p>Experienced and Certified Real Estate Agent that help and accompany you through the journey of buying-selling-renting a property.</p>
                                             <div class="bd-social">
                                                 <ul>
                                                     <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
