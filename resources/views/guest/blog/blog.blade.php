@@ -117,7 +117,7 @@
                                 <div class="sidebar-widget-content">
                                     <div class="sidebar-about">
                                         <div class="sidebar-about-thumb mb-25">
-                                            <img src="{{ asset('assets/images/user/user-thumb-09.png') }}"
+                                            <img src="{{ asset('assets/images/user/adam.png') }}"
                                                 alt="user images not found">
                                         </div>
                                         <div class="sidebar-about-content">
