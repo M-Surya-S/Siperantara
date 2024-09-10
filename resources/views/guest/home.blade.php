@@ -25,6 +25,7 @@
                                                         alt="banner-arrow">A
                                                     Home</span>
                                             </h1>
+                                            <p class="description mt-20" style="font-size: 25px; line-height: 35px; font-style: italic">"Transparency at Every Transaction Process, Experience Beyond Expectation."</p>
                                         </div>
                                     </div>
                                 </div>

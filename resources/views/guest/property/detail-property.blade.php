@@ -87,7 +87,7 @@
                                 <ul>
                                     <li><label>Property Status:</label> <span>{{ $property->property_status }}</span></li>
                                     <li><label>Price:</label> <span>Rp
-                                            {{ number_format((int) $property->property_price, 0, ',', '.') }}{{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Bulan' : '' }}</span>
+                                            {{ number_format((int) $property->property_price, 0, ',', '.') }}{{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Tahun' : '' }}</span>
                                     </li>
                                     <li><label>Rooms:</label> <span>{{ $property->rooms }}</span></li>
                                     <li><label>Floors:</label> <span>{{ $property->floors }}</span></li>
