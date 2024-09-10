@@ -117,7 +117,7 @@
                                 <div class="sidebar-widget-content">
                                     <div class="sidebar-about">
                                         <div class="sidebar-about-thumb mb-25">
-                                            <img src="{{ asset('assets/images/user/adam.png') }}"
+                                            <img src="{{ asset('assets/images/user/adam.jpg') }}"
                                                 alt="user images not found">
                                         </div>
                                         <div class="sidebar-about-content">
@@ -128,10 +128,8 @@
                                             <p>Experienced and Certified Real Estate Agent that help and accompany you through the journey of buying-selling-renting a property.</p>
                                             <div class="bd-social">
                                                 <ul>
-                                                    <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                                    <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                    <li><a href="https://www.instagram.com/siperantara.id?igsh=MWo2Nnh4M254bnR4bA%3D%3D&utm_source=qr " target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                                    <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
