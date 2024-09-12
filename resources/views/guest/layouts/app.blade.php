@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="mobile-menu fix mb-25"></div>
-                    <div class="offcanvas-about d-none d-lg-block mb-25">
+                    <div class="offcanvas-about d-lg-block mb-25">
                         <h4 class="offcanvas-title-meta">About SIPERANTARA</h4>
                         <p style="text-align: justify;">In a landscape oversaturated with traditional real estate firms, the world didn’t need just another brokerage. It craved something new, something visionary. It required a model that dared to challenge the outdated norms, one that empowers rather than stifles individual potential. We sought to build a community of forward-thinkers, united by a shared understanding of technology’s power and the importance of meaningful connections. Welcome to Brokerage 3.0—a paradigm shift designed to unsettle the old guard without apologies.</p>
 
