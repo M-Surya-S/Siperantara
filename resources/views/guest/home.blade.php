@@ -10,7 +10,7 @@
                     <!-- if ypu active slider then duplicate "swiper-slide" -->
                     <div class="swiper-slide banner_more_item">
                         <div class="banner-inner p-relative">
-                            <div class="banner-bg" data-background="{{ asset('assets/images/banner/banner-home-02.png') }}">
+                            <div class="banner-bg" data-background="{{ asset('assets/images/banner/banner-home-02.jpg') }}">
                             </div>
                             <div class="container p-relative">
                                 <div class="row justify-content-between">
