@@ -62,7 +62,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/dashboard/sell-property', [SellPropertyController::class, 'index']);
     Route::get('/dashboard/buy-or-rent', [BuyRentController::class, 'index']);
     Route::get('/dashboard/join-agent', [JoinAgentController::class, 'index']);
-    Route::get('/dashboard/download-guide', [DownloadGuideController::class, 'index']);
+    // Route::get('/dashboard/download-guide', [DownloadGuideController::class, 'index']);
 });
 
 Route::get('/login', [LoginController::class, 'index']);
