@@ -727,7 +727,7 @@
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="video-content text-center">
                             <div class="video-play">
-                                <a href="https://www.youtube.com/watch?v=go7QYaQR494" class="bd-play-btn popup-video"><i
+                                <a href="https://youtu.be/A3LB_uWdGFo?si=6f-kFUU9hzqSlDJO" class="bd-play-btn popup-video"><i
                                         class="fa-duotone fa-play"></i></a>
                             </div>
                         </div>
