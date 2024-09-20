@@ -176,7 +176,7 @@
                                                             <div class="price">
                                                                 <span>
                                                                     Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
-                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
+                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Year' : '' }}
                                                                 </span>
                                                             </div>
                                                             <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>
