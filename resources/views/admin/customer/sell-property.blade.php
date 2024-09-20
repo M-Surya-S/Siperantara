@@ -27,27 +27,33 @@
                                         $number = 1;
                                     @endphp
                                     <tbody>
-                                        @foreach ($sell_propertys as $index => $sell)
-                                            <tr class="table-custom">
-                                                <td>
-                                                    <p class="property-location text-center">
-                                                        {{ ($sell_propertys->currentPage() - 1) * $sell_propertys->perPage() + $index + 1 }}
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $sell->name }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $sell->email }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $sell->phone_number }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ Carbon\Carbon::parse($sell->created_at)->format('d M Y') }}</p>
-                                                </td>
+                                        @if ($sell_propertys->isEmpty())
+                                            <tr>
+                                                <td colspan="6" class="text-center">No data found.</td>
                                             </tr>
-                                        @endforeach
+                                        @else
+                                            @foreach ($sell_propertys as $index => $sell)
+                                                <tr class="table-custom">
+                                                    <td>
+                                                        <p class="property-location text-center">
+                                                            {{ ($sell_propertys->currentPage() - 1) * $sell_propertys->perPage() + $index + 1 }}
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $sell->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $sell->email }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $sell->phone_number }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ Carbon\Carbon::parse($sell->created_at)->format('d M Y') }}</p>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>

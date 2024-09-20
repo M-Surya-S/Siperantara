@@ -161,7 +161,7 @@
                                                                         <div class="meta-item">
                                                                             <span class="icon"><i
                                                                                     class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                                class="title">{{ $property->lot_area }} sqft</span>
+                                                                                class="title">{{ $property->lot_area }} m²</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -171,10 +171,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="recent-activity-price-box">
-                                                            <h5 class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</h5>
-                                                            @if ($property->property_status == 'Disewa' or $property->property_status == 'Tersewa')
-                                                                <p>Monthly</p>
-                                                            @endif
+                                                            <span>
+                                                                Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                                                {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Year' : '' }}
+                                                            </span>
                                                         </div>
                                                     </td>
                                                     <td>

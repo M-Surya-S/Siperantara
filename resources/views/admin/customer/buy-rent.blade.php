@@ -27,27 +27,33 @@
                                         $number = 1;
                                     @endphp
                                     <tbody>
-                                        @foreach ($buy_rent as $index => $customer)
-                                            <tr class="table-custom">
-                                                <td>
-                                                    <p class="property-location text-center">
-                                                        {{ ($buy_rent->currentPage() - 1) * $buy_rent->perPage() + $index + 1 }}
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $customer->name }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $customer->email != null ? $customer->email : '-' }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $customer->phone_number }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ Carbon\Carbon::parse($customer->created_at)->format('d M Y') }}</p>
-                                                </td>
+                                        @if ($buy_rent->isEmpty())
+                                            <tr>
+                                                <td colspan="6" class="text-center">No data found.</td>
                                             </tr>
-                                        @endforeach
+                                        @else
+                                            @foreach ($buy_rent as $index => $customer)
+                                                <tr class="table-custom">
+                                                    <td>
+                                                        <p class="property-location text-center">
+                                                            {{ ($buy_rent->currentPage() - 1) * $buy_rent->perPage() + $index + 1 }}
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $customer->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $customer->email != null ? $customer->email : '-' }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $customer->phone_number }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ Carbon\Carbon::parse($customer->created_at)->format('d M Y') }}</p>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>

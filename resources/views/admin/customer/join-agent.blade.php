@@ -27,27 +27,33 @@
                                         $number = 1;
                                     @endphp
                                     <tbody>
-                                        @foreach ($agents as $index => $agent)
-                                            <tr class="table-custom">
-                                                <td>
-                                                    <p class="property-location text-center">
-                                                        {{ ($agents->currentPage() - 1) * $agents->perPage() + $index + 1 }}
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $agent->name }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $agent->email }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ $agent->phone_number }}</p>
-                                                </td>
-                                                <td>
-                                                    <p class="property-location">{{ Carbon\Carbon::parse($agent->created_at)->format('d M Y') }}</p>
-                                                </td>
+                                        @if ($agents->isEmpty())
+                                            <tr>
+                                                <td colspan="6" class="text-center">No data found.</td>
                                             </tr>
-                                        @endforeach
+                                        @else
+                                            @foreach ($agents as $index => $agent)
+                                                <tr class="table-custom">
+                                                    <td>
+                                                        <p class="property-location text-center">
+                                                            {{ ($agents->currentPage() - 1) * $agents->perPage() + $index + 1 }}
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $agent->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $agent->email }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ $agent->phone_number }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="property-location">{{ Carbon\Carbon::parse($agent->created_at)->format('d M Y') }}</p>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
