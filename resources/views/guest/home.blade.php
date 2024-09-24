@@ -10,7 +10,7 @@
                     <!-- if ypu active slider then duplicate "swiper-slide" -->
                     <div class="swiper-slide banner_more_item">
                         <div class="banner-inner p-relative">
-                            <div class="banner-bg" data-background="{{ asset('assets/images/banner/banner-home-02.png') }}">
+                            <div class="banner-bg" data-background="{{ asset('assets/images/banner/banner-home-02.jpg') }}">
                             </div>
                             <div class="container p-relative">
                                 <div class="row justify-content-between">
@@ -727,7 +727,7 @@
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="video-content text-center">
                             <div class="video-play">
-                                <a href="https://www.youtube.com/watch?v=go7QYaQR494" class="bd-play-btn popup-video"><i
+                                <a href="https://www.youtube.com/watch?v=A3LB_uWdGFo" class="bd-play-btn popup-video"><i
                                         class="fa-duotone fa-play"></i></a>
                             </div>
                         </div>

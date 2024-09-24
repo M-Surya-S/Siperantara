@@ -22,7 +22,7 @@
                         <li><a href="{{ url('/dashboard/sell-property') }}">Sell</a></li>
                         <li><a href="{{ url('/dashboard/buy-or-rent') }}">Buy or Rent</a></li>
                         <li><a href="{{ url('/dashboard/join-agent') }}">Join Agent</a></li>
-                        <li><a href="{{ url('/dashboard/download-guide') }}">Download Guide</a></li>
+                        {{-- <li><a href="{{ url('/dashboard/download-guide') }}">Download Guide</a></li> --}}
                     </ul>
                 </li>
             </ul>

@@ -99,7 +99,7 @@
                                                         <div class="recent-activity-price-box">
                                                             <p class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</p>
                                                             @if ($property->property_status == 'For Rent' or $property->property_status == 'Rented Out')
-                                                                <p>Monthly</p>
+                                                                <p>Yearly</p>
                                                             @endif
                                                         </div>
                                                     </td>

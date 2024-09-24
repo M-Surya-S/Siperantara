@@ -125,20 +125,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6">
-                                        <div
-                                            class="bd-property-top-right d-sm-flex align-items-center justify-content-xl-end">
-                                            <div class="bd-property-top-select">
-                                                <select>
-                                                    <option>Default Sorting</option>
-                                                    <option>Low to High</option>
-                                                    <option>High to Low</option>
-                                                    <option>New Added</option>
-                                                    <option>On Sale</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!--<div class="col-xl-6">-->
+                                    <!--    <div-->
+                                    <!--        class="bd-property-top-right d-sm-flex align-items-center justify-content-xl-end">-->
+                                    <!--        <div class="bd-property-top-select">-->
+                                    <!--            <select>-->
+                                    <!--                <option>Default Sorting</option>-->
+                                    <!--                <option>Low to High</option>-->
+                                    <!--                <option>High to Low</option>-->
+                                    <!--                <option>New Added</option>-->
+                                    <!--                <option>On Sale</option>-->
+                                    <!--            </select>-->
+                                    <!--        </div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
                                 </div>
                             </div>
                             <div class="bd-property-items-wrapper bd-property-item-primary">
@@ -176,7 +176,7 @@
                                                             <div class="price">
                                                                 <span>
                                                                     Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
-                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Mo' : '' }}
+                                                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Year' : '' }}
                                                                 </span>
                                                             </div>
                                                             <h3 class="title"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a>

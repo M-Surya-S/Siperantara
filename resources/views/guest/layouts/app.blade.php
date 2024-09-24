@@ -55,7 +55,7 @@
                 <div class="offcanvas-content">
                     <div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
                         <div class="offcanvas-logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="{{ asset('assets/images/logo/logo_siperantara.png') }}" alt="logo not found">
                             </a>
                         </div>
