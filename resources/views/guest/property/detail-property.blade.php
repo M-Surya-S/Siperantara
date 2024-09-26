@@ -79,7 +79,7 @@
                             </span>
                             <h4 class="property-details-title-two">Description</h4>
                             <div class="property-details-descrip-text">
-                                <p>{{ $property->description }}</p>
+                                <p>{!! nl2br(e($property->description)) !!}</p>
                             </div>
                             <h4 class="property-details-title-two">Property Details</h4>
                             <div class="property-details-info-list wow bdFadeInUp" data-wow-delay=".3s"
