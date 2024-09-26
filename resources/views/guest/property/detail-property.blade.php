@@ -193,7 +193,7 @@
                                                 </span>
                                                 <div>
                                                     <h6>Parking</h6>
-                                                    <span class="descrip">{{ $property->garden }}</span>
+                                                    <span class="descrip">{{ $property->parking }}</span>
                                                 </div>
                                             </div>
                                         </li>
