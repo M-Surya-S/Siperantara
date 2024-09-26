@@ -384,7 +384,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_5"
-                                                                value="{{ $benefits[1] }}">
+                                                                value="{{ $benefits[4] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -396,7 +396,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_9"
-                                                                value="{{ $benefits[2] }}">
+                                                                value="{{ $benefits[8] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -408,7 +408,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_2"
-                                                                value="{{ $benefits[3] }}">
+                                                                value="{{ $benefits[1] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -420,7 +420,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_6"
-                                                                value="{{ $benefits[4] }}">
+                                                                value="{{ $benefits[5] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -432,7 +432,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_10"
-                                                                value="{{ $benefits[5] }}">
+                                                                value="{{ $benefits[9] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -444,7 +444,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_3"
-                                                                value="{{ $benefits[6] }}">
+                                                                value="{{ $benefits[2] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -456,7 +456,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_7"
-                                                                value="{{ $benefits[7] }}">
+                                                                value="{{ $benefits[6] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -468,7 +468,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_11"
-                                                                value="{{ $benefits[8] }}">
+                                                                value="{{ $benefits[10] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -480,7 +480,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_4"
-                                                                value="{{ $benefits[9] }}">
+                                                                value="{{ $benefits[3] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -492,7 +492,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_8"
-                                                                value="{{ $benefits[10] }}">
+                                                                value="{{ $benefits[7] }}">
                                                         </div>
                                                     </div>
                                                 </div>

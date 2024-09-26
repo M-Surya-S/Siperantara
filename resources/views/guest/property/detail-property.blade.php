@@ -252,15 +252,17 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h4 class="property-details-title-two"> Location</h4>
-                            <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s"
-                                data-wow-duration="1s">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
+                            @if ($property->link_location != '')
+                                <h4 class="property-details-title-two"> Location</h4>
+                                <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s"
+                                    data-wow-duration="1s">
+                                    <iframe
+                                        src="{{ $property->link_location }}"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4">
