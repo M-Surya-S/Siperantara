@@ -101,8 +101,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="property-details-content mb-20">
-                                            <h4 class="property-details-title-two">Description</h4>
+                                        <div class="property-details-content mb-40">
+                                            <div class="form-input-title">
+                                                <label for="Description">Description<span>*</span></label>
+                                            </div>
                                             <div class="form-input">
                                                 <textarea id="tinymce_simple_textarea" name="description" required>{{ $property->description }}</textarea>
                                             </div>
@@ -135,12 +137,11 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="lotDimensions">Lot
-                                                                dimensions:<span>*</span></label>
+                                                            <label for="lotDimensions">Lot dimensions:</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="lotDimensions" type="text" name="lot_dimensions"
-                                                                value="{{ $property->lot_dimensions }}" required>
+                                                                value="{{ $property->lot_dimensions }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -191,19 +192,6 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label
-                                                                for="numberOfVerandaBalcony">Veranda/Balcony:<span>*</span></label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input id="numberOfVerandaBalcony" type="text"
-                                                                name="veranda_balcony"
-                                                                value="{{ $property->veranda_balcony }}" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
                                                             <label for="builtYear">Year built:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
@@ -244,90 +232,88 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="livingRoom">Living
-                                                                Room<span>*</span></label>
+                                                            <label for="livingRoom">Living Room</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="livingRoom" type="text" name="living_room"
-                                                                value="{{ $property->living_room }}" required>
+                                                                value="{{ $property->living_room }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="garage">Garage <span>*</span></label>
+                                                            <label for="garage">Garage</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="garage" type="text" name="garage"
-                                                                value="{{ $property->garage }}" required>
+                                                                value="{{ $property->garage }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="diningArea">Dining
-                                                                Area<span>*</span></label>
+                                                            <label for="diningArea">Dining Area</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="diningArea" type="text" name="dining_area"
-                                                                value="{{ $property->dining_area }}" required>
+                                                                value="{{ $property->dining_area }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="bedroom">Bedroom <span>*</span></label>
+                                                            <label for="bedroom">Bedroom</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="bedroom" type="text" name="bedroom"
-                                                                value="{{ $property->bedroom }}" required>
+                                                                value="{{ $property->bedroom }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="bathroom">Bathroom <span>*</span></label>
+                                                            <label for="bathroom">Bathroom</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="bathroom" type="text" name="bathroom"
-                                                                value="{{ $property->bathroom }}" required>
+                                                                value="{{ $property->bathroom }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="gymArea">Gym Area <span>*</span></label>
+                                                            <label for="gymArea">Gym Area</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="gymArea" type="text" name="gym_area"
-                                                                value="{{ $property->gym_area }}" required>
+                                                                value="{{ $property->gym_area }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="garden">Garden <span>*</span></label>
+                                                            <label for="garden">Garden</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="garden" type="text" name="garden"
-                                                                value="{{ $property->garden }}" required>
+                                                                value="{{ $property->garden }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="parking">Parking <span>*</span></label>
+                                                            <label for="parking">Parking</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="parking" type="text" name="parking"
-                                                                value="{{ $property->parking }}" required>
+                                                                value="{{ $property->parking }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -384,7 +370,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_5"
-                                                                value="{{ $benefits[1] }}">
+                                                                value="{{ $benefits[4] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -396,7 +382,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_9"
-                                                                value="{{ $benefits[2] }}">
+                                                                value="{{ $benefits[8] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -408,7 +394,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_2"
-                                                                value="{{ $benefits[3] }}">
+                                                                value="{{ $benefits[1] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -420,7 +406,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_6"
-                                                                value="{{ $benefits[4] }}">
+                                                                value="{{ $benefits[5] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -432,7 +418,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_10"
-                                                                value="{{ $benefits[5] }}">
+                                                                value="{{ $benefits[9] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -444,7 +430,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_3"
-                                                                value="{{ $benefits[6] }}">
+                                                                value="{{ $benefits[2] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -456,7 +442,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_7"
-                                                                value="{{ $benefits[7] }}">
+                                                                value="{{ $benefits[6] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -468,7 +454,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_11"
-                                                                value="{{ $benefits[8] }}">
+                                                                value="{{ $benefits[10] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -480,7 +466,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_4"
-                                                                value="{{ $benefits[9] }}">
+                                                                value="{{ $benefits[3] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -492,7 +478,7 @@
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="advantagesList1" type="text" name="benefit_8"
-                                                                value="{{ $benefits[10] }}">
+                                                                value="{{ $benefits[7] }}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -511,10 +497,10 @@
                                             </div>
                                         </div>
                                         <div class="property-details-location mb-20">
-                                            <h4 class="property-details-title-two">Link G-Maps Location</h4>
+                                            <h4 class="property-details-title-two">Link G-Maps Location (Optional)</h4>
                                             <div class="form-input">
                                                 <input id="apartmentLocationLink" type="url" name="link_location"
-                                                    value="{{ $property->link_location }}" required>
+                                                    value="{{ $property->link_location }}">
                                             </div>
                                         </div>
                                     </div>

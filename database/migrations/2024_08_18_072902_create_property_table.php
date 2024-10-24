@@ -25,24 +25,23 @@ return new class extends Migration
             // Property Details
             $table->string('lot_area');
             $table->string('home_area');
-            $table->string('lot_dimensions');
+            $table->string('lot_dimensions')->nullable();
             $table->string('rooms');
             $table->string('beds');
             $table->string('baths');
             $table->string('floors');
-            $table->string('veranda_balcony');
             $table->string('year_built');
             $table->string('property_status');
             $table->string('certificate');
             // Property Features
-            $table->string('living_room');
-            $table->string('garage');
-            $table->string('dining_area');
-            $table->string('bedroom');
-            $table->string('bathroom');
-            $table->string('gym_area');
-            $table->string('garden');
-            $table->string('parking');
+            $table->string('living_room')->nullable();
+            $table->string('garage')->nullable();
+            $table->string('dining_area')->nullable();
+            $table->string('bedroom')->nullable();
+            $table->string('bathroom')->nullable();
+            $table->string('gym_area')->nullable();
+            $table->string('garden')->nullable();
+            $table->string('parking')->nullable();
             // Property Gallery
             $table->json('benefits');
             $table->string('link_location');

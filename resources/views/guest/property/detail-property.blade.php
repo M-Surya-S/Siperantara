@@ -79,7 +79,7 @@
                             </span>
                             <h4 class="property-details-title-two">Description</h4>
                             <div class="property-details-descrip-text">
-                                <p>{{ $property->description }}</p>
+                                <p>{!! nl2br(e($property->description)) !!}</p>
                             </div>
                             <h4 class="property-details-title-two">Property Details</h4>
                             <div class="property-details-info-list wow bdFadeInUp" data-wow-delay=".3s"
@@ -99,106 +99,110 @@
                                     <li><label>Lot Area:</label> <span>{{ $property->lot_area }} m²</span></li>
                                     <li><label>Home Area: </label> <span>{{ $property->home_area }}
                                             {{ $property->home_area == '-' ? '' : 'm²' }}</span></li>
-                                    <li><label>Lot dimensions:</label> <span>{{ $property->lot_dimensions }}</span></li>
+                                    @if ($property->lot_dimensions != null)
+                                        <li><label>Lot dimensions:</label> <span>{{ $property->lot_dimensions }}</span></li>
+                                    @endif
                                     <li><label>Certificate:</label> <span>{{ $property->certificate }}</span></li>
                                     <li><label>Year built:</label> <span>{{ $property->year_built }}</span></li>
                                 </ul>
                             </div>
                             @if ($property->property_category != 'Land')
-                                <h4 class="property-details-title-two">Property Features</h4>
-                                <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
-                                    data-wow-duration="1s">
-                                    <ul>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-modern-living"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Living Room</h6>
-                                                    <span class="descrip">{{ $property->living_room }}</span>
+                                @if ($property->living_room != null && $property->garage != null && $property->dining_area != null && $property->bedroom != null && $property->bathroom != null && $property->gym_area != null && $property->garden != null && $property->parking != null ) 
+                                    <h4 class="property-details-title-two">Property Features</h4>
+                                    <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
+                                        data-wow-duration="1s">
+                                        <ul>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-modern-living"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Living Room</h6>
+                                                        <span class="descrip">{{ $property->living_room == null ? '-' : $property->living_room }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-garage"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Garage</h6>
-                                                    <span class="descrip">{{ $property->garage }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-garage"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Garage</h6>
+                                                        <span class="descrip">{{ $property->garage == null ? '-' : $property->garage }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-dining-area"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Dining Area</h6>
-                                                    <span class="descrip">{{ $property->dining_area }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-dining-area"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Dining Area</h6>
+                                                        <span class="descrip">{{ $property->dining_area == null ? '-' : $property->dining_area }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-bedroom"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Bedroom</h6>
-                                                    <span class="descrip">{{ $property->bedroom }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-bedroom"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Bedroom</h6>
+                                                        <span class="descrip">{{ $property->bedroom == null ? '-' : $property->bedroom }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-bathroom"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Bathroom</h6>
-                                                    <span class="descrip">{{ $property->bathroom }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-bathroom"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Bathroom</h6>
+                                                        <span class="descrip">{{ $property->bathroom == null ? '-' : $property->bathroom }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-gym-area"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Gym Area</h6>
-                                                    <span class="descrip">{{ $property->gym_area }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-gym-area"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Gym Area</h6>
+                                                        <span class="descrip">{{ $property->gym_area == null ? '-' : $property->gym_area }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-garden"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Garden</h6>
-                                                    <span class="descrip">{{ $property->garden }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-garden"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Garden</h6>
+                                                        <span class="descrip">{{ $property->garden == null ? '-' : $property->garden }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="property-details-feature-list-item">
-                                                <span class="icon">
-                                                    <i class="icon-parking-area"></i>
-                                                </span>
-                                                <div>
-                                                    <h6>Parking</h6>
-                                                    <span class="descrip">{{ $property->garden }}</span>
+                                            </li>
+                                            <li>
+                                                <div class="property-details-feature-list-item">
+                                                    <span class="icon">
+                                                        <i class="icon-parking-area"></i>
+                                                    </span>
+                                                    <div>
+                                                        <h6>Parking</h6>
+                                                        <span class="descrip">{{ $property->parking == null ? '-' : $property->parking }}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                @endif
                             @endif
                             <h4 class="property-details-title-two"> Benefits </h4>
                             <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s"
@@ -252,15 +256,17 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h4 class="property-details-title-two"> Location</h4>
-                            <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s"
-                                data-wow-duration="1s">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60970.02123903755!2d-74.01588829728814!3d40.707092808586985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1712226046538!5m2!1sen!2sbd"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
+                            @if ($property->link_location != '')
+                                <h4 class="property-details-title-two"> Location</h4>
+                                <div class="property-details-google-map wow bdFadeInUp" data-wow-delay=".3s"
+                                    data-wow-duration="1s">
+                                    <iframe
+                                        src="{{ $property->link_location }}"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4">

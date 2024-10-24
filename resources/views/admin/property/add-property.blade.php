@@ -113,7 +113,9 @@
                                             </div>
                                         </div>
                                         <div class="property-details-content mb-20">
-                                            <h4 class="property-details-title-two">Description</h4>
+                                            <div class="form-input-title">
+                                                <label for="Description">Description<span>*</span></label>
+                                            </div>
                                             <div class="form-input">
                                                 <textarea id="tinymce_simple_textarea" name="description" placeholder="Deskripsi dari properti" required></textarea>
                                             </div>
@@ -146,13 +148,11 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="lotDimensions">Lot
-                                                                dimensions:<span>*</span></label>
+                                                            <label for="lotDimensions">Lot dimensions:</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="lotDimensions" type="text"
-                                                                name="lot_dimensions" placeholder="Contoh: 10m x 10m"
-                                                                required>
+                                                                name="lot_dimensions" placeholder="Contoh: 10m x 10m">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -203,18 +203,6 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="numberOfVerandaBalcony">Veranda/Balcony:</label>
-                                                        </div>
-                                                        <div class="form-input">
-                                                            <input id="numberOfVerandaBalcony" type="text"
-                                                                name="veranda_balcony"
-                                                                placeholder="Jumlah Veranda/Balcony" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-3 col-lg-4 col-md-6">
-                                                    <div class="form-input-box">
-                                                        <div class="form-input-title">
                                                             <label for="builtYear">Year built:<span>*</span></label>
                                                         </div>
                                                         <div class="form-input">
@@ -256,90 +244,88 @@
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="livingRoom">Living
-                                                                Room<span>*</span></label>
+                                                            <label for="livingRoom">Living Room</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="livingRoom" type="text" name="living_room"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="garage">Garage <span>*</span></label>
+                                                            <label for="garage">Garage</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="garage" type="text" name="garage"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="diningArea">Dining
-                                                                Area<span>*</span></label>
+                                                            <label for="diningArea">Dining Area</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="diningArea" type="text" name="dining_area"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="bedroom">Bedroom <span>*</span></label>
+                                                            <label for="bedroom">Bedroom</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="bedroom" type="text" name="bedroom"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="bathroom">Bathroom <span>*</span></label>
+                                                            <label for="bathroom">Bathroom</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="bathroom" type="text" name="bathroom"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="gymArea">Gym Area <span>*</span></label>
+                                                            <label for="gymArea">Gym Area</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="gymArea" type="text" name="gym_area"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="garden">Garden <span>*</span></label>
+                                                            <label for="garden">Garden</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="garden" type="text" name="garden"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                                     <div class="form-input-box">
                                                         <div class="form-input-title">
-                                                            <label for="parking">Parking <span>*</span></label>
+                                                            <label for="parking">Parking</label>
                                                         </div>
                                                         <div class="form-input">
                                                             <input id="parking" type="text" name="parking"
-                                                                placeholder="Contoh: 5m x 3m" required>
+                                                                placeholder="Contoh: 5m x 3m">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -486,10 +472,9 @@
                                             </div>
                                         </div>
                                         <div class="property-details-location mb-20">
-                                            <h4 class="property-details-title-two mb-5">Link G-Maps Location</h4>
+                                            <h4 class="property-details-title-two mb-5">Link G-Maps Location (Optional)</h4>
                                             <div class="form-input">
-                                                <input id="apartmentLocationLink" type="url" name="link_location"
-                                                    required>
+                                                <input id="apartmentLocationLink" type="url" name="link_location">
                                             </div>
                                         </div>
                                     </div>
