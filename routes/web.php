@@ -107,3 +107,14 @@ Route::get('/blog/detail/{id}', [BlogHomeController::class, 'show'])->name('blog
 Route::get('/contact', function () {
     return view('guest.contact', ['title' => 'Contact']);
 });
+
+// Maintenance
+Route::get('/maintenance', function () {
+    return view('new.maintenance');
+});
+
+// Maintenance
+Route::get('/error', function () {
+    return view('new.error');
+});
+
