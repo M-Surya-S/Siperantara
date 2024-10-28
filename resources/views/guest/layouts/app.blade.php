@@ -19,32 +19,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/spacing.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-
-    <style>
-        /* CSS untuk tombol WhatsApp melayang */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            z-index: 1000;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 
 <body>
@@ -153,7 +127,7 @@
     @include('guest.layouts.partial.footer')
 
     <!-- Tombol WhatsApp Melayang -->
-    <a href="https://wa.me/628XXXXXXXXXX" class="whatsapp-button" target="_blank" title="Chat via WhatsApp">
+    <a href="https://wa.me/628115171010" class="whatsapp-button" target="_blank" title="Chat via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
