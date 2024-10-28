@@ -13,6 +13,7 @@ use App\Http\Controllers\AgentHomeController;
 use App\Http\Controllers\BlogHomeController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeControlller;
+use App\Http\Controllers\NewDevelopController;
 use App\Http\Controllers\PropertyHomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -79,12 +80,9 @@ Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->
 Route::post('/property/detail/{id}', [PropertyHomeController::class, 'sendMessage'])->name('send-message-property');
 Route::get('/property/sell', [SellPropertyController::class, 'create']);
 Route::post('/property/sell', [SellPropertyController::class, 'store'])->name('sell-property.store');
-Route::get('/property/new-develop', function () {
-    return view('guest.property.new-develop', ['title' => 'New Develop']);
-})->name('new-develop');
-Route::get('/property/new-develop/detail', function () {
-    return view('guest.property.detail-new-develop', ['title' => 'New Develop']);
-})->name('detail-new-develop');
+Route::get('/property/new-develop', [NewDevelopController::class, 'index'])->name('new-develop');
+Route::get('/property/new-develop/detail', [NewDevelopController::class, 'detail'])->name('detail-new-develop');
+Route::get('/property/new-develop/detail/download_flyer', [NewDevelopController::class, 'download_flyer'])->name('download-flyer');
 
 // Agent
 Route::get('/agent', [AgentHomeController::class, 'index']);

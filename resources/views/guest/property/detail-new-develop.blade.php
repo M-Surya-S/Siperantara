@@ -4,7 +4,7 @@
         <!-- Breadcrumb area start -->
         <section class="bd-breadcrumb-area p-relative fix">
             <!-- breadcrumb background image -->
-            <div class="bd-breadcrumb-bg" data-background="assets/images/breadcrumb/breadcrumb-thumb-01.png"></div>
+            <div class="bd-breadcrumb-bg-new-develop" data-background="{{ asset('assets/images/breadcrumb/mentari-village/cluster-garuda.jpg') }}"></div>
             <div class="bd-breadcrumb-wrapper p-relative">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -165,24 +165,92 @@
                             <h4 class="property-details-title-two">Gallery</h4>
                             <div class="property-details-gallery wow bdFadeInUp" data-wow-delay=".3s"
                                 data-wow-duration="1s">
-                                <div class="row g-5">
-                                    <div class="col-md-6">
-                                        <div class="property-details-gallery-thumb">
-                                            <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/map.png') }}"
-                                                alt="image not found">
+                                    <div class="row g-5">
+                                        <div class="col-12">
+                                            <div class="property-details-wrapper">
+                                                <div class="swiper property-details-active" style="overflow: hidden;">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-01.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-02.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-03.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-04.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-05.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-06.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class=" property-details-item">
+                                                                <div class="new-develop-details-item-thumb">
+                                                                    <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/cluster-garuda-07.jpg') }}" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- If we need navigation buttons -->
+                                                    <div class="property-details-navigation d-none d-sm-block">
+                                                        <button class="property-details-button-prev circle-btn is-bg-white"><i
+                                                    class="fa-regular fa-arrow-left-long"></i></button>
+                                                        <button class="property-details-button-next circle-btn is-bg-white"><i
+                                                    class="fa-regular fa-arrow-right-long"></i></button>
+                                                    </div>
+                                                    <!-- If we need pagination -->
+                                                    <div class="pagination-wrapper d-block d-sm-none">
+                                                        <div class="bd-swiper-dot text-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        {{-- <div class="col-md-6">
+                                            <div class="property-details-gallery-thumb">
+                                                <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/map.png') }}"
+                                                    alt="image not found">
+                                            </div>
+                                        </div> --}}
+                                        {{-- <div class="col-md-6">
+                                            <div class="property-details-gallery-thumb mb-30">
+                                                <img src="{{ asset('assets/images/gallery/property-details-gallery-02.png') }}"
+                                                    alt="image not found">
+                                            </div>
+                                            <div class="property-details-gallery-thumb">
+                                                <img src="{{ asset('assets/images/gallery/property-details-gallery-03.png') }}"
+                                                    alt="image not found">
+                                            </div>
+                                        </div> --}}
                                     </div>
-                                    {{-- <div class="col-md-6">
-                                        <div class="property-details-gallery-thumb mb-30">
-                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-02.png') }}"
-                                                alt="image not found">
-                                        </div>
-                                        <div class="property-details-gallery-thumb">
-                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-03.png') }}"
-                                                alt="image not found">
-                                        </div>
-                                    </div> --}}
-                                </div>
                             </div>
                             <h4 class="property-details-title-two"> Fasilitas </h4>
                             <div class="property-details-benefits wow bdFadeInUp" data-wow-delay=".3s"
@@ -255,7 +323,7 @@
                                 </div>
                             </div>
                             <div class="property-details-btn">
-                                <a href="contact.html" class="bd-btn btn-style btn-hover-x hover-black">
+                                <a href="{{ route('download-flyer') }}" class="bd-btn btn-style btn-hover-x hover-black">
                                     Download Flyer
                                 </a>
                             </div>

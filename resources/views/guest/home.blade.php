@@ -204,6 +204,25 @@
                             </div>
                             <div class="thumb-one">
                                 <figure>
+                                    <img id="main-image" src="{{ asset('assets/images/development/cluster-garuda/garuda-1.png') }}" alt="image">
+                                </figure>
+                            </div>
+                            <div class="thumb-two-inner">
+                                <div class="thumb-two">
+                                    <figure>
+                                        <img id="image-two" src="{{ asset('assets/images/development/cluster-garuda/garuda-2.png') }}" alt="image">
+                                    </figure>
+                                </div>
+                                <div class="thumb-two">
+                                    <figure>
+                                        <img id="image-three"
+                                            src="{{ asset('assets/images/development/cluster-garuda/garuda-3.png') }}" alt="image">
+                                    </figure>
+                                </div>
+                            </div>
+                            {{-- documentation js --}}
+                            {{-- <div class="thumb-one">
+                                <figure>
                                     <img id="main-image" src="{{ asset('assets/images/development/townville-1.png') }}"
                                         data-townville-src="{{ asset('assets/images/development/townville-1.png') }}"
                                         data-nordville-src="{{ asset('assets/images/development/nordville-1.png') }}"
@@ -231,7 +250,7 @@
                                             alt="image">
                                     </figure>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
