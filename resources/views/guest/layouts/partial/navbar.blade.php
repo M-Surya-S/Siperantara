@@ -18,16 +18,16 @@
                         </li>
 
                         <li class="menu-item-has-children">
-                            <a href="/property">Property</a>
+                            <a>Property</a>
                             <ul class="dp-menu">
-                                <li><a href="/property/development">Development</a></li>
-                                <li><a href="/property/search?status=buy-or-rent">Buy or Rent</a></li>
+                                <li><a href="/property/development">New Develop</a></li>
+                                <li><a href="/property">Buy or Rent</a></li>
                                 <li><a href="/property/sell">Sell</a></li>
                             </ul>
                         </li>
 
                         <li class="menu-item-has-children">
-                            <a href="/agent">Agent</a>
+                            <a>Agent</a>
                             <ul class="dp-menu">
                                 <li><a href="/agent">Find Agent</a></li>
                                 <li><a href="/agent/join">Join us</a></li>
