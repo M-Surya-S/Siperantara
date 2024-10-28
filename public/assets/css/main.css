@@ -4844,6 +4844,32 @@ input:checked + .switch:before {
 /*----------------------------------------*/
 /*  2.1 Back to top
 /*----------------------------------------*/
+
+/* CSS untuk membuat tombol WhatsApp melayang di kanan bawah */
+.whatsapp-button {
+    position: relative;
+    bottom: 40px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    z-index: 100 !important;
+
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
 .back-to-top {
   display: flex;
   align-items: center;
@@ -4851,7 +4877,7 @@ input:checked + .switch:before {
   height: 35px;
   background: transparent;
   position: fixed;
-  bottom: 60px;
+  bottom: 150px;
   right: -12px;
   z-index: 99;
   text-align: center;
@@ -4864,7 +4890,7 @@ input:checked + .switch:before {
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
-  bottom: 70px;
+  bottom: 135px;
 }
 
 .back-to-top-text {

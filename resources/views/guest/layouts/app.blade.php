@@ -7,7 +7,6 @@
     <title>{{ $title == 'Home' ? '' : $title .' | ' }}Siperantara</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
@@ -20,9 +19,33 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/spacing.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+    <style>
+        /* CSS untuk tombol WhatsApp melayang */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-
-
 
 <body>
     <!-- Pre loader start -->
@@ -36,16 +59,15 @@
         </div>
     </div>
     <!-- Pre loader end -->
+
     <!-- Cursor Animation -->
     <div class="cursor1"></div>
 
     <!-- Back to top start -->
-
     <a href="#" data-target="html" class="back-to-target back-to-top">
         <span class="back-to-top-text">back top</span>
         <span class="back-to-top-wrapper"><span class="back-to-top-inner" style="width: 4.05654%;"></span></span>
     </a>
-
     <!-- Back to top end -->
 
     <!-- Offcanvas area start -->
@@ -72,11 +94,7 @@
                     <div class="mobile-menu fix mb-25"></div>
                     <div class="offcanvas-about d-lg-block mb-25">
                         <h4 class="offcanvas-title-meta">About SIPERANTARA</h4>
-                        <p style="text-align: justify;">In a landscape oversaturated with traditional real estate firms, the world didn’t need just another brokerage. It craved something new, something visionary. It required a model that dared to challenge the outdated norms, one that empowers rather than stifles individual potential. We sought to build a community of forward-thinkers, united by a shared understanding of technology’s power and the importance of meaningful connections. Welcome to Brokerage 3.0—a paradigm shift designed to unsettle the old guard without apologies.</p>
-
-                        <p style="text-align: justify">Born amidst the turmoil of a global pandemic, where others saw obstacles, we identified opportunities. With the momentum of being Balikpapan top-ranked sales team behind us, Siperantara Real Estate. emerged as the first Brokerage 3.0—a pioneering force in real estate in Balikpapan.</p>
-
-                        <p style="text-align: justify">We believe that potential is everywhere—in people, properties, and even entire industries. But uncovering this hidden potential requires a fresh perspective. At Siperantara., we are fueled by creativity, collaboration, tenacity, and an unyielding optimism. We challenge the status quo with confidence and pursue what’s possible with relentless determination.</p>
+                        <p style="text-align: justify;">In a landscape oversaturated with traditional real estate firms, the world didn’t need just another brokerage. It craved something new, something visionary...</p>
                     </div>
                     <div class="offcanvas-contact mb-25">
                         <h4 class="offcanvas-title-meta">Contact Info</h4>
@@ -88,7 +106,7 @@
                                     </a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">Komplek Balikpapan Permai...</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
@@ -123,7 +141,7 @@
     </div>
     <div class="offcanvas-overlay"></div>
     <div class="offcanvas-overlay-white"></div>
-    <!-- Offcanvas area start -->
+    <!-- Offcanvas area end -->
 
     {{-- navbar --}}
     @include('guest.layouts.partial.navbar')
@@ -133,6 +151,11 @@
 
     {{-- footer --}}
     @include('guest.layouts.partial.footer')
+
+    <!-- Tombol WhatsApp Melayang -->
+    <a href="https://wa.me/628XXXXXXXXXX" class="whatsapp-button" target="_blank" title="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- JS here -->
     <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
