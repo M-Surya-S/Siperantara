@@ -19833,7 +19833,7 @@ blockquote cite::before {
   position: absolute;
   transform: translateY(-50%);
   z-index: 2;
-  left: 90px;
+  left: 10px;
 }
 .property-details-wrapper .property-details-navigation button.circle-btn {
   font-size: 20px;
@@ -19866,7 +19866,7 @@ blockquote cite::before {
 }
 .property-details-wrapper .property-details-navigation button.property-details-button-next {
   left: auto;
-  right: 90px;
+  right: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .property-details-wrapper .property-details-navigation button.property-details-button-next {
