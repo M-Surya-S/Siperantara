@@ -79,9 +79,12 @@ Route::get('/property/detail/{id}', [PropertyHomeController::class, 'detail'])->
 Route::post('/property/detail/{id}', [PropertyHomeController::class, 'sendMessage'])->name('send-message-property');
 Route::get('/property/sell', [SellPropertyController::class, 'create']);
 Route::post('/property/sell', [SellPropertyController::class, 'store'])->name('sell-property.store');
-Route::get('/property/development', function () {
-    return view('guest.property.developments', ['title' => 'Development']);
+Route::get('/property/new-develop', function () {
+    return view('guest.property.new-develop', ['title' => 'New Develop']);
 });
+Route::get('/property/new-develop/detail', function () {
+    return view('guest.property.detail-new-develop', ['title' => 'New Develop']);
+})->name('detail-new-develop');
 
 // Agent
 Route::get('/agent', [AgentHomeController::class, 'index']);
