@@ -81,7 +81,7 @@ Route::get('/property/sell', [SellPropertyController::class, 'create']);
 Route::post('/property/sell', [SellPropertyController::class, 'store'])->name('sell-property.store');
 Route::get('/property/new-develop', function () {
     return view('guest.property.new-develop', ['title' => 'New Develop']);
-});
+})->name('new-develop');
 Route::get('/property/new-develop/detail', function () {
     return view('guest.property.detail-new-develop', ['title' => 'New Develop']);
 })->name('detail-new-develop');

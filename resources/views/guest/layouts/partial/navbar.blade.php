@@ -20,7 +20,7 @@
                         <li class="menu-item-has-children">
                             <a>Property</a>
                             <ul class="dp-menu">
-                                <li><a href="/property/development">New Develop</a></li>
+                                <li><a href="{{ route('new-develop') }}">New Develop</a></li>
                                 <li><a href="/property">Buy or Rent</a></li>
                                 <li><a href="/property/sell">Sell</a></li>
                             </ul>
