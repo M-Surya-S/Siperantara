@@ -121,13 +121,13 @@
                             <div class="section-title-wrapper anim-wrapper animation-style-3 mb-20">
                                 <span class="section-subtitle uppercase">
                                     <i class="icon-home"></i>
-                                    Sinar Mas Land
+                                    PT. BUMI KARYA MENTARI
                                 </span>
-                                <h2 class="section-title title-animation" id="main-title">Grand City<br>Balikpapan</h2>
+                                <h2 class="section-title title-animation" id="main-title">Cluster Garuda<br>at Mentari Village</h2>
                             </div>
                             <div class="about-tab">
                                 <div class="bd-tab">
-                                    <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                                    {{-- <ul class="nav nav-tabs" id="myTab1" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="townville-tab" data-bs-toggle="tab"
                                                 data-bs-target="#townville-tab-pane" type="button" role="tab"
@@ -143,19 +143,32 @@
                                                 data-bs-target="#hayfield-tab-pane" type="button" role="tab"
                                                 aria-controls="hayfield-tab-pane" aria-selected="false">Hayfield</button>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="townville-tab-pane" role="tabpanel"
                                             aria-labelledby="townville-tab" tabindex="0">
                                             <div class="about-tab-contnent">
-                                                <p class="description">Townville, the first premium cluster in Balikpapan,
-                                                    offers a minimalist tropical design with lake views, smart home
-                                                    features, and a strategic location near key facilities. It provides a
-                                                    perfect blend of modern comfort, nature, and long-term investment value
-                                                    in the Grand City Balikpapan area.</p>
+                                                <p class="description">Cluster Garuda di Mentari Village, Balikpapan, 
+                                                    adalah pilihan hunian premium yang terjangkau untuk keluarga modern. 
+                                                    Dirancang dengan arsitektur elegan dan layout fungsional, setiap unit 
+                                                    menawarkan spesifikasi premium, termasuk bahan bangunan berkualitas 
+                                                    dan solusi hemat energi. Cluster eksklusif ini menghadirkan kenyamanan 
+                                                    dan keanggunan, menciptakan gaya hidup terbaik di komunitas yang berkembang.</p>
+                                                <a href="{{ route('detail-new-develop') }}" class="bd-animated-btn style-two mt-20">
+                                                    <svg viewBox="0 0 24 24" class="arrow-right" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="bd-animated-btn-text">Explore More</span>
+                                                    <span class="bd-animated-btn-circle"></span>
+                                                    <svg viewBox="0 0 24 24" class="arrow-left" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="nordville-tab-pane" role="tabpanel"
+                                        {{-- <div class="tab-pane fade" id="nordville-tab-pane" role="tabpanel"
                                             aria-labelledby="nordville-tab" tabindex="0">
                                             <div class="about-tab-contnent">
                                                 <p class="description">Nordville in Grand City Balikpapan offers spacious
@@ -174,19 +187,7 @@
                                                     natural living and sustainable development, harmonizing with the vibrant
                                                     city life.</p>
                                             </div>
-                                        </div>
-                                        <a href="{{ route('detail-new-develop') }}" class="bd-animated-btn style-two mt-20">
-                                            <svg viewBox="0 0 24 24" class="arrow-right" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                                </path>
-                                            </svg>
-                                            <span class="bd-animated-btn-text">Explore More</span>
-                                            <span class="bd-animated-btn-circle"></span>
-                                            <svg viewBox="0 0 24 24" class="arrow-left" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                                </path>
-                                            </svg>
-                                        </a>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>

@@ -11,11 +11,11 @@
                         <div class="col-xl-10">
                             <div class="bd-breadcrumb">
                                 <div class="bd-breadcrumb-content text-center">
-                                    <h1 class="bd-breadcrumb-title">Mentari Village</h1>
+                                    {{-- <h1 class="bd-breadcrumb-title">Mentari Village</h1>
                                     <div class="bd-breadcrumb-list">
                                         <span><a href="index.html"><i class="icon-home"></i>Home</a></span>
                                         <span>New Development</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -56,15 +56,59 @@
                                     kepraktisan yang sempurna, Cluster ini menghadirkan
                                     pengalaman hunian yang tak tertandingi di Balikpapan.</p>
                             </div>
-                            <h4 class="property-details-title-two">Property Types (LB/LT)</h4>
+                            <div class="counter-wrapper style-two">
+                                <div class="counter-item wow bdFadeInUp" data-wow-delay=".3s"
+                                    data-wow-duration="1s">
+                                    <span class="icon"><i class="icon-buy-house"></i></span>
+                                    <div class="content">
+                                        <p class="description">Harga Mulai</p>
+                                        <h2 class="title"><span data-purecounter-duration="1"
+                                                data-purecounter-end="300" class="purecounter">300</span>
+                                        </h2>
+                                        <p class="description">Juta-an</p>
+                                    </div>
+                                    <div class="apartment-counter-divider"></div>
+                                </div>
+                                <div class="apartment-counter-divider"></div>
+                                <div class="counter-item wow bdFadeInUp" data-wow-delay=".5s"
+                                    data-wow-duration="1s">
+                                    <span class="icon"><i class="icon-buyers"></i></span>
+                                    <div class="content">
+                                        <p class="description">DP</p>
+                                        <h2 class="title"><span data-purecounter-duration="1"
+                                                data-purecounter-end="0" class="purecounter">0%</span>%
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="apartment-counter-divider"></div>
+                                <div class="counter-item wow bdFadeInUp" data-wow-delay=".7s"
+                                    data-wow-duration="1s">
+                                    <span class="icon"><i class="icon-efficiency"></i></span>
+                                    <div class="content">
+                                        <p class="description">Cicilan</p>
+                                        <h2 class="title"><span data-purecounter-duration="1"
+                                            data-purecounter-end="2" class="purecounter">2 Juta-an</span>
+                                        </h2>
+                                        <p class="description">Juta-an</p>
+                                    </div>
+                                </div>
+                                <div class="apartment-counter-top-line"></div>
+                                <div class="apartment-counter-bottom-line"></div>
+                            </div>
+                            {{-- <div class="property-details-btn">
+                                <a href="contact.html" class="bd-btn btn-style btn-hover-x hover-black">
+                                    Download Flyer
+                                </a>
+                            </div> --}}
+                            <h4 class="property-details-title-two mt-40">Type Unit (LB/LT)</h4>
                             <div class="property-details-feature wow bdFadeInUp" data-wow-delay=".3s"
                                 data-wow-duration="1s">
-                                <ul>
+                                <ul class="mb-30">
                                     <li>
                                         <div class="property-details-feature-list-item">
                                             <span class="icon"><i class="icon-villa"></i></span>
                                             <div>
-                                                <h6>Type</h6>
+                                                <h6>STD</h6>
                                                 <span class="descrip">30/60 sq meter</span>
                                             </div>
                                         </div>
@@ -73,7 +117,7 @@
                                         <div class="property-details-feature-list-item">
                                             <span class="icon"><i class="icon-villa"></i></span>
                                             <div>
-                                                <h6>Type</h6>
+                                                <h6>Hook</h6>
                                                 <span class="descrip">30/82 sq meter</span>
                                             </div>
                                         </div>
@@ -82,7 +126,7 @@
                                         <div class="property-details-feature-list-item">
                                             <span class="icon"><i class="icon-villa"></i></span>
                                             <div>
-                                                <h6>Type</h6>
+                                                <h6>Hook</h6>
                                                 <span class="descrip">30/119 sq meter</span>
                                             </div>
                                         </div>
@@ -91,8 +135,28 @@
                                         <div class="property-details-feature-list-item">
                                             <span class="icon"><i class="icon-villa"></i></span>
                                             <div>
-                                                <h6>Type</h6>
+                                                <h6>Hook</h6>
                                                 <span class="descrip">30/127 sq meter</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon"><i class="icon-villa"></i></span>
+                                            <div>
+                                                <h6>ROW</h6>
+                                                <span class="descrip">30/60 sq meter</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="property-details-feature-list-item">
+                                            <span class="icon"><i class="icon-villa"></i></span>
+                                            <div>
+                                                <h6>Taman</h6>
+                                                <span class="descrip">30/60 sq meter</span>
                                             </div>
                                         </div>
                                     </li>
@@ -104,20 +168,20 @@
                                 <div class="row g-5">
                                     <div class="col-md-6">
                                         <div class="property-details-gallery-thumb">
-                                            <img src="assets/images/gallery/property-details-gallery-01.png"
+                                            <img src="{{ asset('assets/images/gallery/mentari-village/cluster-garuda/map.png') }}"
                                                 alt="image not found">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    {{-- <div class="col-md-6">
                                         <div class="property-details-gallery-thumb mb-30">
-                                            <img src="assets/images/gallery/property-details-gallery-02.png"
+                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-02.png') }}"
                                                 alt="image not found">
                                         </div>
                                         <div class="property-details-gallery-thumb">
-                                            <img src="assets/images/gallery/property-details-gallery-03.png"
+                                            <img src="{{ asset('assets/images/gallery/property-details-gallery-03.png') }}"
                                                 alt="image not found">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             <h4 class="property-details-title-two"> Fasilitas </h4>
@@ -143,18 +207,6 @@
                                             </span>
                                             Jogging Track
                                         </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Akses PDAM
-                                        </li>
-                                        <li>
-                                            <span class="list-icon">
-                                                <i class="fa-solid fa-check"></i>
-                                            </span>
-                                            Supermarket Maxi
-                                        </li>
                                     </ul>
                                 </div>
                                 <div class="property-details-benefits-list">
@@ -177,84 +229,34 @@
                                             </span>
                                             Internet
                                         </li>
+                                    </ul>
+                                </div>
+                                <div class="property-details-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Supermarket Maxi
+                                        </li>
+                                        <li>
+                                            <span class="list-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </span>
+                                            Akses PDAM
+                                        </li>
                                         <li>
                                             <span class="list-icon">
                                                 <i class="fa-solid fa-check"></i>
                                             </span>
                                             Pusat Kuliner dalam kawasan
                                         </li>
-
                                     </ul>
-                                </div>
-                            </div>
-                            <h4 class="property-details-title-two"> Working Process </h4>
-                            <div class="property-details-working-process">
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".3s">
-                                    <div class="icon">
-                                        <span><i class="icon-solution"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Easy Solution
-                                        </h3>
-                                        <p class="description">Choose us for your real estate needs.</p>
-                                    </div>
-                                </div>
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".4s">
-                                    <div class="icon">
-                                        <span><i class="icon-flexibility"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Full Flexibility
-                                        </h3>
-                                        <p class="description">Investing in multi-unit properties as duplexes.</p>
-                                    </div>
-                                </div>
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".5s">
-                                    <div class="icon">
-                                        <span><i class="icon-efficiency"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Cost Effective
-                                        </h3>
-                                        <p class="description">Consider not only the purchase price repairs.</p>
-                                    </div>
-                                </div>
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".6s">
-                                    <div class="icon">
-                                        <span><i class="icon-eco-friendly"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Eco friendly
-                                        </h3>
-                                        <p class="description">Features such as green spaces, energy-efficient.</p>
-                                    </div>
-                                </div>
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".7s">
-                                    <div class="icon">
-                                        <span><i class="icon-modern-living"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Modern Living
-                                        </h3>
-                                        <p class="description">The quality of real state and materials building.</p>
-                                    </div>
-                                </div>
-                                <div class="property-details-working-process-item wow fadeIn" data-wow-delay=".8s">
-                                    <div class="icon">
-                                        <span><i class="icon-location"></i></span>
-                                    </div>
-                                    <div class="content">
-                                        <h3 class="title">Prime Location
-                                        </h3>
-                                        <p class="description">The core feature of any real estate property area.</p>
-                                    </div>
                                 </div>
                             </div>
                             <div class="property-details-btn">
                                 <a href="contact.html" class="bd-btn btn-style btn-hover-x hover-black">
-                                    <span>
-                                    </span>
-                                    Contact us
+                                    Download Flyer
                                 </a>
                             </div>
                         </div>
@@ -273,7 +275,6 @@
                                             <li><a>Tempat Wisata <span>5 Min</span></a></li>
                                             <li><a>Fasilitas Olahraga<span>10 Min</span></a></li>
                                             <li><a>Fasilitas Pendidik<span>5 Min</span></a></li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -281,20 +282,12 @@
                             <div class="sidebar-widget widget_categories mb-35">
                                 <h3 class="sidebar-widget-title">Scan Lokasi</h3>
                                 <div class="sidebar-widget-content">
-                                    <div class="list">
-                                        <ul>
-                                            <li><a>Akses Tol IKN <span>10 Min</span></a></li>
-                                            <li><a>Area Industri <span>10 Min</span></a></li>
-                                            <li><a>SPBU <span>10 Min</span></a></li>
-                                            <li><a>Tempat Wisata <span>5 Min</span></a></li>
-                                            <li><a>Fasilitas Olahraga<span>10 Min</span></a></li>
-                                            <li><a>Fasilitas Pendidik<span>5 Min</span></a></li>
-
-                                        </ul>
+                                    <div class="property-details-gallery-thumb">
+                                        <img src="{{ asset('assets/images/qr/qr-cluster-garuda-mentari-village.jpg') }}"
+                                            alt="image not found">
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
