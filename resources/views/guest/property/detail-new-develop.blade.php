@@ -31,7 +31,7 @@
                 <div class="row g-5">
                     <div class="col-xl-8 col-lg-8">
                         <div class="property-details-content-inner">
-                            <h2 class="property-details-title has-max-width">Cluster Garuda</h2>
+                            <h2 class="property-details-title has-max-width"><span style="font-family: 'tangerine', sans-serif; color: #0A2735;">Cluster Garuda</span></h2>
                             <span class="property-details-location">
                                 <i class="fa-regular fa-location-dot"></i>
                                 KM 21, Karang Joang, Kec. Balikpapan Utara
