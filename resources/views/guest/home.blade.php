@@ -119,11 +119,11 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-5">
                         <div class="about-content style-one">
                             <div class="section-title-wrapper anim-wrapper animation-style-3 mb-20">
-                                <span class="section-subtitle uppercase">
+                                <span class="section-subtitle uppercase" style="line-height: 2">
                                     <i class="icon-home"></i>
                                     PT. BUMI KARYA MENTARI
                                 </span>
-                                <h2 class="section-title title-animation" id="main-title">Cluster Garuda<br>at Mentari Village</h2>
+                                <h2 class="section-title title-animation" id="main-title" style="line-height: 0.6"><span style="font-family: 'tangerine', sans-serif; color: #0A2735;">Cluster Garuda</span><br><span style="font-size: 20px">at <span style="color: #C1953A ;">Mentari Village</span></span></h2>
                             </div>
                             <div class="about-tab">
                                 <div class="bd-tab">
