@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: siperantara-mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: '${DB_DATABASE:-siperantara}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
