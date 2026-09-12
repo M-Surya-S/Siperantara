@@ -1,248 +1,142 @@
 @extends('admin.layouts.app')
 
 @section('content-admin')
-    <div class="app-content-wrapper">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="card-wrapper">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center gap-30">
-                            <div class="card-icon">
-                                <span><i class="fa-sharp fa-thin fa-buildings"></i></span>
-                            </div>
-                            <div class="card-title-wrap">
-                                <h6 class="card-subtitle mb-5">Total Properties</h6>
-                                <div class="d-flex flex-wrap align-items-end gap-10">
-                                    <h4 class="card-title">313</h4>
-                                    <span class="card-desc">
-                                        <span class="price-increase">
-                                            <i class="fa-light fa-arrow-up"></i>
-                                            +2.15%</span> Than Last Month
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="card-wrapper">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center gap-30">
-                            <div class="card-icon">
-                                <span><i class="fa-light fa-users"></i></span>
-                            </div>
-                            <div class="card-title-wrap">
-                                <h6 class="card-subtitle mb-5">Total Customer</h6>
-                                <div class="d-flex flex-wrap align-items-end gap-10">
-                                    <h4 class="card-title">313</h4>
-                                    <span class="card-desc">
-                                        <span class="price-decrease">
-                                            <i class="fa-light fa-arrow-down"></i>
-                                            +2.15%</span> Than Last Month
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="card-wrapper">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center gap-30">
-                            <div class="card-icon">
-                                <span><i class="fa-thin fa-badge-check"></i></span>
-                            </div>
-                            <div class="card-title-wrap">
-                                <h6 class="card-subtitle mb-5">Properties for Sale</h6>
-                                <div class="d-flex flex-wrap align-items-end gap-10">
-                                    <h4 class="card-title">313</h4>
-                                    <span class="card-desc">
-                                        <span class="price-increase">
-                                            <i class="fa-light fa-arrow-up"></i>
-                                            +2.15%</span> Than Last Month
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="card-wrapper">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center gap-30">
-                            <div class="card-icon">
-                                <span><i class="fa-sharp fa-light fa-tag"></i></span>
-                            </div>
-                            <div class="card-title-wrap">
-                                <h6 class="card-subtitle mb-5">Properties for Rent</h6>
-                                <div class="d-flex flex-wrap align-items-end gap-10">
-                                    <h4 class="card-title">313</h4>
-                                    <span class="card-desc">
-                                        <span class="price-increase">
-                                            <i class="fa-light fa-arrow-up"></i>
-                                            +2.15%</span> Than Last Month
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-                <div class="card-wrapper">
-                    <div class="card-header d-flex align-items-center justify-content-between mb-10">
-                        <div class="card-title-wrap">
-                            <h6 class="card-subtitle">Recent Listing</h6>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="property-table-wrapper">
-                            <div class="table-responsive">
-                                <table class="table mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Photo</th>
-                                            <th>Description</th>
-                                            <th>Price</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @if ($propertys->isEmpty())
-                                            <tr>
-                                                <td colspan="6" class="text-center">No properties found.</td>
-                                            </tr>
-                                        @else
-                                            @foreach ($propertys as $property)
-                                                <tr class="table-custom">
-                                                    <td style="width: 280px;">
-                                                        <div class="property-thumb-wrapper">
-                                                            <div class="property-thumb image-hover-effect-two position-relative">
-                                                                @php
-                                                                    $filePaths = json_decode($property->image);
-                                                                @endphp
-                                                                @foreach ($filePaths as $filePath)
-                                                                    <img class="" src="{{ Storage::url($filePath) }}" alt="image">
-                                                                    @break
-                                                                @endforeach
-                                                                <div class="property-thumb-date">
-                                                                    <div class="bd-badge-sq theme-bg">
-                                                                        <div class="d-block">
-                                                                            <h5 class="badge-title">
-                                                                                {{ \Carbon\Carbon::parse($property->created_at)->format('d') }}
-                                                                            </h5>
-                                                                            <span>{{ \Carbon\Carbon::parse($property->created_at)->format('M') }}</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="property-title-box d-flex align-items-center gap-10">
-                                                            <div>
-                                                                <h3 class="property-title underline">{{ $property->property_title }}</h3>
-                                                                <div class="property-info-box mb-5">
-                                                                    <div class="bd-meta">
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-regular fa-bed-front"></i></span><span
-                                                                                class="title">{{ $property->beds }} bed</span>
-                                                                        </div>
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-duotone fa-shower"></i></span><span
-                                                                                class="title">{{ $property->baths }} bath</span>
-                                                                        </div>
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                                class="title">{{ $property->lot_area }} m²</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="property-location">{{ $property->address }}</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="recent-activity-price-box">
-                                                            <span>
-                                                                Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
-                                                                {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Year' : '' }}
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <ul class="recent-activity-list">
-                                                            <li class="property-date mb-5">Add Date: <span
-                                                                    class="property-add-date">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></li>
-                                                            <li class="property-date">Last Update: <span
-                                                                    class="property-last-date">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
-                                                            <span class="bd-badge warning">{{ $property->property_status }}</span>
-                                                        @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rent Out')
-                                                            <span class="bd-badge success">{{ $property->property_status }}</span>
-                                                        @endif
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        @endif
-                                    </tbody>
-                                </table>
-                            </div>
+<div class="mb-6">
+    <h1 class="text-2xl font-bold text-gray-900">Dashboard Overview</h1>
+    <p class="text-gray-500 text-sm mt-1">Welcome back, {{ Auth::user()->name }}!</p>
+</div>
 
-                            <div class="pagination__wrapper mt-30">
-                                <div class="basic-pagination">
-                                    <nav>
-                                        <ul>
-                                            {{-- Link ke halaman sebelumnya --}}
-                                            @if ($propertys->onFirstPage())
-                                                
-                                            @else
-                                                <li>
-                                                    <a href="{{ $propertys->previousPageUrl() }}">
-                                                        <i class="fa-regular fa-arrow-left"></i>
-                                                    </a>
-                                                </li>
-                                            @endif
-                            
-                                            {{-- Link ke halaman-halaman --}}
-                                            @foreach ($propertys->links()->elements[0] as $page => $url)
-                                                @if ($page == $propertys->currentPage())
-                                                    <li>
-                                                        <a class="current" href="{{ $url }}">{{ $page }}</a>
-                                                    </li>
-                                                @else
-                                                    <li>
-                                                        <a href="{{ $url }}">{{ $page }}</a>
-                                                    </li>
-                                                @endif
-                                            @endforeach
-                            
-                                            {{-- Link ke halaman berikutnya --}}
-                                            @if ($propertys->hasMorePages())
-                                                <li>
-                                                    <a href="{{ $propertys->nextPageUrl() }}">
-                                                        <i class="fa-regular fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+    
+    <!-- Total Properties -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center space-x-5 transition-shadow hover:shadow-md">
+        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 shrink-0">
+            <i class="fa-sharp fa-light fa-buildings text-2xl"></i>
+        </div>
+        <div>
+            <p class="text-sm font-medium text-gray-500 mb-1">Total Properties</p>
+            <div class="flex items-baseline space-x-2">
+                <h4 class="text-2xl font-bold text-gray-900">{{ count($propertys) }}</h4>
             </div>
         </div>
     </div>
+
+    <!-- Total Agents -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center space-x-5 transition-shadow hover:shadow-md">
+        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-green-50 text-green-600 shrink-0">
+            <i class="fa-light fa-users text-2xl"></i>
+        </div>
+        <div>
+            <p class="text-sm font-medium text-gray-500 mb-1">Total Agents</p>
+            <div class="flex items-baseline space-x-2">
+                <h4 class="text-2xl font-bold text-gray-900">#</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Properties for Sale -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center space-x-5 transition-shadow hover:shadow-md">
+        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-amber-50 text-amber-600 shrink-0">
+            <i class="fa-light fa-badge-check text-2xl"></i>
+        </div>
+        <div>
+            <p class="text-sm font-medium text-gray-500 mb-1">For Sale</p>
+            <div class="flex items-baseline space-x-2">
+                <h4 class="text-2xl font-bold text-gray-900">#</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Properties for Rent -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center space-x-5 transition-shadow hover:shadow-md">
+        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-50 text-purple-600 shrink-0">
+            <i class="fa-sharp fa-light fa-tag text-2xl"></i>
+        </div>
+        <div>
+            <p class="text-sm font-medium text-gray-500 mb-1">For Rent</p>
+            <div class="flex items-baseline space-x-2">
+                <h4 class="text-2xl font-bold text-gray-900">#</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Listings Table -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+    <div class="px-6 py-5 border-b border-gray-100">
+        <h3 class="text-lg font-semibold text-gray-900">Recent Listing</h3>
+    </div>
+    
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm whitespace-nowrap">
+            <thead class="bg-gray-50 text-gray-500 font-medium">
+                <tr>
+                    <th class="px-6 py-4">Property</th>
+                    <th class="px-6 py-4">Description</th>
+                    <th class="px-6 py-4">Price</th>
+                    <th class="px-6 py-4">Date</th>
+                    <th class="px-6 py-4">Status</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                @if ($propertys->isEmpty())
+                    <tr>
+                        <td colspan="5" class="px-6 py-8 text-center text-gray-500">No properties found.</td>
+                    </tr>
+                @else
+                    @foreach ($propertys->take(5) as $property)
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4">
+                                @php
+                                    $filePaths = is_string($property->image) ? json_decode($property->image, true) : $property->image;
+                                    $firstImage = !empty($filePaths) ? $filePaths[0] : null;
+                                @endphp
+                                @if($firstImage)
+                                    <div class="w-32 h-20 rounded-lg bg-gray-200 overflow-hidden relative">
+                                        <img src="{{ Storage::url($firstImage) }}" alt="Property" class="w-full h-full object-cover">
+                                    </div>
+                                @else
+                                    <div class="w-32 h-20 rounded-lg bg-gray-200 flex items-center justify-center">
+                                        <i class="fa-light fa-image text-gray-400"></i>
+                                    </div>
+                                @endif
+                            </td>
+                            <td class="px-6 py-4">
+                                <h4 class="text-base font-semibold text-gray-900 mb-1">{{ $property->property_title }}</h4>
+                                <div class="flex items-center space-x-3 text-xs text-gray-500 mb-1">
+                                    <span class="flex items-center"><i class="fa-regular fa-bed mr-1"></i> {{ $property->beds }} bed</span>
+                                    <span class="flex items-center"><i class="fa-duotone fa-shower mr-1"></i> {{ $property->baths }} bath</span>
+                                    <span class="flex items-center"><i class="fa-regular fa-maximize mr-1"></i> {{ $property->lot_area }} m²</span>
+                                </div>
+                                <p class="text-xs text-gray-500 truncate max-w-xs"><i class="fa-regular fa-location-dot mr-1"></i> {{ $property->address }}</p>
+                            </td>
+                            <td class="px-6 py-4 font-medium text-gray-900">
+                                Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                <span class="text-xs text-gray-500 font-normal">
+                                    {{ $property->property_status == 'For Rent' || $property->property_status == 'Rented Out' ? '/Year' : '' }}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="text-xs text-gray-500 mb-1">Added: <span class="font-medium text-gray-700">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></div>
+                                <div class="text-xs text-gray-500">Updated: <span class="font-medium text-gray-700">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></div>
+                            </td>
+                            <td class="px-6 py-4">
+                                @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                                        {{ $property->property_status }}
+                                    </span>
+                                @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rent Out')
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        {{ $property->property_status }}
+                                    </span>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
+            </tbody>
+        </table>
+    </div>
+</div>
 @endsection
