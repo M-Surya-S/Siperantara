@@ -57,18 +57,9 @@
                                                             Property Agent at Siperantara
                                                         </span>
                                                     </div>
-                                                    <div class="contact-list-wrapper">
-                                                        <ul>
-                                                            <li class="contact-list-item">
-                                                                <span class="icon">
-                                                                    <i class="fa-regular fa-location-dot"></i>
-                                                                </span>
-                                                                <span class="title">
-                                                                    <p style="display: inline-block; word-wrap: break-word; max-width: 300px;">
-                                                                        {{ $agent->address }}
-                                                                    </p>
-                                                                </span>
-                                                            </li>
+                                                    <div class="agent-details-hover">
+                                                        <div class="contact-list-wrapper">
+                                                            <ul>
 
                                                             <li class="contact-list-item">
                                                                 <span class="icon">
@@ -110,35 +101,38 @@
                                                                 </span>
                                                             </li>
 
-                                                        </ul>
-                                                    </div>
-                                                    <div class="bottom">
-                                                        <div class="agent-social-wrapper">
-                                                            <div class="bd-social">
-                                                                <ul>
-                                                                    @if ($agent->instagram_link != null)
-                                                                        <li>
-                                                                            <a href="{{ $agent->instagram_link }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                                                        </li>
-                                                                    @endif
-                                                                    @if ($agent->linkedin_link != null)
-                                                                        <li>
-                                                                            <a href="{{ $agent->linkedin_link }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                                                                        </li>
-                                                                    @endif
-                                                                    @if ($agent->facebook_link != null)
-                                                                        <li>
-                                                                            <a href="{{ $agent->facebook_link }}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                                                                        </li>
-                                                                    @endif
-                                                                    @if ($agent->twitter_link != null)
-                                                                        <li>
-                                                                            <a href="{{ $agent->twitter_link }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                                                                        </li>
-                                                                    @endif
-                                                                </ul>
+                                                            </ul>
+                                                        </div>
+                                                        @if ($agent->instagram_link || $agent->linkedin_link || $agent->facebook_link || $agent->twitter_link)
+                                                        <div class="bottom">
+                                                            <div class="agent-social-wrapper">
+                                                                <div class="bd-social">
+                                                                    <ul>
+                                                                        @if ($agent->instagram_link != null)
+                                                                            <li>
+                                                                                <a href="{{ $agent->instagram_link }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                                                            </li>
+                                                                        @endif
+                                                                        @if ($agent->linkedin_link != null)
+                                                                            <li>
+                                                                                <a href="{{ $agent->linkedin_link }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                                            </li>
+                                                                        @endif
+                                                                        @if ($agent->facebook_link != null)
+                                                                            <li>
+                                                                                <a href="{{ $agent->facebook_link }}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                                                                            </li>
+                                                                        @endif
+                                                                        @if ($agent->twitter_link != null)
+                                                                            <li>
+                                                                                <a href="{{ $agent->twitter_link }}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                                                            </li>
+                                                                        @endif
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -195,4 +189,28 @@
         <!-- Agent area end -->
 
     </main>
+
+    <style>
+        .agent-item .agent-details-hover {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+        .agent-item:hover .agent-details-hover {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 15px;
+        }
+        .agent-item.style-one .thumb-wrapper .thumb {
+            height: auto !important;
+            aspect-ratio: 3 / 4;
+        }
+        .agent-item.style-one .thumb-wrapper .thumb img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 15%;
+        }
+    </style>
 @endsection
