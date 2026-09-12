@@ -6,7 +6,7 @@ use App\Models\Agent;
 use App\Models\Property;
 use Illuminate\Http\Request;
 
-class HomeControlller extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.

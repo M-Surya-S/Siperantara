@@ -63,25 +63,15 @@ class PropertyController extends Controller
             }
         }
 
-        // Collecting benefits
-        $benefits = [
-            $request->benefit_1,
-            $request->benefit_2,
-            $request->benefit_3,
-            $request->benefit_4,
-            $request->benefit_5,
-            $request->benefit_6,
-            $request->benefit_7,
-            $request->benefit_8,
-            $request->benefit_9,
-            $request->benefit_10,
-            $request->benefit_11,
-            $request->benefit_12,
-        ];
+        // Collecting benefits from checkboxes
+        $benefits = $request->benefits;
+        if (is_array($benefits)) {
+            $benefits = json_encode($benefits);
+        }
 
         Property::create([
             'property_id' => $property_id,
-            'image' => json_encode($filePaths),
+            'image' => $filePaths,
             'property_title' => $request->property_title,
             'property_price' => $request->property_price,
             'discount' => $request->discount,
@@ -108,7 +98,7 @@ class PropertyController extends Controller
             'gym_area' => $request->gym_area,
             'garden' => $request->garden,
             'parking' => $request->parking,
-            'benefits' => json_encode($benefits),
+            'benefits' => $benefits,
             'link_location' => $request->link_location,
         ]);
 
@@ -141,7 +131,7 @@ class PropertyController extends Controller
     {
         $property = Property::findOrFail($id);
 
-        $existingImagePath = json_decode($property->image);
+        $existingImagePath = is_string($property->image) ? json_decode($property->image, true) : $property->image;
 
         // Handle image upload
         if ($request->hasFile('image')) {
@@ -162,7 +152,7 @@ class PropertyController extends Controller
 
             // Update path gambar yang baru ke dalam database
             $property->update([
-                'image' => json_encode($filePaths),
+                'image' => $filePaths,
             ]);
         } else {
             // Jika tidak ada gambar baru, tetap gunakan gambar yang ada
@@ -171,21 +161,11 @@ class PropertyController extends Controller
             ]);
         }
 
-        // Collecting benefits
-        $benefits = [
-            $request->benefit_1,
-            $request->benefit_2,
-            $request->benefit_3,
-            $request->benefit_4,
-            $request->benefit_5,
-            $request->benefit_6,
-            $request->benefit_7,
-            $request->benefit_8,
-            $request->benefit_9,
-            $request->benefit_10,
-            $request->benefit_11,
-            $request->benefit_12,
-        ];
+        // Collecting benefits from checkboxes
+        $benefits = $request->benefits;
+        if (is_array($benefits)) {
+            $benefits = json_encode($benefits);
+        }
 
         // Update property fields lainnya
         $property->update([
@@ -215,7 +195,7 @@ class PropertyController extends Controller
             'gym_area' => $request->gym_area,
             'garden' => $request->garden,
             'parking' => $request->parking,
-            'benefits' => json_encode($benefits),
+            'benefits' => $benefits,
             'link_location' => $request->link_location,
         ]);
 
@@ -231,7 +211,7 @@ class PropertyController extends Controller
         $property = Property::findOrFail($id);
 
         // Ambil path gambar dari properti
-        $filePaths = json_decode($property->image);
+        $filePaths = is_string($property->image) ? json_decode($property->image, true) : $property->image;
 
         // Hapus setiap file gambar dari storage
         if ($filePaths) {

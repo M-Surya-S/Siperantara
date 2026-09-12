@@ -12,6 +12,11 @@ class Property extends Model
     protected $table = 'property';
     protected $primaryKey = 'property_id';
     public $incrementing = false;
+    protected $keyType = 'string';
+    
+    protected $casts = [
+        'image' => 'array',
+    ];
     protected $fillable = [
         'property_id',
         'image',

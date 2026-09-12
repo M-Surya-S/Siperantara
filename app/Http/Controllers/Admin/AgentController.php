@@ -48,13 +48,23 @@ class AgentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:255',
+            'instagram_link' => 'nullable|string|max:255',
+            'linkedin_link' => 'nullable|string|max:255',
+            'facebook_link' => 'nullable|string|max:255',
+            'twitter_link' => 'nullable|string|max:255',
+        ]);
+
         // Handle image upload
         $filepath = $request->file('image')->store('public/agent/image');
 
         Agent::create([
             'image' => $filepath,
             'name' => $request->name,
-            'address' => $request->address,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'instagram_link' => $request->instagram_link,
@@ -89,6 +99,17 @@ class AgentController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:255',
+            'instagram_link' => 'nullable|string|max:255',
+            'linkedin_link' => 'nullable|string|max:255',
+            'facebook_link' => 'nullable|string|max:255',
+            'twitter_link' => 'nullable|string|max:255',
+        ]);
+
         $agent = Agent::find($id);
 
         $existingImage = $agent->image;
@@ -117,7 +138,6 @@ class AgentController extends Controller
 
         $agent->update([
             'name' => $request->name,
-            'address' => $request->address,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'instagram_link' => $request->instagram_link,
