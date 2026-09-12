@@ -1566,7 +1566,7 @@
 
     /* tinymce Text editor */
     tinymce.init({
-        selector: '#tinymce_simple_textarea',
+        selector: '#tinymce_simple_textarea, #tinymce_benefits',
         toolbar: 'undo redo blockquote blocks bold italic alignleft aligncenter alignright outdent indent code anchor link restoredraft charmap codesample ltr rtl emoticons fullscreen help image insertdatetime lists media nonbreaking pagebreak preview save searchreplace visualblocks visualchars wordcount accordion print',
         toolbar_mode: 'wrap',
         plugins: ['code', 'table', 'lists', 'anchor', 'autolink', "autosave", "charmap", "codesample", "directionality", "emoticons", "fullscreen", "help", "image", "importcss", "insertdatetime", "visualblocks", "visualchars", "wordcount", "accordion"],

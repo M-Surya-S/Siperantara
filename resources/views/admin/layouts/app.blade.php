@@ -1,123 +1,97 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en" class="antialiased bg-gray-50 text-gray-900">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $title == 'Dashboard' ? '' : ($title . ' |') }} Dashboard Siperantara</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico in the root directory -->
+    <title>{{ $title == 'Dashboard' ? '' : ($title . ' | ') }}Dashboard Siperantara</title>
+    
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/chosen.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/nouislider.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/dropzone.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/magnific-popup.css') }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- FontAwesome & Plugins (Keep needed CSS) -->
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/fontawesome-pro.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/icomoon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/spacing.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/dropzone.min.css') }}">
+    
+    @stack('styles')
 </head>
+<body class="font-sans flex h-screen overflow-hidden bg-gray-50" x-data="{ sidebarOpen: false }">
 
-<body>
+    <!-- Sidebar -->
+    @include('admin.layouts.partials.sidebar')
 
-    <!-- Pre loader start -->
-    <div class="preloader">
-        <div class='loader'>
-            <div class='circle'></div>
-            <div class='circle'></div>
-            <div class='circle'></div>
-            <div class='circle'></div>
-            <div class='circle'></div>
-        </div>
-    </div>
-    <!-- Pre loader end -->
-
-    <!-- Cursor Animation -->
-    <div class="cursor1"></div>
-
-    <!-- Body main wrapper start -->
-    <div class="app-page-body">
-
-        <!-- app header start -->
-        <header class="app-header">
-            <div class="app-header-inner">
-                <div class="app-header-left">
-                </div>
-                <div class="app-header-right">
-                    <div class="app-header-admin p-relative">
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="admin-wrapper">
-                            <span class="admin-thumb">
-                                <img class="avatar-sm" src="{{ asset('assets/images/agent/agent-01.png') }}" alt="image">
-                            </span>
-                                <span class="admin-meta">
-                                <span class="admin-meta-name">{{ Auth::user()->name }}</span>
-                                </span>
-                                </span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    @method('POST')
-                                    <button type="submit" class="dropdown-item"><i class="fa-sharp fa-light fa-arrow-right-from-bracket"></i> Logout</button>
-                                </form>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col h-screen overflow-hidden">
+        
+        <!-- Header -->
+        <header class="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-6 shrink-0 shadow-sm z-10">
+            <div class="flex items-center">
+                <!-- Mobile menu button (Alpine) -->
+                <button class="lg:hidden text-gray-500 hover:text-gray-700 focus:outline-none" @click="sidebarOpen = !sidebarOpen">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="flex items-center space-x-4 relative" x-data="{ userMenuOpen: false }">
+                <!-- Profile dropdown -->
+                <button @click="userMenuOpen = !userMenuOpen" @click.away="userMenuOpen = false" class="flex items-center space-x-3 focus:outline-none">
+                    <img class="h-9 w-9 rounded-full object-cover border border-gray-200" src="{{ asset('assets/images/agent/agent-01.png') }}" alt="Admin avatar">
+                    <span class="hidden md:block text-sm font-medium text-gray-700">{{ Auth::user()->name }}</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                </button>
+                
+                <!-- Dropdown menu -->
+                <div x-show="userMenuOpen" x-transition class="absolute right-0 top-12 w-48 bg-white rounded-lg shadow-lg py-1 border border-gray-100 z-50" style="display: none;">
+                    <a href="{{ url('/') }}" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors">
+                        <i class="fa-solid fa-house mr-2 text-blue-500"></i> Kunjungi Website
+                    </a>
+                    <div class="border-t border-gray-100 my-1"></div>
+                    <form action="{{ route('logout') }}" method="POST" class="block w-full">
+                        @csrf
+                        <button type="submit" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50 transition-colors">
+                            <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Logout
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
-        <!-- app header end -->
 
-        <!-- app-sidebar start -->
-        @include('admin.layouts.partials.sidebar')
-        <!-- app-sidebar end -->
-
-        <!-- app body content start -->
-        @yield('content-admin')
-        <!-- app body content end -->
+        <!-- Main Content (Scrollable) -->
+        <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+            @yield('content-admin')
+        </main>
     </div>
-    <!-- Body main wrapper end -->
 
-    <!-- Backtotop start -->
-    <a href="#" data-target="html" class="back-to-target back-to-top">
-        <span class="back-to-top-text">back top</span>
-        <span class="back-to-top-wrapper"><span class="back-to-top-inner" style="width: 4.05654%;"></span></span>
-    </a>
-    <!-- Backtotop end -->
-
-    <!-- JS here -->
+    <!-- Core Scripts -->
     <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/meanmenu.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/slick.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/purecounter.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/nouislider.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/nice-select.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/SplitText.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bd-cursor.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jarallax.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/dropzone.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/tinymce.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/ajax-form.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-
+    
+    @stack('scripts')
 </body>
-
 </html>

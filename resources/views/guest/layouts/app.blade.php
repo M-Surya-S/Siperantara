@@ -8,6 +8,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
+
+    <!-- Preconnect to external domains -->
+    <link rel="dns-prefetch" href="//wa.me">
+    <link rel="dns-prefetch" href="//maps.app.goo.gl">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
@@ -48,7 +54,7 @@
     <div class="fix">
         <div class="offcanvas-area">
             <div class="offcanvas-wrapper">
-                <div class="offcanvas-content">
+                <div class="offcanvas-content d-flex flex-column h-100" style="padding-bottom: 0;">
                     <div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
                         <div class="offcanvas-logo">
                             <a href="/">
@@ -68,7 +74,7 @@
                     <div class="mobile-menu fix mb-25"></div>
                     <div class="offcanvas-about d-lg-block mb-25">
                         <h4 class="offcanvas-title-meta">About SIPERANTARA</h4>
-                        <p style="text-align: justify;">In a landscape oversaturated with traditional real estate firms, the world didn’t need just another brokerage. It craved something new, something visionary...</p>
+                        <p style="text-align: justify;">In a landscape oversaturated with traditional real estate firms, the world didn’t need just another brokerage. It craved something new, something visionary. SIPERANTARA was born out of this desire to redefine real estate—combining cutting-edge technology with unparalleled human expertise. We don't just sell properties; we curate experiences, build futures, and turn your boldest real estate dreams into reality.</p>
                     </div>
                     <div class="offcanvas-contact mb-25">
                         <h4 class="offcanvas-title-meta">Contact Info</h4>
@@ -80,7 +86,7 @@
                                     </a>
                                 </div>
                                 <div class="offcanvas-contact-text">
-                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">Komplek Balikpapan Permai...</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/Kg9aYDF6PLd3nM1J6">Komplek Balikpapan Permai, Jl. Jenderal Sudirman No.9 Blok L, Damai, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center gap-10">
@@ -102,12 +108,24 @@
                         </ul>
                     </div>
 
-                    <div class="offcanvas-social">
+                    <div class="offcanvas-social mb-25">
                         <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
                         <ul>
                             <li><a href="https://www.instagram.com/siperantara_real_estate/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="https://www.youtube.com/@properthree2770" target="_blank"><i class="fab fa-youtube"></i></a></li>
                         </ul>
+                    </div>
+
+                    <div class="offcanvas-btn mt-auto">
+                        @auth
+                            <a href="{{ url('dashboard') }}" class="bd-btn btn-style btn-hover-x btn-black w-100 text-center">
+                                Back to Dashboard
+                            </a>
+                        @else
+                            <a href="{{ url('login') }}" class="bd-btn btn-style btn-hover-x btn-black w-100 text-center">
+                                Login Admin
+                            </a>
+                        @endauth
                     </div>
                 </div>
             </div>
