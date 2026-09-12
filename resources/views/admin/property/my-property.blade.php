@@ -1,192 +1,167 @@
 @extends('admin.layouts.app')
 
 @section('content-admin')
-    <div class="app-content-wrapper">
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-                <div class="card-wrapper">
-                    <div class="card-header d-flex align-items-center justify-content-between mb-30">
-                        <div class="card-title-wrap">
-                            <h6 class="card-subtitle">My Property List</h6>
-                        </div>
-                        <div class="card-title-wrap">
-                            <div class="card-title-wrap">
-                                <form action="{{ route('my-property.search') }}" method="GET" style="display: flex; align-items: center;">
-                                    <input type="text" name="search" placeholder="Search Property" class="form-control" value="{{ request('search') }}" 
-                                        style="flex: 1; margin-right: 10px; padding: 1.5rem; height: calc(1.5em + 0.75rem + 2px);">
-                                    <button type="submit" class="btn btn-primary" style="height: calc(1.5em + 0.75rem + 2px); padding: 0 10px;">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="property-table-wrapper">
-                            <div class="table-responsive">
-                                <table class="table mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Photo</th>
-                                            <th>Description</th>
-                                            <th>Price</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @if ($propertys->isEmpty())
-                                            <tr>
-                                                <td colspan="6" class="text-center">No properties found.</td>
-                                            </tr>
-                                        @else
-                                            @foreach ($propertys as $property)
-                                                <tr class="table-custom">
-                                                    <td style="width: 280px;">
-                                                        <div class="property-thumb-wrapper">
-                                                            <div
-                                                                class="property-thumb image-hover-effect-two position-relative">
-                                                                @php
-                                                                    $filePaths = json_decode($property->image);
-                                                                @endphp
-                                                                @foreach ($filePaths as $filePath)
-                                                                    <img class="" src="{{ Storage::url($filePath) }}" alt="image">
-                                                                    @break
-                                                                @endforeach
-                                                                <div class="property-thumb-date">
-                                                                    <div class="bd-badge-sq theme-bg">
-                                                                        <div class="d-block">
-                                                                            <h5 class="badge-title">
-                                                                                {{ \Carbon\Carbon::parse($property->created_at)->format('d') }}
-                                                                            </h5>
-                                                                            <span>{{ \Carbon\Carbon::parse($property->created_at)->format('M') }}</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="property-title-box d-flex align-items-center gap-10">
-                                                            <div>
-                                                                <h5 class="property-title underline">{{ $property->property_title }}</h5>
-                                                                <div class="property-info-box mb-5">
-                                                                    <div class="bd-meta">
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-regular fa-bed-front"></i></span><span
-                                                                                class="title">{{ $property->beds }} bed</span>
-                                                                        </div>
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-duotone fa-shower"></i></span><span
-                                                                                class="title">{{ $property->baths }} bath</span>
-                                                                        </div>
-                                                                        <div class="meta-item">
-                                                                            <span class="icon"><i
-                                                                                    class="fa-regular fa-arrows-maximize"></i></span><span
-                                                                                class="title">{{ $property->lot_area }} m²</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="property-location">{{ $property->address }}</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="recent-activity-price-box">
-                                                            <p class="mb-5">Rp {{ number_format((int)$property->property_price, 0, ',', '.') }}</p>
-                                                            @if ($property->property_status == 'For Rent' or $property->property_status == 'Rented Out')
-                                                                <p>Yearly</p>
-                                                            @endif
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <ul class="recent-activity-list">
-                                                            <li class="property-date mb-5">Add Date: <span
-                                                                    class="property-add-date">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></li>
-                                                            <li class="property-date">Last Update: <span
-                                                                    class="property-last-date">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent')
-                                                            <span class="bd-badge warning">{{ $property->property_status }}</span>
-                                                        @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rented Out')
-                                                            <span class="bd-badge success">{{ $property->property_status }}</span>
-                                                        @endif
-                                                    </td>
-                                                    <td>
-                                                        <div class="d-flex align-items-center justify-content-start gap-10">
-                                                            <a href="{{ route('property.detail', $property->property_id) }}" class="action-button download">
-                                                                <i class="fa-regular fa-eye"></i>
-                                                            </a>
-                                                            <a href="{{ route('edit-property.edit', $property->property_id) }}" class="action-button edit">
-                                                                <i class="fa-sharp fa-light fa-pen"></i>
-                                                            </a>
-                                                            <form
-                                                                action="{{ route('delete-property.destroy', $property->property_id) }}"
-                                                                method="POST" style="display: inline;">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="action-button delete">
-                                                                    <i class="fa-regular fa-trash"></i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        @endif
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="pagination__wrapper mt-30">
-                                <div class="basic-pagination">
-                                    <nav>
-                                        <ul>
-                                            {{-- Link ke halaman sebelumnya --}}
-                                            @if ($propertys->onFirstPage())
-                                                
-                                            @else
-                                                <li>
-                                                    <a href="{{ $propertys->previousPageUrl() }}">
-                                                        <i class="fa-regular fa-arrow-left"></i>
-                                                    </a>
-                                                </li>
-                                            @endif
-                            
-                                            {{-- Link ke halaman-halaman --}}
-                                            @foreach ($propertys->links()->elements[0] as $page => $url)
-                                                @if ($page == $propertys->currentPage())
-                                                    <li>
-                                                        <a class="current" href="{{ $url }}">{{ $page }}</a>
-                                                    </li>
-                                                @else
-                                                    <li>
-                                                        <a href="{{ $url }}">{{ $page }}</a>
-                                                    </li>
-                                                @endif
-                                            @endforeach
-                            
-                                            {{-- Link ke halaman berikutnya --}}
-                                            @if ($propertys->hasMorePages())
-                                                <li>
-                                                    <a href="{{ $propertys->nextPageUrl() }}">
-                                                        <i class="fa-regular fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div>
+        <h1 class="text-2xl font-bold text-gray-900">My Properties</h1>
+        <p class="text-gray-500 text-sm mt-1">Manage your property listings.</p>
     </div>
+    <div class="flex items-center gap-3">
+        <form action="{{ route('my-property.search') }}" method="GET" class="flex relative w-full sm:w-auto">
+            <input type="text" name="search" placeholder="Search Property..." value="{{ request('search') }}" 
+                   class="w-full sm:w-64 pl-4 pr-10 py-2.5 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+            <button type="submit" class="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-blue-600 transition-colors">
+                <i class="fa-regular fa-search"></i>
+            </button>
+        </form>
+        <a href="{{ url('/dashboard/my-property/add') }}" class="shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm flex items-center gap-2">
+            <i class="fa-regular fa-plus"></i>
+            <span class="hidden sm:inline">Add Property</span>
+        </a>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm whitespace-nowrap">
+            <thead class="bg-gray-50 text-gray-500 font-medium border-b border-gray-100">
+                <tr>
+                    <th class="px-6 py-4">Property</th>
+                    <th class="px-6 py-4">Description</th>
+                    <th class="px-6 py-4">Price</th>
+                    <th class="px-6 py-4">Date</th>
+                    <th class="px-6 py-4">Status</th>
+                    <th class="px-6 py-4 text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                @if ($propertys->isEmpty())
+                    <tr>
+                        <td colspan="6" class="px-6 py-12 text-center text-gray-500">
+                            <div class="flex flex-col items-center justify-center">
+                                <i class="fa-light fa-house-slash text-4xl mb-3 text-gray-300"></i>
+                                <p>No properties found.</p>
+                            </div>
+                        </td>
+                    </tr>
+                @else
+                    @foreach ($propertys as $property)
+                        <tr class="hover:bg-gray-50 transition-colors group">
+                            <td class="px-6 py-4">
+                                @php
+                                    $filePaths = is_string($property->image) ? json_decode($property->image, true) : $property->image;
+                                    $firstImage = !empty($filePaths) ? $filePaths[0] : null;
+                                @endphp
+                                @if($firstImage)
+                                    <div class="w-32 h-20 rounded-lg bg-gray-200 overflow-hidden relative shadow-sm">
+                                        <img src="{{ Storage::url($firstImage) }}" alt="Property" class="w-full h-full object-cover">
+                                    </div>
+                                @else
+                                    <div class="w-32 h-20 rounded-lg bg-gray-100 flex items-center justify-center border border-gray-200">
+                                        <i class="fa-light fa-image text-gray-400"></i>
+                                    </div>
+                                @endif
+                            </td>
+                            <td class="px-6 py-4">
+                                <h4 class="text-base font-semibold text-gray-900 mb-1 hover:text-blue-600 transition-colors"><a href="{{ route('property.detail', $property->property_id) }}">{{ $property->property_title }}</a></h4>
+                                <div class="flex items-center space-x-3 text-xs text-gray-500 mb-1.5">
+                                    <span class="flex items-center"><i class="fa-regular fa-bed mr-1 text-gray-400"></i> {{ $property->beds }} bed</span>
+                                    <span class="flex items-center"><i class="fa-duotone fa-shower mr-1 text-gray-400"></i> {{ $property->baths }} bath</span>
+                                    <span class="flex items-center"><i class="fa-regular fa-maximize mr-1 text-gray-400"></i> {{ $property->lot_area }} m²</span>
+                                </div>
+                                <p class="text-xs text-gray-500 truncate max-w-xs flex items-center"><i class="fa-regular fa-location-dot mr-1.5 text-gray-400"></i> {{ $property->address }}</p>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="font-medium text-gray-900">
+                                    Rp {{ number_format((int) $property->property_price, 0, ',', '.') }}
+                                </div>
+                                @if ($property->property_status == 'For Rent' || $property->property_status == 'Rented Out')
+                                    <div class="text-xs text-gray-500 mt-0.5">Yearly</div>
+                                @endif
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="text-xs text-gray-500 mb-1">Added: <span class="font-medium text-gray-700">{{ \Carbon\Carbon::parse($property->created_at)->format('d M Y') }}</span></div>
+                                <div class="text-xs text-gray-500">Updated: <span class="font-medium text-gray-700">{{ \Carbon\Carbon::parse($property->updated_at)->format('d M Y') }}</span></div>
+                            </td>
+                            <td class="px-6 py-4">
+                                @if ($property->property_status == 'For Sale' or $property->property_status == 'For Rent' or $property->property_status == 'New Develop')
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 border border-amber-200">
+                                        {{ $property->property_status }}
+                                    </span>
+                                @elseif ($property->property_status == 'Sold Out' or $property->property_status == 'Rented Out')
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                        {{ $property->property_status }}
+                                    </span>
+                                @else
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 border border-gray-200">
+                                        {{ $property->property_status }}
+                                    </span>
+                                @endif
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center justify-center gap-2 opacity-100 transition-opacity">
+                                    <a href="{{ route('property.detail', $property->property_id) }}" class="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 transition-colors tooltip shadow-sm" title="View">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <a href="{{ route('edit-property.edit', $property->property_id) }}" class="w-8 h-8 rounded-lg flex items-center justify-center bg-amber-50 text-amber-600 hover:bg-amber-100 hover:text-amber-700 transition-colors tooltip shadow-sm" title="Edit">
+                                        <i class="fa-regular fa-pen"></i>
+                                    </a>
+                                    <form action="{{ route('delete-property.destroy', $property->property_id) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this property?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="w-8 h-8 rounded-lg flex items-center justify-center bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-700 transition-colors tooltip shadow-sm" title="Delete">
+                                            <i class="fa-regular fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Pagination -->
+    @if ($propertys->hasPages())
+    <div class="px-6 py-4 border-t border-gray-100 flex items-center justify-center">
+        <nav class="flex items-center gap-1">
+            {{-- Previous Page Link --}}
+            @if ($propertys->onFirstPage())
+                <span class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-300 cursor-not-allowed">
+                    <i class="fa-regular fa-chevron-left text-xs"></i>
+                </span>
+            @else
+                <a href="{{ $propertys->previousPageUrl() }}" class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                    <i class="fa-regular fa-chevron-left text-xs"></i>
+                </a>
+            @endif
+
+            {{-- Pagination Elements --}}
+            @foreach ($propertys->links()->elements[0] as $page => $url)
+                @if ($page == $propertys->currentPage())
+                    <span class="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-600 text-white font-medium text-sm">
+                        {{ $page }}
+                    </span>
+                @else
+                    <a href="{{ $url }}" class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-blue-600 font-medium text-sm transition-colors">
+                        {{ $page }}
+                    </a>
+                @endif
+            @endforeach
+
+            {{-- Next Page Link --}}
+            @if ($propertys->hasMorePages())
+                <a href="{{ $propertys->nextPageUrl() }}" class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                    <i class="fa-regular fa-chevron-right text-xs"></i>
+                </a>
+            @else
+                <span class="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-300 cursor-not-allowed">
+                    <i class="fa-regular fa-chevron-right text-xs"></i>
+                </span>
+            @endif
+        </nav>
+    </div>
+    @endif
+</div>
 @endsection

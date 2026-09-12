@@ -204,19 +204,19 @@
                             </div>
                             <div class="thumb-one">
                                 <figure>
-                                    <img id="main-image" src="{{ asset('assets/images/development/cluster-garuda/garuda-1.png') }}" alt="image">
+                                    <img id="main-image" src="{{ asset('assets/images/development/cluster-garuda/garuda-1.png') }}" alt="image" loading="lazy">
                                 </figure>
                             </div>
                             <div class="thumb-two-inner">
                                 <div class="thumb-two">
                                     <figure>
-                                        <img id="image-two" src="{{ asset('assets/images/development/cluster-garuda/garuda-2.png') }}" alt="image">
+                                        <img id="image-two" src="{{ asset('assets/images/development/cluster-garuda/garuda-2.png') }}" alt="image" loading="lazy">
                                     </figure>
                                 </div>
                                 <div class="thumb-two">
                                     <figure>
                                         <img id="image-three"
-                                            src="{{ asset('assets/images/development/cluster-garuda/garuda-3.png') }}" alt="image">
+                                            src="{{ asset('assets/images/development/cluster-garuda/garuda-3.png') }}" alt="image" loading="lazy">
                                     </figure>
                                 </div>
                             </div>
@@ -501,13 +501,13 @@
                                                     <a class="bd-badge">{{ $property->property_category }}</a>
                                                 </div>
                                                 @php
-                                                    $filePaths = json_decode($property->image);
+                                                    $filePaths = is_string($property->image) ? json_decode($property->image, true) : $property->image;
                                                 @endphp
                                                 <div class="thumb">
                                                     <a href="{{ route('property.detail', $property->property_id) }}">
                                                         <figure>
                                                             @foreach ($filePaths as $filePath)
-                                                                <img src="{{ Storage::url($filePath) }}" alt="Image">
+                                                                <img src="{{ Storage::url($filePath) }}" alt="Image" loading="lazy">
                                                                 @php
                                                                     break;
                                                                 @endphp
@@ -702,7 +702,7 @@
                                             <div class="team-item style-two">
                                                 <div class="thumb">
                                                     <figure>
-                                                        <img src="{{ Storage::url($agent->image) }}" alt="Image">
+                                                        <img src="{{ Storage::url($agent->image) }}" alt="image" loading="lazy">
                                                     </figure>
                                                 </div>
                                                 <div class="content-inner">

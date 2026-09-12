@@ -159,7 +159,7 @@
                                                                 <a class="bd-badge">{{ $property->property_category }}</a>
                                                             </div>
                                                             @php
-                                                                $filePaths = json_decode($property->image);
+                                                                $filePaths = is_string($property->image) ? json_decode($property->image, true) : $property->image;
                                                             @endphp
                                                             <div class="thumb">
                                                                 <a href="{{ route('property.detail', $property->property_id) }}">
